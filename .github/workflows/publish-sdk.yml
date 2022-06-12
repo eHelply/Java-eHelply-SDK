@@ -1,0 +1,54 @@
+name: Publish SDK
+concurrency: sdk_publish
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out this repository
+        uses: actions/checkout@v2
+      - name: Build
+      - name: Set up Java
+        uses: actions/setup-java@v3
+        with:
+          java-version: '11'
+          distribution: 'adopt'
+      - name: Validate Gradle wrapper
+        uses: gradle/wrapper-validation-action@e6e38bacfdf1a337459f332974bb2327a31aaf4b
+      - name: Publish package
+        uses: gradle/gradle-build-action@0d13054264b0bb894ded474f08ebb30921341cee
+        with:
+          arguments: publish
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  notifications:
+    needs: [build]
+    runs-on: ubuntu-latest
+    if: always()
+    steps:
+      - name: Slack Failure Notification
+        if: needs.build.result == 'failure'
+        uses: rtCamp/action-slack-notify@v2
+        env:
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+          SLACK_COLOR: '#9e101e'
+          SLACK_USERNAME: 'GitHub SDK Bot'
+          SLACK_ICON: "https://assets.ehelply.com/logo/ehelply/base/symbol_green_white.png"
+          SLACK_FOOTER: ""
+          SLACK_TITLE: 'Java SDK Publish FAILED'
+          SLACK_MESSAGE: 'Failed to publish the Java SDK to Maven'
+      - name: Slack Success Notification
+        if: always() && needs.build.result == 'success'
+        uses: rtCamp/action-slack-notify@v2
+        env:
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+          SLACK_COLOR: 'good'
+          SLACK_USERNAME: 'GitHub SDK Bot'
+          SLACK_ICON: "https://assets.ehelply.com/logo/ehelply/base/symbol_green_white.png"
+          SLACK_FOOTER: ""
+          SLACK_TITLE: 'Java SDK Publish SUCCESS'
+          SLACK_MESSAGE: 'Java SDK pushed to Maven successfully'
