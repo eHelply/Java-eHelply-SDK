@@ -10,7 +10,6 @@ jobs:
     steps:
       - name: Check out this repository
         uses: actions/checkout@v2
-      - name: Build
       - name: Set up Java
         uses: actions/setup-java@v3
         with:
