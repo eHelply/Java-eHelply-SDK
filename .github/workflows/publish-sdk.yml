@@ -41,7 +41,7 @@ jobs:
           SLACK_ICON: "https://assets.ehelply.com/logo/ehelply/base/symbol_green_white.png"
           SLACK_FOOTER: ""
           SLACK_TITLE: 'Java SDK Publish FAILED'
-          SLACK_MESSAGE: 'Failed to publish the Java SDK to Maven'
+          SLACK_MESSAGE: 'Failed to publish the Java SDK to GitHub Maven Packages'
       - name: Slack Success Notification
         if: always() && needs.build.result == 'success'
         uses: rtCamp/action-slack-notify@v2
@@ -52,4 +52,4 @@ jobs:
           SLACK_ICON: "https://assets.ehelply.com/logo/ehelply/base/symbol_green_white.png"
           SLACK_FOOTER: ""
           SLACK_TITLE: 'Java SDK Publish SUCCESS'
-          SLACK_MESSAGE: 'Java SDK pushed to Maven successfully'
+          SLACK_MESSAGE: 'Java SDK pushed to GitHub Maven Packages successfully'
