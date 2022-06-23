@@ -9,8 +9,8 @@ info:
     name: Apache 2.0
     url: https://www.apache.org/licenses/LICENSE-2.0.html
   termsOfService: https://superstack.ehelply.com/support/legal/terms
-  title: eHelply SDK - 1.1.89
-  version: 1.1.89
+  title: eHelply SDK - 1.1.83
+  version: 1.1.83
 servers:
 - description: eHelply / SuperStack Production
   url: https://api.prod.ehelply.com
@@ -14136,11 +14136,11 @@ components:
         contact:
           website: www.ehelply.com
           phones:
-            Clinic: "1234567"
-            Fax: "1234567"
+          - name: cell
+            value: "1234567"
           socials:
-            Clinic: "1234567"
-            Fax: "1234567"
+          - name: Twitter
+            value: twitter.com
           email: test@example.com
         name: Example Company
       properties:
@@ -14178,8 +14178,6 @@ components:
       example:
         summary: Summary of the company
         project_uuid: project_uuid 1234
-        review_group_data: {}
-        schedule_data: {}
         created_at: 2020-06-27T12:00:00.000000
         uuid: uuid_1234
         deleted_at: 2020-06-27T12:00:00.000000
@@ -14189,19 +14187,17 @@ components:
         public: true
         updated_at: 2020-06-27T12:00:00.000000
         meta: {}
-        blog_data: {}
         contact:
           website: www.ehelply.com
           phones:
-            Clinic: "1234567"
-            Fax: "1234567"
+          - name: cell
+            value: "1234567"
           socials:
-            Clinic: "1234567"
-            Fax: "1234567"
+          - name: Twitter
+            value: twitter.com
           email: test@example.com
         name: Example Company
         categories: []
-        catalog_data: {}
       properties:
         name:
           example: Example Company
@@ -14234,26 +14230,6 @@ components:
           example: meta_uuid 1234
           title: Meta Uuid
           type: string
-        catalog_data:
-          default: {}
-          example: {}
-          title: Catalog Data
-          type: object
-        review_group_data:
-          default: {}
-          example: {}
-          title: Review Group Data
-          type: object
-        schedule_data:
-          default: {}
-          example: {}
-          title: Schedule Data
-          type: object
-        blog_data:
-          default: {}
-          example: {}
-          title: Blog Data
-          type: object
         tags:
           example: []
           items:
@@ -14289,31 +14265,29 @@ components:
       title: CompanyResponse
       type: object
     ContactBase:
-      description: |-
-        **:param** phones                              **type:** dict or None
-
-        **:param** email                               **type:** string or None
-
-        **:param** website                             **type:** string or None
-
-        **:param** socials                             **type:** dict or None
+      description: "**:param** phones                              **type:** List[ContactKeys]\
+        \ or None\n\n**:param** email                               **type:** string\
+        \ or None\n\n**:param** website                             **type:** string\
+        \ or None\n\n**:param** socials                             **type:** List[ContactKeys]\
+        \ or None"
       example:
         website: www.ehelply.com
         phones:
-          Clinic: "1234567"
-          Fax: "1234567"
+        - name: cell
+          value: "1234567"
         socials:
-          Clinic: "1234567"
-          Fax: "1234567"
+        - name: Twitter
+          value: twitter.com
         email: test@example.com
       properties:
         phones:
-          default: {}
           example:
-            Clinic: "1234567"
-            Fax: "1234567"
+          - name: cell
+            value: "1234567"
+          items:
+            $ref: '#/components/schemas/ContactMethod'
           title: Phones
-          type: object
+          type: array
         email:
           example: test@example.com
           title: Email
@@ -14323,13 +14297,28 @@ components:
           title: Website
           type: string
         socials:
-          default: {}
           example:
-            Clinic: "1234567"
-            Fax: "1234567"
+          - name: Twitter
+            value: twitter.com
+          items:
+            $ref: '#/components/schemas/ContactMethod'
           title: Socials
-          type: object
+          type: array
       title: ContactBase
+      type: object
+    ContactMethod:
+      properties:
+        name:
+          default: ""
+          example: Primary Number
+          title: Name
+          type: string
+        value:
+          default: ""
+          example: 123-456-7890
+          title: Value
+          type: string
+      title: ContactMethod
       type: object
     Page:
       description: Page state
@@ -14423,11 +14412,11 @@ components:
         contact:
           website: www.ehelply.com
           phones:
-            Clinic: "1234567"
-            Fax: "1234567"
+          - name: cell
+            value: "1234567"
           socials:
-            Clinic: "1234567"
-            Fax: "1234567"
+          - name: Twitter
+            value: twitter.com
           email: test@example.com
         name: Example Clinic
       properties:
@@ -14476,9 +14465,6 @@ components:
         summary: Summary of the clinic
         project_uuid: project_uuid 1234
         addresses: []
-        collection_data: {}
-        review_group_data: {}
-        schedule_data: {}
         created_at: 2020-06-27T12:00:00.000000
         uuid: uuid_1234
         deleted_at: 2020-06-27T12:00:00.000000
@@ -14487,20 +14473,18 @@ components:
         public: true
         updated_at: 2020-06-27T12:00:00.000000
         meta: {}
-        blog_data: {}
         contact:
           website: www.ehelply.com
           phones:
-            Clinic: "1234567"
-            Fax: "1234567"
+          - name: cell
+            value: "1234567"
           socials:
-            Clinic: "1234567"
-            Fax: "1234567"
+          - name: Twitter
+            value: twitter.com
           email: test@example.com
         name: Example Clinic
         company: null
         categories: []
-        catalog_data: {}
       properties:
         name:
           example: Example Clinic
@@ -14539,31 +14523,6 @@ components:
           example: meta_uuid 1234
           title: Meta Uuid
           type: string
-        catalog_data:
-          default: {}
-          example: {}
-          title: Catalog Data
-          type: object
-        review_group_data:
-          default: {}
-          example: {}
-          title: Review Group Data
-          type: object
-        schedule_data:
-          default: {}
-          example: {}
-          title: Schedule Data
-          type: object
-        collection_data:
-          default: {}
-          example: {}
-          title: Collection Data
-          type: object
-        blog_data:
-          default: {}
-          example: {}
-          title: Blog Data
-          type: object
         tags:
           example: []
           items:

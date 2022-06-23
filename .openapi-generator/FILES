@@ -33,6 +33,7 @@ docs/CompanyBase.md
 docs/CompanyResponse.md
 docs/Contact.md
 docs/ContactBase.md
+docs/ContactMethod.md
 docs/ContactResponse.md
 docs/CreateKeyResponse.md
 docs/CreateReview.md
@@ -209,6 +210,7 @@ src/main/java/org/openapitools/client/model/CompanyBase.java
 src/main/java/org/openapitools/client/model/CompanyResponse.java
 src/main/java/org/openapitools/client/model/Contact.java
 src/main/java/org/openapitools/client/model/ContactBase.java
+src/main/java/org/openapitools/client/model/ContactMethod.java
 src/main/java/org/openapitools/client/model/ContactResponse.java
 src/main/java/org/openapitools/client/model/CreateKeyResponse.java
 src/main/java/org/openapitools/client/model/CreateReview.java
@@ -345,6 +347,7 @@ src/test/java/org/openapitools/client/model/CompanyBaseTest.java
 src/test/java/org/openapitools/client/model/CompanyResponseTest.java
 src/test/java/org/openapitools/client/model/CompanyTest.java
 src/test/java/org/openapitools/client/model/ContactBaseTest.java
+src/test/java/org/openapitools/client/model/ContactMethodTest.java
 src/test/java/org/openapitools/client/model/ContactResponseTest.java
 src/test/java/org/openapitools/client/model/ContactTest.java
 src/test/java/org/openapitools/client/model/CreateKeyResponseTest.java

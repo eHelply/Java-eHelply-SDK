@@ -13,7 +13,7 @@ on:
 
 jobs:
   build:
-    name: Build eHelply SDK - 1.1.89
+    name: Build eHelply SDK - 1.1.83
     runs-on: ubuntu-latest
     strategy:
       matrix:

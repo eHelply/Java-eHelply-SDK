@@ -45,53 +45,22 @@ import java.util.Set;
 import org.openapitools.client.JSON;
 
 /**
- * CatalogBase
+ * ContactMethod
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-23T00:21:58.664423Z[Etc/UTC]")
-public class CatalogBase {
-  public static final String SERIALIZED_NAME_META_DATA = "meta_data";
-  @SerializedName(SERIALIZED_NAME_META_DATA)
-  private Object metaData;
-
+public class ContactMethod {
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
-  private String name;
+  private String name = "";
 
-  public static final String SERIALIZED_NAME_FEATURED = "featured";
-  @SerializedName(SERIALIZED_NAME_FEATURED)
-  private Object featured;
+  public static final String SERIALIZED_NAME_VALUE = "value";
+  @SerializedName(SERIALIZED_NAME_VALUE)
+  private String value = "";
 
-  public static final String SERIALIZED_NAME_SUB_CATALOGS = "sub_catalogs";
-  @SerializedName(SERIALIZED_NAME_SUB_CATALOGS)
-  private Object subCatalogs;
-
-  public CatalogBase() { 
+  public ContactMethod() { 
   }
 
-  public CatalogBase metaData(Object metaData) {
-    
-    this.metaData = metaData;
-    return this;
-  }
-
-   /**
-   * Get metaData
-   * @return metaData
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(example = "{}", value = "")
-
-  public Object getMetaData() {
-    return metaData;
-  }
-
-
-  public void setMetaData(Object metaData) {
-    this.metaData = metaData;
-  }
-
-
-  public CatalogBase name(String name) {
+  public ContactMethod name(String name) {
     
     this.name = name;
     return this;
@@ -102,7 +71,7 @@ public class CatalogBase {
    * @return name
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "Product Name", value = "")
+  @ApiModelProperty(example = "Primary Number", value = "")
 
   public String getName() {
     return name;
@@ -114,49 +83,26 @@ public class CatalogBase {
   }
 
 
-  public CatalogBase featured(Object featured) {
+  public ContactMethod value(String value) {
     
-    this.featured = featured;
+    this.value = value;
     return this;
   }
 
    /**
-   * Get featured
-   * @return featured
+   * Get value
+   * @return value
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "{\"Special Feature\":\"Plants\"}", value = "")
+  @ApiModelProperty(example = "123-456-7890", value = "")
 
-  public Object getFeatured() {
-    return featured;
+  public String getValue() {
+    return value;
   }
 
 
-  public void setFeatured(Object featured) {
-    this.featured = featured;
-  }
-
-
-  public CatalogBase subCatalogs(Object subCatalogs) {
-    
-    this.subCatalogs = subCatalogs;
-    return this;
-  }
-
-   /**
-   * Get subCatalogs
-   * @return subCatalogs
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(example = "{\"Summer Catalog\":[]}", value = "")
-
-  public Object getSubCatalogs() {
-    return subCatalogs;
-  }
-
-
-  public void setSubCatalogs(Object subCatalogs) {
-    this.subCatalogs = subCatalogs;
+  public void setValue(String value) {
+    this.value = value;
   }
 
 
@@ -169,26 +115,22 @@ public class CatalogBase {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    CatalogBase catalogBase = (CatalogBase) o;
-    return Objects.equals(this.metaData, catalogBase.metaData) &&
-        Objects.equals(this.name, catalogBase.name) &&
-        Objects.equals(this.featured, catalogBase.featured) &&
-        Objects.equals(this.subCatalogs, catalogBase.subCatalogs);
+    ContactMethod contactMethod = (ContactMethod) o;
+    return Objects.equals(this.name, contactMethod.name) &&
+        Objects.equals(this.value, contactMethod.value);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(metaData, name, featured, subCatalogs);
+    return Objects.hash(name, value);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class CatalogBase {\n");
-    sb.append("    metaData: ").append(toIndentedString(metaData)).append("\n");
+    sb.append("class ContactMethod {\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
-    sb.append("    featured: ").append(toIndentedString(featured)).append("\n");
-    sb.append("    subCatalogs: ").append(toIndentedString(subCatalogs)).append("\n");
+    sb.append("    value: ").append(toIndentedString(value)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -211,10 +153,8 @@ public class CatalogBase {
   static {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
-    openapiFields.add("meta_data");
     openapiFields.add("name");
-    openapiFields.add("featured");
-    openapiFields.add("sub_catalogs");
+    openapiFields.add("value");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
@@ -224,26 +164,29 @@ public class CatalogBase {
   * Validates the JSON Object and throws an exception if issues found
   *
   * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to CatalogBase
+  * @throws IOException if the JSON Object is invalid with respect to ContactMethod
   */
   public static void validateJsonObject(JsonObject jsonObj) throws IOException {
       if (jsonObj == null) {
-        if (CatalogBase.openapiRequiredFields.isEmpty()) {
+        if (ContactMethod.openapiRequiredFields.isEmpty()) {
           return;
         } else { // has required fields
-          throw new IllegalArgumentException(String.format("The required field(s) %s in CatalogBase is not found in the empty JSON string", CatalogBase.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format("The required field(s) %s in ContactMethod is not found in the empty JSON string", ContactMethod.openapiRequiredFields.toString()));
         }
       }
 
       Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
       // check to see if the JSON string contains additional fields
       for (Entry<String, JsonElement> entry : entries) {
-        if (!CatalogBase.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `CatalogBase` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
+        if (!ContactMethod.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `ContactMethod` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
         }
       }
       if (jsonObj.get("name") != null && !jsonObj.get("name").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
+      }
+      if (jsonObj.get("value") != null && !jsonObj.get("value").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `value` to be a primitive type in the JSON string but got `%s`", jsonObj.get("value").toString()));
       }
   }
 
@@ -251,22 +194,22 @@ public class CatalogBase {
     @SuppressWarnings("unchecked")
     @Override
     public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!CatalogBase.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'CatalogBase' and its subtypes
+       if (!ContactMethod.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'ContactMethod' and its subtypes
        }
        final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<CatalogBase> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(CatalogBase.class));
+       final TypeAdapter<ContactMethod> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(ContactMethod.class));
 
-       return (TypeAdapter<T>) new TypeAdapter<CatalogBase>() {
+       return (TypeAdapter<T>) new TypeAdapter<ContactMethod>() {
            @Override
-           public void write(JsonWriter out, CatalogBase value) throws IOException {
+           public void write(JsonWriter out, ContactMethod value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
              elementAdapter.write(out, obj);
            }
 
            @Override
-           public CatalogBase read(JsonReader in) throws IOException {
+           public ContactMethod read(JsonReader in) throws IOException {
              JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
              validateJsonObject(jsonObj);
              return thisAdapter.fromJsonTree(jsonObj);
@@ -277,18 +220,18 @@ public class CatalogBase {
   }
 
  /**
-  * Create an instance of CatalogBase given an JSON string
+  * Create an instance of ContactMethod given an JSON string
   *
   * @param jsonString JSON string
-  * @return An instance of CatalogBase
-  * @throws IOException if the JSON string is invalid with respect to CatalogBase
+  * @return An instance of ContactMethod
+  * @throws IOException if the JSON string is invalid with respect to ContactMethod
   */
-  public static CatalogBase fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, CatalogBase.class);
+  public static ContactMethod fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, ContactMethod.class);
   }
 
  /**
-  * Convert an instance of CatalogBase to an JSON string
+  * Convert an instance of ContactMethod to an JSON string
   *
   * @return JSON string
   */

@@ -17,11 +17,6 @@
 |**uuid** | **String** |  |  |
 |**projectUuid** | **String** |  |  [optional] |
 |**metaUuid** | **String** |  |  [optional] |
-|**catalogData** | **Object** |  |  [optional] |
-|**reviewGroupData** | **Object** |  |  [optional] |
-|**scheduleData** | **Object** |  |  [optional] |
-|**collectionData** | **Object** |  |  [optional] |
-|**blogData** | **Object** |  |  [optional] |
 |**tags** | [**List&lt;TagBase&gt;**](TagBase.md) |  |  [optional] |
 |**categories** | [**List&lt;CategoryBase&gt;**](CategoryBase.md) |  |  [optional] |
 |**company** | [**Company**](Company.md) |  |  [optional] |

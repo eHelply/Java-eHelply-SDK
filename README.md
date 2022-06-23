@@ -1,8 +1,8 @@
 # ehelply-java-sdk
 
-eHelply SDK - 1.1.89
-- API version: 1.1.89
-  - Build date: 2022-06-13T19:19:46.796450Z[Etc/UTC]
+eHelply SDK - 1.1.83
+- API version: 1.1.83
+  - Build date: 2022-06-23T00:21:58.664423Z[Etc/UTC]
 
 eHelply SDK for SuperStack Services
 
@@ -41,7 +41,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>org.openapitools</groupId>
   <artifactId>ehelply-java-sdk</artifactId>
-  <version>1.1.89</version>
+  <version>1.1.83</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -57,7 +57,7 @@ Add this dependency to your project's build file:
   }
 
   dependencies {
-     implementation "org.openapitools:ehelply-java-sdk:1.1.89"
+     implementation "org.openapitools:ehelply-java-sdk:1.1.83"
   }
 ```
 
@@ -71,7 +71,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/ehelply-java-sdk-1.1.89.jar`
+* `target/ehelply-java-sdk-1.1.83.jar`
 * `target/lib/*.jar`
 
 ## Getting Started
@@ -301,6 +301,7 @@ Class | Method | HTTP request | Description
  - [CompanyResponse](docs/CompanyResponse.md)
  - [Contact](docs/Contact.md)
  - [ContactBase](docs/ContactBase.md)
+ - [ContactMethod](docs/ContactMethod.md)
  - [ContactResponse](docs/ContactResponse.md)
  - [CreateKeyResponse](docs/CreateKeyResponse.md)
  - [CreateReview](docs/CreateReview.md)

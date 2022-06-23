@@ -26,57 +26,33 @@ import org.junit.jupiter.api.Test;
 
 
 /**
- * Model tests for LoggingDynamo
+ * Model tests for ContactMethod
  */
-public class LoggingDynamoTest {
-    private final LoggingDynamo model = new LoggingDynamo();
+public class ContactMethodTest {
+    private final ContactMethod model = new ContactMethod();
 
     /**
-     * Model tests for LoggingDynamo
+     * Model tests for ContactMethod
      */
     @Test
-    public void testLoggingDynamo() {
-        // TODO: test LoggingDynamo
+    public void testContactMethod() {
+        // TODO: test ContactMethod
     }
 
     /**
-     * Test the property 'service'
+     * Test the property 'name'
      */
     @Test
-    public void serviceTest() {
-        // TODO: test service
+    public void nameTest() {
+        // TODO: test name
     }
 
     /**
-     * Test the property 'time'
+     * Test the property 'value'
      */
     @Test
-    public void timeTest() {
-        // TODO: test time
-    }
-
-    /**
-     * Test the property 'log'
-     */
-    @Test
-    public void logTest() {
-        // TODO: test log
-    }
-
-    /**
-     * Test the property 'severity'
-     */
-    @Test
-    public void severityTest() {
-        // TODO: test severity
-    }
-
-    /**
-     * Test the property 'subject'
-     */
-    @Test
-    public void subjectTest() {
-        // TODO: test subject
+    public void valueTest() {
+        // TODO: test value
     }
 
 }
