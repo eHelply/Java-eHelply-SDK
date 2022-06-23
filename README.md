@@ -1,8 +1,8 @@
 # ehelply-java-sdk
 
-eHelply SDK - 1.1.82
-- API version: 1.1.82
-  - Build date: 2022-06-23T01:03:17.599283Z[Etc/UTC]
+eHelply SDK - 1.1.92
+- API version: 1.1.92
+  - Build date: 2022-06-23T02:28:45.317699Z[Etc/UTC]
 
 eHelply SDK for SuperStack Services
 
@@ -41,7 +41,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>com.ehelply</groupId>
   <artifactId>ehelply-java-sdk</artifactId>
-  <version>1.1.82</version>
+  <version>1.1.92</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -57,7 +57,7 @@ Add this dependency to your project's build file:
   }
 
   dependencies {
-     implementation "com.ehelply:ehelply-java-sdk:1.1.82"
+     implementation "com.ehelply:ehelply-java-sdk:1.1.92"
   }
 ```
 
@@ -71,7 +71,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/ehelply-java-sdk-1.1.82.jar`
+* `target/ehelply-java-sdk-1.1.92.jar`
 * `target/lib/*.jar`
 
 ## Getting Started
@@ -314,7 +314,10 @@ Class | Method | HTTP request | Description
  - [Email](docs/Email.md)
  - [Field](docs/Field.md)
  - [FieldDynamo](docs/FieldDynamo.md)
- - [GetAppointment403Response](docs/GetAppointment403Response.md)
+ - [GetServiceServiceWithSpecsResponse](docs/GetServiceServiceWithSpecsResponse.md)
+ - [GetServiceSpecResponse](docs/GetServiceSpecResponse.md)
+ - [GetServiceSpecsResponse](docs/GetServiceSpecsResponse.md)
+ - [GetServicesWithSpecs403Response](docs/GetServicesWithSpecs403Response.md)
  - [HTTPValidationError](docs/HTTPValidationError.md)
  - [HeartbeatResponse](docs/HeartbeatResponse.md)
  - [KpiResponse](docs/KpiResponse.md)
@@ -360,9 +363,6 @@ Class | Method | HTTP request | Description
  - [ResponseDeletekey](docs/ResponseDeletekey.md)
  - [ResponseDeleteusagetype](docs/ResponseDeleteusagetype.md)
  - [ResponseGeneratetoken](docs/ResponseGeneratetoken.md)
- - [ResponseGetservicespec](docs/ResponseGetservicespec.md)
- - [ResponseGetservicespecs](docs/ResponseGetservicespecs.md)
- - [ResponseGetserviceswithspecs](docs/ResponseGetserviceswithspecs.md)
  - [ResponseRemovememberfromproject](docs/ResponseRemovememberfromproject.md)
  - [SecurityCreateToken](docs/SecurityCreateToken.md)
  - [SecurityEncryptionKeyGet](docs/SecurityEncryptionKeyGet.md)

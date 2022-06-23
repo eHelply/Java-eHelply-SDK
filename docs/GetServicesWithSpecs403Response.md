@@ -1,6 +1,6 @@
 
 
-# ResponseGetservicespec
+# GetServicesWithSpecs403Response
 
 
 ## Properties

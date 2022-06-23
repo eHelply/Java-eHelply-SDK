@@ -47,7 +47,10 @@ docs/DetailedMetaCreate.md
 docs/Email.md
 docs/Field.md
 docs/FieldDynamo.md
-docs/GetAppointment403Response.md
+docs/GetServiceServiceWithSpecsResponse.md
+docs/GetServiceSpecResponse.md
+docs/GetServiceSpecsResponse.md
+docs/GetServicesWithSpecs403Response.md
 docs/HTTPValidationError.md
 docs/HeartbeatResponse.md
 docs/KpiResponse.md
@@ -99,9 +102,6 @@ docs/ResponseCreatekey.md
 docs/ResponseDeletekey.md
 docs/ResponseDeleteusagetype.md
 docs/ResponseGeneratetoken.md
-docs/ResponseGetservicespec.md
-docs/ResponseGetservicespecs.md
-docs/ResponseGetserviceswithspecs.md
 docs/ResponseRemovememberfromproject.md
 docs/SecurityApi.md
 docs/SecurityCreateToken.md
@@ -223,7 +223,10 @@ src/main/java/com/ehelply/client/model/DetailedMetaCreate.java
 src/main/java/com/ehelply/client/model/Email.java
 src/main/java/com/ehelply/client/model/Field.java
 src/main/java/com/ehelply/client/model/FieldDynamo.java
-src/main/java/com/ehelply/client/model/GetAppointment403Response.java
+src/main/java/com/ehelply/client/model/GetServiceServiceWithSpecsResponse.java
+src/main/java/com/ehelply/client/model/GetServiceSpecResponse.java
+src/main/java/com/ehelply/client/model/GetServiceSpecsResponse.java
+src/main/java/com/ehelply/client/model/GetServicesWithSpecs403Response.java
 src/main/java/com/ehelply/client/model/HTTPValidationError.java
 src/main/java/com/ehelply/client/model/HeartbeatResponse.java
 src/main/java/com/ehelply/client/model/KpiResponse.java
@@ -269,9 +272,6 @@ src/main/java/com/ehelply/client/model/ResponseCreatekey.java
 src/main/java/com/ehelply/client/model/ResponseDeletekey.java
 src/main/java/com/ehelply/client/model/ResponseDeleteusagetype.java
 src/main/java/com/ehelply/client/model/ResponseGeneratetoken.java
-src/main/java/com/ehelply/client/model/ResponseGetservicespec.java
-src/main/java/com/ehelply/client/model/ResponseGetservicespecs.java
-src/main/java/com/ehelply/client/model/ResponseGetserviceswithspecs.java
 src/main/java/com/ehelply/client/model/ResponseRemovememberfromproject.java
 src/main/java/com/ehelply/client/model/SecurityCreateToken.java
 src/main/java/com/ehelply/client/model/SecurityEncryptionKeyGet.java
@@ -361,7 +361,10 @@ src/test/java/com/ehelply/client/model/DetailedTest.java
 src/test/java/com/ehelply/client/model/EmailTest.java
 src/test/java/com/ehelply/client/model/FieldDynamoTest.java
 src/test/java/com/ehelply/client/model/FieldTest.java
-src/test/java/com/ehelply/client/model/GetAppointment403ResponseTest.java
+src/test/java/com/ehelply/client/model/GetServiceServiceWithSpecsResponseTest.java
+src/test/java/com/ehelply/client/model/GetServiceSpecResponseTest.java
+src/test/java/com/ehelply/client/model/GetServiceSpecsResponseTest.java
+src/test/java/com/ehelply/client/model/GetServicesWithSpecs403ResponseTest.java
 src/test/java/com/ehelply/client/model/HTTPValidationErrorTest.java
 src/test/java/com/ehelply/client/model/HeartbeatResponseTest.java
 src/test/java/com/ehelply/client/model/KpiResponseTest.java
@@ -407,9 +410,6 @@ src/test/java/com/ehelply/client/model/ResponseCreatekeyTest.java
 src/test/java/com/ehelply/client/model/ResponseDeletekeyTest.java
 src/test/java/com/ehelply/client/model/ResponseDeleteusagetypeTest.java
 src/test/java/com/ehelply/client/model/ResponseGeneratetokenTest.java
-src/test/java/com/ehelply/client/model/ResponseGetservicespecTest.java
-src/test/java/com/ehelply/client/model/ResponseGetservicespecsTest.java
-src/test/java/com/ehelply/client/model/ResponseGetserviceswithspecsTest.java
 src/test/java/com/ehelply/client/model/ResponseRemovememberfromprojectTest.java
 src/test/java/com/ehelply/client/model/SecurityCreateTokenTest.java
 src/test/java/com/ehelply/client/model/SecurityEncryptionKeyGetTest.java

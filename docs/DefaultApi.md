@@ -1247,7 +1247,7 @@ No authorization required
 
 <a name="searchAppointment"></a>
 # **searchAppointment**
-> Object searchAppointment(placeUuid, excludeCancelled, isDeleted, startRange, endRange, page, pageSize, sortOn, sortDesc, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData)
+> Object searchAppointment(placeUuid, excludeCancelled, isDeleted, startRange, endRange, page, pageSize, sortOn, sortDesc, search, searchOn, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData)
 
 Search Appointment
 
@@ -1275,6 +1275,8 @@ public class Example {
     Integer pageSize = 25; // Integer | 
     String sortOn = "sortOn_example"; // String | 
     Boolean sortDesc = false; // Boolean | 
+    String search = "search_example"; // String | 
+    String searchOn = "searchOn_example"; // String | 
     String xAccessToken = "xAccessToken_example"; // String | 
     String xSecretToken = "xSecretToken_example"; // String | 
     String authorization = "authorization_example"; // String | 
@@ -1282,7 +1284,7 @@ public class Example {
     String ehelplyProject = "ehelplyProject_example"; // String | 
     String ehelplyData = "ehelplyData_example"; // String | 
     try {
-      Object result = apiInstance.searchAppointment(placeUuid, excludeCancelled, isDeleted, startRange, endRange, page, pageSize, sortOn, sortDesc, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
+      Object result = apiInstance.searchAppointment(placeUuid, excludeCancelled, isDeleted, startRange, endRange, page, pageSize, sortOn, sortDesc, search, searchOn, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling DefaultApi#searchAppointment");
@@ -1308,6 +1310,8 @@ public class Example {
 | **pageSize** | **Integer**|  | [optional] [default to 25] |
 | **sortOn** | **String**|  | [optional] |
 | **sortDesc** | **Boolean**|  | [optional] [default to false] |
+| **search** | **String**|  | [optional] |
+| **searchOn** | **String**|  | [optional] |
 | **xAccessToken** | **String**|  | [optional] |
 | **xSecretToken** | **String**|  | [optional] |
 | **authorization** | **String**|  | [optional] |
@@ -1591,7 +1595,7 @@ No authorization required
 
 <a name="searchEntityAppointments"></a>
 # **searchEntityAppointments**
-> Object searchEntityAppointments(entityUuid, startDate, endDate, excludeCancelled, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData)
+> Object searchEntityAppointments(entityUuid, startDate, endDate, includeCancelled, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData)
 
 Get Entities Appointments
 
@@ -1613,7 +1617,7 @@ public class Example {
     String entityUuid = "entityUuid_example"; // String | 
     String startDate = "startDate_example"; // String | 
     String endDate = "endDate_example"; // String | 
-    Boolean excludeCancelled = false; // Boolean | 
+    Boolean includeCancelled = false; // Boolean | 
     String xAccessToken = "xAccessToken_example"; // String | 
     String xSecretToken = "xSecretToken_example"; // String | 
     String authorization = "authorization_example"; // String | 
@@ -1621,7 +1625,7 @@ public class Example {
     String ehelplyProject = "ehelplyProject_example"; // String | 
     String ehelplyData = "ehelplyData_example"; // String | 
     try {
-      Object result = apiInstance.searchEntityAppointments(entityUuid, startDate, endDate, excludeCancelled, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
+      Object result = apiInstance.searchEntityAppointments(entityUuid, startDate, endDate, includeCancelled, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling DefaultApi#searchEntityAppointments");
@@ -1641,7 +1645,7 @@ public class Example {
 | **entityUuid** | **String**|  | |
 | **startDate** | **String**|  | [optional] |
 | **endDate** | **String**|  | [optional] |
-| **excludeCancelled** | **Boolean**|  | [optional] [default to false] |
+| **includeCancelled** | **Boolean**|  | [optional] [default to false] |
 | **xAccessToken** | **String**|  | [optional] |
 | **xSecretToken** | **String**|  | [optional] |
 | **authorization** | **String**|  | [optional] |

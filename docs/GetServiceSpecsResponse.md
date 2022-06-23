@@ -1,13 +1,13 @@
 
 
-# ResponseGetserviceswithspecs
+# GetServiceSpecsResponse
 
 
 ## Properties
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**message** | **String** |  |  [optional] |
+|**specs** | **List&lt;String&gt;** |  |  |
 
 
 

@@ -706,7 +706,7 @@ No authorization required
 
 <a name="getServiceSpec"></a>
 # **getServiceSpec**
-> ResponseGetservicespec getServiceSpec(service, spec, asJson)
+> GetServiceSpecResponse getServiceSpec(service, spec)
 
 Getservicespec
 
@@ -727,9 +727,8 @@ public class Example {
     MonitorApi apiInstance = new MonitorApi(defaultClient);
     String service = "service_example"; // String | 
     String spec = "spec_example"; // String | 
-    Boolean asJson = false; // Boolean | 
     try {
-      ResponseGetservicespec result = apiInstance.getServiceSpec(service, spec, asJson);
+      GetServiceSpecResponse result = apiInstance.getServiceSpec(service, spec);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling MonitorApi#getServiceSpec");
@@ -748,11 +747,10 @@ public class Example {
 |------------- | ------------- | ------------- | -------------|
 | **service** | **String**|  | |
 | **spec** | **String**|  | |
-| **asJson** | **Boolean**|  | [optional] [default to false] |
 
 ### Return type
 
-[**ResponseGetservicespec**](ResponseGetservicespec.md)
+[**GetServiceSpecResponse**](GetServiceSpecResponse.md)
 
 ### Authorization
 
@@ -773,7 +771,7 @@ No authorization required
 
 <a name="getServiceSpecs"></a>
 # **getServiceSpecs**
-> ResponseGetservicespecs getServiceSpecs(service)
+> GetServiceSpecsResponse getServiceSpecs(service)
 
 Getservicespecs
 
@@ -794,7 +792,7 @@ public class Example {
     MonitorApi apiInstance = new MonitorApi(defaultClient);
     String service = "service_example"; // String | 
     try {
-      ResponseGetservicespecs result = apiInstance.getServiceSpecs(service);
+      GetServiceSpecsResponse result = apiInstance.getServiceSpecs(service);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling MonitorApi#getServiceSpecs");
@@ -815,7 +813,7 @@ public class Example {
 
 ### Return type
 
-[**ResponseGetservicespecs**](ResponseGetservicespecs.md)
+[**GetServiceSpecsResponse**](GetServiceSpecsResponse.md)
 
 ### Authorization
 
@@ -976,7 +974,7 @@ No authorization required
 
 <a name="getServicesWithSpecs"></a>
 # **getServicesWithSpecs**
-> ResponseGetserviceswithspecs getServicesWithSpecs()
+> GetServiceServiceWithSpecsResponse getServicesWithSpecs()
 
 Getserviceswithspecs
 
@@ -996,7 +994,7 @@ public class Example {
 
     MonitorApi apiInstance = new MonitorApi(defaultClient);
     try {
-      ResponseGetserviceswithspecs result = apiInstance.getServicesWithSpecs();
+      GetServiceServiceWithSpecsResponse result = apiInstance.getServicesWithSpecs();
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling MonitorApi#getServicesWithSpecs");
@@ -1014,7 +1012,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ResponseGetserviceswithspecs**](ResponseGetserviceswithspecs.md)
+[**GetServiceServiceWithSpecsResponse**](GetServiceServiceWithSpecsResponse.md)
 
 ### Authorization
 
