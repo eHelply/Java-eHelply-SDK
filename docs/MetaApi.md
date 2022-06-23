@@ -28,11 +28,11 @@ Create Field
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.MetaApi;
+import com.ehelply.client.ApiClient;
+import com.ehelply.client.ApiException;
+import com.ehelply.client.Configuration;
+import com.ehelply.client.models.*;
+import com.ehelply.client.api.MetaApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -102,11 +102,11 @@ Create Meta
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.MetaApi;
+import com.ehelply.client.ApiClient;
+import com.ehelply.client.ApiException;
+import com.ehelply.client.Configuration;
+import com.ehelply.client.models.*;
+import com.ehelply.client.api.MetaApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -182,11 +182,11 @@ Delete Field
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.MetaApi;
+import com.ehelply.client.ApiClient;
+import com.ehelply.client.ApiException;
+import com.ehelply.client.Configuration;
+import com.ehelply.client.models.*;
+import com.ehelply.client.api.MetaApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -258,11 +258,11 @@ Delete Meta
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.MetaApi;
+import com.ehelply.client.ApiClient;
+import com.ehelply.client.ApiException;
+import com.ehelply.client.Configuration;
+import com.ehelply.client.models.*;
+import com.ehelply.client.api.MetaApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -336,11 +336,11 @@ Delete Meta From Uuid
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.MetaApi;
+import com.ehelply.client.ApiClient;
+import com.ehelply.client.ApiException;
+import com.ehelply.client.Configuration;
+import com.ehelply.client.models.*;
+import com.ehelply.client.api.MetaApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -410,11 +410,11 @@ Get Field
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.MetaApi;
+import com.ehelply.client.ApiClient;
+import com.ehelply.client.ApiException;
+import com.ehelply.client.Configuration;
+import com.ehelply.client.models.*;
+import com.ehelply.client.api.MetaApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -484,11 +484,11 @@ Get Meta
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.MetaApi;
+import com.ehelply.client.ApiClient;
+import com.ehelply.client.ApiException;
+import com.ehelply.client.Configuration;
+import com.ehelply.client.models.*;
+import com.ehelply.client.api.MetaApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -570,11 +570,11 @@ Get Meta From Uuid
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.MetaApi;
+import com.ehelply.client.ApiClient;
+import com.ehelply.client.ApiException;
+import com.ehelply.client.Configuration;
+import com.ehelply.client.models.*;
+import com.ehelply.client.api.MetaApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -652,11 +652,11 @@ Make Slug
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.MetaApi;
+import com.ehelply.client.ApiClient;
+import com.ehelply.client.ApiException;
+import com.ehelply.client.Configuration;
+import com.ehelply.client.models.*;
+import com.ehelply.client.api.MetaApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -714,11 +714,11 @@ Touch Meta
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.MetaApi;
+import com.ehelply.client.ApiClient;
+import com.ehelply.client.ApiException;
+import com.ehelply.client.Configuration;
+import com.ehelply.client.models.*;
+import com.ehelply.client.api.MetaApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -792,11 +792,11 @@ Update Field
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.MetaApi;
+import com.ehelply.client.ApiClient;
+import com.ehelply.client.ApiException;
+import com.ehelply.client.Configuration;
+import com.ehelply.client.models.*;
+import com.ehelply.client.api.MetaApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -868,11 +868,11 @@ Update Meta
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.MetaApi;
+import com.ehelply.client.ApiClient;
+import com.ehelply.client.ApiException;
+import com.ehelply.client.Configuration;
+import com.ehelply.client.models.*;
+import com.ehelply.client.api.MetaApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -948,11 +948,11 @@ Update Meta From Uuid
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.MetaApi;
+import com.ehelply.client.ApiClient;
+import com.ehelply.client.ApiException;
+import com.ehelply.client.Configuration;
+import com.ehelply.client.models.*;
+import com.ehelply.client.api.MetaApi;
 
 public class Example {
   public static void main(String[] args) {

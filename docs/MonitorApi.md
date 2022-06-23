@@ -37,11 +37,11 @@ Acknowledgealarm
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.MonitorApi;
+import com.ehelply.client.ApiClient;
+import com.ehelply.client.ApiException;
+import com.ehelply.client.Configuration;
+import com.ehelply.client.models.*;
+import com.ehelply.client.api.MonitorApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -105,11 +105,11 @@ Assignalarm
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.MonitorApi;
+import com.ehelply.client.ApiClient;
+import com.ehelply.client.ApiException;
+import com.ehelply.client.Configuration;
+import com.ehelply.client.models.*;
+import com.ehelply.client.api.MonitorApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -173,11 +173,11 @@ Attachalarmnote
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.MonitorApi;
+import com.ehelply.client.ApiClient;
+import com.ehelply.client.ApiException;
+import com.ehelply.client.Configuration;
+import com.ehelply.client.models.*;
+import com.ehelply.client.api.MonitorApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -241,11 +241,11 @@ Attachalarmticket
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.MonitorApi;
+import com.ehelply.client.ApiClient;
+import com.ehelply.client.ApiException;
+import com.ehelply.client.Configuration;
+import com.ehelply.client.models.*;
+import com.ehelply.client.api.MonitorApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -309,11 +309,11 @@ Clearalarm
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.MonitorApi;
+import com.ehelply.client.ApiClient;
+import com.ehelply.client.ApiException;
+import com.ehelply.client.Configuration;
+import com.ehelply.client.models.*;
+import com.ehelply.client.api.MonitorApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -375,11 +375,11 @@ Getservice
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.MonitorApi;
+import com.ehelply.client.ApiClient;
+import com.ehelply.client.ApiException;
+import com.ehelply.client.Configuration;
+import com.ehelply.client.models.*;
+import com.ehelply.client.api.MonitorApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -447,11 +447,11 @@ Getservicealarm
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.MonitorApi;
+import com.ehelply.client.ApiClient;
+import com.ehelply.client.ApiException;
+import com.ehelply.client.Configuration;
+import com.ehelply.client.models.*;
+import com.ehelply.client.api.MonitorApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -513,11 +513,11 @@ Getservicealarms
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.MonitorApi;
+import com.ehelply.client.ApiClient;
+import com.ehelply.client.ApiException;
+import com.ehelply.client.Configuration;
+import com.ehelply.client.models.*;
+import com.ehelply.client.api.MonitorApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -583,11 +583,11 @@ Getserviceheartbeat
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.MonitorApi;
+import com.ehelply.client.ApiClient;
+import com.ehelply.client.ApiException;
+import com.ehelply.client.Configuration;
+import com.ehelply.client.models.*;
+import com.ehelply.client.api.MonitorApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -649,11 +649,11 @@ Getservicekpis
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.MonitorApi;
+import com.ehelply.client.ApiClient;
+import com.ehelply.client.ApiException;
+import com.ehelply.client.Configuration;
+import com.ehelply.client.models.*;
+import com.ehelply.client.api.MonitorApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -713,11 +713,11 @@ Getservicespec
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.MonitorApi;
+import com.ehelply.client.ApiClient;
+import com.ehelply.client.ApiException;
+import com.ehelply.client.Configuration;
+import com.ehelply.client.models.*;
+import com.ehelply.client.api.MonitorApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -780,11 +780,11 @@ Getservicespecs
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.MonitorApi;
+import com.ehelply.client.ApiClient;
+import com.ehelply.client.ApiException;
+import com.ehelply.client.Configuration;
+import com.ehelply.client.models.*;
+import com.ehelply.client.api.MonitorApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -843,11 +843,11 @@ Getservicevitals
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.MonitorApi;
+import com.ehelply.client.ApiClient;
+import com.ehelply.client.ApiException;
+import com.ehelply.client.Configuration;
+import com.ehelply.client.models.*;
+import com.ehelply.client.api.MonitorApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -909,11 +909,11 @@ Getservices
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.MonitorApi;
+import com.ehelply.client.ApiClient;
+import com.ehelply.client.ApiException;
+import com.ehelply.client.Configuration;
+import com.ehelply.client.models.*;
+import com.ehelply.client.api.MonitorApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -983,11 +983,11 @@ Getserviceswithspecs
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.MonitorApi;
+import com.ehelply.client.ApiClient;
+import com.ehelply.client.ApiException;
+import com.ehelply.client.Configuration;
+import com.ehelply.client.models.*;
+import com.ehelply.client.api.MonitorApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1041,11 +1041,11 @@ Hideservice
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.MonitorApi;
+import com.ehelply.client.ApiClient;
+import com.ehelply.client.ApiException;
+import com.ehelply.client.Configuration;
+import com.ehelply.client.models.*;
+import com.ehelply.client.api.MonitorApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1105,11 +1105,11 @@ Ignorealarm
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.MonitorApi;
+import com.ehelply.client.ApiClient;
+import com.ehelply.client.ApiException;
+import com.ehelply.client.Configuration;
+import com.ehelply.client.models.*;
+import com.ehelply.client.api.MonitorApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1173,11 +1173,11 @@ Registerservice
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.MonitorApi;
+import com.ehelply.client.ApiClient;
+import com.ehelply.client.ApiException;
+import com.ehelply.client.Configuration;
+import com.ehelply.client.models.*;
+import com.ehelply.client.api.MonitorApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1235,11 +1235,11 @@ Searchalarms
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.MonitorApi;
+import com.ehelply.client.ApiClient;
+import com.ehelply.client.ApiException;
+import com.ehelply.client.Configuration;
+import com.ehelply.client.models.*;
+import com.ehelply.client.api.MonitorApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1309,11 +1309,11 @@ Showservice
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.MonitorApi;
+import com.ehelply.client.ApiClient;
+import com.ehelply.client.ApiException;
+import com.ehelply.client.Configuration;
+import com.ehelply.client.models.*;
+import com.ehelply.client.api.MonitorApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1373,11 +1373,11 @@ Terminatealarm
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.MonitorApi;
+import com.ehelply.client.ApiClient;
+import com.ehelply.client.ApiException;
+import com.ehelply.client.Configuration;
+import com.ehelply.client.models.*;
+import com.ehelply.client.api.MonitorApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1441,11 +1441,11 @@ Triggeralarm
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.MonitorApi;
+import com.ehelply.client.ApiClient;
+import com.ehelply.client.ApiException;
+import com.ehelply.client.Configuration;
+import com.ehelply.client.models.*;
+import com.ehelply.client.api.MonitorApi;
 
 public class Example {
   public static void main(String[] args) {

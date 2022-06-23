@@ -22,11 +22,11 @@ Creates a category
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.CategoryApi;
+import com.ehelply.client.ApiClient;
+import com.ehelply.client.ApiException;
+import com.ehelply.client.Configuration;
+import com.ehelply.client.models.*;
+import com.ehelply.client.api.CategoryApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -98,11 +98,11 @@ Deletes the category with the given ID and returns True if successful
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.CategoryApi;
+import com.ehelply.client.ApiClient;
+import com.ehelply.client.ApiException;
+import com.ehelply.client.Configuration;
+import com.ehelply.client.models.*;
+import com.ehelply.client.api.CategoryApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -174,11 +174,11 @@ Gets the category information given the category ID
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.CategoryApi;
+import com.ehelply.client.ApiClient;
+import com.ehelply.client.ApiException;
+import com.ehelply.client.Configuration;
+import com.ehelply.client.models.*;
+import com.ehelply.client.api.CategoryApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -252,11 +252,11 @@ TODO Item return format: &#x60;&#x60;&#x60; {     uuid                          
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.CategoryApi;
+import com.ehelply.client.ApiClient;
+import com.ehelply.client.ApiException;
+import com.ehelply.client.Configuration;
+import com.ehelply.client.models.*;
+import com.ehelply.client.api.CategoryApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -340,11 +340,11 @@ Update category with given info, only updating the fields supplied. Category Uui
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.CategoryApi;
+import com.ehelply.client.ApiClient;
+import com.ehelply.client.ApiException;
+import com.ehelply.client.Configuration;
+import com.ehelply.client.models.*;
+import com.ehelply.client.api.CategoryApi;
 
 public class Example {
   public static void main(String[] args) {

@@ -1,8 +1,8 @@
 # ehelply-java-sdk
 
-eHelply SDK - 1.1.81
-- API version: 1.1.81
-  - Build date: 2022-06-23T00:51:45.571201Z[Etc/UTC]
+eHelply SDK - 1.1.82
+- API version: 1.1.82
+  - Build date: 2022-06-23T01:03:17.599283Z[Etc/UTC]
 
 eHelply SDK for SuperStack Services
 
@@ -39,9 +39,9 @@ Add this dependency to your project's POM:
 
 ```xml
 <dependency>
-  <groupId>org.openapitools</groupId>
+  <groupId>com.ehelply</groupId>
   <artifactId>ehelply-java-sdk</artifactId>
-  <version>1.1.81</version>
+  <version>1.1.82</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -57,7 +57,7 @@ Add this dependency to your project's build file:
   }
 
   dependencies {
-     implementation "org.openapitools:ehelply-java-sdk:1.1.81"
+     implementation "com.ehelply:ehelply-java-sdk:1.1.82"
   }
 ```
 
@@ -71,7 +71,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/ehelply-java-sdk-1.1.81.jar`
+* `target/ehelply-java-sdk-1.1.82.jar`
 * `target/lib/*.jar`
 
 ## Getting Started
@@ -81,11 +81,11 @@ Please follow the [installation](#installation) instruction and execute the foll
 ```java
 
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.BillingApi;
+import com.ehelply.client.ApiClient;
+import com.ehelply.client.ApiException;
+import com.ehelply.client.Configuration;
+import com.ehelply.client.models.*;
+import com.ehelply.client.api.BillingApi;
 
 public class Example {
   public static void main(String[] args) {

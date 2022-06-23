@@ -1,11 +1,11 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>org.openapitools</groupId>
+    <groupId>com.ehelply</groupId>
     <artifactId>ehelply-java-sdk</artifactId>
     <packaging>jar</packaging>
     <name>ehelply-java-sdk</name>
-    <version>1.1.81</version>
+    <version>1.1.82</version>
     <url>https://github.com/eHelply/Java-eHelply-SDK</url>
     <description>OpenAPI Java</description>
     <scm>
@@ -24,10 +24,10 @@
 
     <developers>
         <developer>
-            <name>OpenAPI-Generator Contributors</name>
-            <email>team@openapitools.org</email>
-            <organization>OpenAPITools.org</organization>
-            <organizationUrl>http://openapitools.org</organizationUrl>
+            <name>eHelply</name>
+            <email>support@ehelply.com</email>
+            <organization>eHelply.com</organization>
+            <organizationUrl>https://ehelply.com</organizationUrl>
         </developer>
     </developers>
 

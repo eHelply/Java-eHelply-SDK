@@ -1,8 +1,8 @@
 lazy val root = (project in file(".")).
   settings(
-    organization := "org.openapitools",
+    organization := "com.ehelply",
     name := "ehelply-java-sdk",
-    version := "1.1.81",
+    version := "1.1.82",
     scalaVersion := "2.11.4",
     scalacOptions ++= Seq("-feature"),
     javacOptions in compile ++= Seq("-Xlint:deprecation"),
