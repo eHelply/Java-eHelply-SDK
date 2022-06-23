@@ -9,8 +9,8 @@ info:
     name: Apache 2.0
     url: https://www.apache.org/licenses/LICENSE-2.0.html
   termsOfService: https://superstack.ehelply.com/support/legal/terms
-  title: eHelply SDK - 1.1.82
-  version: 1.1.82
+  title: eHelply SDK - 1.1.83
+  version: 1.1.83
 servers:
 - description: eHelply / SuperStack Production
   url: https://api.prod.ehelply.com
@@ -8733,7 +8733,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Response_Getserviceswithspecs'
+                $ref: '#/components/schemas/GetServiceServiceWithSpecsResponse'
           description: Successful Response
         "403":
           content:
@@ -8764,7 +8764,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Response_Getservicespecs'
+                $ref: '#/components/schemas/GetServiceSpecsResponse'
           description: Successful Response
         "403":
           content:
@@ -8804,21 +8804,12 @@ paths:
           title: Spec
           type: string
         style: simple
-      - explode: true
-        in: query
-        name: as_json
-        required: false
-        schema:
-          default: false
-          title: As Json
-          type: boolean
-        style: form
       responses:
         "200":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Response_Getservicespec'
+                $ref: '#/components/schemas/GetServiceSpecResponse'
           description: Successful Response
         "403":
           content:
@@ -15397,6 +15388,47 @@ components:
       - subject
       title: CreateTicket
       type: object
+    GetServiceServiceWithSpecsResponse:
+      example:
+        services:
+        - services
+        - services
+      properties:
+        services:
+          items:
+            type: string
+          title: Services
+          type: array
+      required:
+      - services
+      title: GetServiceServiceWithSpecsResponse
+      type: object
+    GetServiceSpecResponse:
+      example:
+        content: content
+      properties:
+        content:
+          title: Content
+          type: string
+      required:
+      - content
+      title: GetServiceSpecResponse
+      type: object
+    GetServiceSpecsResponse:
+      example:
+        specs:
+        - specs
+        - specs
+      properties:
+        specs:
+          items:
+            type: string
+          title: Specs
+          type: array
+      required:
+      - specs
+      title: GetServiceSpecsResponse
+      type: object
     HeartbeatResponse:
       example:
         process: process
@@ -16893,37 +16925,6 @@ components:
       properties:
         message:
           type: string
-      type: object
-    Response_Getserviceswithspecs:
-      example:
-        message:
-          services:
-          - service 1
-          - service 2
-      properties:
-        message:
-          type: string
-      title: Response Getserviceswithspecs
-      type: object
-    Response_Getservicespecs:
-      example:
-        message:
-          specs:
-          - spec 1
-          - spec 2
-      properties:
-        message:
-          type: string
-      title: Response Getservicespecs
-      type: object
-    Response_Getservicespec:
-      example:
-        message:
-          contents: spec content
-      properties:
-        message:
-          type: string
-      title: Response Getservicespec
       type: object
     Response_Archiveproject:
       example:

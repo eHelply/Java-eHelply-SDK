@@ -15,7 +15,6 @@ package com.ehelply.client.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.ehelply.client.model.ValidationError;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -48,45 +47,42 @@ import java.util.Set;
 import com.ehelply.client.JSON;
 
 /**
- * HTTPValidationError
+ * GetServiceServiceWithSpecsResponse
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-23T02:34:59.482234Z[Etc/UTC]")
-public class HTTPValidationError {
-  public static final String SERIALIZED_NAME_DETAIL = "detail";
-  @SerializedName(SERIALIZED_NAME_DETAIL)
-  private List<ValidationError> detail = null;
+public class GetServiceServiceWithSpecsResponse {
+  public static final String SERIALIZED_NAME_SERVICES = "services";
+  @SerializedName(SERIALIZED_NAME_SERVICES)
+  private List<String> services = new ArrayList<>();
 
-  public HTTPValidationError() { 
+  public GetServiceServiceWithSpecsResponse() { 
   }
 
-  public HTTPValidationError detail(List<ValidationError> detail) {
+  public GetServiceServiceWithSpecsResponse services(List<String> services) {
     
-    this.detail = detail;
+    this.services = services;
     return this;
   }
 
-  public HTTPValidationError addDetailItem(ValidationError detailItem) {
-    if (this.detail == null) {
-      this.detail = new ArrayList<>();
-    }
-    this.detail.add(detailItem);
+  public GetServiceServiceWithSpecsResponse addServicesItem(String servicesItem) {
+    this.services.add(servicesItem);
     return this;
   }
 
    /**
-   * Get detail
-   * @return detail
+   * Get services
+   * @return services
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "")
 
-  public List<ValidationError> getDetail() {
-    return detail;
+  public List<String> getServices() {
+    return services;
   }
 
 
-  public void setDetail(List<ValidationError> detail) {
-    this.detail = detail;
+  public void setServices(List<String> services) {
+    this.services = services;
   }
 
 
@@ -99,20 +95,20 @@ public class HTTPValidationError {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    HTTPValidationError htTPValidationError = (HTTPValidationError) o;
-    return Objects.equals(this.detail, htTPValidationError.detail);
+    GetServiceServiceWithSpecsResponse getServiceServiceWithSpecsResponse = (GetServiceServiceWithSpecsResponse) o;
+    return Objects.equals(this.services, getServiceServiceWithSpecsResponse.services);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(detail);
+    return Objects.hash(services);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class HTTPValidationError {\n");
-    sb.append("    detail: ").append(toIndentedString(detail)).append("\n");
+    sb.append("class GetServiceServiceWithSpecsResponse {\n");
+    sb.append("    services: ").append(toIndentedString(services)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -135,45 +131,45 @@ public class HTTPValidationError {
   static {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
-    openapiFields.add("detail");
+    openapiFields.add("services");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields.add("services");
   }
 
  /**
   * Validates the JSON Object and throws an exception if issues found
   *
   * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to HTTPValidationError
+  * @throws IOException if the JSON Object is invalid with respect to GetServiceServiceWithSpecsResponse
   */
   public static void validateJsonObject(JsonObject jsonObj) throws IOException {
       if (jsonObj == null) {
-        if (HTTPValidationError.openapiRequiredFields.isEmpty()) {
+        if (GetServiceServiceWithSpecsResponse.openapiRequiredFields.isEmpty()) {
           return;
         } else { // has required fields
-          throw new IllegalArgumentException(String.format("The required field(s) %s in HTTPValidationError is not found in the empty JSON string", HTTPValidationError.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format("The required field(s) %s in GetServiceServiceWithSpecsResponse is not found in the empty JSON string", GetServiceServiceWithSpecsResponse.openapiRequiredFields.toString()));
         }
       }
 
       Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
       // check to see if the JSON string contains additional fields
       for (Entry<String, JsonElement> entry : entries) {
-        if (!HTTPValidationError.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `HTTPValidationError` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
+        if (!GetServiceServiceWithSpecsResponse.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `GetServiceServiceWithSpecsResponse` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
         }
       }
-      JsonArray jsonArraydetail = jsonObj.getAsJsonArray("detail");
-      if (jsonArraydetail != null) {
-        // ensure the json data is an array
-        if (!jsonObj.get("detail").isJsonArray()) {
-          throw new IllegalArgumentException(String.format("Expected the field `detail` to be an array in the JSON string but got `%s`", jsonObj.get("detail").toString()));
-        }
 
-        // validate the optional field `detail` (array)
-        for (int i = 0; i < jsonArraydetail.size(); i++) {
-          ValidationError.validateJsonObject(jsonArraydetail.get(i).getAsJsonObject());
-        };
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : GetServiceServiceWithSpecsResponse.openapiRequiredFields) {
+        if (jsonObj.get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
+        }
+      }
+      // ensure the json data is an array
+      if (jsonObj.get("services") != null && !jsonObj.get("services").isJsonArray()) {
+        throw new IllegalArgumentException(String.format("Expected the field `services` to be an array in the JSON string but got `%s`", jsonObj.get("services").toString()));
       }
   }
 
@@ -181,22 +177,22 @@ public class HTTPValidationError {
     @SuppressWarnings("unchecked")
     @Override
     public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!HTTPValidationError.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'HTTPValidationError' and its subtypes
+       if (!GetServiceServiceWithSpecsResponse.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'GetServiceServiceWithSpecsResponse' and its subtypes
        }
        final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<HTTPValidationError> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(HTTPValidationError.class));
+       final TypeAdapter<GetServiceServiceWithSpecsResponse> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(GetServiceServiceWithSpecsResponse.class));
 
-       return (TypeAdapter<T>) new TypeAdapter<HTTPValidationError>() {
+       return (TypeAdapter<T>) new TypeAdapter<GetServiceServiceWithSpecsResponse>() {
            @Override
-           public void write(JsonWriter out, HTTPValidationError value) throws IOException {
+           public void write(JsonWriter out, GetServiceServiceWithSpecsResponse value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
              elementAdapter.write(out, obj);
            }
 
            @Override
-           public HTTPValidationError read(JsonReader in) throws IOException {
+           public GetServiceServiceWithSpecsResponse read(JsonReader in) throws IOException {
              JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
              validateJsonObject(jsonObj);
              return thisAdapter.fromJsonTree(jsonObj);
@@ -207,18 +203,18 @@ public class HTTPValidationError {
   }
 
  /**
-  * Create an instance of HTTPValidationError given an JSON string
+  * Create an instance of GetServiceServiceWithSpecsResponse given an JSON string
   *
   * @param jsonString JSON string
-  * @return An instance of HTTPValidationError
-  * @throws IOException if the JSON string is invalid with respect to HTTPValidationError
+  * @return An instance of GetServiceServiceWithSpecsResponse
+  * @throws IOException if the JSON string is invalid with respect to GetServiceServiceWithSpecsResponse
   */
-  public static HTTPValidationError fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, HTTPValidationError.class);
+  public static GetServiceServiceWithSpecsResponse fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, GetServiceServiceWithSpecsResponse.class);
   }
 
  /**
-  * Convert an instance of HTTPValidationError to an JSON string
+  * Convert an instance of GetServiceServiceWithSpecsResponse to an JSON string
   *
   * @return JSON string
   */
