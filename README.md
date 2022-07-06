@@ -1,8 +1,8 @@
 # ehelply-java-sdk
 
-eHelply SDK - 1.1.94
-- API version: 1.1.94
-  - Build date: 2022-07-06T17:40:02.023118Z[Etc/UTC]
+eHelply SDK - 1.1.95
+- API version: 1.1.95
+  - Build date: 2022-07-06T20:38:31.839675Z[Etc/UTC]
 
 eHelply SDK for SuperStack Services
 
@@ -41,7 +41,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>com.ehelply</groupId>
   <artifactId>ehelply-java-sdk</artifactId>
-  <version>1.1.94</version>
+  <version>1.1.95</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -57,7 +57,7 @@ Add this dependency to your project's build file:
   }
 
   dependencies {
-     implementation "com.ehelply:ehelply-java-sdk:1.1.94"
+     implementation "com.ehelply:ehelply-java-sdk:1.1.95"
   }
 ```
 
@@ -71,7 +71,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/ehelply-java-sdk-1.1.94.jar`
+* `target/ehelply-java-sdk-1.1.95.jar`
 * `target/lib/*.jar`
 
 ## Getting Started
