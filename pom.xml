@@ -5,7 +5,7 @@
     <artifactId>ehelply-java-sdk</artifactId>
     <packaging>jar</packaging>
     <name>ehelply-java-sdk</name>
-    <version>1.1.95</version>
+    <version>1.1.96</version>
     <url>https://github.com/eHelply/Java-eHelply-SDK</url>
     <description>OpenAPI Java</description>
     <scm>
