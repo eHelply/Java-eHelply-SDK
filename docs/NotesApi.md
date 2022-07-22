@@ -12,7 +12,7 @@ All URIs are relative to *https://api.prod.ehelply.com*
 
 <a name="createNote"></a>
 # **createNote**
-> NoteDynamo createNote(noteBase, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData)
+> NoteDynamoResponse createNote(noteBase, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData)
 
 Create Note
 
@@ -39,7 +39,7 @@ public class Example {
     String ehelplyProject = "ehelplyProject_example"; // String | 
     String ehelplyData = "ehelplyData_example"; // String | 
     try {
-      NoteDynamo result = apiInstance.createNote(noteBase, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
+      NoteDynamoResponse result = apiInstance.createNote(noteBase, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling NotesApi#createNote");
@@ -66,7 +66,7 @@ public class Example {
 
 ### Return type
 
-[**NoteDynamo**](NoteDynamo.md)
+[**NoteDynamoResponse**](NoteDynamoResponse.md)
 
 ### Authorization
 
@@ -240,7 +240,7 @@ No authorization required
 
 <a name="updateNote"></a>
 # **updateNote**
-> NoteDynamo updateNote(noteId, noteBase, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData)
+> NoteDynamoResponse updateNote(noteId, noteBase, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData)
 
 Update Note
 
@@ -268,7 +268,7 @@ public class Example {
     String ehelplyProject = "ehelplyProject_example"; // String | 
     String ehelplyData = "ehelplyData_example"; // String | 
     try {
-      NoteDynamo result = apiInstance.updateNote(noteId, noteBase, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
+      NoteDynamoResponse result = apiInstance.updateNote(noteId, noteBase, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling NotesApi#updateNote");
@@ -296,7 +296,7 @@ public class Example {
 
 ### Return type
 
-[**NoteDynamo**](NoteDynamo.md)
+[**NoteDynamoResponse**](NoteDynamoResponse.md)
 
 ### Authorization
 

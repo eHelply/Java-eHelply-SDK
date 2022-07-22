@@ -1,15 +1,14 @@
 
 
-# NoteDynamo
+# NoteDynamoResponse
 
-A note from DynamoDB
 
 ## Properties
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
 |**uuid** | **String** |  |  |
-|**content** | **File** |  |  [optional] |
+|**content** | **String** |  |  |
 |**time** | **String** |  |  |
 |**meta** | [**NoteMeta**](NoteMeta.md) |  |  |
 
