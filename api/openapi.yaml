@@ -9,8 +9,8 @@ info:
     name: Apache 2.0
     url: https://www.apache.org/licenses/LICENSE-2.0.html
   termsOfService: https://superstack.ehelply.com/support/legal/terms
-  title: eHelply SDK - 1.1.96
-  version: 1.1.96
+  title: eHelply SDK - 1.1.97
+  version: 1.1.97
 servers:
 - description: eHelply / SuperStack Production
   url: https://api.prod.ehelply.com
@@ -2145,7 +2145,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NotesHTTPValidationError'
+                $ref: '#/components/schemas/HTTPValidationError'
           description: Validation Error
       summary: Delete Note
       tags:
@@ -2241,7 +2241,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NotesHTTPValidationError'
+                $ref: '#/components/schemas/HTTPValidationError'
           description: Validation Error
       summary: Get Note
       tags:
@@ -2317,7 +2317,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NoteDynamo'
+                $ref: '#/components/schemas/NoteDynamoResponse'
           description: Successful Response
         "404":
           description: Not found
@@ -2325,7 +2325,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NotesHTTPValidationError'
+                $ref: '#/components/schemas/HTTPValidationError'
           description: Validation Error
       summary: Update Note
       tags:
@@ -2395,7 +2395,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NoteDynamo'
+                $ref: '#/components/schemas/NoteDynamoResponse'
           description: Successful Response
         "404":
           description: Not found
@@ -2403,7 +2403,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NotesHTTPValidationError'
+                $ref: '#/components/schemas/HTTPValidationError'
           description: Validation Error
       summary: Create Note
       tags:
@@ -14322,15 +14322,6 @@ components:
           type: array
       title: Validations
       type: object
-    NotesHTTPValidationError:
-      properties:
-        detail:
-          items:
-            $ref: '#/components/schemas/NotesValidationError'
-          title: Detail
-          type: array
-      title: HTTPValidationError
-      type: object
     NoteBase:
       description: |-
         Note
@@ -14358,36 +14349,6 @@ components:
       - time
       title: NoteBase
       type: object
-    NoteDynamo:
-      description: A note from DynamoDB
-      example:
-        meta:
-          previous_version: previous_version
-          author: author
-          original_author: original_author
-          next_version: next_version
-        time: time
-        uuid: uuid
-        content: ""
-      properties:
-        uuid:
-          title: Uuid
-          type: string
-        content:
-          format: binary
-          title: Content
-          type: string
-        time:
-          title: Time
-          type: string
-        meta:
-          $ref: '#/components/schemas/NoteMeta'
-      required:
-      - meta
-      - time
-      - uuid
-      title: NoteDynamo
-      type: object
     NoteDynamoHistory:
       description: A note from Dynamo DB including n amount of version history of
         that note
@@ -14406,7 +14367,7 @@ components:
             next_version: next_version
           time: time
           uuid: uuid
-          content: ""
+          content: content
         - meta:
             previous_version: previous_version
             author: author
@@ -14414,7 +14375,7 @@ components:
             next_version: next_version
           time: time
           uuid: uuid
-          content: ""
+          content: content
         uuid: uuid
         content: ""
       properties:
@@ -14433,7 +14394,7 @@ components:
         history:
           default: []
           items:
-            $ref: '#/components/schemas/NoteDynamo'
+            $ref: '#/components/schemas/NoteDynamoResponse'
           title: History
           type: array
       required:
@@ -14441,6 +14402,35 @@ components:
       - time
       - uuid
       title: NoteDynamoHistory
+      type: object
+    NoteDynamoResponse:
+      example:
+        meta:
+          previous_version: previous_version
+          author: author
+          original_author: original_author
+          next_version: next_version
+        time: time
+        uuid: uuid
+        content: content
+      properties:
+        uuid:
+          title: Uuid
+          type: string
+        content:
+          title: Content
+          type: string
+        time:
+          title: Time
+          type: string
+        meta:
+          $ref: '#/components/schemas/NoteMeta'
+      required:
+      - content
+      - meta
+      - time
+      - uuid
+      title: NoteDynamoResponse
       type: object
     NoteMeta:
       description: Metadata associated to a note
@@ -14465,25 +14455,6 @@ components:
       required:
       - author
       title: NoteMeta
-      type: object
-    NotesValidationError:
-      properties:
-        loc:
-          items:
-            type: string
-          title: Location
-          type: array
-        msg:
-          title: Message
-          type: string
-        type:
-          title: Error Type
-          type: string
-      required:
-      - loc
-      - msg
-      - type
-      title: ValidationError
       type: object
     AddressBase:
       description: |-

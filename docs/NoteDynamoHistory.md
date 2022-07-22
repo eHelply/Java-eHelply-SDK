@@ -12,7 +12,7 @@ A note from Dynamo DB including n amount of version history of that note
 |**content** | **File** |  |  [optional] |
 |**time** | **String** |  |  |
 |**meta** | [**NoteMeta**](NoteMeta.md) |  |  |
-|**history** | [**List&lt;NoteDynamo&gt;**](NoteDynamo.md) |  |  [optional] |
+|**history** | [**List&lt;NoteDynamoResponse&gt;**](NoteDynamoResponse.md) |  |  [optional] |
 
 
 
