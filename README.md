@@ -1,8 +1,8 @@
 # ehelply-java-sdk
 
-eHelply SDK - 1.1.97
-- API version: 1.1.97
-  - Build date: 2022-07-22T22:10:54.965733Z[Etc/UTC]
+eHelply SDK - 1.1.98
+- API version: 1.1.98
+  - Build date: 2022-07-23T01:42:38.023302Z[Etc/UTC]
 
 eHelply SDK for SuperStack Services
 
@@ -41,7 +41,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>com.ehelply</groupId>
   <artifactId>ehelply-java-sdk</artifactId>
-  <version>1.1.97</version>
+  <version>1.1.98</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -57,7 +57,7 @@ Add this dependency to your project's build file:
   }
 
   dependencies {
-     implementation "com.ehelply:ehelply-java-sdk:1.1.97"
+     implementation "com.ehelply:ehelply-java-sdk:1.1.98"
   }
 ```
 
@@ -71,7 +71,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/ehelply-java-sdk-1.1.97.jar`
+* `target/ehelply-java-sdk-1.1.98.jar`
 * `target/lib/*.jar`
 
 ## Getting Started
@@ -337,7 +337,7 @@ Class | Method | HTTP request | Description
  - [MetaDynamo](docs/MetaDynamo.md)
  - [MetaSlugger](docs/MetaSlugger.md)
  - [NoteBase](docs/NoteBase.md)
- - [NoteDynamoHistory](docs/NoteDynamoHistory.md)
+ - [NoteDynamoHistoryResponse](docs/NoteDynamoHistoryResponse.md)
  - [NoteDynamoResponse](docs/NoteDynamoResponse.md)
  - [NoteMeta](docs/NoteMeta.md)
  - [OptionGroup](docs/OptionGroup.md)

@@ -162,7 +162,7 @@ No authorization required
 
 <a name="getNote"></a>
 # **getNote**
-> NoteDynamoHistory getNote(noteId, history, historyContent, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData)
+> NoteDynamoHistoryResponse getNote(noteId, history, historyContent, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData)
 
 Get Note
 
@@ -191,7 +191,7 @@ public class Example {
     String ehelplyProject = "ehelplyProject_example"; // String | 
     String ehelplyData = "ehelplyData_example"; // String | 
     try {
-      NoteDynamoHistory result = apiInstance.getNote(noteId, history, historyContent, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
+      NoteDynamoHistoryResponse result = apiInstance.getNote(noteId, history, historyContent, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling NotesApi#getNote");
@@ -220,7 +220,7 @@ public class Example {
 
 ### Return type
 
-[**NoteDynamoHistory**](NoteDynamoHistory.md)
+[**NoteDynamoHistoryResponse**](NoteDynamoHistoryResponse.md)
 
 ### Authorization
 
