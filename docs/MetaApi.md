@@ -477,7 +477,7 @@ No authorization required
 
 <a name="getMeta"></a>
 # **getMeta**
-> MetaDynamo getMeta(service, typeStr, entityUuid, detailed, custom, dates, history, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData)
+> MetaGet getMeta(service, typeStr, entityUuid, detailed, custom, dates, history, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData)
 
 Get Meta
 
@@ -510,7 +510,7 @@ public class Example {
     String ehelplyProject = "ehelplyProject_example"; // String | 
     String ehelplyData = "ehelplyData_example"; // String | 
     try {
-      MetaDynamo result = apiInstance.getMeta(service, typeStr, entityUuid, detailed, custom, dates, history, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
+      MetaGet result = apiInstance.getMeta(service, typeStr, entityUuid, detailed, custom, dates, history, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling MetaApi#getMeta");
@@ -543,7 +543,7 @@ public class Example {
 
 ### Return type
 
-[**MetaDynamo**](MetaDynamo.md)
+[**MetaGet**](MetaGet.md)
 
 ### Authorization
 
@@ -563,7 +563,7 @@ No authorization required
 
 <a name="getMetaFromUuid"></a>
 # **getMetaFromUuid**
-> MetaDynamo getMetaFromUuid(metaUuid, detailed, custom, dates, history, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData)
+> MetaGet getMetaFromUuid(metaUuid, detailed, custom, dates, history, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData)
 
 Get Meta From Uuid
 
@@ -594,7 +594,7 @@ public class Example {
     String ehelplyProject = "ehelplyProject_example"; // String | 
     String ehelplyData = "ehelplyData_example"; // String | 
     try {
-      MetaDynamo result = apiInstance.getMetaFromUuid(metaUuid, detailed, custom, dates, history, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
+      MetaGet result = apiInstance.getMetaFromUuid(metaUuid, detailed, custom, dates, history, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling MetaApi#getMetaFromUuid");
@@ -625,7 +625,7 @@ public class Example {
 
 ### Return type
 
-[**MetaDynamo**](MetaDynamo.md)
+[**MetaGet**](MetaGet.md)
 
 ### Authorization
 
