@@ -46,6 +46,7 @@ docs/DefaultApi.md
 docs/Detailed.md
 docs/DetailedMeta.md
 docs/DetailedMetaCreate.md
+docs/DetailedMetaGet.md
 docs/Email.md
 docs/Field.md
 docs/FieldDynamo.md
@@ -65,6 +66,7 @@ docs/MetaChildren.md
 docs/MetaCreate.md
 docs/MetaCustom.md
 docs/MetaDynamo.md
+docs/MetaGet.md
 docs/MetaSlugger.md
 docs/MonitorApi.md
 docs/NoteBase.md
@@ -228,6 +230,7 @@ src/main/java/com/ehelply/client/model/DatesMeta.java
 src/main/java/com/ehelply/client/model/Detailed.java
 src/main/java/com/ehelply/client/model/DetailedMeta.java
 src/main/java/com/ehelply/client/model/DetailedMetaCreate.java
+src/main/java/com/ehelply/client/model/DetailedMetaGet.java
 src/main/java/com/ehelply/client/model/Email.java
 src/main/java/com/ehelply/client/model/Field.java
 src/main/java/com/ehelply/client/model/FieldDynamo.java
@@ -245,6 +248,7 @@ src/main/java/com/ehelply/client/model/MetaChildren.java
 src/main/java/com/ehelply/client/model/MetaCreate.java
 src/main/java/com/ehelply/client/model/MetaCustom.java
 src/main/java/com/ehelply/client/model/MetaDynamo.java
+src/main/java/com/ehelply/client/model/MetaGet.java
 src/main/java/com/ehelply/client/model/MetaSlugger.java
 src/main/java/com/ehelply/client/model/NoteBase.java
 src/main/java/com/ehelply/client/model/NoteDynamoHistoryResponse.java
@@ -370,6 +374,7 @@ src/test/java/com/ehelply/client/model/CredentialTest.java
 src/test/java/com/ehelply/client/model/CustomListTest.java
 src/test/java/com/ehelply/client/model/DatesMetaTest.java
 src/test/java/com/ehelply/client/model/DetailedMetaCreateTest.java
+src/test/java/com/ehelply/client/model/DetailedMetaGetTest.java
 src/test/java/com/ehelply/client/model/DetailedMetaTest.java
 src/test/java/com/ehelply/client/model/DetailedTest.java
 src/test/java/com/ehelply/client/model/EmailTest.java
@@ -389,6 +394,7 @@ src/test/java/com/ehelply/client/model/MetaChildrenTest.java
 src/test/java/com/ehelply/client/model/MetaCreateTest.java
 src/test/java/com/ehelply/client/model/MetaCustomTest.java
 src/test/java/com/ehelply/client/model/MetaDynamoTest.java
+src/test/java/com/ehelply/client/model/MetaGetTest.java
 src/test/java/com/ehelply/client/model/MetaSluggerTest.java
 src/test/java/com/ehelply/client/model/NoteBaseTest.java
 src/test/java/com/ehelply/client/model/NoteDynamoHistoryResponseTest.java
