@@ -24,6 +24,7 @@ docs/BasicMetaCreate.md
 docs/BillingApi.md
 docs/CatalogBase.md
 docs/CatalogReturn.md
+docs/CatalogsApi.md
 docs/CategoryApi.md
 docs/CategoryBase.md
 docs/CategoryDb.md
@@ -84,6 +85,7 @@ docs/PlaceResponse.md
 docs/PlacesApi.md
 docs/ProductBase.md
 docs/ProductReturn.md
+docs/ProductsApi.md
 docs/ProjectDB.md
 docs/ProjectsApi.md
 docs/ProjectsProjectCreate.md
@@ -103,6 +105,7 @@ docs/ResponseDeletekey.md
 docs/ResponseDeleteusagetype.md
 docs/ResponseGeneratetoken.md
 docs/ResponseRemovememberfromproject.md
+docs/ReviewsApi.md
 docs/SecurityApi.md
 docs/SecurityCreateToken.md
 docs/SecurityEncryptionKeyGet.md
@@ -167,6 +170,7 @@ src/main/java/com/ehelply/client/ServerConfiguration.java
 src/main/java/com/ehelply/client/ServerVariable.java
 src/main/java/com/ehelply/client/StringUtil.java
 src/main/java/com/ehelply/client/api/BillingApi.java
+src/main/java/com/ehelply/client/api/CatalogsApi.java
 src/main/java/com/ehelply/client/api/CategoryApi.java
 src/main/java/com/ehelply/client/api/CompaniesApi.java
 src/main/java/com/ehelply/client/api/DefaultApi.java
@@ -175,7 +179,9 @@ src/main/java/com/ehelply/client/api/MetaApi.java
 src/main/java/com/ehelply/client/api/MonitorApi.java
 src/main/java/com/ehelply/client/api/NotesApi.java
 src/main/java/com/ehelply/client/api/PlacesApi.java
+src/main/java/com/ehelply/client/api/ProductsApi.java
 src/main/java/com/ehelply/client/api/ProjectsApi.java
+src/main/java/com/ehelply/client/api/ReviewsApi.java
 src/main/java/com/ehelply/client/api/SecurityApi.java
 src/main/java/com/ehelply/client/api/StaffApi.java
 src/main/java/com/ehelply/client/api/SupportApi.java
@@ -310,6 +316,7 @@ src/main/java/com/ehelply/client/model/UserValidations.java
 src/main/java/com/ehelply/client/model/ValidationError.java
 src/main/java/com/ehelply/client/model/Validations.java
 src/test/java/com/ehelply/client/api/BillingApiTest.java
+src/test/java/com/ehelply/client/api/CatalogsApiTest.java
 src/test/java/com/ehelply/client/api/CategoryApiTest.java
 src/test/java/com/ehelply/client/api/CompaniesApiTest.java
 src/test/java/com/ehelply/client/api/DefaultApiTest.java
@@ -318,7 +325,9 @@ src/test/java/com/ehelply/client/api/MetaApiTest.java
 src/test/java/com/ehelply/client/api/MonitorApiTest.java
 src/test/java/com/ehelply/client/api/NotesApiTest.java
 src/test/java/com/ehelply/client/api/PlacesApiTest.java
+src/test/java/com/ehelply/client/api/ProductsApiTest.java
 src/test/java/com/ehelply/client/api/ProjectsApiTest.java
+src/test/java/com/ehelply/client/api/ReviewsApiTest.java
 src/test/java/com/ehelply/client/api/SecurityApiTest.java
 src/test/java/com/ehelply/client/api/StaffApiTest.java
 src/test/java/com/ehelply/client/api/SupportApiTest.java
