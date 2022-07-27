@@ -135,6 +135,7 @@ docs/SupportApi.md
 docs/TagApi.md
 docs/TagBase.md
 docs/TagDb.md
+docs/TagsApi.md
 docs/TicketResponse.md
 docs/TicketsResponse.md
 docs/UpdateProjectCredentialRequest.md
@@ -194,6 +195,7 @@ src/main/java/com/ehelply/client/api/SecurityApi.java
 src/main/java/com/ehelply/client/api/StaffApi.java
 src/main/java/com/ehelply/client/api/SupportApi.java
 src/main/java/com/ehelply/client/api/TagApi.java
+src/main/java/com/ehelply/client/api/TagsApi.java
 src/main/java/com/ehelply/client/api/UsersApi.java
 src/main/java/com/ehelply/client/auth/ApiKeyAuth.java
 src/main/java/com/ehelply/client/auth/Authentication.java
@@ -348,6 +350,7 @@ src/test/java/com/ehelply/client/api/SecurityApiTest.java
 src/test/java/com/ehelply/client/api/StaffApiTest.java
 src/test/java/com/ehelply/client/api/SupportApiTest.java
 src/test/java/com/ehelply/client/api/TagApiTest.java
+src/test/java/com/ehelply/client/api/TagsApiTest.java
 src/test/java/com/ehelply/client/api/UsersApiTest.java
 src/test/java/com/ehelply/client/model/AddressBaseTest.java
 src/test/java/com/ehelply/client/model/AlarmAcknowledgeTest.java

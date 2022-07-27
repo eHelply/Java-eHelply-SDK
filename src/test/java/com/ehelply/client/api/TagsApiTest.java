@@ -14,10 +14,10 @@
 package com.ehelply.client.api;
 
 import com.ehelply.client.ApiException;
-import com.ehelply.client.model.CategoryBase;
-import com.ehelply.client.model.CategoryDb;
 import com.ehelply.client.model.HTTPValidationError;
 import com.ehelply.client.model.Page;
+import com.ehelply.client.model.TagBase;
+import com.ehelply.client.model.TagDb;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
@@ -27,86 +27,64 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * API tests for CategoryApi
+ * API tests for TagsApi
  */
 @Disabled
-public class CategoryApiTest {
+public class TagsApiTest {
 
-    private final CategoryApi api = new CategoryApi();
+    private final TagsApi api = new TagsApi();
 
     /**
-     * Create Category
+     * Createtag
      *
-     * Creates a category
+     * Creates a tag
      *
      * @throws ApiException if the Api call fails
      */
     @Test
-    public void createCategoryPlacesCategoriesPostTest() throws ApiException {
-        CategoryBase categoryBase = null;
+    public void createTagTest() throws ApiException {
+        TagBase tagBase = null;
         String xAccessToken = null;
         String xSecretToken = null;
         String authorization = null;
         String ehelplyActiveParticipant = null;
         String ehelplyProject = null;
         String ehelplyData = null;
-        CategoryDb response = api.createCategoryPlacesCategoriesPost(categoryBase, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
+        TagDb response = api.createTag(tagBase, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
         // TODO: test validations
     }
 
     /**
-     * Delete Category
+     * Gettag
      *
-     * Deletes the category with the given ID and returns True if successful
+     * Gets the tag member information given the tag ID
      *
      * @throws ApiException if the Api call fails
      */
     @Test
-    public void deleteCategoryPlacesCategoriesCategoryUuidDeleteTest() throws ApiException {
-        String categoryUuid = null;
+    public void getTagTest() throws ApiException {
+        String tagUuid = null;
         String xAccessToken = null;
         String xSecretToken = null;
         String authorization = null;
         String ehelplyActiveParticipant = null;
         String ehelplyProject = null;
         String ehelplyData = null;
-        Object response = api.deleteCategoryPlacesCategoriesCategoryUuidDelete(categoryUuid, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
+        TagBase response = api.getTag(tagUuid, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
         // TODO: test validations
     }
 
     /**
-     * Get Category
-     *
-     * Gets the category information given the category ID
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void getCategoryPlacesCategoriesCategoryUuidGetTest() throws ApiException {
-        String categoryUuid = null;
-        Boolean withMeta = null;
-        String xAccessToken = null;
-        String xSecretToken = null;
-        String authorization = null;
-        String ehelplyActiveParticipant = null;
-        String ehelplyProject = null;
-        String ehelplyData = null;
-        CategoryBase response = api.getCategoryPlacesCategoriesCategoryUuidGet(categoryUuid, withMeta, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
-        // TODO: test validations
-    }
-
-    /**
-     * Search Categories
+     * Searchtag
      *
      * TODO Item return format: &#x60;&#x60;&#x60; {     uuid                                **type:** string     project_uuid                        **type:** string or None      name                                **type:** string or None      meta                                **type:** dict or None      created_at                          **type:** string or None      updated_at                          **type:** string or None      deleted_at                          **type:** string or None  } &#x60;&#x60;&#x60;
      *
      * @throws ApiException if the Api call fails
      */
     @Test
-    public void searchCategoriesPlacesCategoriesGetTest() throws ApiException {
+    public void searchTagTest() throws ApiException {
         String projectUuid = null;
         String name = null;
-        Boolean withMeta = null;
         Integer page = null;
         Integer pageSize = null;
         String sortOn = null;
@@ -117,28 +95,28 @@ public class CategoryApiTest {
         String ehelplyActiveParticipant = null;
         String ehelplyProject = null;
         String ehelplyData = null;
-        Page response = api.searchCategoriesPlacesCategoriesGet(projectUuid, name, withMeta, page, pageSize, sortOn, sortDesc, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
+        Page response = api.searchTag(projectUuid, name, page, pageSize, sortOn, sortDesc, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
         // TODO: test validations
     }
 
     /**
-     * Update Category
+     * Updatetag
      *
-     * Update category with given info, only updating the fields supplied. Category Uuid must be sent however.
+     * Update tag with given info, only updating the fields supplied. Tag Uuid must be sent however.
      *
      * @throws ApiException if the Api call fails
      */
     @Test
-    public void updateCategoryPlacesCategoriesCategoryUuidPutTest() throws ApiException {
-        String categoryUuid = null;
-        CategoryBase categoryBase = null;
+    public void updateTagTest() throws ApiException {
+        String tagUuid = null;
+        TagBase tagBase = null;
         String xAccessToken = null;
         String xSecretToken = null;
         String authorization = null;
         String ehelplyActiveParticipant = null;
         String ehelplyProject = null;
         String ehelplyData = null;
-        CategoryBase response = api.updateCategoryPlacesCategoriesCategoryUuidPut(categoryUuid, categoryBase, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
+        TagBase response = api.updateTag(tagUuid, tagBase, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
         // TODO: test validations
     }
 

@@ -27,10 +27,10 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
-import com.ehelply.client.model.CategoryBase;
-import com.ehelply.client.model.CategoryDb;
 import com.ehelply.client.model.HTTPValidationError;
 import com.ehelply.client.model.Page;
+import com.ehelply.client.model.TagBase;
+import com.ehelply.client.model.TagDb;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -39,16 +39,16 @@ import java.util.List;
 import java.util.Map;
 import javax.ws.rs.core.GenericType;
 
-public class CategoryApi {
+public class TagsApi {
     private ApiClient localVarApiClient;
     private int localHostIndex;
     private String localCustomBaseUrl;
 
-    public CategoryApi() {
+    public TagsApi() {
         this(Configuration.getDefaultApiClient());
     }
 
-    public CategoryApi(ApiClient apiClient) {
+    public TagsApi(ApiClient apiClient) {
         this.localVarApiClient = apiClient;
     }
 
@@ -77,8 +77,8 @@ public class CategoryApi {
     }
 
     /**
-     * Build call for createCategoryPlacesCategoriesPost
-     * @param categoryBase  (required)
+     * Build call for createTag
+     * @param tagBase  (required)
      * @param xAccessToken  (optional)
      * @param xSecretToken  (optional)
      * @param authorization  (optional)
@@ -96,7 +96,7 @@ public class CategoryApi {
         <tr><td> 422 </td><td> Validation Error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call createCategoryPlacesCategoriesPostCall(CategoryBase categoryBase, String xAccessToken, String xSecretToken, String authorization, String ehelplyActiveParticipant, String ehelplyProject, String ehelplyData, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call createTagCall(TagBase tagBase, String xAccessToken, String xSecretToken, String authorization, String ehelplyActiveParticipant, String ehelplyProject, String ehelplyData, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -110,10 +110,10 @@ public class CategoryApi {
             basePath = null;
         }
 
-        Object localVarPostBody = categoryBase;
+        Object localVarPostBody = tagBase;
 
         // create path and map variables
-        String localVarPath = "/places/categories";
+        String localVarPath = "/places/tags";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -166,30 +166,30 @@ public class CategoryApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call createCategoryPlacesCategoriesPostValidateBeforeCall(CategoryBase categoryBase, String xAccessToken, String xSecretToken, String authorization, String ehelplyActiveParticipant, String ehelplyProject, String ehelplyData, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call createTagValidateBeforeCall(TagBase tagBase, String xAccessToken, String xSecretToken, String authorization, String ehelplyActiveParticipant, String ehelplyProject, String ehelplyData, final ApiCallback _callback) throws ApiException {
         
-        // verify the required parameter 'categoryBase' is set
-        if (categoryBase == null) {
-            throw new ApiException("Missing the required parameter 'categoryBase' when calling createCategoryPlacesCategoriesPost(Async)");
+        // verify the required parameter 'tagBase' is set
+        if (tagBase == null) {
+            throw new ApiException("Missing the required parameter 'tagBase' when calling createTag(Async)");
         }
         
 
-        okhttp3.Call localVarCall = createCategoryPlacesCategoriesPostCall(categoryBase, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData, _callback);
+        okhttp3.Call localVarCall = createTagCall(tagBase, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData, _callback);
         return localVarCall;
 
     }
 
     /**
-     * Create Category
-     * Creates a category
-     * @param categoryBase  (required)
+     * Createtag
+     * Creates a tag
+     * @param tagBase  (required)
      * @param xAccessToken  (optional)
      * @param xSecretToken  (optional)
      * @param authorization  (optional)
      * @param ehelplyActiveParticipant  (optional)
      * @param ehelplyProject  (optional)
      * @param ehelplyData  (optional)
-     * @return CategoryDb
+     * @return TagDb
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -199,22 +199,22 @@ public class CategoryApi {
         <tr><td> 422 </td><td> Validation Error </td><td>  -  </td></tr>
      </table>
      */
-    public CategoryDb createCategoryPlacesCategoriesPost(CategoryBase categoryBase, String xAccessToken, String xSecretToken, String authorization, String ehelplyActiveParticipant, String ehelplyProject, String ehelplyData) throws ApiException {
-        ApiResponse<CategoryDb> localVarResp = createCategoryPlacesCategoriesPostWithHttpInfo(categoryBase, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
+    public TagDb createTag(TagBase tagBase, String xAccessToken, String xSecretToken, String authorization, String ehelplyActiveParticipant, String ehelplyProject, String ehelplyData) throws ApiException {
+        ApiResponse<TagDb> localVarResp = createTagWithHttpInfo(tagBase, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
         return localVarResp.getData();
     }
 
     /**
-     * Create Category
-     * Creates a category
-     * @param categoryBase  (required)
+     * Createtag
+     * Creates a tag
+     * @param tagBase  (required)
      * @param xAccessToken  (optional)
      * @param xSecretToken  (optional)
      * @param authorization  (optional)
      * @param ehelplyActiveParticipant  (optional)
      * @param ehelplyProject  (optional)
      * @param ehelplyData  (optional)
-     * @return ApiResponse&lt;CategoryDb&gt;
+     * @return ApiResponse&lt;TagDb&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -224,16 +224,16 @@ public class CategoryApi {
         <tr><td> 422 </td><td> Validation Error </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<CategoryDb> createCategoryPlacesCategoriesPostWithHttpInfo(CategoryBase categoryBase, String xAccessToken, String xSecretToken, String authorization, String ehelplyActiveParticipant, String ehelplyProject, String ehelplyData) throws ApiException {
-        okhttp3.Call localVarCall = createCategoryPlacesCategoriesPostValidateBeforeCall(categoryBase, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData, null);
-        Type localVarReturnType = new TypeToken<CategoryDb>(){}.getType();
+    public ApiResponse<TagDb> createTagWithHttpInfo(TagBase tagBase, String xAccessToken, String xSecretToken, String authorization, String ehelplyActiveParticipant, String ehelplyProject, String ehelplyData) throws ApiException {
+        okhttp3.Call localVarCall = createTagValidateBeforeCall(tagBase, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData, null);
+        Type localVarReturnType = new TypeToken<TagDb>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
-     * Create Category (asynchronously)
-     * Creates a category
-     * @param categoryBase  (required)
+     * Createtag (asynchronously)
+     * Creates a tag
+     * @param tagBase  (required)
      * @param xAccessToken  (optional)
      * @param xSecretToken  (optional)
      * @param authorization  (optional)
@@ -251,16 +251,16 @@ public class CategoryApi {
         <tr><td> 422 </td><td> Validation Error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call createCategoryPlacesCategoriesPostAsync(CategoryBase categoryBase, String xAccessToken, String xSecretToken, String authorization, String ehelplyActiveParticipant, String ehelplyProject, String ehelplyData, final ApiCallback<CategoryDb> _callback) throws ApiException {
+    public okhttp3.Call createTagAsync(TagBase tagBase, String xAccessToken, String xSecretToken, String authorization, String ehelplyActiveParticipant, String ehelplyProject, String ehelplyData, final ApiCallback<TagDb> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = createCategoryPlacesCategoriesPostValidateBeforeCall(categoryBase, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData, _callback);
-        Type localVarReturnType = new TypeToken<CategoryDb>(){}.getType();
+        okhttp3.Call localVarCall = createTagValidateBeforeCall(tagBase, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData, _callback);
+        Type localVarReturnType = new TypeToken<TagDb>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
-     * Build call for deleteCategoryPlacesCategoriesCategoryUuidDelete
-     * @param categoryUuid  (required)
+     * Build call for getTag
+     * @param tagUuid  (required)
      * @param xAccessToken  (optional)
      * @param xSecretToken  (optional)
      * @param authorization  (optional)
@@ -278,7 +278,7 @@ public class CategoryApi {
         <tr><td> 422 </td><td> Validation Error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call deleteCategoryPlacesCategoriesCategoryUuidDeleteCall(String categoryUuid, String xAccessToken, String xSecretToken, String authorization, String ehelplyActiveParticipant, String ehelplyProject, String ehelplyData, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getTagCall(String tagUuid, String xAccessToken, String xSecretToken, String authorization, String ehelplyActiveParticipant, String ehelplyProject, String ehelplyData, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -295,202 +295,14 @@ public class CategoryApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/places/categories/{category_uuid}"
-            .replaceAll("\\{" + "category_uuid" + "\\}", localVarApiClient.escapeString(categoryUuid.toString()));
+        String localVarPath = "/places/tags/{tag_uuid}"
+            .replaceAll("\\{" + "tag_uuid" + "\\}", localVarApiClient.escapeString(tagUuid.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-        if (xAccessToken != null) {
-            localVarHeaderParams.put("x-access-token", localVarApiClient.parameterToString(xAccessToken));
-        }
-
-        if (xSecretToken != null) {
-            localVarHeaderParams.put("x-secret-token", localVarApiClient.parameterToString(xSecretToken));
-        }
-
-        if (authorization != null) {
-            localVarHeaderParams.put("authorization", localVarApiClient.parameterToString(authorization));
-        }
-
-        if (ehelplyActiveParticipant != null) {
-            localVarHeaderParams.put("ehelply-active-participant", localVarApiClient.parameterToString(ehelplyActiveParticipant));
-        }
-
-        if (ehelplyProject != null) {
-            localVarHeaderParams.put("ehelply-project", localVarApiClient.parameterToString(ehelplyProject));
-        }
-
-        if (ehelplyData != null) {
-            localVarHeaderParams.put("ehelply-data", localVarApiClient.parameterToString(ehelplyData));
-        }
-
-        final String[] localVarAccepts = {
-            "application/json"
-        };
-        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
-        if (localVarAccept != null) {
-            localVarHeaderParams.put("Accept", localVarAccept);
-        }
-
-        final String[] localVarContentTypes = {
-            
-        };
-        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarContentType != null) {
-            localVarHeaderParams.put("Content-Type", localVarContentType);
-        }
-
-        String[] localVarAuthNames = new String[] {  };
-        return localVarApiClient.buildCall(basePath, localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
-    }
-
-    @SuppressWarnings("rawtypes")
-    private okhttp3.Call deleteCategoryPlacesCategoriesCategoryUuidDeleteValidateBeforeCall(String categoryUuid, String xAccessToken, String xSecretToken, String authorization, String ehelplyActiveParticipant, String ehelplyProject, String ehelplyData, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'categoryUuid' is set
-        if (categoryUuid == null) {
-            throw new ApiException("Missing the required parameter 'categoryUuid' when calling deleteCategoryPlacesCategoriesCategoryUuidDelete(Async)");
-        }
-        
-
-        okhttp3.Call localVarCall = deleteCategoryPlacesCategoriesCategoryUuidDeleteCall(categoryUuid, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData, _callback);
-        return localVarCall;
-
-    }
-
-    /**
-     * Delete Category
-     * Deletes the category with the given ID and returns True if successful
-     * @param categoryUuid  (required)
-     * @param xAccessToken  (optional)
-     * @param xSecretToken  (optional)
-     * @param authorization  (optional)
-     * @param ehelplyActiveParticipant  (optional)
-     * @param ehelplyProject  (optional)
-     * @param ehelplyData  (optional)
-     * @return Object
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Successful Response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Route not found - Denied by eHelply </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> Validation Error </td><td>  -  </td></tr>
-     </table>
-     */
-    public Object deleteCategoryPlacesCategoriesCategoryUuidDelete(String categoryUuid, String xAccessToken, String xSecretToken, String authorization, String ehelplyActiveParticipant, String ehelplyProject, String ehelplyData) throws ApiException {
-        ApiResponse<Object> localVarResp = deleteCategoryPlacesCategoriesCategoryUuidDeleteWithHttpInfo(categoryUuid, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
-        return localVarResp.getData();
-    }
-
-    /**
-     * Delete Category
-     * Deletes the category with the given ID and returns True if successful
-     * @param categoryUuid  (required)
-     * @param xAccessToken  (optional)
-     * @param xSecretToken  (optional)
-     * @param authorization  (optional)
-     * @param ehelplyActiveParticipant  (optional)
-     * @param ehelplyProject  (optional)
-     * @param ehelplyData  (optional)
-     * @return ApiResponse&lt;Object&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Successful Response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Route not found - Denied by eHelply </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> Validation Error </td><td>  -  </td></tr>
-     </table>
-     */
-    public ApiResponse<Object> deleteCategoryPlacesCategoriesCategoryUuidDeleteWithHttpInfo(String categoryUuid, String xAccessToken, String xSecretToken, String authorization, String ehelplyActiveParticipant, String ehelplyProject, String ehelplyData) throws ApiException {
-        okhttp3.Call localVarCall = deleteCategoryPlacesCategoriesCategoryUuidDeleteValidateBeforeCall(categoryUuid, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData, null);
-        Type localVarReturnType = new TypeToken<Object>(){}.getType();
-        return localVarApiClient.execute(localVarCall, localVarReturnType);
-    }
-
-    /**
-     * Delete Category (asynchronously)
-     * Deletes the category with the given ID and returns True if successful
-     * @param categoryUuid  (required)
-     * @param xAccessToken  (optional)
-     * @param xSecretToken  (optional)
-     * @param authorization  (optional)
-     * @param ehelplyActiveParticipant  (optional)
-     * @param ehelplyProject  (optional)
-     * @param ehelplyData  (optional)
-     * @param _callback The callback to be executed when the API call finishes
-     * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
-     * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Successful Response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Route not found - Denied by eHelply </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> Validation Error </td><td>  -  </td></tr>
-     </table>
-     */
-    public okhttp3.Call deleteCategoryPlacesCategoriesCategoryUuidDeleteAsync(String categoryUuid, String xAccessToken, String xSecretToken, String authorization, String ehelplyActiveParticipant, String ehelplyProject, String ehelplyData, final ApiCallback<Object> _callback) throws ApiException {
-
-        okhttp3.Call localVarCall = deleteCategoryPlacesCategoriesCategoryUuidDeleteValidateBeforeCall(categoryUuid, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData, _callback);
-        Type localVarReturnType = new TypeToken<Object>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
-        return localVarCall;
-    }
-    /**
-     * Build call for getCategoryPlacesCategoriesCategoryUuidGet
-     * @param categoryUuid  (required)
-     * @param withMeta  (optional, default to false)
-     * @param xAccessToken  (optional)
-     * @param xSecretToken  (optional)
-     * @param authorization  (optional)
-     * @param ehelplyActiveParticipant  (optional)
-     * @param ehelplyProject  (optional)
-     * @param ehelplyData  (optional)
-     * @param _callback Callback for upload/download progress
-     * @return Call to execute
-     * @throws ApiException If fail to serialize the request body object
-     * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Successful Response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Route not found - Denied by eHelply </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> Validation Error </td><td>  -  </td></tr>
-     </table>
-     */
-    public okhttp3.Call getCategoryPlacesCategoriesCategoryUuidGetCall(String categoryUuid, Boolean withMeta, String xAccessToken, String xSecretToken, String authorization, String ehelplyActiveParticipant, String ehelplyProject, String ehelplyData, final ApiCallback _callback) throws ApiException {
-        String basePath = null;
-        // Operation Servers
-        String[] localBasePaths = new String[] {  };
-
-        // Determine Base Path to Use
-        if (localCustomBaseUrl != null){
-            basePath = localCustomBaseUrl;
-        } else if ( localBasePaths.length > 0 ) {
-            basePath = localBasePaths[localHostIndex];
-        } else {
-            basePath = null;
-        }
-
-        Object localVarPostBody = null;
-
-        // create path and map variables
-        String localVarPath = "/places/categories/{category_uuid}"
-            .replaceAll("\\{" + "category_uuid" + "\\}", localVarApiClient.escapeString(categoryUuid.toString()));
-
-        List<Pair> localVarQueryParams = new ArrayList<Pair>();
-        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-        Map<String, String> localVarCookieParams = new HashMap<String, String>();
-        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-        if (withMeta != null) {
-            localVarQueryParams.addAll(localVarApiClient.parameterToPair("with_meta", withMeta));
-        }
 
         if (xAccessToken != null) {
             localVarHeaderParams.put("x-access-token", localVarApiClient.parameterToString(xAccessToken));
@@ -537,31 +349,30 @@ public class CategoryApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getCategoryPlacesCategoriesCategoryUuidGetValidateBeforeCall(String categoryUuid, Boolean withMeta, String xAccessToken, String xSecretToken, String authorization, String ehelplyActiveParticipant, String ehelplyProject, String ehelplyData, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getTagValidateBeforeCall(String tagUuid, String xAccessToken, String xSecretToken, String authorization, String ehelplyActiveParticipant, String ehelplyProject, String ehelplyData, final ApiCallback _callback) throws ApiException {
         
-        // verify the required parameter 'categoryUuid' is set
-        if (categoryUuid == null) {
-            throw new ApiException("Missing the required parameter 'categoryUuid' when calling getCategoryPlacesCategoriesCategoryUuidGet(Async)");
+        // verify the required parameter 'tagUuid' is set
+        if (tagUuid == null) {
+            throw new ApiException("Missing the required parameter 'tagUuid' when calling getTag(Async)");
         }
         
 
-        okhttp3.Call localVarCall = getCategoryPlacesCategoriesCategoryUuidGetCall(categoryUuid, withMeta, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData, _callback);
+        okhttp3.Call localVarCall = getTagCall(tagUuid, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData, _callback);
         return localVarCall;
 
     }
 
     /**
-     * Get Category
-     * Gets the category information given the category ID
-     * @param categoryUuid  (required)
-     * @param withMeta  (optional, default to false)
+     * Gettag
+     * Gets the tag member information given the tag ID
+     * @param tagUuid  (required)
      * @param xAccessToken  (optional)
      * @param xSecretToken  (optional)
      * @param authorization  (optional)
      * @param ehelplyActiveParticipant  (optional)
      * @param ehelplyProject  (optional)
      * @param ehelplyData  (optional)
-     * @return CategoryBase
+     * @return TagBase
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -571,23 +382,22 @@ public class CategoryApi {
         <tr><td> 422 </td><td> Validation Error </td><td>  -  </td></tr>
      </table>
      */
-    public CategoryBase getCategoryPlacesCategoriesCategoryUuidGet(String categoryUuid, Boolean withMeta, String xAccessToken, String xSecretToken, String authorization, String ehelplyActiveParticipant, String ehelplyProject, String ehelplyData) throws ApiException {
-        ApiResponse<CategoryBase> localVarResp = getCategoryPlacesCategoriesCategoryUuidGetWithHttpInfo(categoryUuid, withMeta, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
+    public TagBase getTag(String tagUuid, String xAccessToken, String xSecretToken, String authorization, String ehelplyActiveParticipant, String ehelplyProject, String ehelplyData) throws ApiException {
+        ApiResponse<TagBase> localVarResp = getTagWithHttpInfo(tagUuid, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
         return localVarResp.getData();
     }
 
     /**
-     * Get Category
-     * Gets the category information given the category ID
-     * @param categoryUuid  (required)
-     * @param withMeta  (optional, default to false)
+     * Gettag
+     * Gets the tag member information given the tag ID
+     * @param tagUuid  (required)
      * @param xAccessToken  (optional)
      * @param xSecretToken  (optional)
      * @param authorization  (optional)
      * @param ehelplyActiveParticipant  (optional)
      * @param ehelplyProject  (optional)
      * @param ehelplyData  (optional)
-     * @return ApiResponse&lt;CategoryBase&gt;
+     * @return ApiResponse&lt;TagBase&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -597,17 +407,16 @@ public class CategoryApi {
         <tr><td> 422 </td><td> Validation Error </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<CategoryBase> getCategoryPlacesCategoriesCategoryUuidGetWithHttpInfo(String categoryUuid, Boolean withMeta, String xAccessToken, String xSecretToken, String authorization, String ehelplyActiveParticipant, String ehelplyProject, String ehelplyData) throws ApiException {
-        okhttp3.Call localVarCall = getCategoryPlacesCategoriesCategoryUuidGetValidateBeforeCall(categoryUuid, withMeta, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData, null);
-        Type localVarReturnType = new TypeToken<CategoryBase>(){}.getType();
+    public ApiResponse<TagBase> getTagWithHttpInfo(String tagUuid, String xAccessToken, String xSecretToken, String authorization, String ehelplyActiveParticipant, String ehelplyProject, String ehelplyData) throws ApiException {
+        okhttp3.Call localVarCall = getTagValidateBeforeCall(tagUuid, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData, null);
+        Type localVarReturnType = new TypeToken<TagBase>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
-     * Get Category (asynchronously)
-     * Gets the category information given the category ID
-     * @param categoryUuid  (required)
-     * @param withMeta  (optional, default to false)
+     * Gettag (asynchronously)
+     * Gets the tag member information given the tag ID
+     * @param tagUuid  (required)
      * @param xAccessToken  (optional)
      * @param xSecretToken  (optional)
      * @param authorization  (optional)
@@ -625,18 +434,17 @@ public class CategoryApi {
         <tr><td> 422 </td><td> Validation Error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getCategoryPlacesCategoriesCategoryUuidGetAsync(String categoryUuid, Boolean withMeta, String xAccessToken, String xSecretToken, String authorization, String ehelplyActiveParticipant, String ehelplyProject, String ehelplyData, final ApiCallback<CategoryBase> _callback) throws ApiException {
+    public okhttp3.Call getTagAsync(String tagUuid, String xAccessToken, String xSecretToken, String authorization, String ehelplyActiveParticipant, String ehelplyProject, String ehelplyData, final ApiCallback<TagBase> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getCategoryPlacesCategoriesCategoryUuidGetValidateBeforeCall(categoryUuid, withMeta, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData, _callback);
-        Type localVarReturnType = new TypeToken<CategoryBase>(){}.getType();
+        okhttp3.Call localVarCall = getTagValidateBeforeCall(tagUuid, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData, _callback);
+        Type localVarReturnType = new TypeToken<TagBase>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
-     * Build call for searchCategoriesPlacesCategoriesGet
+     * Build call for searchTag
      * @param projectUuid  (optional)
      * @param name  (optional)
-     * @param withMeta  (optional, default to false)
      * @param page  (optional, default to 1)
      * @param pageSize  (optional, default to 25)
      * @param sortOn  (optional)
@@ -658,7 +466,7 @@ public class CategoryApi {
         <tr><td> 422 </td><td> Validation Error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call searchCategoriesPlacesCategoriesGetCall(String projectUuid, String name, Boolean withMeta, Integer page, Integer pageSize, String sortOn, Boolean sortDesc, String xAccessToken, String xSecretToken, String authorization, String ehelplyActiveParticipant, String ehelplyProject, String ehelplyData, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call searchTagCall(String projectUuid, String name, Integer page, Integer pageSize, String sortOn, Boolean sortDesc, String xAccessToken, String xSecretToken, String authorization, String ehelplyActiveParticipant, String ehelplyProject, String ehelplyData, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -675,7 +483,7 @@ public class CategoryApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/places/categories";
+        String localVarPath = "/places/tags";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -689,10 +497,6 @@ public class CategoryApi {
 
         if (name != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("name", name));
-        }
-
-        if (withMeta != null) {
-            localVarQueryParams.addAll(localVarApiClient.parameterToPair("with_meta", withMeta));
         }
 
         if (page != null) {
@@ -756,20 +560,19 @@ public class CategoryApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call searchCategoriesPlacesCategoriesGetValidateBeforeCall(String projectUuid, String name, Boolean withMeta, Integer page, Integer pageSize, String sortOn, Boolean sortDesc, String xAccessToken, String xSecretToken, String authorization, String ehelplyActiveParticipant, String ehelplyProject, String ehelplyData, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call searchTagValidateBeforeCall(String projectUuid, String name, Integer page, Integer pageSize, String sortOn, Boolean sortDesc, String xAccessToken, String xSecretToken, String authorization, String ehelplyActiveParticipant, String ehelplyProject, String ehelplyData, final ApiCallback _callback) throws ApiException {
         
 
-        okhttp3.Call localVarCall = searchCategoriesPlacesCategoriesGetCall(projectUuid, name, withMeta, page, pageSize, sortOn, sortDesc, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData, _callback);
+        okhttp3.Call localVarCall = searchTagCall(projectUuid, name, page, pageSize, sortOn, sortDesc, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData, _callback);
         return localVarCall;
 
     }
 
     /**
-     * Search Categories
+     * Searchtag
      * TODO Item return format: &#x60;&#x60;&#x60; {     uuid                                **type:** string     project_uuid                        **type:** string or None      name                                **type:** string or None      meta                                **type:** dict or None      created_at                          **type:** string or None      updated_at                          **type:** string or None      deleted_at                          **type:** string or None  } &#x60;&#x60;&#x60;
      * @param projectUuid  (optional)
      * @param name  (optional)
-     * @param withMeta  (optional, default to false)
      * @param page  (optional, default to 1)
      * @param pageSize  (optional, default to 25)
      * @param sortOn  (optional)
@@ -790,17 +593,16 @@ public class CategoryApi {
         <tr><td> 422 </td><td> Validation Error </td><td>  -  </td></tr>
      </table>
      */
-    public Page searchCategoriesPlacesCategoriesGet(String projectUuid, String name, Boolean withMeta, Integer page, Integer pageSize, String sortOn, Boolean sortDesc, String xAccessToken, String xSecretToken, String authorization, String ehelplyActiveParticipant, String ehelplyProject, String ehelplyData) throws ApiException {
-        ApiResponse<Page> localVarResp = searchCategoriesPlacesCategoriesGetWithHttpInfo(projectUuid, name, withMeta, page, pageSize, sortOn, sortDesc, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
+    public Page searchTag(String projectUuid, String name, Integer page, Integer pageSize, String sortOn, Boolean sortDesc, String xAccessToken, String xSecretToken, String authorization, String ehelplyActiveParticipant, String ehelplyProject, String ehelplyData) throws ApiException {
+        ApiResponse<Page> localVarResp = searchTagWithHttpInfo(projectUuid, name, page, pageSize, sortOn, sortDesc, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
         return localVarResp.getData();
     }
 
     /**
-     * Search Categories
+     * Searchtag
      * TODO Item return format: &#x60;&#x60;&#x60; {     uuid                                **type:** string     project_uuid                        **type:** string or None      name                                **type:** string or None      meta                                **type:** dict or None      created_at                          **type:** string or None      updated_at                          **type:** string or None      deleted_at                          **type:** string or None  } &#x60;&#x60;&#x60;
      * @param projectUuid  (optional)
      * @param name  (optional)
-     * @param withMeta  (optional, default to false)
      * @param page  (optional, default to 1)
      * @param pageSize  (optional, default to 25)
      * @param sortOn  (optional)
@@ -821,18 +623,17 @@ public class CategoryApi {
         <tr><td> 422 </td><td> Validation Error </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Page> searchCategoriesPlacesCategoriesGetWithHttpInfo(String projectUuid, String name, Boolean withMeta, Integer page, Integer pageSize, String sortOn, Boolean sortDesc, String xAccessToken, String xSecretToken, String authorization, String ehelplyActiveParticipant, String ehelplyProject, String ehelplyData) throws ApiException {
-        okhttp3.Call localVarCall = searchCategoriesPlacesCategoriesGetValidateBeforeCall(projectUuid, name, withMeta, page, pageSize, sortOn, sortDesc, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData, null);
+    public ApiResponse<Page> searchTagWithHttpInfo(String projectUuid, String name, Integer page, Integer pageSize, String sortOn, Boolean sortDesc, String xAccessToken, String xSecretToken, String authorization, String ehelplyActiveParticipant, String ehelplyProject, String ehelplyData) throws ApiException {
+        okhttp3.Call localVarCall = searchTagValidateBeforeCall(projectUuid, name, page, pageSize, sortOn, sortDesc, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData, null);
         Type localVarReturnType = new TypeToken<Page>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
-     * Search Categories (asynchronously)
+     * Searchtag (asynchronously)
      * TODO Item return format: &#x60;&#x60;&#x60; {     uuid                                **type:** string     project_uuid                        **type:** string or None      name                                **type:** string or None      meta                                **type:** dict or None      created_at                          **type:** string or None      updated_at                          **type:** string or None      deleted_at                          **type:** string or None  } &#x60;&#x60;&#x60;
      * @param projectUuid  (optional)
      * @param name  (optional)
-     * @param withMeta  (optional, default to false)
      * @param page  (optional, default to 1)
      * @param pageSize  (optional, default to 25)
      * @param sortOn  (optional)
@@ -854,17 +655,17 @@ public class CategoryApi {
         <tr><td> 422 </td><td> Validation Error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call searchCategoriesPlacesCategoriesGetAsync(String projectUuid, String name, Boolean withMeta, Integer page, Integer pageSize, String sortOn, Boolean sortDesc, String xAccessToken, String xSecretToken, String authorization, String ehelplyActiveParticipant, String ehelplyProject, String ehelplyData, final ApiCallback<Page> _callback) throws ApiException {
+    public okhttp3.Call searchTagAsync(String projectUuid, String name, Integer page, Integer pageSize, String sortOn, Boolean sortDesc, String xAccessToken, String xSecretToken, String authorization, String ehelplyActiveParticipant, String ehelplyProject, String ehelplyData, final ApiCallback<Page> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = searchCategoriesPlacesCategoriesGetValidateBeforeCall(projectUuid, name, withMeta, page, pageSize, sortOn, sortDesc, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData, _callback);
+        okhttp3.Call localVarCall = searchTagValidateBeforeCall(projectUuid, name, page, pageSize, sortOn, sortDesc, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData, _callback);
         Type localVarReturnType = new TypeToken<Page>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
-     * Build call for updateCategoryPlacesCategoriesCategoryUuidPut
-     * @param categoryUuid  (required)
-     * @param categoryBase  (required)
+     * Build call for updateTag
+     * @param tagUuid  (required)
+     * @param tagBase  (required)
      * @param xAccessToken  (optional)
      * @param xSecretToken  (optional)
      * @param authorization  (optional)
@@ -882,7 +683,7 @@ public class CategoryApi {
         <tr><td> 422 </td><td> Validation Error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call updateCategoryPlacesCategoriesCategoryUuidPutCall(String categoryUuid, CategoryBase categoryBase, String xAccessToken, String xSecretToken, String authorization, String ehelplyActiveParticipant, String ehelplyProject, String ehelplyData, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call updateTagCall(String tagUuid, TagBase tagBase, String xAccessToken, String xSecretToken, String authorization, String ehelplyActiveParticipant, String ehelplyProject, String ehelplyData, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -896,11 +697,11 @@ public class CategoryApi {
             basePath = null;
         }
 
-        Object localVarPostBody = categoryBase;
+        Object localVarPostBody = tagBase;
 
         // create path and map variables
-        String localVarPath = "/places/categories/{category_uuid}"
-            .replaceAll("\\{" + "category_uuid" + "\\}", localVarApiClient.escapeString(categoryUuid.toString()));
+        String localVarPath = "/places/tags/{tag_uuid}"
+            .replaceAll("\\{" + "tag_uuid" + "\\}", localVarApiClient.escapeString(tagUuid.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -953,36 +754,36 @@ public class CategoryApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call updateCategoryPlacesCategoriesCategoryUuidPutValidateBeforeCall(String categoryUuid, CategoryBase categoryBase, String xAccessToken, String xSecretToken, String authorization, String ehelplyActiveParticipant, String ehelplyProject, String ehelplyData, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call updateTagValidateBeforeCall(String tagUuid, TagBase tagBase, String xAccessToken, String xSecretToken, String authorization, String ehelplyActiveParticipant, String ehelplyProject, String ehelplyData, final ApiCallback _callback) throws ApiException {
         
-        // verify the required parameter 'categoryUuid' is set
-        if (categoryUuid == null) {
-            throw new ApiException("Missing the required parameter 'categoryUuid' when calling updateCategoryPlacesCategoriesCategoryUuidPut(Async)");
+        // verify the required parameter 'tagUuid' is set
+        if (tagUuid == null) {
+            throw new ApiException("Missing the required parameter 'tagUuid' when calling updateTag(Async)");
         }
         
-        // verify the required parameter 'categoryBase' is set
-        if (categoryBase == null) {
-            throw new ApiException("Missing the required parameter 'categoryBase' when calling updateCategoryPlacesCategoriesCategoryUuidPut(Async)");
+        // verify the required parameter 'tagBase' is set
+        if (tagBase == null) {
+            throw new ApiException("Missing the required parameter 'tagBase' when calling updateTag(Async)");
         }
         
 
-        okhttp3.Call localVarCall = updateCategoryPlacesCategoriesCategoryUuidPutCall(categoryUuid, categoryBase, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData, _callback);
+        okhttp3.Call localVarCall = updateTagCall(tagUuid, tagBase, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData, _callback);
         return localVarCall;
 
     }
 
     /**
-     * Update Category
-     * Update category with given info, only updating the fields supplied. Category Uuid must be sent however.
-     * @param categoryUuid  (required)
-     * @param categoryBase  (required)
+     * Updatetag
+     * Update tag with given info, only updating the fields supplied. Tag Uuid must be sent however.
+     * @param tagUuid  (required)
+     * @param tagBase  (required)
      * @param xAccessToken  (optional)
      * @param xSecretToken  (optional)
      * @param authorization  (optional)
      * @param ehelplyActiveParticipant  (optional)
      * @param ehelplyProject  (optional)
      * @param ehelplyData  (optional)
-     * @return CategoryBase
+     * @return TagBase
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -992,23 +793,23 @@ public class CategoryApi {
         <tr><td> 422 </td><td> Validation Error </td><td>  -  </td></tr>
      </table>
      */
-    public CategoryBase updateCategoryPlacesCategoriesCategoryUuidPut(String categoryUuid, CategoryBase categoryBase, String xAccessToken, String xSecretToken, String authorization, String ehelplyActiveParticipant, String ehelplyProject, String ehelplyData) throws ApiException {
-        ApiResponse<CategoryBase> localVarResp = updateCategoryPlacesCategoriesCategoryUuidPutWithHttpInfo(categoryUuid, categoryBase, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
+    public TagBase updateTag(String tagUuid, TagBase tagBase, String xAccessToken, String xSecretToken, String authorization, String ehelplyActiveParticipant, String ehelplyProject, String ehelplyData) throws ApiException {
+        ApiResponse<TagBase> localVarResp = updateTagWithHttpInfo(tagUuid, tagBase, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
         return localVarResp.getData();
     }
 
     /**
-     * Update Category
-     * Update category with given info, only updating the fields supplied. Category Uuid must be sent however.
-     * @param categoryUuid  (required)
-     * @param categoryBase  (required)
+     * Updatetag
+     * Update tag with given info, only updating the fields supplied. Tag Uuid must be sent however.
+     * @param tagUuid  (required)
+     * @param tagBase  (required)
      * @param xAccessToken  (optional)
      * @param xSecretToken  (optional)
      * @param authorization  (optional)
      * @param ehelplyActiveParticipant  (optional)
      * @param ehelplyProject  (optional)
      * @param ehelplyData  (optional)
-     * @return ApiResponse&lt;CategoryBase&gt;
+     * @return ApiResponse&lt;TagBase&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -1018,17 +819,17 @@ public class CategoryApi {
         <tr><td> 422 </td><td> Validation Error </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<CategoryBase> updateCategoryPlacesCategoriesCategoryUuidPutWithHttpInfo(String categoryUuid, CategoryBase categoryBase, String xAccessToken, String xSecretToken, String authorization, String ehelplyActiveParticipant, String ehelplyProject, String ehelplyData) throws ApiException {
-        okhttp3.Call localVarCall = updateCategoryPlacesCategoriesCategoryUuidPutValidateBeforeCall(categoryUuid, categoryBase, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData, null);
-        Type localVarReturnType = new TypeToken<CategoryBase>(){}.getType();
+    public ApiResponse<TagBase> updateTagWithHttpInfo(String tagUuid, TagBase tagBase, String xAccessToken, String xSecretToken, String authorization, String ehelplyActiveParticipant, String ehelplyProject, String ehelplyData) throws ApiException {
+        okhttp3.Call localVarCall = updateTagValidateBeforeCall(tagUuid, tagBase, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData, null);
+        Type localVarReturnType = new TypeToken<TagBase>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
-     * Update Category (asynchronously)
-     * Update category with given info, only updating the fields supplied. Category Uuid must be sent however.
-     * @param categoryUuid  (required)
-     * @param categoryBase  (required)
+     * Updatetag (asynchronously)
+     * Update tag with given info, only updating the fields supplied. Tag Uuid must be sent however.
+     * @param tagUuid  (required)
+     * @param tagBase  (required)
      * @param xAccessToken  (optional)
      * @param xSecretToken  (optional)
      * @param authorization  (optional)
@@ -1046,10 +847,10 @@ public class CategoryApi {
         <tr><td> 422 </td><td> Validation Error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call updateCategoryPlacesCategoriesCategoryUuidPutAsync(String categoryUuid, CategoryBase categoryBase, String xAccessToken, String xSecretToken, String authorization, String ehelplyActiveParticipant, String ehelplyProject, String ehelplyData, final ApiCallback<CategoryBase> _callback) throws ApiException {
+    public okhttp3.Call updateTagAsync(String tagUuid, TagBase tagBase, String xAccessToken, String xSecretToken, String authorization, String ehelplyActiveParticipant, String ehelplyProject, String ehelplyData, final ApiCallback<TagBase> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = updateCategoryPlacesCategoriesCategoryUuidPutValidateBeforeCall(categoryUuid, categoryBase, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData, _callback);
-        Type localVarReturnType = new TypeToken<CategoryBase>(){}.getType();
+        okhttp3.Call localVarCall = updateTagValidateBeforeCall(tagUuid, tagBase, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData, _callback);
+        Type localVarReturnType = new TypeToken<TagBase>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

@@ -4,18 +4,18 @@ All URIs are relative to *https://api.prod.ehelply.com*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
-| [**createStaffPlacesStaffPost**](StaffApi.md#createStaffPlacesStaffPost) | **POST** /places/staff | Create Staff |
-| [**deleteStaffPlacesStaffStaffUuidDelete**](StaffApi.md#deleteStaffPlacesStaffStaffUuidDelete) | **DELETE** /places/staff/{staff_uuid} | Delete Staff |
-| [**getStaffPlacesStaffStaffUuidGet**](StaffApi.md#getStaffPlacesStaffStaffUuidGet) | **GET** /places/staff/{staff_uuid} | Get Staff |
-| [**searchStaffPlacesStaffGet**](StaffApi.md#searchStaffPlacesStaffGet) | **GET** /places/staff | Search Staff |
-| [**updateStaffPlacesStaffStaffUuidPut**](StaffApi.md#updateStaffPlacesStaffStaffUuidPut) | **PUT** /places/staff/{staff_uuid} | Update Staff |
+| [**createStaff**](StaffApi.md#createStaff) | **POST** /places/staff | Createstaff |
+| [**deleteStaff**](StaffApi.md#deleteStaff) | **DELETE** /places/staff/{staff_uuid} | Deletestaff |
+| [**getStaff**](StaffApi.md#getStaff) | **GET** /places/staff/{staff_uuid} | Getstaff |
+| [**searchStaff**](StaffApi.md#searchStaff) | **GET** /places/staff | Searchstaff |
+| [**updateStaff**](StaffApi.md#updateStaff) | **PUT** /places/staff/{staff_uuid} | Updatestaff |
 
 
-<a name="createStaffPlacesStaffPost"></a>
-# **createStaffPlacesStaffPost**
-> StaffDb createStaffPlacesStaffPost(staffCreate, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData)
+<a name="createStaff"></a>
+# **createStaff**
+> StaffDb createStaff(staffCreate, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData)
 
-Create Staff
+Createstaff
 
 Creates a staff member
 
@@ -42,10 +42,10 @@ public class Example {
     String ehelplyProject = "ehelplyProject_example"; // String | 
     String ehelplyData = "ehelplyData_example"; // String | 
     try {
-      StaffDb result = apiInstance.createStaffPlacesStaffPost(staffCreate, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
+      StaffDb result = apiInstance.createStaff(staffCreate, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling StaffApi#createStaffPlacesStaffPost");
+      System.err.println("Exception when calling StaffApi#createStaff");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -87,11 +87,11 @@ No authorization required
 | **404** | Route not found - Denied by eHelply |  -  |
 | **422** | Validation Error |  -  |
 
-<a name="deleteStaffPlacesStaffStaffUuidDelete"></a>
-# **deleteStaffPlacesStaffStaffUuidDelete**
-> Object deleteStaffPlacesStaffStaffUuidDelete(staffUuid, softDelete, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData)
+<a name="deleteStaff"></a>
+# **deleteStaff**
+> Object deleteStaff(staffUuid, softDelete, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData)
 
-Delete Staff
+Deletestaff
 
 Deletes the staff member with the given ID and returns True if successful
 
@@ -119,10 +119,10 @@ public class Example {
     String ehelplyProject = "ehelplyProject_example"; // String | 
     String ehelplyData = "ehelplyData_example"; // String | 
     try {
-      Object result = apiInstance.deleteStaffPlacesStaffStaffUuidDelete(staffUuid, softDelete, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
+      Object result = apiInstance.deleteStaff(staffUuid, softDelete, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling StaffApi#deleteStaffPlacesStaffStaffUuidDelete");
+      System.err.println("Exception when calling StaffApi#deleteStaff");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -165,11 +165,11 @@ No authorization required
 | **404** | Route not found - Denied by eHelply |  -  |
 | **422** | Validation Error |  -  |
 
-<a name="getStaffPlacesStaffStaffUuidGet"></a>
-# **getStaffPlacesStaffStaffUuidGet**
-> StaffResponse getStaffPlacesStaffStaffUuidGet(staffUuid, withPlaces, withCompanies, withCatalog, withSchedule, withRoles, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData)
+<a name="getStaff"></a>
+# **getStaff**
+> StaffResponse getStaff(staffUuid, withPlaces, withCompanies, withCatalog, withSchedule, withRoles, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData)
 
-Get Staff
+Getstaff
 
 Gets the staff member information given the staff ID
 
@@ -201,10 +201,10 @@ public class Example {
     String ehelplyProject = "ehelplyProject_example"; // String | 
     String ehelplyData = "ehelplyData_example"; // String | 
     try {
-      StaffResponse result = apiInstance.getStaffPlacesStaffStaffUuidGet(staffUuid, withPlaces, withCompanies, withCatalog, withSchedule, withRoles, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
+      StaffResponse result = apiInstance.getStaff(staffUuid, withPlaces, withCompanies, withCatalog, withSchedule, withRoles, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling StaffApi#getStaffPlacesStaffStaffUuidGet");
+      System.err.println("Exception when calling StaffApi#getStaff");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -251,11 +251,11 @@ No authorization required
 | **404** | Route not found - Denied by eHelply |  -  |
 | **422** | Validation Error |  -  |
 
-<a name="searchStaffPlacesStaffGet"></a>
-# **searchStaffPlacesStaffGet**
-> Page searchStaffPlacesStaffGet(projectUuid, firstName, lastName, isDeleted, withCompanies, withPlaces, withSchedule, withCatalog, withReviews, withRoles, page, pageSize, sortOn, sortDesc, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData)
+<a name="searchStaff"></a>
+# **searchStaff**
+> Page searchStaff(projectUuid, firstName, lastName, isDeleted, withCompanies, withPlaces, withSchedule, withCatalog, withReviews, withRoles, page, pageSize, sortOn, sortDesc, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData)
 
-Search Staff
+Searchstaff
 
 TODO Item return format: &#x60;&#x60;&#x60; {     uuid                                **type:** string     project_uuid                        **type:** string or None      entity                              **type:** string or None      place                               **type:** dict or None      company                             **type:** dict or None      schedule                            **type:** dict or None      catalog                             **type:** dict or None      reviews                             **type:** dict or None      created_at                          **type:** string or None      updated_at                          **type:** string or None      deleted_at                          **type:** string or None  } &#x60;&#x60;&#x60;
 
@@ -295,10 +295,10 @@ public class Example {
     String ehelplyProject = "ehelplyProject_example"; // String | 
     String ehelplyData = "ehelplyData_example"; // String | 
     try {
-      Page result = apiInstance.searchStaffPlacesStaffGet(projectUuid, firstName, lastName, isDeleted, withCompanies, withPlaces, withSchedule, withCatalog, withReviews, withRoles, page, pageSize, sortOn, sortDesc, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
+      Page result = apiInstance.searchStaff(projectUuid, firstName, lastName, isDeleted, withCompanies, withPlaces, withSchedule, withCatalog, withReviews, withRoles, page, pageSize, sortOn, sortDesc, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling StaffApi#searchStaffPlacesStaffGet");
+      System.err.println("Exception when calling StaffApi#searchStaff");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -353,11 +353,11 @@ No authorization required
 | **404** | Route not found - Denied by eHelply |  -  |
 | **422** | Validation Error |  -  |
 
-<a name="updateStaffPlacesStaffStaffUuidPut"></a>
-# **updateStaffPlacesStaffStaffUuidPut**
-> StaffResponse updateStaffPlacesStaffStaffUuidPut(staffUuid, staffCreate, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData)
+<a name="updateStaff"></a>
+# **updateStaff**
+> StaffResponse updateStaff(staffUuid, staffCreate, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData)
 
-Update Staff
+Updatestaff
 
 Update staff with given info, only updating the fields supplied. Staff Uuid must be sent however.
 
@@ -385,10 +385,10 @@ public class Example {
     String ehelplyProject = "ehelplyProject_example"; // String | 
     String ehelplyData = "ehelplyData_example"; // String | 
     try {
-      StaffResponse result = apiInstance.updateStaffPlacesStaffStaffUuidPut(staffUuid, staffCreate, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
+      StaffResponse result = apiInstance.updateStaff(staffUuid, staffCreate, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling StaffApi#updateStaffPlacesStaffStaffUuidPut");
+      System.err.println("Exception when calling StaffApi#updateStaff");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());

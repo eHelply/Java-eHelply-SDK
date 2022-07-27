@@ -5,7 +5,7 @@ apply plugin: 'com.diffplug.spotless'
 apply plugin: 'maven-publish'
 
 group = 'com.ehelply'
-version = '1.1.102'
+version = '1.1.103'
 
 buildscript {
     repositories {

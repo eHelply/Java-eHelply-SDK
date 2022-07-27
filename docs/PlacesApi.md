@@ -4,15 +4,99 @@ All URIs are relative to *https://api.prod.ehelply.com*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
+| [**advancedSearchPlaces**](PlacesApi.md#advancedSearchPlaces) | **GET** /places/search/places/string | Advancedsearchplaces |
 | [**createPlacePlacesPlacesPost**](PlacesApi.md#createPlacePlacesPlacesPost) | **POST** /places/places | Create Place |
-| [**deletePlacePlacesPlacesPlaceUuidDelete**](PlacesApi.md#deletePlacePlacesPlacesPlaceUuidDelete) | **DELETE** /places/places/{place_uuid} | Delete Place |
+| [**deletePlace**](PlacesApi.md#deletePlace) | **DELETE** /places/places/{place_uuid} | Deleteplace |
 | [**forwardGeocodingPlacesGeocodingForwardGet**](PlacesApi.md#forwardGeocodingPlacesGeocodingForwardGet) | **GET** /places/geocoding/forward | Forward Geocoding |
-| [**getPlacePlacesPlacesPlaceUuidGet**](PlacesApi.md#getPlacePlacesPlacesPlaceUuidGet) | **GET** /places/places/{place_uuid} | Get Place |
+| [**getPlace**](PlacesApi.md#getPlace) | **GET** /places/places/{place_uuid} | Getplace |
 | [**reverseGeocodingPlacesGeocodingReverseGet**](PlacesApi.md#reverseGeocodingPlacesGeocodingReverseGet) | **GET** /places/geocoding/reverse | Reverse Geocoding |
-| [**searchPlacesBySearchStringPlacesSearchPlacesStringGet**](PlacesApi.md#searchPlacesBySearchStringPlacesSearchPlacesStringGet) | **GET** /places/search/places/string | Search Places By Search String |
-| [**searchPlacesPlacesPlacesGet**](PlacesApi.md#searchPlacesPlacesPlacesGet) | **GET** /places/places | Search Places |
-| [**updatePlacePlacesPlacesPlaceUuidPut**](PlacesApi.md#updatePlacePlacesPlacesPlaceUuidPut) | **PUT** /places/places/{place_uuid} | Update Place |
+| [**searchPlaces**](PlacesApi.md#searchPlaces) | **GET** /places/places | Searchplaces |
+| [**updatePlace**](PlacesApi.md#updatePlace) | **PUT** /places/places/{place_uuid} | Updateplace |
 
+
+<a name="advancedSearchPlaces"></a>
+# **advancedSearchPlaces**
+> Page advancedSearchPlaces(searchString, page, pageSize, sortOn, sortDesc, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData)
+
+Advancedsearchplaces
+
+Search places by a search string
+
+### Example
+```java
+// Import classes:
+import com.ehelply.client.ApiClient;
+import com.ehelply.client.ApiException;
+import com.ehelply.client.Configuration;
+import com.ehelply.client.models.*;
+import com.ehelply.client.api.PlacesApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.prod.ehelply.com");
+
+    PlacesApi apiInstance = new PlacesApi(defaultClient);
+    String searchString = ""; // String | 
+    Integer page = 1; // Integer | 
+    Integer pageSize = 25; // Integer | 
+    String sortOn = "sortOn_example"; // String | 
+    Boolean sortDesc = false; // Boolean | 
+    String xAccessToken = "xAccessToken_example"; // String | 
+    String xSecretToken = "xSecretToken_example"; // String | 
+    String authorization = "authorization_example"; // String | 
+    String ehelplyActiveParticipant = "ehelplyActiveParticipant_example"; // String | 
+    String ehelplyProject = "ehelplyProject_example"; // String | 
+    String ehelplyData = "ehelplyData_example"; // String | 
+    try {
+      Page result = apiInstance.advancedSearchPlaces(searchString, page, pageSize, sortOn, sortDesc, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling PlacesApi#advancedSearchPlaces");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **searchString** | **String**|  | [optional] [default to ] |
+| **page** | **Integer**|  | [optional] [default to 1] |
+| **pageSize** | **Integer**|  | [optional] [default to 25] |
+| **sortOn** | **String**|  | [optional] |
+| **sortDesc** | **Boolean**|  | [optional] [default to false] |
+| **xAccessToken** | **String**|  | [optional] |
+| **xSecretToken** | **String**|  | [optional] |
+| **authorization** | **String**|  | [optional] |
+| **ehelplyActiveParticipant** | **String**|  | [optional] |
+| **ehelplyProject** | **String**|  | [optional] |
+| **ehelplyData** | **String**|  | [optional] |
+
+### Return type
+
+[**Page**](Page.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Successful Response |  -  |
+| **404** | Route not found - Denied by eHelply |  -  |
+| **422** | Validation Error |  -  |
 
 <a name="createPlacePlacesPlacesPost"></a>
 # **createPlacePlacesPlacesPost**
@@ -90,11 +174,11 @@ No authorization required
 | **404** | Route not found - Denied by eHelply |  -  |
 | **422** | Validation Error |  -  |
 
-<a name="deletePlacePlacesPlacesPlaceUuidDelete"></a>
-# **deletePlacePlacesPlacesPlaceUuidDelete**
-> Object deletePlacePlacesPlacesPlaceUuidDelete(placeUuid, softDelete, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData)
+<a name="deletePlace"></a>
+# **deletePlace**
+> Object deletePlace(placeUuid, softDelete, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData)
 
-Delete Place
+Deleteplace
 
 Deletes the place with the given ID and returns True if successful
 
@@ -122,10 +206,10 @@ public class Example {
     String ehelplyProject = "ehelplyProject_example"; // String | 
     String ehelplyData = "ehelplyData_example"; // String | 
     try {
-      Object result = apiInstance.deletePlacePlacesPlacesPlaceUuidDelete(placeUuid, softDelete, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
+      Object result = apiInstance.deletePlace(placeUuid, softDelete, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling PlacesApi#deletePlacePlacesPlacesPlaceUuidDelete");
+      System.err.println("Exception when calling PlacesApi#deletePlace");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -242,11 +326,11 @@ No authorization required
 | **404** | Route not found - Denied by eHelply |  -  |
 | **422** | Validation Error |  -  |
 
-<a name="getPlacePlacesPlacesPlaceUuidGet"></a>
-# **getPlacePlacesPlacesPlaceUuidGet**
-> PlaceResponse getPlacePlacesPlacesPlaceUuidGet(placeUuid, withMeta, withCatalog, withReviews, withSchedule, withCollection, withBlog, withTags, withCategories, withCompany, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData)
+<a name="getPlace"></a>
+# **getPlace**
+> PlaceResponse getPlace(placeUuid, withMeta, withCatalog, withReviews, withSchedule, withCollection, withBlog, withTags, withCategories, withCompany, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData)
 
-Get Place
+Getplace
 
 Gets the place information given the Place ID
 
@@ -282,10 +366,10 @@ public class Example {
     String ehelplyProject = "ehelplyProject_example"; // String | 
     String ehelplyData = "ehelplyData_example"; // String | 
     try {
-      PlaceResponse result = apiInstance.getPlacePlacesPlacesPlaceUuidGet(placeUuid, withMeta, withCatalog, withReviews, withSchedule, withCollection, withBlog, withTags, withCategories, withCompany, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
+      PlaceResponse result = apiInstance.getPlace(placeUuid, withMeta, withCatalog, withReviews, withSchedule, withCollection, withBlog, withTags, withCategories, withCompany, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling PlacesApi#getPlacePlacesPlacesPlaceUuidGet");
+      System.err.println("Exception when calling PlacesApi#getPlace");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -412,95 +496,11 @@ No authorization required
 | **404** | Route not found - Denied by eHelply |  -  |
 | **422** | Validation Error |  -  |
 
-<a name="searchPlacesBySearchStringPlacesSearchPlacesStringGet"></a>
-# **searchPlacesBySearchStringPlacesSearchPlacesStringGet**
-> Page searchPlacesBySearchStringPlacesSearchPlacesStringGet(searchString, page, pageSize, sortOn, sortDesc, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData)
+<a name="searchPlaces"></a>
+# **searchPlaces**
+> Page searchPlaces(projectUuid, name, addressLine1, addressLine2, city, provinceState, country, postalZipCode, lat, lng, email, isPublic, isDeleted, withCompany, withMeta, withCatalog, withReviews, withSchedule, withCollection, withBlog, withTags, withCategories, page, pageSize, sortOn, sortDesc, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData)
 
-Search Places By Search String
-
-Search places by a search string
-
-### Example
-```java
-// Import classes:
-import com.ehelply.client.ApiClient;
-import com.ehelply.client.ApiException;
-import com.ehelply.client.Configuration;
-import com.ehelply.client.models.*;
-import com.ehelply.client.api.PlacesApi;
-
-public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://api.prod.ehelply.com");
-
-    PlacesApi apiInstance = new PlacesApi(defaultClient);
-    String searchString = ""; // String | 
-    Integer page = 1; // Integer | 
-    Integer pageSize = 25; // Integer | 
-    String sortOn = "sortOn_example"; // String | 
-    Boolean sortDesc = false; // Boolean | 
-    String xAccessToken = "xAccessToken_example"; // String | 
-    String xSecretToken = "xSecretToken_example"; // String | 
-    String authorization = "authorization_example"; // String | 
-    String ehelplyActiveParticipant = "ehelplyActiveParticipant_example"; // String | 
-    String ehelplyProject = "ehelplyProject_example"; // String | 
-    String ehelplyData = "ehelplyData_example"; // String | 
-    try {
-      Page result = apiInstance.searchPlacesBySearchStringPlacesSearchPlacesStringGet(searchString, page, pageSize, sortOn, sortDesc, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling PlacesApi#searchPlacesBySearchStringPlacesSearchPlacesStringGet");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
-    }
-  }
-}
-```
-
-### Parameters
-
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **searchString** | **String**|  | [optional] [default to ] |
-| **page** | **Integer**|  | [optional] [default to 1] |
-| **pageSize** | **Integer**|  | [optional] [default to 25] |
-| **sortOn** | **String**|  | [optional] |
-| **sortDesc** | **Boolean**|  | [optional] [default to false] |
-| **xAccessToken** | **String**|  | [optional] |
-| **xSecretToken** | **String**|  | [optional] |
-| **authorization** | **String**|  | [optional] |
-| **ehelplyActiveParticipant** | **String**|  | [optional] |
-| **ehelplyProject** | **String**|  | [optional] |
-| **ehelplyData** | **String**|  | [optional] |
-
-### Return type
-
-[**Page**](Page.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Successful Response |  -  |
-| **404** | Route not found - Denied by eHelply |  -  |
-| **422** | Validation Error |  -  |
-
-<a name="searchPlacesPlacesPlacesGet"></a>
-# **searchPlacesPlacesPlacesGet**
-> Page searchPlacesPlacesPlacesGet(projectUuid, name, addressLine1, addressLine2, city, provinceState, country, postalZipCode, lat, lng, email, isPublic, isDeleted, withCompany, withMeta, withCatalog, withReviews, withSchedule, withCollection, withBlog, withTags, withCategories, page, pageSize, sortOn, sortDesc, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData)
-
-Search Places
+Searchplaces
 
 Search all places and returns paginated results with Places being stored in items field. Can search by &#x60;project_uuid, name, address, address_line_2, city, province_state, country, postal_zip_code, lat, lng email&#x60; string fields or the &#x60;is_public and is_deleted&#x60; boolean fields. To search with these fields use query params with string values. For sorting fill out \&quot;sort_desc\&quot; field with either true/false and the \&quot;sort_on\&quot; query parameter with column you want to sort on (ex: name). Max pagination items per page is 50. Item return format: &#x60;&#x60;&#x60; {     uuid                                **type:** string     project_uuid                        **type:** string or None      meta_uuid                           **type:** string or None      catalog_data                        **type:** dict or None      review_group_data                   **type:** dict or None      schedule_data                       **type:** dict or None      collection_data                     **type:** dict or None      blog_data                           **type:** dict or None      tags                                **type:** [TagBase] or None      categories                          **type:** [CategoryBase] or None      company                             **type:** CompanyBase or None      created_at                          **type:** string or None      updated_at                          **type:** string or None      deleted_at                          **type:** string or None  } &#x60;&#x60;&#x60;
 
@@ -552,10 +552,10 @@ public class Example {
     String ehelplyProject = "ehelplyProject_example"; // String | 
     String ehelplyData = "ehelplyData_example"; // String | 
     try {
-      Page result = apiInstance.searchPlacesPlacesPlacesGet(projectUuid, name, addressLine1, addressLine2, city, provinceState, country, postalZipCode, lat, lng, email, isPublic, isDeleted, withCompany, withMeta, withCatalog, withReviews, withSchedule, withCollection, withBlog, withTags, withCategories, page, pageSize, sortOn, sortDesc, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
+      Page result = apiInstance.searchPlaces(projectUuid, name, addressLine1, addressLine2, city, provinceState, country, postalZipCode, lat, lng, email, isPublic, isDeleted, withCompany, withMeta, withCatalog, withReviews, withSchedule, withCollection, withBlog, withTags, withCategories, page, pageSize, sortOn, sortDesc, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling PlacesApi#searchPlacesPlacesPlacesGet");
+      System.err.println("Exception when calling PlacesApi#searchPlaces");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -622,11 +622,11 @@ No authorization required
 | **404** | Route not found - Denied by eHelply |  -  |
 | **422** | Validation Error |  -  |
 
-<a name="updatePlacePlacesPlacesPlaceUuidPut"></a>
-# **updatePlacePlacesPlacesPlaceUuidPut**
-> PlaceResponse updatePlacePlacesPlacesPlaceUuidPut(placeUuid, placeBase, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData)
+<a name="updatePlace"></a>
+# **updatePlace**
+> PlaceResponse updatePlace(placeUuid, placeBase, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData)
 
-Update Place
+Updateplace
 
 Update Place with given info, only updating the fields supplied. Place Uuid must be sent however.
 
@@ -654,10 +654,10 @@ public class Example {
     String ehelplyProject = "ehelplyProject_example"; // String | 
     String ehelplyData = "ehelplyData_example"; // String | 
     try {
-      PlaceResponse result = apiInstance.updatePlacePlacesPlacesPlaceUuidPut(placeUuid, placeBase, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
+      PlaceResponse result = apiInstance.updatePlace(placeUuid, placeBase, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling PlacesApi#updatePlacePlacesPlacesPlaceUuidPut");
+      System.err.println("Exception when calling PlacesApi#updatePlace");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
