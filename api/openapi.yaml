@@ -9,8 +9,8 @@ info:
     name: Apache 2.0
     url: https://www.apache.org/licenses/LICENSE-2.0.html
   termsOfService: https://superstack.ehelply.com/support/legal/terms
-  title: eHelply SDK - 1.1.97
-  version: 1.1.97
+  title: eHelply SDK - 1.1.98
+  version: 1.1.98
 servers:
 - description: eHelply / SuperStack Production
   url: https://api.prod.ehelply.com
@@ -2417,7 +2417,7 @@ paths:
         \         **type:** string or None\n\n    updated_at                     \
         \     **type:** string or None\n\n    deleted_at                         \
         \ **type:** string or None\n\n}\n```"
-      operationId: search_places_places_places_get
+      operationId: searchPlaces
       parameters:
       - explode: true
         in: query
@@ -2704,7 +2704,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/HTTPValidationError'
           description: Validation Error
-      summary: Search Places
+      summary: Searchplaces
       tags:
       - places
       x-accepts: application/json
@@ -2789,7 +2789,7 @@ paths:
   /places/places/{place_uuid}:
     delete:
       description: Deletes the place with the given ID and returns True if successful
-      operationId: delete_place_places_places__place_uuid__delete
+      operationId: deletePlace
       parameters:
       - explode: false
         in: path
@@ -2870,13 +2870,13 @@ paths:
               schema:
                 $ref: '#/components/schemas/HTTPValidationError'
           description: Validation Error
-      summary: Delete Place
+      summary: Deleteplace
       tags:
       - places
       x-accepts: application/json
     get:
       description: Gets the place information given the Place ID
-      operationId: get_place_places_places__place_uuid__get
+      operationId: getPlace
       parameters:
       - explode: false
         in: path
@@ -3030,14 +3030,14 @@ paths:
               schema:
                 $ref: '#/components/schemas/HTTPValidationError'
           description: Validation Error
-      summary: Get Place
+      summary: Getplace
       tags:
       - places
       x-accepts: application/json
     put:
       description: "Update Place with given info, only updating the fields supplied.\
         \ Place Uuid must be sent however."
-      operationId: update_place_places_places__place_uuid__put
+      operationId: updatePlace
       parameters:
       - explode: false
         in: path
@@ -3116,7 +3116,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/HTTPValidationError'
           description: Validation Error
-      summary: Update Place
+      summary: Updateplace
       tags:
       - places
       x-content-type: application/json
@@ -3777,7 +3777,7 @@ paths:
         \          **type:** string or None\n\n    updated_at                    \
         \      **type:** string or None\n\n    deleted_at                        \
         \  **type:** string or None\n\n}\n```"
-      operationId: search_staff_places_staff_get
+      operationId: searchStaff
       parameters:
       - explode: true
         in: query
@@ -3964,13 +3964,13 @@ paths:
               schema:
                 $ref: '#/components/schemas/HTTPValidationError'
           description: Validation Error
-      summary: Search Staff
+      summary: Searchstaff
       tags:
       - staff
       x-accepts: application/json
     post:
       description: Creates a staff member
-      operationId: create_staff_places_staff_post
+      operationId: createStaff
       parameters:
       - explode: false
         in: header
@@ -4041,7 +4041,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/HTTPValidationError'
           description: Validation Error
-      summary: Create Staff
+      summary: Createstaff
       tags:
       - staff
       x-content-type: application/json
@@ -4050,7 +4050,7 @@ paths:
     delete:
       description: Deletes the staff member with the given ID and returns True if
         successful
-      operationId: delete_staff_places_staff__staff_uuid__delete
+      operationId: deleteStaff
       parameters:
       - explode: false
         in: path
@@ -4131,13 +4131,13 @@ paths:
               schema:
                 $ref: '#/components/schemas/HTTPValidationError'
           description: Validation Error
-      summary: Delete Staff
+      summary: Deletestaff
       tags:
       - staff
       x-accepts: application/json
     get:
       description: Gets the staff member information given the staff ID
-      operationId: get_staff_places_staff__staff_uuid__get
+      operationId: getStaff
       parameters:
       - explode: false
         in: path
@@ -4255,14 +4255,14 @@ paths:
               schema:
                 $ref: '#/components/schemas/HTTPValidationError'
           description: Validation Error
-      summary: Get Staff
+      summary: Getstaff
       tags:
       - staff
       x-accepts: application/json
     put:
       description: "Update staff with given info, only updating the fields supplied.\
         \ Staff Uuid must be sent however."
-      operationId: update_staff_places_staff__staff_uuid__put
+      operationId: updateStaff
       parameters:
       - explode: false
         in: path
@@ -4341,7 +4341,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/HTTPValidationError'
           description: Validation Error
-      summary: Update Staff
+      summary: Updatestaff
       tags:
       - staff
       x-content-type: application/json
@@ -4825,7 +4825,7 @@ paths:
         \n    created_at                          **type:** string or None\n\n   \
         \ updated_at                          **type:** string or None\n\n    deleted_at\
         \                          **type:** string or None\n\n}\n```"
-      operationId: search_tags_places_tags_get
+      operationId: searchTag
       parameters:
       - explode: true
         in: query
@@ -4941,13 +4941,13 @@ paths:
               schema:
                 $ref: '#/components/schemas/HTTPValidationError'
           description: Validation Error
-      summary: Search Tags
+      summary: Searchtag
       tags:
-      - tag
+      - tags
       x-accepts: application/json
     post:
       description: Creates a tag
-      operationId: create_tag_places_tags_post
+      operationId: createTag
       parameters:
       - explode: false
         in: header
@@ -5018,15 +5018,15 @@ paths:
               schema:
                 $ref: '#/components/schemas/HTTPValidationError'
           description: Validation Error
-      summary: Create Tag
+      summary: Createtag
       tags:
-      - tag
+      - tags
       x-content-type: application/json
       x-accepts: application/json
   /places/tags/{tag_uuid}:
     delete:
       description: Deletes the tag member with the given ID and returns True if successful
-      operationId: delete_tag_places_tags__tag_uuid__delete
+      operationId: deleteTag
       parameters:
       - explode: false
         in: path
@@ -5098,13 +5098,13 @@ paths:
               schema:
                 $ref: '#/components/schemas/HTTPValidationError'
           description: Validation Error
-      summary: Delete Tag
+      summary: Deletetag
       tags:
       - tag
       x-accepts: application/json
     get:
       description: Gets the tag member information given the tag ID
-      operationId: get_tag_places_tags__tag_uuid__get
+      operationId: getTag
       parameters:
       - explode: false
         in: path
@@ -5177,14 +5177,14 @@ paths:
               schema:
                 $ref: '#/components/schemas/HTTPValidationError'
           description: Validation Error
-      summary: Get Tag
+      summary: Gettag
       tags:
-      - tag
+      - tags
       x-accepts: application/json
     put:
       description: "Update tag with given info, only updating the fields supplied.\
         \ Tag Uuid must be sent however."
-      operationId: update_tag_places_tags__tag_uuid__put
+      operationId: updateTag
       parameters:
       - explode: false
         in: path
@@ -5263,9 +5263,9 @@ paths:
               schema:
                 $ref: '#/components/schemas/HTTPValidationError'
           description: Validation Error
-      summary: Update Tag
+      summary: Updatetag
       tags:
-      - tag
+      - tags
       x-content-type: application/json
       x-accepts: application/json
   /places/geocoding/forward:
@@ -5435,7 +5435,7 @@ paths:
   /places/search/places/string:
     get:
       description: Search places by a search string
-      operationId: search_places_by_search_string_places_search_places_string_get
+      operationId: advancedSearchPlaces
       parameters:
       - explode: true
         in: query
@@ -5544,7 +5544,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/HTTPValidationError'
           description: Validation Error
-      summary: Search Places By Search String
+      summary: Advancedsearchplaces
       tags:
       - places
       x-accepts: application/json

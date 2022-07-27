@@ -1,8 +1,8 @@
 # ehelply-java-sdk
 
-eHelply SDK - 1.1.97
-- API version: 1.1.97
-  - Build date: 2022-07-26T23:33:10.071410Z[Etc/UTC]
+eHelply SDK - 1.1.98
+- API version: 1.1.98
+  - Build date: 2022-07-27T16:54:36.352081Z[Etc/UTC]
 
 eHelply SDK for SuperStack Services
 
@@ -41,7 +41,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>com.ehelply</groupId>
   <artifactId>ehelply-java-sdk</artifactId>
-  <version>1.1.97</version>
+  <version>1.1.98</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -57,7 +57,7 @@ Add this dependency to your project's build file:
   }
 
   dependencies {
-     implementation "com.ehelply:ehelply-java-sdk:1.1.97"
+     implementation "com.ehelply:ehelply-java-sdk:1.1.98"
   }
 ```
 
@@ -71,7 +71,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/ehelply-java-sdk-1.1.97.jar`
+* `target/ehelply-java-sdk-1.1.98.jar`
 * `target/lib/*.jar`
 
 ## Getting Started
@@ -196,14 +196,14 @@ Class | Method | HTTP request | Description
 *NotesApi* | [**deleteNote**](docs/NotesApi.md#deleteNote) | **DELETE** /notes/notes/{note_id} | Delete Note
 *NotesApi* | [**getNote**](docs/NotesApi.md#getNote) | **GET** /notes/notes/{note_id} | Get Note
 *NotesApi* | [**updateNote**](docs/NotesApi.md#updateNote) | **PUT** /notes/notes/{note_id} | Update Note
+*PlacesApi* | [**advancedSearchPlaces**](docs/PlacesApi.md#advancedSearchPlaces) | **GET** /places/search/places/string | Advancedsearchplaces
 *PlacesApi* | [**createPlacePlacesPlacesPost**](docs/PlacesApi.md#createPlacePlacesPlacesPost) | **POST** /places/places | Create Place
-*PlacesApi* | [**deletePlacePlacesPlacesPlaceUuidDelete**](docs/PlacesApi.md#deletePlacePlacesPlacesPlaceUuidDelete) | **DELETE** /places/places/{place_uuid} | Delete Place
+*PlacesApi* | [**deletePlace**](docs/PlacesApi.md#deletePlace) | **DELETE** /places/places/{place_uuid} | Deleteplace
 *PlacesApi* | [**forwardGeocodingPlacesGeocodingForwardGet**](docs/PlacesApi.md#forwardGeocodingPlacesGeocodingForwardGet) | **GET** /places/geocoding/forward | Forward Geocoding
-*PlacesApi* | [**getPlacePlacesPlacesPlaceUuidGet**](docs/PlacesApi.md#getPlacePlacesPlacesPlaceUuidGet) | **GET** /places/places/{place_uuid} | Get Place
+*PlacesApi* | [**getPlace**](docs/PlacesApi.md#getPlace) | **GET** /places/places/{place_uuid} | Getplace
 *PlacesApi* | [**reverseGeocodingPlacesGeocodingReverseGet**](docs/PlacesApi.md#reverseGeocodingPlacesGeocodingReverseGet) | **GET** /places/geocoding/reverse | Reverse Geocoding
-*PlacesApi* | [**searchPlacesBySearchStringPlacesSearchPlacesStringGet**](docs/PlacesApi.md#searchPlacesBySearchStringPlacesSearchPlacesStringGet) | **GET** /places/search/places/string | Search Places By Search String
-*PlacesApi* | [**searchPlacesPlacesPlacesGet**](docs/PlacesApi.md#searchPlacesPlacesPlacesGet) | **GET** /places/places | Search Places
-*PlacesApi* | [**updatePlacePlacesPlacesPlaceUuidPut**](docs/PlacesApi.md#updatePlacePlacesPlacesPlaceUuidPut) | **PUT** /places/places/{place_uuid} | Update Place
+*PlacesApi* | [**searchPlaces**](docs/PlacesApi.md#searchPlaces) | **GET** /places/places | Searchplaces
+*PlacesApi* | [**updatePlace**](docs/PlacesApi.md#updatePlace) | **PUT** /places/places/{place_uuid} | Updateplace
 *ProductsApi* | [**createProduct**](docs/ProductsApi.md#createProduct) | **POST** /products/products | Createproduct
 *ProductsApi* | [**deleteProduct**](docs/ProductsApi.md#deleteProduct) | **DELETE** /products/products/{product_uuid} | Deleteproduct
 *ProductsApi* | [**getProduct**](docs/ProductsApi.md#getProduct) | **GET** /products/products/{product_uuid} | Getproduct
@@ -242,21 +242,21 @@ Class | Method | HTTP request | Description
 *SecurityApi* | [**getKey**](docs/SecurityApi.md#getKey) | **GET** /sam/security/keys/{key_uuid} | Getkey
 *SecurityApi* | [**searchKeys**](docs/SecurityApi.md#searchKeys) | **GET** /sam/security/keys | Searchkeys
 *SecurityApi* | [**verifyKey**](docs/SecurityApi.md#verifyKey) | **POST** /sam/security/keys/verify | Verifykey
-*StaffApi* | [**createStaffPlacesStaffPost**](docs/StaffApi.md#createStaffPlacesStaffPost) | **POST** /places/staff | Create Staff
-*StaffApi* | [**deleteStaffPlacesStaffStaffUuidDelete**](docs/StaffApi.md#deleteStaffPlacesStaffStaffUuidDelete) | **DELETE** /places/staff/{staff_uuid} | Delete Staff
-*StaffApi* | [**getStaffPlacesStaffStaffUuidGet**](docs/StaffApi.md#getStaffPlacesStaffStaffUuidGet) | **GET** /places/staff/{staff_uuid} | Get Staff
-*StaffApi* | [**searchStaffPlacesStaffGet**](docs/StaffApi.md#searchStaffPlacesStaffGet) | **GET** /places/staff | Search Staff
-*StaffApi* | [**updateStaffPlacesStaffStaffUuidPut**](docs/StaffApi.md#updateStaffPlacesStaffStaffUuidPut) | **PUT** /places/staff/{staff_uuid} | Update Staff
+*StaffApi* | [**createStaff**](docs/StaffApi.md#createStaff) | **POST** /places/staff | Createstaff
+*StaffApi* | [**deleteStaff**](docs/StaffApi.md#deleteStaff) | **DELETE** /places/staff/{staff_uuid} | Deletestaff
+*StaffApi* | [**getStaff**](docs/StaffApi.md#getStaff) | **GET** /places/staff/{staff_uuid} | Getstaff
+*StaffApi* | [**searchStaff**](docs/StaffApi.md#searchStaff) | **GET** /places/staff | Searchstaff
+*StaffApi* | [**updateStaff**](docs/StaffApi.md#updateStaff) | **PUT** /places/staff/{staff_uuid} | Updatestaff
 *SupportApi* | [**createContact**](docs/SupportApi.md#createContact) | **POST** /sam/support/contact | Createcontact
 *SupportApi* | [**createTicket**](docs/SupportApi.md#createTicket) | **POST** /sam/support/projects/{project_uuid}/members/{member_uuid}/tickets | Createticket
 *SupportApi* | [**listTickets**](docs/SupportApi.md#listTickets) | **GET** /sam/support/projects/{project_uuid}/members/{member_uuid}/tickets | Listtickets
 *SupportApi* | [**updateTicket**](docs/SupportApi.md#updateTicket) | **PUT** /sam/support/projects/{project_uuid}/members/{member_uuid}/tickets/{ticket_id} | Updateticket
 *SupportApi* | [**viewTicket**](docs/SupportApi.md#viewTicket) | **GET** /sam/support/projects/{project_uuid}/members/{member_uuid}/tickets/{ticket_id} | Viewticket
-*TagApi* | [**createTagPlacesTagsPost**](docs/TagApi.md#createTagPlacesTagsPost) | **POST** /places/tags | Create Tag
-*TagApi* | [**deleteTagPlacesTagsTagUuidDelete**](docs/TagApi.md#deleteTagPlacesTagsTagUuidDelete) | **DELETE** /places/tags/{tag_uuid} | Delete Tag
-*TagApi* | [**getTagPlacesTagsTagUuidGet**](docs/TagApi.md#getTagPlacesTagsTagUuidGet) | **GET** /places/tags/{tag_uuid} | Get Tag
-*TagApi* | [**searchTagsPlacesTagsGet**](docs/TagApi.md#searchTagsPlacesTagsGet) | **GET** /places/tags | Search Tags
-*TagApi* | [**updateTagPlacesTagsTagUuidPut**](docs/TagApi.md#updateTagPlacesTagsTagUuidPut) | **PUT** /places/tags/{tag_uuid} | Update Tag
+*TagApi* | [**deleteTag**](docs/TagApi.md#deleteTag) | **DELETE** /places/tags/{tag_uuid} | Deletetag
+*TagsApi* | [**createTag**](docs/TagsApi.md#createTag) | **POST** /places/tags | Createtag
+*TagsApi* | [**getTag**](docs/TagsApi.md#getTag) | **GET** /places/tags/{tag_uuid} | Gettag
+*TagsApi* | [**searchTag**](docs/TagsApi.md#searchTag) | **GET** /places/tags | Searchtag
+*TagsApi* | [**updateTag**](docs/TagsApi.md#updateTag) | **PUT** /places/tags/{tag_uuid} | Updatetag
 *UsersApi* | [**confirmSignup**](docs/UsersApi.md#confirmSignup) | **POST** /sam/users/auth/signup/confirm | Confirmsignup
 *UsersApi* | [**createParticipant**](docs/UsersApi.md#createParticipant) | **POST** /sam/users/participants | Createparticipant
 *UsersApi* | [**createUser**](docs/UsersApi.md#createUser) | **POST** /sam/users | Createuser

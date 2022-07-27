@@ -28,9 +28,9 @@ import java.io.IOException;
 
 
 import com.ehelply.client.model.HTTPValidationError;
-import com.ehelply.client.model.NoteBase;
-import com.ehelply.client.model.NoteDynamoHistoryResponse;
-import com.ehelply.client.model.NoteDynamoResponse;
+import com.ehelply.client.model.Page;
+import com.ehelply.client.model.TagBase;
+import com.ehelply.client.model.TagDb;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -39,16 +39,16 @@ import java.util.List;
 import java.util.Map;
 import javax.ws.rs.core.GenericType;
 
-public class NotesApi {
+public class TagsApi {
     private ApiClient localVarApiClient;
     private int localHostIndex;
     private String localCustomBaseUrl;
 
-    public NotesApi() {
+    public TagsApi() {
         this(Configuration.getDefaultApiClient());
     }
 
-    public NotesApi(ApiClient apiClient) {
+    public TagsApi(ApiClient apiClient) {
         this.localVarApiClient = apiClient;
     }
 
@@ -77,8 +77,8 @@ public class NotesApi {
     }
 
     /**
-     * Build call for createNote
-     * @param noteBase  (required)
+     * Build call for createTag
+     * @param tagBase  (required)
      * @param xAccessToken  (optional)
      * @param xSecretToken  (optional)
      * @param authorization  (optional)
@@ -92,11 +92,11 @@ public class NotesApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful Response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Route not found - Denied by eHelply </td><td>  -  </td></tr>
         <tr><td> 422 </td><td> Validation Error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call createNoteCall(NoteBase noteBase, String xAccessToken, String xSecretToken, String authorization, String ehelplyActiveParticipant, String ehelplyProject, String ehelplyData, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call createTagCall(TagBase tagBase, String xAccessToken, String xSecretToken, String authorization, String ehelplyActiveParticipant, String ehelplyProject, String ehelplyData, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -110,10 +110,10 @@ public class NotesApi {
             basePath = null;
         }
 
-        Object localVarPostBody = noteBase;
+        Object localVarPostBody = tagBase;
 
         // create path and map variables
-        String localVarPath = "/notes/notes";
+        String localVarPath = "/places/tags";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -166,74 +166,74 @@ public class NotesApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call createNoteValidateBeforeCall(NoteBase noteBase, String xAccessToken, String xSecretToken, String authorization, String ehelplyActiveParticipant, String ehelplyProject, String ehelplyData, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call createTagValidateBeforeCall(TagBase tagBase, String xAccessToken, String xSecretToken, String authorization, String ehelplyActiveParticipant, String ehelplyProject, String ehelplyData, final ApiCallback _callback) throws ApiException {
         
-        // verify the required parameter 'noteBase' is set
-        if (noteBase == null) {
-            throw new ApiException("Missing the required parameter 'noteBase' when calling createNote(Async)");
+        // verify the required parameter 'tagBase' is set
+        if (tagBase == null) {
+            throw new ApiException("Missing the required parameter 'tagBase' when calling createTag(Async)");
         }
         
 
-        okhttp3.Call localVarCall = createNoteCall(noteBase, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData, _callback);
+        okhttp3.Call localVarCall = createTagCall(tagBase, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData, _callback);
         return localVarCall;
 
     }
 
     /**
-     * Create Note
-     * 
-     * @param noteBase  (required)
+     * Createtag
+     * Creates a tag
+     * @param tagBase  (required)
      * @param xAccessToken  (optional)
      * @param xSecretToken  (optional)
      * @param authorization  (optional)
      * @param ehelplyActiveParticipant  (optional)
      * @param ehelplyProject  (optional)
      * @param ehelplyData  (optional)
-     * @return NoteDynamoResponse
+     * @return TagDb
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful Response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Route not found - Denied by eHelply </td><td>  -  </td></tr>
         <tr><td> 422 </td><td> Validation Error </td><td>  -  </td></tr>
      </table>
      */
-    public NoteDynamoResponse createNote(NoteBase noteBase, String xAccessToken, String xSecretToken, String authorization, String ehelplyActiveParticipant, String ehelplyProject, String ehelplyData) throws ApiException {
-        ApiResponse<NoteDynamoResponse> localVarResp = createNoteWithHttpInfo(noteBase, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
+    public TagDb createTag(TagBase tagBase, String xAccessToken, String xSecretToken, String authorization, String ehelplyActiveParticipant, String ehelplyProject, String ehelplyData) throws ApiException {
+        ApiResponse<TagDb> localVarResp = createTagWithHttpInfo(tagBase, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
         return localVarResp.getData();
     }
 
     /**
-     * Create Note
-     * 
-     * @param noteBase  (required)
+     * Createtag
+     * Creates a tag
+     * @param tagBase  (required)
      * @param xAccessToken  (optional)
      * @param xSecretToken  (optional)
      * @param authorization  (optional)
      * @param ehelplyActiveParticipant  (optional)
      * @param ehelplyProject  (optional)
      * @param ehelplyData  (optional)
-     * @return ApiResponse&lt;NoteDynamoResponse&gt;
+     * @return ApiResponse&lt;TagDb&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful Response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Route not found - Denied by eHelply </td><td>  -  </td></tr>
         <tr><td> 422 </td><td> Validation Error </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<NoteDynamoResponse> createNoteWithHttpInfo(NoteBase noteBase, String xAccessToken, String xSecretToken, String authorization, String ehelplyActiveParticipant, String ehelplyProject, String ehelplyData) throws ApiException {
-        okhttp3.Call localVarCall = createNoteValidateBeforeCall(noteBase, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData, null);
-        Type localVarReturnType = new TypeToken<NoteDynamoResponse>(){}.getType();
+    public ApiResponse<TagDb> createTagWithHttpInfo(TagBase tagBase, String xAccessToken, String xSecretToken, String authorization, String ehelplyActiveParticipant, String ehelplyProject, String ehelplyData) throws ApiException {
+        okhttp3.Call localVarCall = createTagValidateBeforeCall(tagBase, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData, null);
+        Type localVarReturnType = new TypeToken<TagDb>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
-     * Create Note (asynchronously)
-     * 
-     * @param noteBase  (required)
+     * Createtag (asynchronously)
+     * Creates a tag
+     * @param tagBase  (required)
      * @param xAccessToken  (optional)
      * @param xSecretToken  (optional)
      * @param authorization  (optional)
@@ -247,21 +247,20 @@ public class NotesApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful Response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Route not found - Denied by eHelply </td><td>  -  </td></tr>
         <tr><td> 422 </td><td> Validation Error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call createNoteAsync(NoteBase noteBase, String xAccessToken, String xSecretToken, String authorization, String ehelplyActiveParticipant, String ehelplyProject, String ehelplyData, final ApiCallback<NoteDynamoResponse> _callback) throws ApiException {
+    public okhttp3.Call createTagAsync(TagBase tagBase, String xAccessToken, String xSecretToken, String authorization, String ehelplyActiveParticipant, String ehelplyProject, String ehelplyData, final ApiCallback<TagDb> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = createNoteValidateBeforeCall(noteBase, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData, _callback);
-        Type localVarReturnType = new TypeToken<NoteDynamoResponse>(){}.getType();
+        okhttp3.Call localVarCall = createTagValidateBeforeCall(tagBase, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData, _callback);
+        Type localVarReturnType = new TypeToken<TagDb>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
-     * Build call for deleteNote
-     * @param noteId  (required)
-     * @param method  (optional, default to previous)
+     * Build call for getTag
+     * @param tagUuid  (required)
      * @param xAccessToken  (optional)
      * @param xSecretToken  (optional)
      * @param authorization  (optional)
@@ -275,11 +274,11 @@ public class NotesApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful Response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Route not found - Denied by eHelply </td><td>  -  </td></tr>
         <tr><td> 422 </td><td> Validation Error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call deleteNoteCall(String noteId, String method, String xAccessToken, String xSecretToken, String authorization, String ehelplyActiveParticipant, String ehelplyProject, String ehelplyData, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getTagCall(String tagUuid, String xAccessToken, String xSecretToken, String authorization, String ehelplyActiveParticipant, String ehelplyProject, String ehelplyData, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -296,18 +295,14 @@ public class NotesApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/notes/notes/{note_id}"
-            .replaceAll("\\{" + "note_id" + "\\}", localVarApiClient.escapeString(noteId.toString()));
+        String localVarPath = "/places/tags/{tag_uuid}"
+            .replaceAll("\\{" + "tag_uuid" + "\\}", localVarApiClient.escapeString(tagUuid.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-        if (method != null) {
-            localVarQueryParams.addAll(localVarApiClient.parameterToPair("method", method));
-        }
 
         if (xAccessToken != null) {
             localVarHeaderParams.put("x-access-token", localVarApiClient.parameterToString(xAccessToken));
@@ -350,81 +345,78 @@ public class NotesApi {
         }
 
         String[] localVarAuthNames = new String[] {  };
-        return localVarApiClient.buildCall(basePath, localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call deleteNoteValidateBeforeCall(String noteId, String method, String xAccessToken, String xSecretToken, String authorization, String ehelplyActiveParticipant, String ehelplyProject, String ehelplyData, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getTagValidateBeforeCall(String tagUuid, String xAccessToken, String xSecretToken, String authorization, String ehelplyActiveParticipant, String ehelplyProject, String ehelplyData, final ApiCallback _callback) throws ApiException {
         
-        // verify the required parameter 'noteId' is set
-        if (noteId == null) {
-            throw new ApiException("Missing the required parameter 'noteId' when calling deleteNote(Async)");
+        // verify the required parameter 'tagUuid' is set
+        if (tagUuid == null) {
+            throw new ApiException("Missing the required parameter 'tagUuid' when calling getTag(Async)");
         }
         
 
-        okhttp3.Call localVarCall = deleteNoteCall(noteId, method, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData, _callback);
+        okhttp3.Call localVarCall = getTagCall(tagUuid, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData, _callback);
         return localVarCall;
 
     }
 
     /**
-     * Delete Note
-     * 
-     * @param noteId  (required)
-     * @param method  (optional, default to previous)
+     * Gettag
+     * Gets the tag member information given the tag ID
+     * @param tagUuid  (required)
      * @param xAccessToken  (optional)
      * @param xSecretToken  (optional)
      * @param authorization  (optional)
      * @param ehelplyActiveParticipant  (optional)
      * @param ehelplyProject  (optional)
      * @param ehelplyData  (optional)
-     * @return Object
+     * @return TagBase
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful Response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Route not found - Denied by eHelply </td><td>  -  </td></tr>
         <tr><td> 422 </td><td> Validation Error </td><td>  -  </td></tr>
      </table>
      */
-    public Object deleteNote(String noteId, String method, String xAccessToken, String xSecretToken, String authorization, String ehelplyActiveParticipant, String ehelplyProject, String ehelplyData) throws ApiException {
-        ApiResponse<Object> localVarResp = deleteNoteWithHttpInfo(noteId, method, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
+    public TagBase getTag(String tagUuid, String xAccessToken, String xSecretToken, String authorization, String ehelplyActiveParticipant, String ehelplyProject, String ehelplyData) throws ApiException {
+        ApiResponse<TagBase> localVarResp = getTagWithHttpInfo(tagUuid, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
         return localVarResp.getData();
     }
 
     /**
-     * Delete Note
-     * 
-     * @param noteId  (required)
-     * @param method  (optional, default to previous)
+     * Gettag
+     * Gets the tag member information given the tag ID
+     * @param tagUuid  (required)
      * @param xAccessToken  (optional)
      * @param xSecretToken  (optional)
      * @param authorization  (optional)
      * @param ehelplyActiveParticipant  (optional)
      * @param ehelplyProject  (optional)
      * @param ehelplyData  (optional)
-     * @return ApiResponse&lt;Object&gt;
+     * @return ApiResponse&lt;TagBase&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful Response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Route not found - Denied by eHelply </td><td>  -  </td></tr>
         <tr><td> 422 </td><td> Validation Error </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Object> deleteNoteWithHttpInfo(String noteId, String method, String xAccessToken, String xSecretToken, String authorization, String ehelplyActiveParticipant, String ehelplyProject, String ehelplyData) throws ApiException {
-        okhttp3.Call localVarCall = deleteNoteValidateBeforeCall(noteId, method, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData, null);
-        Type localVarReturnType = new TypeToken<Object>(){}.getType();
+    public ApiResponse<TagBase> getTagWithHttpInfo(String tagUuid, String xAccessToken, String xSecretToken, String authorization, String ehelplyActiveParticipant, String ehelplyProject, String ehelplyData) throws ApiException {
+        okhttp3.Call localVarCall = getTagValidateBeforeCall(tagUuid, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData, null);
+        Type localVarReturnType = new TypeToken<TagBase>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
-     * Delete Note (asynchronously)
-     * 
-     * @param noteId  (required)
-     * @param method  (optional, default to previous)
+     * Gettag (asynchronously)
+     * Gets the tag member information given the tag ID
+     * @param tagUuid  (required)
      * @param xAccessToken  (optional)
      * @param xSecretToken  (optional)
      * @param authorization  (optional)
@@ -438,22 +430,25 @@ public class NotesApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful Response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Route not found - Denied by eHelply </td><td>  -  </td></tr>
         <tr><td> 422 </td><td> Validation Error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call deleteNoteAsync(String noteId, String method, String xAccessToken, String xSecretToken, String authorization, String ehelplyActiveParticipant, String ehelplyProject, String ehelplyData, final ApiCallback<Object> _callback) throws ApiException {
+    public okhttp3.Call getTagAsync(String tagUuid, String xAccessToken, String xSecretToken, String authorization, String ehelplyActiveParticipant, String ehelplyProject, String ehelplyData, final ApiCallback<TagBase> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = deleteNoteValidateBeforeCall(noteId, method, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData, _callback);
-        Type localVarReturnType = new TypeToken<Object>(){}.getType();
+        okhttp3.Call localVarCall = getTagValidateBeforeCall(tagUuid, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData, _callback);
+        Type localVarReturnType = new TypeToken<TagBase>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
-     * Build call for getNote
-     * @param noteId  (required)
-     * @param history  (optional, default to 0)
-     * @param historyContent  (optional, default to true)
+     * Build call for searchTag
+     * @param projectUuid  (optional)
+     * @param name  (optional)
+     * @param page  (optional, default to 1)
+     * @param pageSize  (optional, default to 25)
+     * @param sortOn  (optional)
+     * @param sortDesc  (optional, default to false)
      * @param xAccessToken  (optional)
      * @param xSecretToken  (optional)
      * @param authorization  (optional)
@@ -467,11 +462,11 @@ public class NotesApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful Response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Route not found - Denied by eHelply </td><td>  -  </td></tr>
         <tr><td> 422 </td><td> Validation Error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getNoteCall(String noteId, Integer history, Boolean historyContent, String xAccessToken, String xSecretToken, String authorization, String ehelplyActiveParticipant, String ehelplyProject, String ehelplyData, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call searchTagCall(String projectUuid, String name, Integer page, Integer pageSize, String sortOn, Boolean sortDesc, String xAccessToken, String xSecretToken, String authorization, String ehelplyActiveParticipant, String ehelplyProject, String ehelplyData, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -488,8 +483,7 @@ public class NotesApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/notes/notes/{note_id}"
-            .replaceAll("\\{" + "note_id" + "\\}", localVarApiClient.escapeString(noteId.toString()));
+        String localVarPath = "/places/tags";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -497,12 +491,28 @@ public class NotesApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (history != null) {
-            localVarQueryParams.addAll(localVarApiClient.parameterToPair("history", history));
+        if (projectUuid != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("project_uuid", projectUuid));
         }
 
-        if (historyContent != null) {
-            localVarQueryParams.addAll(localVarApiClient.parameterToPair("history_content", historyContent));
+        if (name != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("name", name));
+        }
+
+        if (page != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("page", page));
+        }
+
+        if (pageSize != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("page_size", pageSize));
+        }
+
+        if (sortOn != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("sort_on", sortOn));
+        }
+
+        if (sortDesc != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("sort_desc", sortDesc));
         }
 
         if (xAccessToken != null) {
@@ -550,80 +560,84 @@ public class NotesApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getNoteValidateBeforeCall(String noteId, Integer history, Boolean historyContent, String xAccessToken, String xSecretToken, String authorization, String ehelplyActiveParticipant, String ehelplyProject, String ehelplyData, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'noteId' is set
-        if (noteId == null) {
-            throw new ApiException("Missing the required parameter 'noteId' when calling getNote(Async)");
-        }
+    private okhttp3.Call searchTagValidateBeforeCall(String projectUuid, String name, Integer page, Integer pageSize, String sortOn, Boolean sortDesc, String xAccessToken, String xSecretToken, String authorization, String ehelplyActiveParticipant, String ehelplyProject, String ehelplyData, final ApiCallback _callback) throws ApiException {
         
 
-        okhttp3.Call localVarCall = getNoteCall(noteId, history, historyContent, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData, _callback);
+        okhttp3.Call localVarCall = searchTagCall(projectUuid, name, page, pageSize, sortOn, sortDesc, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData, _callback);
         return localVarCall;
 
     }
 
     /**
-     * Get Note
-     * 
-     * @param noteId  (required)
-     * @param history  (optional, default to 0)
-     * @param historyContent  (optional, default to true)
+     * Searchtag
+     * TODO Item return format: &#x60;&#x60;&#x60; {     uuid                                **type:** string     project_uuid                        **type:** string or None      name                                **type:** string or None      meta                                **type:** dict or None      created_at                          **type:** string or None      updated_at                          **type:** string or None      deleted_at                          **type:** string or None  } &#x60;&#x60;&#x60;
+     * @param projectUuid  (optional)
+     * @param name  (optional)
+     * @param page  (optional, default to 1)
+     * @param pageSize  (optional, default to 25)
+     * @param sortOn  (optional)
+     * @param sortDesc  (optional, default to false)
      * @param xAccessToken  (optional)
      * @param xSecretToken  (optional)
      * @param authorization  (optional)
      * @param ehelplyActiveParticipant  (optional)
      * @param ehelplyProject  (optional)
      * @param ehelplyData  (optional)
-     * @return NoteDynamoHistoryResponse
+     * @return Page
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful Response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Route not found - Denied by eHelply </td><td>  -  </td></tr>
         <tr><td> 422 </td><td> Validation Error </td><td>  -  </td></tr>
      </table>
      */
-    public NoteDynamoHistoryResponse getNote(String noteId, Integer history, Boolean historyContent, String xAccessToken, String xSecretToken, String authorization, String ehelplyActiveParticipant, String ehelplyProject, String ehelplyData) throws ApiException {
-        ApiResponse<NoteDynamoHistoryResponse> localVarResp = getNoteWithHttpInfo(noteId, history, historyContent, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
+    public Page searchTag(String projectUuid, String name, Integer page, Integer pageSize, String sortOn, Boolean sortDesc, String xAccessToken, String xSecretToken, String authorization, String ehelplyActiveParticipant, String ehelplyProject, String ehelplyData) throws ApiException {
+        ApiResponse<Page> localVarResp = searchTagWithHttpInfo(projectUuid, name, page, pageSize, sortOn, sortDesc, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
         return localVarResp.getData();
     }
 
     /**
-     * Get Note
-     * 
-     * @param noteId  (required)
-     * @param history  (optional, default to 0)
-     * @param historyContent  (optional, default to true)
+     * Searchtag
+     * TODO Item return format: &#x60;&#x60;&#x60; {     uuid                                **type:** string     project_uuid                        **type:** string or None      name                                **type:** string or None      meta                                **type:** dict or None      created_at                          **type:** string or None      updated_at                          **type:** string or None      deleted_at                          **type:** string or None  } &#x60;&#x60;&#x60;
+     * @param projectUuid  (optional)
+     * @param name  (optional)
+     * @param page  (optional, default to 1)
+     * @param pageSize  (optional, default to 25)
+     * @param sortOn  (optional)
+     * @param sortDesc  (optional, default to false)
      * @param xAccessToken  (optional)
      * @param xSecretToken  (optional)
      * @param authorization  (optional)
      * @param ehelplyActiveParticipant  (optional)
      * @param ehelplyProject  (optional)
      * @param ehelplyData  (optional)
-     * @return ApiResponse&lt;NoteDynamoHistoryResponse&gt;
+     * @return ApiResponse&lt;Page&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful Response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Route not found - Denied by eHelply </td><td>  -  </td></tr>
         <tr><td> 422 </td><td> Validation Error </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<NoteDynamoHistoryResponse> getNoteWithHttpInfo(String noteId, Integer history, Boolean historyContent, String xAccessToken, String xSecretToken, String authorization, String ehelplyActiveParticipant, String ehelplyProject, String ehelplyData) throws ApiException {
-        okhttp3.Call localVarCall = getNoteValidateBeforeCall(noteId, history, historyContent, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData, null);
-        Type localVarReturnType = new TypeToken<NoteDynamoHistoryResponse>(){}.getType();
+    public ApiResponse<Page> searchTagWithHttpInfo(String projectUuid, String name, Integer page, Integer pageSize, String sortOn, Boolean sortDesc, String xAccessToken, String xSecretToken, String authorization, String ehelplyActiveParticipant, String ehelplyProject, String ehelplyData) throws ApiException {
+        okhttp3.Call localVarCall = searchTagValidateBeforeCall(projectUuid, name, page, pageSize, sortOn, sortDesc, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData, null);
+        Type localVarReturnType = new TypeToken<Page>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
-     * Get Note (asynchronously)
-     * 
-     * @param noteId  (required)
-     * @param history  (optional, default to 0)
-     * @param historyContent  (optional, default to true)
+     * Searchtag (asynchronously)
+     * TODO Item return format: &#x60;&#x60;&#x60; {     uuid                                **type:** string     project_uuid                        **type:** string or None      name                                **type:** string or None      meta                                **type:** dict or None      created_at                          **type:** string or None      updated_at                          **type:** string or None      deleted_at                          **type:** string or None  } &#x60;&#x60;&#x60;
+     * @param projectUuid  (optional)
+     * @param name  (optional)
+     * @param page  (optional, default to 1)
+     * @param pageSize  (optional, default to 25)
+     * @param sortOn  (optional)
+     * @param sortDesc  (optional, default to false)
      * @param xAccessToken  (optional)
      * @param xSecretToken  (optional)
      * @param authorization  (optional)
@@ -637,21 +651,21 @@ public class NotesApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful Response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Route not found - Denied by eHelply </td><td>  -  </td></tr>
         <tr><td> 422 </td><td> Validation Error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getNoteAsync(String noteId, Integer history, Boolean historyContent, String xAccessToken, String xSecretToken, String authorization, String ehelplyActiveParticipant, String ehelplyProject, String ehelplyData, final ApiCallback<NoteDynamoHistoryResponse> _callback) throws ApiException {
+    public okhttp3.Call searchTagAsync(String projectUuid, String name, Integer page, Integer pageSize, String sortOn, Boolean sortDesc, String xAccessToken, String xSecretToken, String authorization, String ehelplyActiveParticipant, String ehelplyProject, String ehelplyData, final ApiCallback<Page> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getNoteValidateBeforeCall(noteId, history, historyContent, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData, _callback);
-        Type localVarReturnType = new TypeToken<NoteDynamoHistoryResponse>(){}.getType();
+        okhttp3.Call localVarCall = searchTagValidateBeforeCall(projectUuid, name, page, pageSize, sortOn, sortDesc, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData, _callback);
+        Type localVarReturnType = new TypeToken<Page>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
-     * Build call for updateNote
-     * @param noteId  (required)
-     * @param noteBase  (required)
+     * Build call for updateTag
+     * @param tagUuid  (required)
+     * @param tagBase  (required)
      * @param xAccessToken  (optional)
      * @param xSecretToken  (optional)
      * @param authorization  (optional)
@@ -665,11 +679,11 @@ public class NotesApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful Response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Route not found - Denied by eHelply </td><td>  -  </td></tr>
         <tr><td> 422 </td><td> Validation Error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call updateNoteCall(String noteId, NoteBase noteBase, String xAccessToken, String xSecretToken, String authorization, String ehelplyActiveParticipant, String ehelplyProject, String ehelplyData, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call updateTagCall(String tagUuid, TagBase tagBase, String xAccessToken, String xSecretToken, String authorization, String ehelplyActiveParticipant, String ehelplyProject, String ehelplyData, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -683,11 +697,11 @@ public class NotesApi {
             basePath = null;
         }
 
-        Object localVarPostBody = noteBase;
+        Object localVarPostBody = tagBase;
 
         // create path and map variables
-        String localVarPath = "/notes/notes/{note_id}"
-            .replaceAll("\\{" + "note_id" + "\\}", localVarApiClient.escapeString(noteId.toString()));
+        String localVarPath = "/places/tags/{tag_uuid}"
+            .replaceAll("\\{" + "tag_uuid" + "\\}", localVarApiClient.escapeString(tagUuid.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -740,82 +754,82 @@ public class NotesApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call updateNoteValidateBeforeCall(String noteId, NoteBase noteBase, String xAccessToken, String xSecretToken, String authorization, String ehelplyActiveParticipant, String ehelplyProject, String ehelplyData, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call updateTagValidateBeforeCall(String tagUuid, TagBase tagBase, String xAccessToken, String xSecretToken, String authorization, String ehelplyActiveParticipant, String ehelplyProject, String ehelplyData, final ApiCallback _callback) throws ApiException {
         
-        // verify the required parameter 'noteId' is set
-        if (noteId == null) {
-            throw new ApiException("Missing the required parameter 'noteId' when calling updateNote(Async)");
+        // verify the required parameter 'tagUuid' is set
+        if (tagUuid == null) {
+            throw new ApiException("Missing the required parameter 'tagUuid' when calling updateTag(Async)");
         }
         
-        // verify the required parameter 'noteBase' is set
-        if (noteBase == null) {
-            throw new ApiException("Missing the required parameter 'noteBase' when calling updateNote(Async)");
+        // verify the required parameter 'tagBase' is set
+        if (tagBase == null) {
+            throw new ApiException("Missing the required parameter 'tagBase' when calling updateTag(Async)");
         }
         
 
-        okhttp3.Call localVarCall = updateNoteCall(noteId, noteBase, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData, _callback);
+        okhttp3.Call localVarCall = updateTagCall(tagUuid, tagBase, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData, _callback);
         return localVarCall;
 
     }
 
     /**
-     * Update Note
-     * 
-     * @param noteId  (required)
-     * @param noteBase  (required)
+     * Updatetag
+     * Update tag with given info, only updating the fields supplied. Tag Uuid must be sent however.
+     * @param tagUuid  (required)
+     * @param tagBase  (required)
      * @param xAccessToken  (optional)
      * @param xSecretToken  (optional)
      * @param authorization  (optional)
      * @param ehelplyActiveParticipant  (optional)
      * @param ehelplyProject  (optional)
      * @param ehelplyData  (optional)
-     * @return NoteDynamoResponse
+     * @return TagBase
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful Response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Route not found - Denied by eHelply </td><td>  -  </td></tr>
         <tr><td> 422 </td><td> Validation Error </td><td>  -  </td></tr>
      </table>
      */
-    public NoteDynamoResponse updateNote(String noteId, NoteBase noteBase, String xAccessToken, String xSecretToken, String authorization, String ehelplyActiveParticipant, String ehelplyProject, String ehelplyData) throws ApiException {
-        ApiResponse<NoteDynamoResponse> localVarResp = updateNoteWithHttpInfo(noteId, noteBase, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
+    public TagBase updateTag(String tagUuid, TagBase tagBase, String xAccessToken, String xSecretToken, String authorization, String ehelplyActiveParticipant, String ehelplyProject, String ehelplyData) throws ApiException {
+        ApiResponse<TagBase> localVarResp = updateTagWithHttpInfo(tagUuid, tagBase, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
         return localVarResp.getData();
     }
 
     /**
-     * Update Note
-     * 
-     * @param noteId  (required)
-     * @param noteBase  (required)
+     * Updatetag
+     * Update tag with given info, only updating the fields supplied. Tag Uuid must be sent however.
+     * @param tagUuid  (required)
+     * @param tagBase  (required)
      * @param xAccessToken  (optional)
      * @param xSecretToken  (optional)
      * @param authorization  (optional)
      * @param ehelplyActiveParticipant  (optional)
      * @param ehelplyProject  (optional)
      * @param ehelplyData  (optional)
-     * @return ApiResponse&lt;NoteDynamoResponse&gt;
+     * @return ApiResponse&lt;TagBase&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful Response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Route not found - Denied by eHelply </td><td>  -  </td></tr>
         <tr><td> 422 </td><td> Validation Error </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<NoteDynamoResponse> updateNoteWithHttpInfo(String noteId, NoteBase noteBase, String xAccessToken, String xSecretToken, String authorization, String ehelplyActiveParticipant, String ehelplyProject, String ehelplyData) throws ApiException {
-        okhttp3.Call localVarCall = updateNoteValidateBeforeCall(noteId, noteBase, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData, null);
-        Type localVarReturnType = new TypeToken<NoteDynamoResponse>(){}.getType();
+    public ApiResponse<TagBase> updateTagWithHttpInfo(String tagUuid, TagBase tagBase, String xAccessToken, String xSecretToken, String authorization, String ehelplyActiveParticipant, String ehelplyProject, String ehelplyData) throws ApiException {
+        okhttp3.Call localVarCall = updateTagValidateBeforeCall(tagUuid, tagBase, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData, null);
+        Type localVarReturnType = new TypeToken<TagBase>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
-     * Update Note (asynchronously)
-     * 
-     * @param noteId  (required)
-     * @param noteBase  (required)
+     * Updatetag (asynchronously)
+     * Update tag with given info, only updating the fields supplied. Tag Uuid must be sent however.
+     * @param tagUuid  (required)
+     * @param tagBase  (required)
      * @param xAccessToken  (optional)
      * @param xSecretToken  (optional)
      * @param authorization  (optional)
@@ -829,14 +843,14 @@ public class NotesApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful Response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Route not found - Denied by eHelply </td><td>  -  </td></tr>
         <tr><td> 422 </td><td> Validation Error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call updateNoteAsync(String noteId, NoteBase noteBase, String xAccessToken, String xSecretToken, String authorization, String ehelplyActiveParticipant, String ehelplyProject, String ehelplyData, final ApiCallback<NoteDynamoResponse> _callback) throws ApiException {
+    public okhttp3.Call updateTagAsync(String tagUuid, TagBase tagBase, String xAccessToken, String xSecretToken, String authorization, String ehelplyActiveParticipant, String ehelplyProject, String ehelplyData, final ApiCallback<TagBase> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = updateNoteValidateBeforeCall(noteId, noteBase, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData, _callback);
-        Type localVarReturnType = new TypeToken<NoteDynamoResponse>(){}.getType();
+        okhttp3.Call localVarCall = updateTagValidateBeforeCall(tagUuid, tagBase, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData, _callback);
+        Type localVarReturnType = new TypeToken<TagBase>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
