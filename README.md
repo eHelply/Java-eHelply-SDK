@@ -1,8 +1,8 @@
 # ehelply-java-sdk
 
-eHelply SDK - 1.1.98
-- API version: 1.1.98
-  - Build date: 2022-07-27T16:54:36.352081Z[Etc/UTC]
+eHelply SDK - 1.1.99
+- API version: 1.1.99
+  - Build date: 2022-07-28T01:14:40.544181Z[Etc/UTC]
 
 eHelply SDK for SuperStack Services
 
@@ -41,7 +41,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>com.ehelply</groupId>
   <artifactId>ehelply-java-sdk</artifactId>
-  <version>1.1.98</version>
+  <version>1.1.99</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -57,7 +57,7 @@ Add this dependency to your project's build file:
   }
 
   dependencies {
-     implementation "com.ehelply:ehelply-java-sdk:1.1.98"
+     implementation "com.ehelply:ehelply-java-sdk:1.1.99"
   }
 ```
 
@@ -71,7 +71,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/ehelply-java-sdk-1.1.98.jar`
+* `target/ehelply-java-sdk-1.1.99.jar`
 * `target/lib/*.jar`
 
 ## Getting Started
@@ -213,21 +213,26 @@ Class | Method | HTTP request | Description
 *ProjectsApi* | [**addMemberToProject**](docs/ProjectsApi.md#addMemberToProject) | **POST** /sam/projects/projects/{project_uuid}/members/{entity_uuid} | Addmembertoproject
 *ProjectsApi* | [**archiveProject**](docs/ProjectsApi.md#archiveProject) | **DELETE** /sam/projects/projects/{project_uuid} | Archiveproject
 *ProjectsApi* | [**createProject**](docs/ProjectsApi.md#createProject) | **POST** /sam/projects/projects | Createproject
+*ProjectsApi* | [**createProjectCredential**](docs/ProjectsApi.md#createProjectCredential) | **POST** /sam/projects/projects/{project_uuid}/credentials | Createprojectcredential
 *ProjectsApi* | [**createProjectKey**](docs/ProjectsApi.md#createProjectKey) | **POST** /sam/projects/projects/{project_uuid}/keys | Createprojectkey
 *ProjectsApi* | [**createUsageType**](docs/ProjectsApi.md#createUsageType) | **POST** /sam/projects/usage/types | Createusagetype
+*ProjectsApi* | [**deleteProjectCredential**](docs/ProjectsApi.md#deleteProjectCredential) | **DELETE** /sam/projects/projects/{project_uuid}/credentials/{service_name} | Deleteprojectcredential
 *ProjectsApi* | [**deleteProjectKey**](docs/ProjectsApi.md#deleteProjectKey) | **DELETE** /sam/projects/projects/{project_uuid}/keys | Deleteprojectkey
 *ProjectsApi* | [**deleteUsageType**](docs/ProjectsApi.md#deleteUsageType) | **DELETE** /sam/projects/usage/types/{usage_type_key} | Deleteusagetype
+*ProjectsApi* | [**getAllProjectCredentials**](docs/ProjectsApi.md#getAllProjectCredentials) | **GET** /sam/projects/projects/{project_uuid}/credentials | Getallprojectcredentials
 *ProjectsApi* | [**getAllProjectUsage**](docs/ProjectsApi.md#getAllProjectUsage) | **GET** /sam/projects/projects/{project_uuid}/usage | Getallprojectusage
 *ProjectsApi* | [**getMemberProjects**](docs/ProjectsApi.md#getMemberProjects) | **GET** /sam/projects/members/{entity_uuid}/projects | Getmemberprojects
 *ProjectsApi* | [**getProject**](docs/ProjectsApi.md#getProject) | **GET** /sam/projects/projects/{project_uuid} | Getproject
 *ProjectsApi* | [**getProjectKeys**](docs/ProjectsApi.md#getProjectKeys) | **GET** /sam/projects/projects/{project_uuid}/keys | Getprojectkeys
 *ProjectsApi* | [**getProjectMembers**](docs/ProjectsApi.md#getProjectMembers) | **GET** /sam/projects/projects/{project_uuid}/members | Getprojectmembers
+*ProjectsApi* | [**getSpecificProjectCredential**](docs/ProjectsApi.md#getSpecificProjectCredential) | **GET** /sam/projects/projects/{project_uuid}/credentials/{service_name} | Getspecificprojectcredential
 *ProjectsApi* | [**getSpecificProjectUsage**](docs/ProjectsApi.md#getSpecificProjectUsage) | **GET** /sam/projects/projects/{project_uuid}/usage/{usage_type_key} | Getspecificprojectusage
 *ProjectsApi* | [**getUsageType**](docs/ProjectsApi.md#getUsageType) | **GET** /sam/projects/usage/types/{usage_type_key} | Getusagetype
 *ProjectsApi* | [**removeMemberFromProject**](docs/ProjectsApi.md#removeMemberFromProject) | **DELETE** /sam/projects/projects/{project_uuid}/members/{entity_uuid} | Removememberfromproject
 *ProjectsApi* | [**searchProjects**](docs/ProjectsApi.md#searchProjects) | **GET** /sam/projects/projects | Searchprojects
 *ProjectsApi* | [**searchUsageType**](docs/ProjectsApi.md#searchUsageType) | **GET** /sam/projects/usage/types | Searchusagetype
 *ProjectsApi* | [**updateProject**](docs/ProjectsApi.md#updateProject) | **PUT** /sam/projects/projects/{project_uuid} | Updateproject
+*ProjectsApi* | [**updateProjectCredential**](docs/ProjectsApi.md#updateProjectCredential) | **PUT** /sam/projects/projects/{project_uuid}/credentials/{service_name} | Updateprojectcredential
 *ProjectsApi* | [**updateUsageType**](docs/ProjectsApi.md#updateUsageType) | **PUT** /sam/projects/usage/types/{usage_type_key} | Updateusagetype
 *ReviewsApi* | [**createReview**](docs/ReviewsApi.md#createReview) | **POST** /products/reviews/types/{entity_type}/entities/{entity_uuid} | Create
 *ReviewsApi* | [**deleteReview**](docs/ReviewsApi.md#deleteReview) | **DELETE** /products/reviews/types/{entity_type}/entities/{entity_uuid}/reviews/{review_uuid} | Deletereview
@@ -304,8 +309,10 @@ Class | Method | HTTP request | Description
  - [ContactMethod](docs/ContactMethod.md)
  - [ContactResponse](docs/ContactResponse.md)
  - [CreateKeyResponse](docs/CreateKeyResponse.md)
+ - [CreateProjectCredential](docs/CreateProjectCredential.md)
  - [CreateReview](docs/CreateReview.md)
  - [CreateTicket](docs/CreateTicket.md)
+ - [Credential](docs/Credential.md)
  - [CustomList](docs/CustomList.md)
  - [DatesMeta](docs/DatesMeta.md)
  - [Detailed](docs/Detailed.md)
@@ -316,6 +323,8 @@ Class | Method | HTTP request | Description
  - [Field](docs/Field.md)
  - [FieldDynamo](docs/FieldDynamo.md)
  - [GetAppointment403Response](docs/GetAppointment403Response.md)
+ - [GetProjectCredential](docs/GetProjectCredential.md)
+ - [GetSecret](docs/GetSecret.md)
  - [GetServiceServiceWithSpecsResponse](docs/GetServiceServiceWithSpecsResponse.md)
  - [GetServiceSpecResponse](docs/GetServiceSpecResponse.md)
  - [GetServiceSpecsResponse](docs/GetServiceSpecsResponse.md)
@@ -360,10 +369,13 @@ Class | Method | HTTP request | Description
  - [ResponseAddmembertoproject](docs/ResponseAddmembertoproject.md)
  - [ResponseArchiveproject](docs/ResponseArchiveproject.md)
  - [ResponseCreatekey](docs/ResponseCreatekey.md)
+ - [ResponseCreateprojectcredential](docs/ResponseCreateprojectcredential.md)
  - [ResponseDeletekey](docs/ResponseDeletekey.md)
+ - [ResponseDeleteprojectcredential](docs/ResponseDeleteprojectcredential.md)
  - [ResponseDeleteusagetype](docs/ResponseDeleteusagetype.md)
  - [ResponseGeneratetoken](docs/ResponseGeneratetoken.md)
  - [ResponseRemovememberfromproject](docs/ResponseRemovememberfromproject.md)
+ - [ResponseUpdateprojectcredential](docs/ResponseUpdateprojectcredential.md)
  - [SecurityCreateToken](docs/SecurityCreateToken.md)
  - [SecurityEncryptionKeyGet](docs/SecurityEncryptionKeyGet.md)
  - [SecurityEncryptionKeyResponse](docs/SecurityEncryptionKeyResponse.md)
@@ -384,6 +396,7 @@ Class | Method | HTTP request | Description
  - [TagDb](docs/TagDb.md)
  - [TicketResponse](docs/TicketResponse.md)
  - [TicketsResponse](docs/TicketsResponse.md)
+ - [UpdateProjectCredentialRequest](docs/UpdateProjectCredentialRequest.md)
  - [UpdateReview](docs/UpdateReview.md)
  - [User](docs/User.md)
  - [UserConfirmation](docs/UserConfirmation.md)

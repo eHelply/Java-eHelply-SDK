@@ -9,7 +9,8 @@ Used for update endpoint
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
 |**maxSpend** | **Integer** |  |  [optional] |
-|**status** | **String** |  |  [optional] |
+|**addStatus** | **String** |  |  [optional] |
+|**removeStatus** | **String** |  |  [optional] |
 
 
 

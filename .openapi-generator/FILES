@@ -37,8 +37,10 @@ docs/ContactBase.md
 docs/ContactMethod.md
 docs/ContactResponse.md
 docs/CreateKeyResponse.md
+docs/CreateProjectCredential.md
 docs/CreateReview.md
 docs/CreateTicket.md
+docs/Credential.md
 docs/CustomList.md
 docs/DatesMeta.md
 docs/DefaultApi.md
@@ -50,6 +52,8 @@ docs/Email.md
 docs/Field.md
 docs/FieldDynamo.md
 docs/GetAppointment403Response.md
+docs/GetProjectCredential.md
+docs/GetSecret.md
 docs/GetServiceServiceWithSpecsResponse.md
 docs/GetServiceSpecResponse.md
 docs/GetServiceSpecsResponse.md
@@ -101,10 +105,13 @@ docs/ProjectsUsageTypeUpdate.md
 docs/ResponseAddmembertoproject.md
 docs/ResponseArchiveproject.md
 docs/ResponseCreatekey.md
+docs/ResponseCreateprojectcredential.md
 docs/ResponseDeletekey.md
+docs/ResponseDeleteprojectcredential.md
 docs/ResponseDeleteusagetype.md
 docs/ResponseGeneratetoken.md
 docs/ResponseRemovememberfromproject.md
+docs/ResponseUpdateprojectcredential.md
 docs/ReviewsApi.md
 docs/SecurityApi.md
 docs/SecurityCreateToken.md
@@ -131,6 +138,7 @@ docs/TagDb.md
 docs/TagsApi.md
 docs/TicketResponse.md
 docs/TicketsResponse.md
+docs/UpdateProjectCredentialRequest.md
 docs/UpdateReview.md
 docs/User.md
 docs/UserConfirmation.md
@@ -221,8 +229,10 @@ src/main/java/com/ehelply/client/model/ContactBase.java
 src/main/java/com/ehelply/client/model/ContactMethod.java
 src/main/java/com/ehelply/client/model/ContactResponse.java
 src/main/java/com/ehelply/client/model/CreateKeyResponse.java
+src/main/java/com/ehelply/client/model/CreateProjectCredential.java
 src/main/java/com/ehelply/client/model/CreateReview.java
 src/main/java/com/ehelply/client/model/CreateTicket.java
+src/main/java/com/ehelply/client/model/Credential.java
 src/main/java/com/ehelply/client/model/CustomList.java
 src/main/java/com/ehelply/client/model/DatesMeta.java
 src/main/java/com/ehelply/client/model/Detailed.java
@@ -233,6 +243,8 @@ src/main/java/com/ehelply/client/model/Email.java
 src/main/java/com/ehelply/client/model/Field.java
 src/main/java/com/ehelply/client/model/FieldDynamo.java
 src/main/java/com/ehelply/client/model/GetAppointment403Response.java
+src/main/java/com/ehelply/client/model/GetProjectCredential.java
+src/main/java/com/ehelply/client/model/GetSecret.java
 src/main/java/com/ehelply/client/model/GetServiceServiceWithSpecsResponse.java
 src/main/java/com/ehelply/client/model/GetServiceSpecResponse.java
 src/main/java/com/ehelply/client/model/GetServiceSpecsResponse.java
@@ -277,10 +289,13 @@ src/main/java/com/ehelply/client/model/ProjectsUsageTypeUpdate.java
 src/main/java/com/ehelply/client/model/ResponseAddmembertoproject.java
 src/main/java/com/ehelply/client/model/ResponseArchiveproject.java
 src/main/java/com/ehelply/client/model/ResponseCreatekey.java
+src/main/java/com/ehelply/client/model/ResponseCreateprojectcredential.java
 src/main/java/com/ehelply/client/model/ResponseDeletekey.java
+src/main/java/com/ehelply/client/model/ResponseDeleteprojectcredential.java
 src/main/java/com/ehelply/client/model/ResponseDeleteusagetype.java
 src/main/java/com/ehelply/client/model/ResponseGeneratetoken.java
 src/main/java/com/ehelply/client/model/ResponseRemovememberfromproject.java
+src/main/java/com/ehelply/client/model/ResponseUpdateprojectcredential.java
 src/main/java/com/ehelply/client/model/SecurityCreateToken.java
 src/main/java/com/ehelply/client/model/SecurityEncryptionKeyGet.java
 src/main/java/com/ehelply/client/model/SecurityEncryptionKeyResponse.java
@@ -301,6 +316,7 @@ src/main/java/com/ehelply/client/model/TagBase.java
 src/main/java/com/ehelply/client/model/TagDb.java
 src/main/java/com/ehelply/client/model/TicketResponse.java
 src/main/java/com/ehelply/client/model/TicketsResponse.java
+src/main/java/com/ehelply/client/model/UpdateProjectCredentialRequest.java
 src/main/java/com/ehelply/client/model/UpdateReview.java
 src/main/java/com/ehelply/client/model/User.java
 src/main/java/com/ehelply/client/model/UserConfirmation.java
@@ -363,8 +379,10 @@ src/test/java/com/ehelply/client/model/ContactMethodTest.java
 src/test/java/com/ehelply/client/model/ContactResponseTest.java
 src/test/java/com/ehelply/client/model/ContactTest.java
 src/test/java/com/ehelply/client/model/CreateKeyResponseTest.java
+src/test/java/com/ehelply/client/model/CreateProjectCredentialTest.java
 src/test/java/com/ehelply/client/model/CreateReviewTest.java
 src/test/java/com/ehelply/client/model/CreateTicketTest.java
+src/test/java/com/ehelply/client/model/CredentialTest.java
 src/test/java/com/ehelply/client/model/CustomListTest.java
 src/test/java/com/ehelply/client/model/DatesMetaTest.java
 src/test/java/com/ehelply/client/model/DetailedMetaCreateTest.java
@@ -375,6 +393,8 @@ src/test/java/com/ehelply/client/model/EmailTest.java
 src/test/java/com/ehelply/client/model/FieldDynamoTest.java
 src/test/java/com/ehelply/client/model/FieldTest.java
 src/test/java/com/ehelply/client/model/GetAppointment403ResponseTest.java
+src/test/java/com/ehelply/client/model/GetProjectCredentialTest.java
+src/test/java/com/ehelply/client/model/GetSecretTest.java
 src/test/java/com/ehelply/client/model/GetServiceServiceWithSpecsResponseTest.java
 src/test/java/com/ehelply/client/model/GetServiceSpecResponseTest.java
 src/test/java/com/ehelply/client/model/GetServiceSpecsResponseTest.java
@@ -419,10 +439,13 @@ src/test/java/com/ehelply/client/model/ProjectsUsageTypeUpdateTest.java
 src/test/java/com/ehelply/client/model/ResponseAddmembertoprojectTest.java
 src/test/java/com/ehelply/client/model/ResponseArchiveprojectTest.java
 src/test/java/com/ehelply/client/model/ResponseCreatekeyTest.java
+src/test/java/com/ehelply/client/model/ResponseCreateprojectcredentialTest.java
 src/test/java/com/ehelply/client/model/ResponseDeletekeyTest.java
+src/test/java/com/ehelply/client/model/ResponseDeleteprojectcredentialTest.java
 src/test/java/com/ehelply/client/model/ResponseDeleteusagetypeTest.java
 src/test/java/com/ehelply/client/model/ResponseGeneratetokenTest.java
 src/test/java/com/ehelply/client/model/ResponseRemovememberfromprojectTest.java
+src/test/java/com/ehelply/client/model/ResponseUpdateprojectcredentialTest.java
 src/test/java/com/ehelply/client/model/SecurityCreateTokenTest.java
 src/test/java/com/ehelply/client/model/SecurityEncryptionKeyGetTest.java
 src/test/java/com/ehelply/client/model/SecurityEncryptionKeyResponseTest.java
@@ -443,6 +466,7 @@ src/test/java/com/ehelply/client/model/TagBaseTest.java
 src/test/java/com/ehelply/client/model/TagDbTest.java
 src/test/java/com/ehelply/client/model/TicketResponseTest.java
 src/test/java/com/ehelply/client/model/TicketsResponseTest.java
+src/test/java/com/ehelply/client/model/UpdateProjectCredentialRequestTest.java
 src/test/java/com/ehelply/client/model/UpdateReviewTest.java
 src/test/java/com/ehelply/client/model/UserConfirmationTest.java
 src/test/java/com/ehelply/client/model/UserEmailTest.java
