@@ -1,8 +1,8 @@
 # ehelply-java-sdk
 
-eHelply SDK - 1.1.105
-- API version: 1.1.105
-  - Build date: 2022-07-28T01:13:32.168081Z[Etc/UTC]
+eHelply SDK - 1.1.106
+- API version: 1.1.106
+  - Build date: 2022-07-28T01:17:03.689338Z[Etc/UTC]
 
 eHelply SDK for SuperStack Services
 
@@ -41,7 +41,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>com.ehelply</groupId>
   <artifactId>ehelply-java-sdk</artifactId>
-  <version>1.1.105</version>
+  <version>1.1.106</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -57,7 +57,7 @@ Add this dependency to your project's build file:
   }
 
   dependencies {
-     implementation "com.ehelply:ehelply-java-sdk:1.1.105"
+     implementation "com.ehelply:ehelply-java-sdk:1.1.106"
   }
 ```
 
@@ -71,7 +71,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/ehelply-java-sdk-1.1.105.jar`
+* `target/ehelply-java-sdk-1.1.106.jar`
 * `target/lib/*.jar`
 
 ## Getting Started
@@ -322,12 +322,12 @@ Class | Method | HTTP request | Description
  - [Email](docs/Email.md)
  - [Field](docs/Field.md)
  - [FieldDynamo](docs/FieldDynamo.md)
+ - [GetAppointment403Response](docs/GetAppointment403Response.md)
  - [GetProjectCredential](docs/GetProjectCredential.md)
  - [GetSecret](docs/GetSecret.md)
  - [GetServiceServiceWithSpecsResponse](docs/GetServiceServiceWithSpecsResponse.md)
  - [GetServiceSpecResponse](docs/GetServiceSpecResponse.md)
  - [GetServiceSpecsResponse](docs/GetServiceSpecsResponse.md)
- - [GetServicesWithSpecs403Response](docs/GetServicesWithSpecs403Response.md)
  - [HTTPValidationError](docs/HTTPValidationError.md)
  - [HeartbeatResponse](docs/HeartbeatResponse.md)
  - [KpiResponse](docs/KpiResponse.md)

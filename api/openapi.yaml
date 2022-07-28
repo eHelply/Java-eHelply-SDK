@@ -9,8 +9,8 @@ info:
     name: Apache 2.0
     url: https://www.apache.org/licenses/LICENSE-2.0.html
   termsOfService: https://superstack.ehelply.com/support/legal/terms
-  title: eHelply SDK - 1.1.105
-  version: 1.1.105
+  title: eHelply SDK - 1.1.106
+  version: 1.1.106
 servers:
 - description: eHelply / SuperStack Production
   url: https://api.prod.ehelply.com
@@ -347,11 +347,11 @@ paths:
         style: form
       - explode: true
         in: query
-        name: include_cancelled
+        name: exclude_cancelled
         required: false
         schema:
           default: false
-          title: Include Cancelled
+          title: Exclude Cancelled
           type: boolean
         style: form
       - explode: false
@@ -498,22 +498,6 @@ paths:
           default: false
           title: Sort Desc
           type: boolean
-        style: form
-      - explode: true
-        in: query
-        name: search
-        required: false
-        schema:
-          title: Search
-          type: string
-        style: form
-      - explode: true
-        in: query
-        name: search_on
-        required: false
-        schema:
-          title: Search On
-          type: string
         style: form
       - explode: false
         in: header
@@ -801,14 +785,14 @@ paths:
         "403":
           content:
             application/json:
-              example:
-                message: Error message
+              schema:
+                $ref: '#/components/schemas/getAppointment_403_response'
           description: Unauthorized - Denied by eHelply
         "404":
           content:
             application/json:
-              example:
-                message: Error message
+              schema:
+                $ref: '#/components/schemas/getAppointment_403_response'
           description: Appointment does not exist
         "422":
           content:
@@ -893,14 +877,14 @@ paths:
         "403":
           content:
             application/json:
-              example:
-                message: Error message
+              schema:
+                $ref: '#/components/schemas/getAppointment_403_response'
           description: Unauthorized - Denied by eHelply
         "404":
           content:
             application/json:
-              example:
-                message: Error message
+              schema:
+                $ref: '#/components/schemas/getAppointment_403_response'
           description: Appointment does not exist
         "422":
           content:
@@ -8793,7 +8777,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/GetServicesWithSpecs_403_response'
+                $ref: '#/components/schemas/getAppointment_403_response'
           description: Unauthorized - Denied by eHelply
         "404":
           description: Not found
@@ -8824,7 +8808,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/GetServicesWithSpecs_403_response'
+                $ref: '#/components/schemas/getAppointment_403_response'
           description: Unauthorized - Denied by eHelply
         "404":
           description: Not found
@@ -8869,7 +8853,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/GetServicesWithSpecs_403_response'
+                $ref: '#/components/schemas/getAppointment_403_response'
           description: Unauthorized - Denied by eHelply
         "404":
           description: Not found
@@ -8998,7 +8982,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/GetServicesWithSpecs_403_response'
+                $ref: '#/components/schemas/getAppointment_403_response'
           description: Unauthorized - Denied by eHelply
         "404":
           description: Not found
@@ -9081,7 +9065,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/GetServicesWithSpecs_403_response'
+                $ref: '#/components/schemas/getAppointment_403_response'
           description: Unauthorized - Denied by eHelply
         "404":
           description: Not found
@@ -9167,7 +9151,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/GetServicesWithSpecs_403_response'
+                $ref: '#/components/schemas/getAppointment_403_response'
           description: Unauthorized - Denied by eHelply
         "404":
           description: Not found
@@ -9252,13 +9236,13 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/GetServicesWithSpecs_403_response'
+                $ref: '#/components/schemas/getAppointment_403_response'
           description: Unauthorized - Denied by eHelply
         "404":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/GetServicesWithSpecs_403_response'
+                $ref: '#/components/schemas/getAppointment_403_response'
           description: Project does not exist
         "422":
           content:
@@ -9347,13 +9331,13 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/GetServicesWithSpecs_403_response'
+                $ref: '#/components/schemas/getAppointment_403_response'
           description: Unauthorized - Denied by eHelply
         "404":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/GetServicesWithSpecs_403_response'
+                $ref: '#/components/schemas/getAppointment_403_response'
           description: Project does not exist
         "422":
           content:
@@ -9436,7 +9420,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/GetServicesWithSpecs_403_response'
+                $ref: '#/components/schemas/getAppointment_403_response'
           description: Unauthorized - Denied by eHelply
         "404":
           description: Not found
@@ -9518,7 +9502,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/GetServicesWithSpecs_403_response'
+                $ref: '#/components/schemas/getAppointment_403_response'
           description: Unauthorized - Denied by eHelply
         "404":
           description: Not found
@@ -9604,7 +9588,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/GetServicesWithSpecs_403_response'
+                $ref: '#/components/schemas/getAppointment_403_response'
           description: Unauthorized - Denied by eHelply
         "404":
           description: Not found
@@ -9644,13 +9628,13 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/GetServicesWithSpecs_403_response'
+                $ref: '#/components/schemas/getAppointment_403_response'
           description: Unauthorized - Denied by eHelply
         "404":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/GetServicesWithSpecs_403_response'
+                $ref: '#/components/schemas/getAppointment_403_response'
           description: UsageType does not exist
         "422":
           content:
@@ -9738,13 +9722,13 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/GetServicesWithSpecs_403_response'
+                $ref: '#/components/schemas/getAppointment_403_response'
           description: Unauthorized - Denied by eHelply
         "404":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/GetServicesWithSpecs_403_response'
+                $ref: '#/components/schemas/getAppointment_403_response'
           description: UsageType does not exist
         "422":
           content:
@@ -9839,13 +9823,13 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/GetServicesWithSpecs_403_response'
+                $ref: '#/components/schemas/getAppointment_403_response'
           description: Unauthorized - Denied by eHelply
         "404":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/GetServicesWithSpecs_403_response'
+                $ref: '#/components/schemas/getAppointment_403_response'
           description: Member does not exist
         "422":
           content:
@@ -9939,13 +9923,13 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/GetServicesWithSpecs_403_response'
+                $ref: '#/components/schemas/getAppointment_403_response'
           description: Unauthorized - Denied by eHelply
         "404":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/GetServicesWithSpecs_403_response'
+                $ref: '#/components/schemas/getAppointment_403_response'
           description: Project does not exist
         "422":
           content:
@@ -10036,13 +10020,13 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/GetServicesWithSpecs_403_response'
+                $ref: '#/components/schemas/getAppointment_403_response'
           description: Unauthorized - Denied by eHelply
         "404":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/GetServicesWithSpecs_403_response'
+                $ref: '#/components/schemas/getAppointment_403_response'
           description: Project does not exist
         "422":
           content:
@@ -10132,13 +10116,13 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/GetServicesWithSpecs_403_response'
+                $ref: '#/components/schemas/getAppointment_403_response'
           description: Unauthorized - Denied by eHelply
         "404":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/GetServicesWithSpecs_403_response'
+                $ref: '#/components/schemas/getAppointment_403_response'
           description: Project does not exist
         "422":
           content:
@@ -10240,13 +10224,13 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/GetServicesWithSpecs_403_response'
+                $ref: '#/components/schemas/getAppointment_403_response'
           description: Unauthorized - Denied by eHelply
         "404":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/GetServicesWithSpecs_403_response'
+                $ref: '#/components/schemas/getAppointment_403_response'
           description: Project does not exist
         "422":
           content:
@@ -10337,13 +10321,13 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/GetServicesWithSpecs_403_response'
+                $ref: '#/components/schemas/getAppointment_403_response'
           description: Unauthorized - Denied by eHelply
         "404":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/GetServicesWithSpecs_403_response'
+                $ref: '#/components/schemas/getAppointment_403_response'
           description: "Project, Usage does not exist"
         "422":
           content:
@@ -10435,13 +10419,13 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/GetServicesWithSpecs_403_response'
+                $ref: '#/components/schemas/getAppointment_403_response'
           description: Unauthorized - Denied by eHelply
         "404":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/GetServicesWithSpecs_403_response'
+                $ref: '#/components/schemas/getAppointment_403_response'
           description: "Project, Entity, or Key does not exist"
         "422":
           content:
@@ -10526,13 +10510,13 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/GetServicesWithSpecs_403_response'
+                $ref: '#/components/schemas/getAppointment_403_response'
           description: Unauthorized - Denied by eHelply
         "404":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/GetServicesWithSpecs_403_response'
+                $ref: '#/components/schemas/getAppointment_403_response'
           description: Project or Entity does not exist
         "422":
           content:
@@ -10620,13 +10604,13 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/GetServicesWithSpecs_403_response'
+                $ref: '#/components/schemas/getAppointment_403_response'
           description: Unauthorized - Denied by eHelply
         "404":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/GetServicesWithSpecs_403_response'
+                $ref: '#/components/schemas/getAppointment_403_response'
           description: Project or Entity does not exist
         "422":
           content:
@@ -10713,13 +10697,13 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/GetServicesWithSpecs_403_response'
+                $ref: '#/components/schemas/getAppointment_403_response'
           description: Unauthorized - Denied by eHelply
         "404":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/GetServicesWithSpecs_403_response'
+                $ref: '#/components/schemas/getAppointment_403_response'
           description: Project credential not found does not exist
         "422":
           content:
@@ -10807,7 +10791,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/GetServicesWithSpecs_403_response'
+                $ref: '#/components/schemas/getAppointment_403_response'
           description: Unauthorized - Denied by eHelply
         "404":
           description: Not found
@@ -10815,7 +10799,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/GetServicesWithSpecs_403_response'
+                $ref: '#/components/schemas/getAppointment_403_response'
           description: Project credential already exits already exists
         "422":
           content:
@@ -10907,13 +10891,13 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/GetServicesWithSpecs_403_response'
+                $ref: '#/components/schemas/getAppointment_403_response'
           description: Unauthorized - Denied by eHelply
         "404":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/GetServicesWithSpecs_403_response'
+                $ref: '#/components/schemas/getAppointment_403_response'
           description: Project credential not found does not exist
         "422":
           content:
@@ -11003,13 +10987,13 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/GetServicesWithSpecs_403_response'
+                $ref: '#/components/schemas/getAppointment_403_response'
           description: Unauthorized - Denied by eHelply
         "404":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/GetServicesWithSpecs_403_response'
+                $ref: '#/components/schemas/getAppointment_403_response'
           description: Project credential not found does not exist
         "422":
           content:
@@ -11105,13 +11089,13 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/GetServicesWithSpecs_403_response'
+                $ref: '#/components/schemas/getAppointment_403_response'
           description: Unauthorized - Denied by eHelply
         "404":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/GetServicesWithSpecs_403_response'
+                $ref: '#/components/schemas/getAppointment_403_response'
           description: Project credential not found does not exist
         "422":
           content:
@@ -11144,7 +11128,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/GetServicesWithSpecs_403_response'
+                $ref: '#/components/schemas/getAppointment_403_response'
           description: Unauthorized - Denied by eHelply
         "404":
           description: Not found
@@ -11176,7 +11160,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/GetServicesWithSpecs_403_response'
+                $ref: '#/components/schemas/getAppointment_403_response'
           description: Unauthorized - Denied by eHelply
         "404":
           description: Not found
@@ -11222,14 +11206,14 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/GetServicesWithSpecs_403_response'
+                $ref: '#/components/schemas/getAppointment_403_response'
           description: 'Access token and secret token lengths must be greater than
             48 characters and less than 1024 characters to guarantee adequate security. '
         "403":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/GetServicesWithSpecs_403_response'
+                $ref: '#/components/schemas/getAppointment_403_response'
           description: Unauthorized - Denied by eHelply
         "404":
           description: Not found
@@ -11267,7 +11251,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/GetServicesWithSpecs_403_response'
+                $ref: '#/components/schemas/getAppointment_403_response'
           description: Unauthorized - Denied by eHelply
         "404":
           description: Not found
@@ -11303,13 +11287,13 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/GetServicesWithSpecs_403_response'
+                $ref: '#/components/schemas/getAppointment_403_response'
           description: Unauthorized - Denied by eHelply
         "404":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/GetServicesWithSpecs_403_response'
+                $ref: '#/components/schemas/getAppointment_403_response'
           description: Key does not exist
         "422":
           content:
@@ -11341,14 +11325,14 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/GetServicesWithSpecs_403_response'
+                $ref: '#/components/schemas/getAppointment_403_response'
           description: 'Access token and secret token lengths must be greater than
             48 characters and less than 1024 characters to guarantee adequate security. '
         "403":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/GetServicesWithSpecs_403_response'
+                $ref: '#/components/schemas/getAppointment_403_response'
           description: Key
         "404":
           description: Not found
@@ -11512,7 +11496,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/GetServicesWithSpecs_403_response'
+                $ref: '#/components/schemas/getAppointment_403_response'
           description: Unauthorized - Denied by eHelply
         "404":
           description: Not found
@@ -11609,13 +11593,13 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/GetServicesWithSpecs_403_response'
+                $ref: '#/components/schemas/getAppointment_403_response'
           description: Unauthorized - Denied by eHelply
         "404":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/GetServicesWithSpecs_403_response'
+                $ref: '#/components/schemas/getAppointment_403_response'
           description: Record does not exist
         "422":
           content:
@@ -11711,7 +11695,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/GetServicesWithSpecs_403_response'
+                $ref: '#/components/schemas/getAppointment_403_response'
           description: Unauthorized - Denied by eHelply
         "404":
           description: Not found
@@ -11813,7 +11797,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/GetServicesWithSpecs_403_response'
+                $ref: '#/components/schemas/getAppointment_403_response'
           description: Unauthorized - Denied by eHelply
         "404":
           description: Not found
@@ -11919,7 +11903,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/GetServicesWithSpecs_403_response'
+                $ref: '#/components/schemas/getAppointment_403_response'
           description: Unauthorized - Denied by eHelply
         "404":
           description: Not found
@@ -17709,7 +17693,7 @@ components:
       - value
       title: UserValidations
       type: object
-    GetServicesWithSpecs_403_response:
+    getAppointment_403_response:
       example:
         message: Error message
       properties:
