@@ -1,8 +1,8 @@
 # ehelply-java-sdk
 
-eHelply SDK - 1.1.99
-- API version: 1.1.99
-  - Build date: 2022-07-28T01:14:40.544181Z[Etc/UTC]
+eHelply SDK - 1.1.100
+- API version: 1.1.100
+  - Build date: 2022-08-01T19:56:14.686297Z[Etc/UTC]
 
 eHelply SDK for SuperStack Services
 
@@ -41,7 +41,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>com.ehelply</groupId>
   <artifactId>ehelply-java-sdk</artifactId>
-  <version>1.1.99</version>
+  <version>1.1.100</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -57,7 +57,7 @@ Add this dependency to your project's build file:
   }
 
   dependencies {
-     implementation "com.ehelply:ehelply-java-sdk:1.1.99"
+     implementation "com.ehelply:ehelply-java-sdk:1.1.100"
   }
 ```
 
@@ -71,7 +71,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/ehelply-java-sdk-1.1.99.jar`
+* `target/ehelply-java-sdk-1.1.100.jar`
 * `target/lib/*.jar`
 
 ## Getting Started
@@ -85,14 +85,16 @@ import com.ehelply.client.ApiClient;
 import com.ehelply.client.ApiException;
 import com.ehelply.client.Configuration;
 import com.ehelply.client.models.*;
-import com.ehelply.client.api.BillingApi;
+import com.ehelply.client.api.AppointmentsApi;
 
 public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.prod.ehelply.com");
 
-    BillingApi apiInstance = new BillingApi(defaultClient);
+    AppointmentsApi apiInstance = new AppointmentsApi(defaultClient);
+    String appointmentUuid = "appointmentUuid_example"; // String | 
+    String entityUuid = "entityUuid_example"; // String | 
     String xAccessToken = "xAccessToken_example"; // String | 
     String xSecretToken = "xSecretToken_example"; // String | 
     String authorization = "authorization_example"; // String | 
@@ -100,10 +102,10 @@ public class Example {
     String ehelplyProject = "ehelplyProject_example"; // String | 
     String ehelplyData = "ehelplyData_example"; // String | 
     try {
-      StripeAccountResponse result = apiInstance.createBillingAccount(xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
+      Boolean result = apiInstance.addEntityToAppointment(appointmentUuid, entityUuid, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling BillingApi#createBillingAccount");
+      System.err.println("Exception when calling AppointmentsApi#addEntityToAppointment");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -120,6 +122,15 @@ All URIs are relative to *https://api.prod.ehelply.com*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*AppointmentsApi* | [**addEntityToAppointment**](docs/AppointmentsApi.md#addEntityToAppointment) | **POST** /appointments/appointments/{appointment_uuid}/entities/{entity_uuid} | Addentitytoappointment
+*AppointmentsApi* | [**createAppointment**](docs/AppointmentsApi.md#createAppointment) | **POST** /appointments/appointments | Createappointment
+*AppointmentsApi* | [**deleteAppointment**](docs/AppointmentsApi.md#deleteAppointment) | **DELETE** /appointments/appointments/{appointment_uuid} | Deleteappointment
+*AppointmentsApi* | [**detachEntityFromAppointment**](docs/AppointmentsApi.md#detachEntityFromAppointment) | **DELETE** /appointments/appointments/{appointment_uuid}/entities/{entity_uuid} | Removeentityfromappointment
+*AppointmentsApi* | [**getAppointment**](docs/AppointmentsApi.md#getAppointment) | **GET** /appointments/appointments/{appointment_uuid} | Getappointment
+*AppointmentsApi* | [**searchAppointment**](docs/AppointmentsApi.md#searchAppointment) | **GET** /appointments/appointments | Searchappointments
+*AppointmentsApi* | [**searchAppointmentEntities**](docs/AppointmentsApi.md#searchAppointmentEntities) | **GET** /appointments/appointments/{appointment_uuid}/entities | Searchappointmententities
+*AppointmentsApi* | [**searchEntityAppointments**](docs/AppointmentsApi.md#searchEntityAppointments) | **GET** /appointments/appointments/entities/{entity_uuid}/appointments | Getentityappointments
+*AppointmentsApi* | [**updateAppointment**](docs/AppointmentsApi.md#updateAppointment) | **PUT** /appointments/appointments/{appointment_uuid} | Updateappointment
 *BillingApi* | [**createBillingAccount**](docs/BillingApi.md#createBillingAccount) | **POST** /sam/billing/create_billing_account | Createbillingaccount
 *BillingApi* | [**getClientSecret**](docs/BillingApi.md#getClientSecret) | **GET** /sam/billing/retrieve_secret | Getclientsecret
 *BillingApi* | [**hasPayment**](docs/BillingApi.md#hasPayment) | **GET** /sam/billing/has_payment | Haspayment
@@ -145,15 +156,6 @@ Class | Method | HTTP request | Description
 *CompaniesApi* | [**getCompanyPlacesCompaniesCompanyUuidGet**](docs/CompaniesApi.md#getCompanyPlacesCompaniesCompanyUuidGet) | **GET** /places/companies/{company_uuid} | Get Company
 *CompaniesApi* | [**searchCompaniesPlacesCompaniesGet**](docs/CompaniesApi.md#searchCompaniesPlacesCompaniesGet) | **GET** /places/companies | Search Companies
 *CompaniesApi* | [**updateCompanyPlacesCompaniesCompanyUuidPut**](docs/CompaniesApi.md#updateCompanyPlacesCompaniesCompanyUuidPut) | **PUT** /places/companies/{company_uuid} | Update Company
-*DefaultApi* | [**attachEntityToAppointment**](docs/DefaultApi.md#attachEntityToAppointment) | **POST** /appointments/appointments/{appointment_uuid}/entities/{entity_uuid} | Attach Entity To Appointment
-*DefaultApi* | [**createAppointment**](docs/DefaultApi.md#createAppointment) | **POST** /appointments/appointments | Create Appointment
-*DefaultApi* | [**deleteAppointment**](docs/DefaultApi.md#deleteAppointment) | **DELETE** /appointments/appointments/{appointment_uuid} | Delete Appointment
-*DefaultApi* | [**detachEntityFromAppointment**](docs/DefaultApi.md#detachEntityFromAppointment) | **DELETE** /appointments/appointments/{appointment_uuid}/entities/{entity_uuid} | Detach Entity From Appointment
-*DefaultApi* | [**getAppointment**](docs/DefaultApi.md#getAppointment) | **GET** /appointments/appointments/{appointment_uuid} | Get Appointment
-*DefaultApi* | [**searchAppointment**](docs/DefaultApi.md#searchAppointment) | **GET** /appointments/appointments | Search Appointment
-*DefaultApi* | [**searchAppointmentEntities**](docs/DefaultApi.md#searchAppointmentEntities) | **GET** /appointments/appointments/{appointment_uuid}/entities | Search Appointment Entities
-*DefaultApi* | [**searchEntityAppointments**](docs/DefaultApi.md#searchEntityAppointments) | **GET** /appointments/appointments/entities/{entity_uuid}/appointments | Get Entities Appointments
-*DefaultApi* | [**updateAppointment**](docs/DefaultApi.md#updateAppointment) | **PUT** /appointments/appointments/{appointment_uuid} | Update Appointment
 *LoggingApi* | [**getLogs**](docs/LoggingApi.md#getLogs) | **GET** /sam/logging/logs | Getlogs
 *LoggingApi* | [**getServiceLogs**](docs/LoggingApi.md#getServiceLogs) | **GET** /sam/logging/logs/services/{service} | Getservicelogs
 *LoggingApi* | [**getSubjectLogs**](docs/LoggingApi.md#getSubjectLogs) | **GET** /sam/logging/logs/services/{service}/subjects/{subject} | Getsubjectlogs
