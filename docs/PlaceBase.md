@@ -14,6 +14,7 @@
 |**meta** | **Object** |  |  [optional] |
 |**addresses** | [**List&lt;AddressBase&gt;**](AddressBase.md) |  |  [optional] |
 |**contact** | [**ContactBase**](ContactBase.md) |  |  [optional] |
+|**picture** | **String** |  |  [optional] |
 
 
 
