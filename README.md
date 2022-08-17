@@ -1,8 +1,8 @@
 # ehelply-java-sdk
 
-eHelply SDK - 1.1.101
-- API version: 1.1.101
-  - Build date: 2022-08-09T21:11:28.331846Z[Etc/UTC]
+eHelply SDK - 1.1.102
+- API version: 1.1.102
+  - Build date: 2022-08-17T20:38:15.683271Z[Etc/UTC]
 
 eHelply SDK for SuperStack Services
 
@@ -41,7 +41,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>com.ehelply</groupId>
   <artifactId>ehelply-java-sdk</artifactId>
-  <version>1.1.101</version>
+  <version>1.1.102</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -57,7 +57,7 @@ Add this dependency to your project's build file:
   }
 
   dependencies {
-     implementation "com.ehelply:ehelply-java-sdk:1.1.101"
+     implementation "com.ehelply:ehelply-java-sdk:1.1.102"
   }
 ```
 
@@ -71,7 +71,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/ehelply-java-sdk-1.1.101.jar`
+* `target/ehelply-java-sdk-1.1.102.jar`
 * `target/lib/*.jar`
 
 ## Getting Started
@@ -216,6 +216,7 @@ Class | Method | HTTP request | Description
 *ProjectsApi* | [**archiveProject**](docs/ProjectsApi.md#archiveProject) | **DELETE** /sam/projects/projects/{project_uuid} | Archiveproject
 *ProjectsApi* | [**createProject**](docs/ProjectsApi.md#createProject) | **POST** /sam/projects/projects | Createproject
 *ProjectsApi* | [**createProjectCredential**](docs/ProjectsApi.md#createProjectCredential) | **POST** /sam/projects/projects/{project_uuid}/credentials | Createprojectcredential
+*ProjectsApi* | [**createProjectInvoice**](docs/ProjectsApi.md#createProjectInvoice) | **POST** /sam/projects/projects/{project_uuid}/invoices | Createprojectinvoice
 *ProjectsApi* | [**createProjectKey**](docs/ProjectsApi.md#createProjectKey) | **POST** /sam/projects/projects/{project_uuid}/keys | Createprojectkey
 *ProjectsApi* | [**createUsageType**](docs/ProjectsApi.md#createUsageType) | **POST** /sam/projects/usage/types | Createusagetype
 *ProjectsApi* | [**deleteProjectCredential**](docs/ProjectsApi.md#deleteProjectCredential) | **DELETE** /sam/projects/projects/{project_uuid}/credentials/{service_name} | Deleteprojectcredential
@@ -225,6 +226,8 @@ Class | Method | HTTP request | Description
 *ProjectsApi* | [**getAllProjectUsage**](docs/ProjectsApi.md#getAllProjectUsage) | **GET** /sam/projects/projects/{project_uuid}/usage | Getallprojectusage
 *ProjectsApi* | [**getMemberProjects**](docs/ProjectsApi.md#getMemberProjects) | **GET** /sam/projects/members/{entity_uuid}/projects | Getmemberprojects
 *ProjectsApi* | [**getProject**](docs/ProjectsApi.md#getProject) | **GET** /sam/projects/projects/{project_uuid} | Getproject
+*ProjectsApi* | [**getProjectInvoice**](docs/ProjectsApi.md#getProjectInvoice) | **GET** /sam/projects/projects/{project_uuid}/invoices | Getprojectinvoice
+*ProjectsApi* | [**getProjectInvoiceHistory**](docs/ProjectsApi.md#getProjectInvoiceHistory) | **GET** /sam/projects/projects/{project_uuid}/invoices/history | Getprojectinvoicehistory
 *ProjectsApi* | [**getProjectKeys**](docs/ProjectsApi.md#getProjectKeys) | **GET** /sam/projects/projects/{project_uuid}/keys | Getprojectkeys
 *ProjectsApi* | [**getProjectMembers**](docs/ProjectsApi.md#getProjectMembers) | **GET** /sam/projects/projects/{project_uuid}/members | Getprojectmembers
 *ProjectsApi* | [**getSpecificProjectCredential**](docs/ProjectsApi.md#getSpecificProjectCredential) | **GET** /sam/projects/projects/{project_uuid}/credentials/{service_name} | Getspecificprojectcredential
@@ -312,6 +315,7 @@ Class | Method | HTTP request | Description
  - [ContactResponse](docs/ContactResponse.md)
  - [CreateKeyResponse](docs/CreateKeyResponse.md)
  - [CreateProjectCredential](docs/CreateProjectCredential.md)
+ - [CreateProjectInvoice](docs/CreateProjectInvoice.md)
  - [CreateReview](docs/CreateReview.md)
  - [CreateTicket](docs/CreateTicket.md)
  - [Credential](docs/Credential.md)
@@ -321,18 +325,25 @@ Class | Method | HTTP request | Description
  - [DetailedMeta](docs/DetailedMeta.md)
  - [DetailedMetaCreate](docs/DetailedMetaCreate.md)
  - [DetailedMetaGet](docs/DetailedMetaGet.md)
+ - [Discount](docs/Discount.md)
  - [Email](docs/Email.md)
  - [Field](docs/Field.md)
  - [FieldDynamo](docs/FieldDynamo.md)
  - [GetAppointment403Response](docs/GetAppointment403Response.md)
+ - [GetInvoiceResponse](docs/GetInvoiceResponse.md)
  - [GetProjectCredential](docs/GetProjectCredential.md)
+ - [GetProjectInvoiceHistory](docs/GetProjectInvoiceHistory.md)
+ - [GetProjectInvoiceResponse](docs/GetProjectInvoiceResponse.md)
  - [GetSecret](docs/GetSecret.md)
  - [GetServiceServiceWithSpecsResponse](docs/GetServiceServiceWithSpecsResponse.md)
  - [GetServiceSpecResponse](docs/GetServiceSpecResponse.md)
  - [GetServiceSpecsResponse](docs/GetServiceSpecsResponse.md)
+ - [GetTransactionResponse](docs/GetTransactionResponse.md)
  - [HTTPValidationError](docs/HTTPValidationError.md)
  - [HeartbeatResponse](docs/HeartbeatResponse.md)
+ - [History](docs/History.md)
  - [KpiResponse](docs/KpiResponse.md)
+ - [LineItem](docs/LineItem.md)
  - [LoggingDynamo](docs/LoggingDynamo.md)
  - [MetaChildren](docs/MetaChildren.md)
  - [MetaCreate](docs/MetaCreate.md)
@@ -340,6 +351,7 @@ Class | Method | HTTP request | Description
  - [MetaDynamo](docs/MetaDynamo.md)
  - [MetaGet](docs/MetaGet.md)
  - [MetaSlugger](docs/MetaSlugger.md)
+ - [Note](docs/Note.md)
  - [NoteBase](docs/NoteBase.md)
  - [NoteDynamoHistoryResponse](docs/NoteDynamoHistoryResponse.md)
  - [NoteDynamoResponse](docs/NoteDynamoResponse.md)
@@ -372,6 +384,7 @@ Class | Method | HTTP request | Description
  - [ResponseArchiveproject](docs/ResponseArchiveproject.md)
  - [ResponseCreatekey](docs/ResponseCreatekey.md)
  - [ResponseCreateprojectcredential](docs/ResponseCreateprojectcredential.md)
+ - [ResponseCreateprojectinvoice](docs/ResponseCreateprojectinvoice.md)
  - [ResponseDeletekey](docs/ResponseDeletekey.md)
  - [ResponseDeleteprojectcredential](docs/ResponseDeleteprojectcredential.md)
  - [ResponseDeleteusagetype](docs/ResponseDeleteusagetype.md)
@@ -396,6 +409,7 @@ Class | Method | HTTP request | Description
  - [StripeCustomerSecretResponse](docs/StripeCustomerSecretResponse.md)
  - [TagBase](docs/TagBase.md)
  - [TagDb](docs/TagDb.md)
+ - [Tax](docs/Tax.md)
  - [TicketResponse](docs/TicketResponse.md)
  - [TicketsResponse](docs/TicketsResponse.md)
  - [UpdateProjectCredentialRequest](docs/UpdateProjectCredentialRequest.md)
