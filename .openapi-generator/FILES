@@ -38,6 +38,7 @@ docs/ContactMethod.md
 docs/ContactResponse.md
 docs/CreateKeyResponse.md
 docs/CreateProjectCredential.md
+docs/CreateProjectCredit.md
 docs/CreateProjectInvoice.md
 docs/CreateReview.md
 docs/CreateTicket.md
@@ -99,6 +100,7 @@ docs/PlacesApi.md
 docs/ProductBase.md
 docs/ProductReturn.md
 docs/ProductsApi.md
+docs/ProjectCreditResponse.md
 docs/ProjectDB.md
 docs/ProjectsApi.md
 docs/ProjectsProjectCreate.md
@@ -241,6 +243,7 @@ src/main/java/com/ehelply/client/model/ContactMethod.java
 src/main/java/com/ehelply/client/model/ContactResponse.java
 src/main/java/com/ehelply/client/model/CreateKeyResponse.java
 src/main/java/com/ehelply/client/model/CreateProjectCredential.java
+src/main/java/com/ehelply/client/model/CreateProjectCredit.java
 src/main/java/com/ehelply/client/model/CreateProjectInvoice.java
 src/main/java/com/ehelply/client/model/CreateReview.java
 src/main/java/com/ehelply/client/model/CreateTicket.java
@@ -295,6 +298,7 @@ src/main/java/com/ehelply/client/model/PlaceBase.java
 src/main/java/com/ehelply/client/model/PlaceResponse.java
 src/main/java/com/ehelply/client/model/ProductBase.java
 src/main/java/com/ehelply/client/model/ProductReturn.java
+src/main/java/com/ehelply/client/model/ProjectCreditResponse.java
 src/main/java/com/ehelply/client/model/ProjectDB.java
 src/main/java/com/ehelply/client/model/ProjectsProjectCreate.java
 src/main/java/com/ehelply/client/model/ProjectsProjectGet.java
@@ -402,6 +406,7 @@ src/test/java/com/ehelply/client/model/ContactResponseTest.java
 src/test/java/com/ehelply/client/model/ContactTest.java
 src/test/java/com/ehelply/client/model/CreateKeyResponseTest.java
 src/test/java/com/ehelply/client/model/CreateProjectCredentialTest.java
+src/test/java/com/ehelply/client/model/CreateProjectCreditTest.java
 src/test/java/com/ehelply/client/model/CreateProjectInvoiceTest.java
 src/test/java/com/ehelply/client/model/CreateReviewTest.java
 src/test/java/com/ehelply/client/model/CreateTicketTest.java
@@ -456,6 +461,7 @@ src/test/java/com/ehelply/client/model/PlaceBaseTest.java
 src/test/java/com/ehelply/client/model/PlaceResponseTest.java
 src/test/java/com/ehelply/client/model/ProductBaseTest.java
 src/test/java/com/ehelply/client/model/ProductReturnTest.java
+src/test/java/com/ehelply/client/model/ProjectCreditResponseTest.java
 src/test/java/com/ehelply/client/model/ProjectDBTest.java
 src/test/java/com/ehelply/client/model/ProjectsProjectCreateTest.java
 src/test/java/com/ehelply/client/model/ProjectsProjectGetTest.java

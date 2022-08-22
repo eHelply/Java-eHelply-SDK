@@ -1,8 +1,8 @@
 # ehelply-java-sdk
 
-eHelply SDK - 1.1.108
-- API version: 1.1.108
-  - Build date: 2022-08-17T19:57:27.600683Z[Etc/UTC]
+eHelply SDK - 1.1.109
+- API version: 1.1.109
+  - Build date: 2022-08-22T20:09:12.124195Z[Etc/UTC]
 
 eHelply SDK for SuperStack Services
 
@@ -41,7 +41,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>com.ehelply</groupId>
   <artifactId>ehelply-java-sdk</artifactId>
-  <version>1.1.108</version>
+  <version>1.1.109</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -57,7 +57,7 @@ Add this dependency to your project's build file:
   }
 
   dependencies {
-     implementation "com.ehelply:ehelply-java-sdk:1.1.108"
+     implementation "com.ehelply:ehelply-java-sdk:1.1.109"
   }
 ```
 
@@ -71,7 +71,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/ehelply-java-sdk-1.1.108.jar`
+* `target/ehelply-java-sdk-1.1.109.jar`
 * `target/lib/*.jar`
 
 ## Getting Started
@@ -221,9 +221,11 @@ Class | Method | HTTP request | Description
 *ProjectsApi* | [**deleteProjectKey**](docs/ProjectsApi.md#deleteProjectKey) | **DELETE** /sam/projects/projects/{project_uuid}/keys | Deleteprojectkey
 *ProjectsApi* | [**deleteUsageType**](docs/ProjectsApi.md#deleteUsageType) | **DELETE** /sam/projects/usage/types/{usage_type_key} | Deleteusagetype
 *ProjectsApi* | [**getAllProjectCredentials**](docs/ProjectsApi.md#getAllProjectCredentials) | **GET** /sam/projects/projects/{project_uuid}/credentials | Getallprojectcredentials
+*ProjectsApi* | [**getAllProjectCredits**](docs/ProjectsApi.md#getAllProjectCredits) | **GET** /sam/projects/projects/{project_uuid}/credits | Getallprojectcredits
 *ProjectsApi* | [**getAllProjectUsage**](docs/ProjectsApi.md#getAllProjectUsage) | **GET** /sam/projects/projects/{project_uuid}/usage | Getallprojectusage
 *ProjectsApi* | [**getMemberProjects**](docs/ProjectsApi.md#getMemberProjects) | **GET** /sam/projects/members/{entity_uuid}/projects | Getmemberprojects
 *ProjectsApi* | [**getProject**](docs/ProjectsApi.md#getProject) | **GET** /sam/projects/projects/{project_uuid} | Getproject
+*ProjectsApi* | [**getProjectCreditTransactions**](docs/ProjectsApi.md#getProjectCreditTransactions) | **GET** /sam/projects/projects/{project_uuid}/credits/{credit_uuid}/transactions | Getprojectcredittransactions
 *ProjectsApi* | [**getProjectInvoice**](docs/ProjectsApi.md#getProjectInvoice) | **GET** /sam/projects/projects/{project_uuid}/invoices | Getprojectinvoice
 *ProjectsApi* | [**getProjectInvoiceHistory**](docs/ProjectsApi.md#getProjectInvoiceHistory) | **GET** /sam/projects/projects/{project_uuid}/invoices/history | Getprojectinvoicehistory
 *ProjectsApi* | [**getProjectKeys**](docs/ProjectsApi.md#getProjectKeys) | **GET** /sam/projects/projects/{project_uuid}/keys | Getprojectkeys
@@ -313,6 +315,7 @@ Class | Method | HTTP request | Description
  - [ContactResponse](docs/ContactResponse.md)
  - [CreateKeyResponse](docs/CreateKeyResponse.md)
  - [CreateProjectCredential](docs/CreateProjectCredential.md)
+ - [CreateProjectCredit](docs/CreateProjectCredit.md)
  - [CreateProjectInvoice](docs/CreateProjectInvoice.md)
  - [CreateReview](docs/CreateReview.md)
  - [CreateTicket](docs/CreateTicket.md)
@@ -367,6 +370,7 @@ Class | Method | HTTP request | Description
  - [PlaceResponse](docs/PlaceResponse.md)
  - [ProductBase](docs/ProductBase.md)
  - [ProductReturn](docs/ProductReturn.md)
+ - [ProjectCreditResponse](docs/ProjectCreditResponse.md)
  - [ProjectDB](docs/ProjectDB.md)
  - [ProjectsProjectCreate](docs/ProjectsProjectCreate.md)
  - [ProjectsProjectGet](docs/ProjectsProjectGet.md)
