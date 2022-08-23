@@ -17,6 +17,7 @@ docs/AlarmTerminate.md
 docs/AlarmTicket.md
 docs/AppointmentBase.md
 docs/AppointmentResponse.md
+docs/AppointmentsApi.md
 docs/AttachPaymentToProject.md
 docs/Basic.md
 docs/BasicMeta.md
@@ -45,7 +46,6 @@ docs/CreateTicket.md
 docs/Credential.md
 docs/CustomList.md
 docs/DatesMeta.md
-docs/DefaultApi.md
 docs/Detailed.md
 docs/DetailedMeta.md
 docs/DetailedMetaCreate.md
@@ -191,11 +191,11 @@ src/main/java/com/ehelply/client/ProgressResponseBody.java
 src/main/java/com/ehelply/client/ServerConfiguration.java
 src/main/java/com/ehelply/client/ServerVariable.java
 src/main/java/com/ehelply/client/StringUtil.java
+src/main/java/com/ehelply/client/api/AppointmentsApi.java
 src/main/java/com/ehelply/client/api/BillingApi.java
 src/main/java/com/ehelply/client/api/CatalogsApi.java
 src/main/java/com/ehelply/client/api/CategoryApi.java
 src/main/java/com/ehelply/client/api/CompaniesApi.java
-src/main/java/com/ehelply/client/api/DefaultApi.java
 src/main/java/com/ehelply/client/api/LoggingApi.java
 src/main/java/com/ehelply/client/api/MetaApi.java
 src/main/java/com/ehelply/client/api/MonitorApi.java
@@ -359,11 +359,11 @@ src/main/java/com/ehelply/client/model/UserTokenReturn.java
 src/main/java/com/ehelply/client/model/UserValidations.java
 src/main/java/com/ehelply/client/model/ValidationError.java
 src/main/java/com/ehelply/client/model/Validations.java
+src/test/java/com/ehelply/client/api/AppointmentsApiTest.java
 src/test/java/com/ehelply/client/api/BillingApiTest.java
 src/test/java/com/ehelply/client/api/CatalogsApiTest.java
 src/test/java/com/ehelply/client/api/CategoryApiTest.java
 src/test/java/com/ehelply/client/api/CompaniesApiTest.java
-src/test/java/com/ehelply/client/api/DefaultApiTest.java
 src/test/java/com/ehelply/client/api/LoggingApiTest.java
 src/test/java/com/ehelply/client/api/MetaApiTest.java
 src/test/java/com/ehelply/client/api/MonitorApiTest.java

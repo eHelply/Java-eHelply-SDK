@@ -9,8 +9,8 @@ info:
     name: Apache 2.0
     url: https://www.apache.org/licenses/LICENSE-2.0.html
   termsOfService: https://superstack.ehelply.com/support/legal/terms
-  title: eHelply SDK - 1.1.109
-  version: 1.1.109
+  title: eHelply SDK - 1.1.110
+  version: 1.1.110
 servers:
 - description: eHelply / SuperStack Production
   url: https://api.prod.ehelply.com
@@ -103,10 +103,12 @@ paths:
               schema:
                 $ref: '#/components/schemas/HTTPValidationError'
           description: Validation Error
-      summary: Detach Entity From Appointment
+      summary: Removeentityfromappointment
+      tags:
+      - appointments
       x-accepts: application/json
     post:
-      operationId: attachEntityToAppointment
+      operationId: addEntityToAppointment
       parameters:
       - explode: false
         in: path
@@ -177,7 +179,7 @@ paths:
           content:
             application/json:
               schema:
-                title: Response Attachentitytoappointment
+                title: Response Addentitytoappointment
                 type: boolean
           description: Successful Response
         "404":
@@ -188,7 +190,9 @@ paths:
               schema:
                 $ref: '#/components/schemas/HTTPValidationError'
           description: Validation Error
-      summary: Attach Entity To Appointment
+      summary: Addentitytoappointment
+      tags:
+      - appointments
       x-accepts: application/json
   /appointments/appointments/{appointment_uuid}/entities:
     get:
@@ -315,7 +319,9 @@ paths:
               schema:
                 $ref: '#/components/schemas/HTTPValidationError'
           description: Validation Error
-      summary: Search Appointment Entities
+      summary: Searchappointmententities
+      tags:
+      - appointments
       x-accepts: application/json
   /appointments/appointments/entities/{entity_uuid}/appointments:
     get:
@@ -416,7 +422,9 @@ paths:
               schema:
                 $ref: '#/components/schemas/HTTPValidationError'
           description: Validation Error
-      summary: Get Entities Appointments
+      summary: Getentityappointments
+      tags:
+      - appointments
       x-accepts: application/json
   /appointments/appointments:
     get:
@@ -561,7 +569,9 @@ paths:
               schema:
                 $ref: '#/components/schemas/HTTPValidationError'
           description: Validation Error
-      summary: Search Appointment
+      summary: Searchappointments
+      tags:
+      - appointments
       x-accepts: application/json
     post:
       operationId: createAppointment
@@ -635,7 +645,9 @@ paths:
               schema:
                 $ref: '#/components/schemas/HTTPValidationError'
           description: Validation Error
-      summary: Create Appointment
+      summary: Createappointment
+      tags:
+      - appointments
       x-content-type: application/json
       x-accepts: application/json
   /appointments/appointments/{appointment_uuid}:
@@ -714,7 +726,9 @@ paths:
               schema:
                 $ref: '#/components/schemas/HTTPValidationError'
           description: Validation Error
-      summary: Delete Appointment
+      summary: Deleteappointment
+      tags:
+      - appointments
       x-accepts: application/json
     get:
       operationId: getAppointment
@@ -800,7 +814,9 @@ paths:
               schema:
                 $ref: '#/components/schemas/HTTPValidationError'
           description: Validation Error
-      summary: Get Appointment
+      summary: Getappointment
+      tags:
+      - appointments
       x-accepts: application/json
     put:
       operationId: updateAppointment
@@ -892,7 +908,9 @@ paths:
               schema:
                 $ref: '#/components/schemas/HTTPValidationError'
           description: Validation Error
-      summary: Update Appointment
+      summary: Updateappointment
+      tags:
+      - appointments
       x-content-type: application/json
       x-accepts: application/json
   /meta/meta/service/{service}/type/{type_str}/entity/{entity_uuid}:

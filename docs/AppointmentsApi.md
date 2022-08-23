@@ -1,25 +1,25 @@
-# DefaultApi
+# AppointmentsApi
 
 All URIs are relative to *https://api.prod.ehelply.com*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
-| [**attachEntityToAppointment**](DefaultApi.md#attachEntityToAppointment) | **POST** /appointments/appointments/{appointment_uuid}/entities/{entity_uuid} | Attach Entity To Appointment |
-| [**createAppointment**](DefaultApi.md#createAppointment) | **POST** /appointments/appointments | Create Appointment |
-| [**deleteAppointment**](DefaultApi.md#deleteAppointment) | **DELETE** /appointments/appointments/{appointment_uuid} | Delete Appointment |
-| [**detachEntityFromAppointment**](DefaultApi.md#detachEntityFromAppointment) | **DELETE** /appointments/appointments/{appointment_uuid}/entities/{entity_uuid} | Detach Entity From Appointment |
-| [**getAppointment**](DefaultApi.md#getAppointment) | **GET** /appointments/appointments/{appointment_uuid} | Get Appointment |
-| [**searchAppointment**](DefaultApi.md#searchAppointment) | **GET** /appointments/appointments | Search Appointment |
-| [**searchAppointmentEntities**](DefaultApi.md#searchAppointmentEntities) | **GET** /appointments/appointments/{appointment_uuid}/entities | Search Appointment Entities |
-| [**searchEntityAppointments**](DefaultApi.md#searchEntityAppointments) | **GET** /appointments/appointments/entities/{entity_uuid}/appointments | Get Entities Appointments |
-| [**updateAppointment**](DefaultApi.md#updateAppointment) | **PUT** /appointments/appointments/{appointment_uuid} | Update Appointment |
+| [**addEntityToAppointment**](AppointmentsApi.md#addEntityToAppointment) | **POST** /appointments/appointments/{appointment_uuid}/entities/{entity_uuid} | Addentitytoappointment |
+| [**createAppointment**](AppointmentsApi.md#createAppointment) | **POST** /appointments/appointments | Createappointment |
+| [**deleteAppointment**](AppointmentsApi.md#deleteAppointment) | **DELETE** /appointments/appointments/{appointment_uuid} | Deleteappointment |
+| [**detachEntityFromAppointment**](AppointmentsApi.md#detachEntityFromAppointment) | **DELETE** /appointments/appointments/{appointment_uuid}/entities/{entity_uuid} | Removeentityfromappointment |
+| [**getAppointment**](AppointmentsApi.md#getAppointment) | **GET** /appointments/appointments/{appointment_uuid} | Getappointment |
+| [**searchAppointment**](AppointmentsApi.md#searchAppointment) | **GET** /appointments/appointments | Searchappointments |
+| [**searchAppointmentEntities**](AppointmentsApi.md#searchAppointmentEntities) | **GET** /appointments/appointments/{appointment_uuid}/entities | Searchappointmententities |
+| [**searchEntityAppointments**](AppointmentsApi.md#searchEntityAppointments) | **GET** /appointments/appointments/entities/{entity_uuid}/appointments | Getentityappointments |
+| [**updateAppointment**](AppointmentsApi.md#updateAppointment) | **PUT** /appointments/appointments/{appointment_uuid} | Updateappointment |
 
 
-<a name="attachEntityToAppointment"></a>
-# **attachEntityToAppointment**
-> Boolean attachEntityToAppointment(appointmentUuid, entityUuid, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData)
+<a name="addEntityToAppointment"></a>
+# **addEntityToAppointment**
+> Boolean addEntityToAppointment(appointmentUuid, entityUuid, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData)
 
-Attach Entity To Appointment
+Addentitytoappointment
 
 ### Example
 ```java
@@ -28,14 +28,14 @@ import com.ehelply.client.ApiClient;
 import com.ehelply.client.ApiException;
 import com.ehelply.client.Configuration;
 import com.ehelply.client.models.*;
-import com.ehelply.client.api.DefaultApi;
+import com.ehelply.client.api.AppointmentsApi;
 
 public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.prod.ehelply.com");
 
-    DefaultApi apiInstance = new DefaultApi(defaultClient);
+    AppointmentsApi apiInstance = new AppointmentsApi(defaultClient);
     String appointmentUuid = "appointmentUuid_example"; // String | 
     String entityUuid = "entityUuid_example"; // String | 
     String xAccessToken = "xAccessToken_example"; // String | 
@@ -45,10 +45,10 @@ public class Example {
     String ehelplyProject = "ehelplyProject_example"; // String | 
     String ehelplyData = "ehelplyData_example"; // String | 
     try {
-      Boolean result = apiInstance.attachEntityToAppointment(appointmentUuid, entityUuid, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
+      Boolean result = apiInstance.addEntityToAppointment(appointmentUuid, entityUuid, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling DefaultApi#attachEntityToAppointment");
+      System.err.println("Exception when calling AppointmentsApi#addEntityToAppointment");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -95,7 +95,7 @@ No authorization required
 # **createAppointment**
 > AppointmentResponse createAppointment(appointmentBase, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData)
 
-Create Appointment
+Createappointment
 
 ### Example
 ```java
@@ -104,14 +104,14 @@ import com.ehelply.client.ApiClient;
 import com.ehelply.client.ApiException;
 import com.ehelply.client.Configuration;
 import com.ehelply.client.models.*;
-import com.ehelply.client.api.DefaultApi;
+import com.ehelply.client.api.AppointmentsApi;
 
 public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.prod.ehelply.com");
 
-    DefaultApi apiInstance = new DefaultApi(defaultClient);
+    AppointmentsApi apiInstance = new AppointmentsApi(defaultClient);
     AppointmentBase appointmentBase = new AppointmentBase(); // AppointmentBase | 
     String xAccessToken = "xAccessToken_example"; // String | 
     String xSecretToken = "xSecretToken_example"; // String | 
@@ -123,7 +123,7 @@ public class Example {
       AppointmentResponse result = apiInstance.createAppointment(appointmentBase, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling DefaultApi#createAppointment");
+      System.err.println("Exception when calling AppointmentsApi#createAppointment");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -169,7 +169,7 @@ No authorization required
 # **deleteAppointment**
 > Boolean deleteAppointment(appointmentUuid, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData)
 
-Delete Appointment
+Deleteappointment
 
 ### Example
 ```java
@@ -178,14 +178,14 @@ import com.ehelply.client.ApiClient;
 import com.ehelply.client.ApiException;
 import com.ehelply.client.Configuration;
 import com.ehelply.client.models.*;
-import com.ehelply.client.api.DefaultApi;
+import com.ehelply.client.api.AppointmentsApi;
 
 public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.prod.ehelply.com");
 
-    DefaultApi apiInstance = new DefaultApi(defaultClient);
+    AppointmentsApi apiInstance = new AppointmentsApi(defaultClient);
     String appointmentUuid = "appointmentUuid_example"; // String | 
     String xAccessToken = "xAccessToken_example"; // String | 
     String xSecretToken = "xSecretToken_example"; // String | 
@@ -197,7 +197,7 @@ public class Example {
       Boolean result = apiInstance.deleteAppointment(appointmentUuid, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling DefaultApi#deleteAppointment");
+      System.err.println("Exception when calling AppointmentsApi#deleteAppointment");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -243,7 +243,7 @@ No authorization required
 # **detachEntityFromAppointment**
 > Boolean detachEntityFromAppointment(appointmentUuid, entityUuid, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData)
 
-Detach Entity From Appointment
+Removeentityfromappointment
 
 ### Example
 ```java
@@ -252,14 +252,14 @@ import com.ehelply.client.ApiClient;
 import com.ehelply.client.ApiException;
 import com.ehelply.client.Configuration;
 import com.ehelply.client.models.*;
-import com.ehelply.client.api.DefaultApi;
+import com.ehelply.client.api.AppointmentsApi;
 
 public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.prod.ehelply.com");
 
-    DefaultApi apiInstance = new DefaultApi(defaultClient);
+    AppointmentsApi apiInstance = new AppointmentsApi(defaultClient);
     String appointmentUuid = "appointmentUuid_example"; // String | 
     String entityUuid = "entityUuid_example"; // String | 
     String xAccessToken = "xAccessToken_example"; // String | 
@@ -272,7 +272,7 @@ public class Example {
       Boolean result = apiInstance.detachEntityFromAppointment(appointmentUuid, entityUuid, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling DefaultApi#detachEntityFromAppointment");
+      System.err.println("Exception when calling AppointmentsApi#detachEntityFromAppointment");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -319,7 +319,7 @@ No authorization required
 # **getAppointment**
 > AppointmentResponse getAppointment(appointmentUuid, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData)
 
-Get Appointment
+Getappointment
 
 ### Example
 ```java
@@ -328,14 +328,14 @@ import com.ehelply.client.ApiClient;
 import com.ehelply.client.ApiException;
 import com.ehelply.client.Configuration;
 import com.ehelply.client.models.*;
-import com.ehelply.client.api.DefaultApi;
+import com.ehelply.client.api.AppointmentsApi;
 
 public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.prod.ehelply.com");
 
-    DefaultApi apiInstance = new DefaultApi(defaultClient);
+    AppointmentsApi apiInstance = new AppointmentsApi(defaultClient);
     String appointmentUuid = "appointmentUuid_example"; // String | 
     String xAccessToken = "xAccessToken_example"; // String | 
     String xSecretToken = "xSecretToken_example"; // String | 
@@ -347,7 +347,7 @@ public class Example {
       AppointmentResponse result = apiInstance.getAppointment(appointmentUuid, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling DefaultApi#getAppointment");
+      System.err.println("Exception when calling AppointmentsApi#getAppointment");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -394,7 +394,7 @@ No authorization required
 # **searchAppointment**
 > Object searchAppointment(placeUuid, excludeCancelled, isDeleted, startRange, endRange, page, pageSize, sortOn, sortDesc, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData)
 
-Search Appointment
+Searchappointments
 
 ### Example
 ```java
@@ -403,14 +403,14 @@ import com.ehelply.client.ApiClient;
 import com.ehelply.client.ApiException;
 import com.ehelply.client.Configuration;
 import com.ehelply.client.models.*;
-import com.ehelply.client.api.DefaultApi;
+import com.ehelply.client.api.AppointmentsApi;
 
 public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.prod.ehelply.com");
 
-    DefaultApi apiInstance = new DefaultApi(defaultClient);
+    AppointmentsApi apiInstance = new AppointmentsApi(defaultClient);
     String placeUuid = "placeUuid_example"; // String | 
     Boolean excludeCancelled = false; // Boolean | 
     Boolean isDeleted = false; // Boolean | 
@@ -430,7 +430,7 @@ public class Example {
       Object result = apiInstance.searchAppointment(placeUuid, excludeCancelled, isDeleted, startRange, endRange, page, pageSize, sortOn, sortDesc, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling DefaultApi#searchAppointment");
+      System.err.println("Exception when calling AppointmentsApi#searchAppointment");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -484,7 +484,7 @@ No authorization required
 # **searchAppointmentEntities**
 > Object searchAppointmentEntities(appointmentUuid, page, pageSize, sortOn, sortDesc, search, searchOn, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData)
 
-Search Appointment Entities
+Searchappointmententities
 
 ### Example
 ```java
@@ -493,14 +493,14 @@ import com.ehelply.client.ApiClient;
 import com.ehelply.client.ApiException;
 import com.ehelply.client.Configuration;
 import com.ehelply.client.models.*;
-import com.ehelply.client.api.DefaultApi;
+import com.ehelply.client.api.AppointmentsApi;
 
 public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.prod.ehelply.com");
 
-    DefaultApi apiInstance = new DefaultApi(defaultClient);
+    AppointmentsApi apiInstance = new AppointmentsApi(defaultClient);
     String appointmentUuid = "appointmentUuid_example"; // String | 
     Integer page = 1; // Integer | 
     Integer pageSize = 25; // Integer | 
@@ -518,7 +518,7 @@ public class Example {
       Object result = apiInstance.searchAppointmentEntities(appointmentUuid, page, pageSize, sortOn, sortDesc, search, searchOn, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling DefaultApi#searchAppointmentEntities");
+      System.err.println("Exception when calling AppointmentsApi#searchAppointmentEntities");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -570,7 +570,7 @@ No authorization required
 # **searchEntityAppointments**
 > Object searchEntityAppointments(entityUuid, startDate, endDate, excludeCancelled, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData)
 
-Get Entities Appointments
+Getentityappointments
 
 ### Example
 ```java
@@ -579,14 +579,14 @@ import com.ehelply.client.ApiClient;
 import com.ehelply.client.ApiException;
 import com.ehelply.client.Configuration;
 import com.ehelply.client.models.*;
-import com.ehelply.client.api.DefaultApi;
+import com.ehelply.client.api.AppointmentsApi;
 
 public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.prod.ehelply.com");
 
-    DefaultApi apiInstance = new DefaultApi(defaultClient);
+    AppointmentsApi apiInstance = new AppointmentsApi(defaultClient);
     String entityUuid = "entityUuid_example"; // String | 
     String startDate = "startDate_example"; // String | 
     String endDate = "endDate_example"; // String | 
@@ -601,7 +601,7 @@ public class Example {
       Object result = apiInstance.searchEntityAppointments(entityUuid, startDate, endDate, excludeCancelled, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling DefaultApi#searchEntityAppointments");
+      System.err.println("Exception when calling AppointmentsApi#searchEntityAppointments");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -650,7 +650,7 @@ No authorization required
 # **updateAppointment**
 > AppointmentResponse updateAppointment(appointmentUuid, appointmentBase, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData)
 
-Update Appointment
+Updateappointment
 
 ### Example
 ```java
@@ -659,14 +659,14 @@ import com.ehelply.client.ApiClient;
 import com.ehelply.client.ApiException;
 import com.ehelply.client.Configuration;
 import com.ehelply.client.models.*;
-import com.ehelply.client.api.DefaultApi;
+import com.ehelply.client.api.AppointmentsApi;
 
 public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.prod.ehelply.com");
 
-    DefaultApi apiInstance = new DefaultApi(defaultClient);
+    AppointmentsApi apiInstance = new AppointmentsApi(defaultClient);
     String appointmentUuid = "appointmentUuid_example"; // String | 
     AppointmentBase appointmentBase = new AppointmentBase(); // AppointmentBase | 
     String xAccessToken = "xAccessToken_example"; // String | 
@@ -679,7 +679,7 @@ public class Example {
       AppointmentResponse result = apiInstance.updateAppointment(appointmentUuid, appointmentBase, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling DefaultApi#updateAppointment");
+      System.err.println("Exception when calling AppointmentsApi#updateAppointment");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
