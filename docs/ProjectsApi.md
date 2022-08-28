@@ -8,6 +8,7 @@ All URIs are relative to *https://api.prod.ehelply.com*
 | [**archiveProject**](ProjectsApi.md#archiveProject) | **DELETE** /sam/projects/projects/{project_uuid} | Archiveproject |
 | [**createProject**](ProjectsApi.md#createProject) | **POST** /sam/projects/projects | Createproject |
 | [**createProjectCredential**](ProjectsApi.md#createProjectCredential) | **POST** /sam/projects/projects/{project_uuid}/credentials | Createprojectcredential |
+| [**createProjectCredit**](ProjectsApi.md#createProjectCredit) | **POST** /sam/projects/projects/{project_uuid}/credits | Createprojectcredit |
 | [**createProjectInvoice**](ProjectsApi.md#createProjectInvoice) | **POST** /sam/projects/projects/{project_uuid}/invoices | Createprojectinvoice |
 | [**createProjectKey**](ProjectsApi.md#createProjectKey) | **POST** /sam/projects/projects/{project_uuid}/keys | Createprojectkey |
 | [**createUsageType**](ProjectsApi.md#createUsageType) | **POST** /sam/projects/usage/types | Createusagetype |
@@ -28,6 +29,7 @@ All URIs are relative to *https://api.prod.ehelply.com*
 | [**getSpecificProjectUsage**](ProjectsApi.md#getSpecificProjectUsage) | **GET** /sam/projects/projects/{project_uuid}/usage/{usage_type_key} | Getspecificprojectusage |
 | [**getUsageType**](ProjectsApi.md#getUsageType) | **GET** /sam/projects/usage/types/{usage_type_key} | Getusagetype |
 | [**removeMemberFromProject**](ProjectsApi.md#removeMemberFromProject) | **DELETE** /sam/projects/projects/{project_uuid}/members/{entity_uuid} | Removememberfromproject |
+| [**revokeProjectCredit**](ProjectsApi.md#revokeProjectCredit) | **DELETE** /sam/projects/projects/{project_uuid}/credits/{credit_uuid} | Revokeprojectcredit |
 | [**searchProjects**](ProjectsApi.md#searchProjects) | **GET** /sam/projects/projects | Searchprojects |
 | [**searchUsageType**](ProjectsApi.md#searchUsageType) | **GET** /sam/projects/usage/types | Searchusagetype |
 | [**updateProject**](ProjectsApi.md#updateProject) | **PUT** /sam/projects/projects/{project_uuid} | Updateproject |
@@ -341,6 +343,83 @@ No authorization required
 | **403** | Unauthorized - Denied by eHelply |  -  |
 | **404** | Not found |  -  |
 | **409** | Project credential already exists |  -  |
+| **422** | Validation Error |  -  |
+
+<a name="createProjectCredit"></a>
+# **createProjectCredit**
+> ProjectCreditResponse createProjectCredit(projectUuid, createProjectCredit, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData)
+
+Createprojectcredit
+
+### Example
+```java
+// Import classes:
+import com.ehelply.client.ApiClient;
+import com.ehelply.client.ApiException;
+import com.ehelply.client.Configuration;
+import com.ehelply.client.models.*;
+import com.ehelply.client.api.ProjectsApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.prod.ehelply.com");
+
+    ProjectsApi apiInstance = new ProjectsApi(defaultClient);
+    String projectUuid = "projectUuid_example"; // String | 
+    CreateProjectCredit createProjectCredit = new CreateProjectCredit(); // CreateProjectCredit | 
+    String xAccessToken = "xAccessToken_example"; // String | 
+    String xSecretToken = "xSecretToken_example"; // String | 
+    String authorization = "authorization_example"; // String | 
+    String ehelplyActiveParticipant = "ehelplyActiveParticipant_example"; // String | 
+    String ehelplyProject = "ehelplyProject_example"; // String | 
+    String ehelplyData = "ehelplyData_example"; // String | 
+    try {
+      ProjectCreditResponse result = apiInstance.createProjectCredit(projectUuid, createProjectCredit, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling ProjectsApi#createProjectCredit");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **projectUuid** | **String**|  | |
+| **createProjectCredit** | [**CreateProjectCredit**](CreateProjectCredit.md)|  | |
+| **xAccessToken** | **String**|  | [optional] |
+| **xSecretToken** | **String**|  | [optional] |
+| **authorization** | **String**|  | [optional] |
+| **ehelplyActiveParticipant** | **String**|  | [optional] |
+| **ehelplyProject** | **String**|  | [optional] |
+| **ehelplyData** | **String**|  | [optional] |
+
+### Return type
+
+[**ProjectCreditResponse**](ProjectCreditResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Successful Response |  -  |
+| **403** | Unauthorized - Denied by eHelply |  -  |
+| **404** | Not found |  -  |
 | **422** | Validation Error |  -  |
 
 <a name="createProjectInvoice"></a>
@@ -956,8 +1035,7 @@ No authorization required
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Successful Response |  -  |
-| **403** | Unauthorized - Denied by eHelply |  -  |
-| **404** | Project credits not found does not exist |  -  |
+| **404** | Not found |  -  |
 | **422** | Validation Error |  -  |
 
 <a name="getAllProjectUsage"></a>
@@ -1270,8 +1348,7 @@ No authorization required
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Successful Response |  -  |
-| **403** | Unauthorized - Denied by eHelply |  -  |
-| **404** | Project credential not found does not exist |  -  |
+| **404** | Not found |  -  |
 | **422** | Validation Error |  -  |
 
 <a name="getProjectInvoice"></a>
@@ -1877,6 +1954,85 @@ No authorization required
 | **200** | Successful Response |  -  |
 | **403** | Unauthorized - Denied by eHelply |  -  |
 | **404** | Project does not exist |  -  |
+| **422** | Validation Error |  -  |
+
+<a name="revokeProjectCredit"></a>
+# **revokeProjectCredit**
+> ResponseRevokeprojectcredit revokeProjectCredit(projectUuid, creditUuid, revokedReason, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData)
+
+Revokeprojectcredit
+
+### Example
+```java
+// Import classes:
+import com.ehelply.client.ApiClient;
+import com.ehelply.client.ApiException;
+import com.ehelply.client.Configuration;
+import com.ehelply.client.models.*;
+import com.ehelply.client.api.ProjectsApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.prod.ehelply.com");
+
+    ProjectsApi apiInstance = new ProjectsApi(defaultClient);
+    String projectUuid = "projectUuid_example"; // String | 
+    String creditUuid = "creditUuid_example"; // String | 
+    String revokedReason = "revokedReason_example"; // String | 
+    String xAccessToken = "xAccessToken_example"; // String | 
+    String xSecretToken = "xSecretToken_example"; // String | 
+    String authorization = "authorization_example"; // String | 
+    String ehelplyActiveParticipant = "ehelplyActiveParticipant_example"; // String | 
+    String ehelplyProject = "ehelplyProject_example"; // String | 
+    String ehelplyData = "ehelplyData_example"; // String | 
+    try {
+      ResponseRevokeprojectcredit result = apiInstance.revokeProjectCredit(projectUuid, creditUuid, revokedReason, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling ProjectsApi#revokeProjectCredit");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **projectUuid** | **String**|  | |
+| **creditUuid** | **String**|  | |
+| **revokedReason** | **String**|  | |
+| **xAccessToken** | **String**|  | [optional] |
+| **xSecretToken** | **String**|  | [optional] |
+| **authorization** | **String**|  | [optional] |
+| **ehelplyActiveParticipant** | **String**|  | [optional] |
+| **ehelplyProject** | **String**|  | [optional] |
+| **ehelplyData** | **String**|  | [optional] |
+
+### Return type
+
+[**ResponseRevokeprojectcredit**](ResponseRevokeprojectcredit.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Successful Response |  -  |
+| **403** | Unauthorized - Denied by eHelply |  -  |
+| **404** | Not found |  -  |
 | **422** | Validation Error |  -  |
 
 <a name="searchProjects"></a>

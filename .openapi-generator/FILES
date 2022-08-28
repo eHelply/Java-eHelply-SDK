@@ -123,6 +123,7 @@ docs/ResponseDeleteprojectcredential.md
 docs/ResponseDeleteusagetype.md
 docs/ResponseGeneratetoken.md
 docs/ResponseRemovememberfromproject.md
+docs/ResponseRevokeprojectcredit.md
 docs/ResponseUpdateprojectcredential.md
 docs/ReviewsApi.md
 docs/SecurityApi.md
@@ -320,6 +321,7 @@ src/main/java/com/ehelply/client/model/ResponseDeleteprojectcredential.java
 src/main/java/com/ehelply/client/model/ResponseDeleteusagetype.java
 src/main/java/com/ehelply/client/model/ResponseGeneratetoken.java
 src/main/java/com/ehelply/client/model/ResponseRemovememberfromproject.java
+src/main/java/com/ehelply/client/model/ResponseRevokeprojectcredit.java
 src/main/java/com/ehelply/client/model/ResponseUpdateprojectcredential.java
 src/main/java/com/ehelply/client/model/SecurityCreateToken.java
 src/main/java/com/ehelply/client/model/SecurityEncryptionKeyGet.java
@@ -483,6 +485,7 @@ src/test/java/com/ehelply/client/model/ResponseDeleteprojectcredentialTest.java
 src/test/java/com/ehelply/client/model/ResponseDeleteusagetypeTest.java
 src/test/java/com/ehelply/client/model/ResponseGeneratetokenTest.java
 src/test/java/com/ehelply/client/model/ResponseRemovememberfromprojectTest.java
+src/test/java/com/ehelply/client/model/ResponseRevokeprojectcreditTest.java
 src/test/java/com/ehelply/client/model/ResponseUpdateprojectcredentialTest.java
 src/test/java/com/ehelply/client/model/SecurityCreateTokenTest.java
 src/test/java/com/ehelply/client/model/SecurityEncryptionKeyGetTest.java
