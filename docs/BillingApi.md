@@ -159,7 +159,7 @@ No authorization required
 
 <a name="hasPayment"></a>
 # **hasPayment**
-> Boolean hasPayment(xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData)
+> Boolean hasPayment(projectUuid, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData)
 
 Haspayment
 
@@ -178,6 +178,7 @@ public class Example {
     defaultClient.setBasePath("https://api.prod.ehelply.com");
 
     BillingApi apiInstance = new BillingApi(defaultClient);
+    Object projectUuid = null; // Object | 
     String xAccessToken = "xAccessToken_example"; // String | 
     String xSecretToken = "xSecretToken_example"; // String | 
     String authorization = "authorization_example"; // String | 
@@ -185,7 +186,7 @@ public class Example {
     String ehelplyProject = "ehelplyProject_example"; // String | 
     String ehelplyData = "ehelplyData_example"; // String | 
     try {
-      Boolean result = apiInstance.hasPayment(xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
+      Boolean result = apiInstance.hasPayment(projectUuid, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling BillingApi#hasPayment");
@@ -202,6 +203,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
+| **projectUuid** | [**Object**](.md)|  | [optional] |
 | **xAccessToken** | **String**|  | [optional] |
 | **xSecretToken** | **String**|  | [optional] |
 | **authorization** | **String**|  | [optional] |
@@ -231,7 +233,7 @@ No authorization required
 
 <a name="listPaymentMethods"></a>
 # **listPaymentMethods**
-> List&lt;PaymentMethodResponse&gt; listPaymentMethods(xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData)
+> List&lt;PaymentMethodResponse&gt; listPaymentMethods(projectUuid, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData)
 
 Listpaymentmethods
 
@@ -250,6 +252,7 @@ public class Example {
     defaultClient.setBasePath("https://api.prod.ehelply.com");
 
     BillingApi apiInstance = new BillingApi(defaultClient);
+    Object projectUuid = null; // Object | 
     String xAccessToken = "xAccessToken_example"; // String | 
     String xSecretToken = "xSecretToken_example"; // String | 
     String authorization = "authorization_example"; // String | 
@@ -257,7 +260,7 @@ public class Example {
     String ehelplyProject = "ehelplyProject_example"; // String | 
     String ehelplyData = "ehelplyData_example"; // String | 
     try {
-      List<PaymentMethodResponse> result = apiInstance.listPaymentMethods(xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
+      List<PaymentMethodResponse> result = apiInstance.listPaymentMethods(projectUuid, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling BillingApi#listPaymentMethods");
@@ -274,6 +277,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
+| **projectUuid** | [**Object**](.md)|  | [optional] |
 | **xAccessToken** | **String**|  | [optional] |
 | **xSecretToken** | **String**|  | [optional] |
 | **authorization** | **String**|  | [optional] |
@@ -449,7 +453,7 @@ No authorization required
 
 <a name="removePaymentMethod"></a>
 # **removePaymentMethod**
-> String removePaymentMethod(xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData)
+> String removePaymentMethod(projectUuid, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData)
 
 Removepaymentmethod
 
@@ -468,6 +472,7 @@ public class Example {
     defaultClient.setBasePath("https://api.prod.ehelply.com");
 
     BillingApi apiInstance = new BillingApi(defaultClient);
+    Object projectUuid = null; // Object | 
     String xAccessToken = "xAccessToken_example"; // String | 
     String xSecretToken = "xSecretToken_example"; // String | 
     String authorization = "authorization_example"; // String | 
@@ -475,7 +480,7 @@ public class Example {
     String ehelplyProject = "ehelplyProject_example"; // String | 
     String ehelplyData = "ehelplyData_example"; // String | 
     try {
-      String result = apiInstance.removePaymentMethod(xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
+      String result = apiInstance.removePaymentMethod(projectUuid, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling BillingApi#removePaymentMethod");
@@ -492,6 +497,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
+| **projectUuid** | [**Object**](.md)|  | [optional] |
 | **xAccessToken** | **String**|  | [optional] |
 | **xSecretToken** | **String**|  | [optional] |
 | **authorization** | **String**|  | [optional] |

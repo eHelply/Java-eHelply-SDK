@@ -1,8 +1,8 @@
 # ehelply-java-sdk
 
-eHelply SDK - 1.1.110
-- API version: 1.1.110
-  - Build date: 2022-08-23T16:22:31.475694Z[Etc/UTC]
+eHelply SDK - 1.1.111
+- API version: 1.1.111
+  - Build date: 2022-08-28T02:36:34.595144Z[Etc/UTC]
 
 eHelply SDK for SuperStack Services
 
@@ -41,7 +41,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>com.ehelply</groupId>
   <artifactId>ehelply-java-sdk</artifactId>
-  <version>1.1.110</version>
+  <version>1.1.111</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -57,7 +57,7 @@ Add this dependency to your project's build file:
   }
 
   dependencies {
-     implementation "com.ehelply:ehelply-java-sdk:1.1.110"
+     implementation "com.ehelply:ehelply-java-sdk:1.1.111"
   }
 ```
 
@@ -71,7 +71,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/ehelply-java-sdk-1.1.110.jar`
+* `target/ehelply-java-sdk-1.1.111.jar`
 * `target/lib/*.jar`
 
 ## Getting Started
@@ -216,6 +216,7 @@ Class | Method | HTTP request | Description
 *ProjectsApi* | [**archiveProject**](docs/ProjectsApi.md#archiveProject) | **DELETE** /sam/projects/projects/{project_uuid} | Archiveproject
 *ProjectsApi* | [**createProject**](docs/ProjectsApi.md#createProject) | **POST** /sam/projects/projects | Createproject
 *ProjectsApi* | [**createProjectCredential**](docs/ProjectsApi.md#createProjectCredential) | **POST** /sam/projects/projects/{project_uuid}/credentials | Createprojectcredential
+*ProjectsApi* | [**createProjectCredit**](docs/ProjectsApi.md#createProjectCredit) | **POST** /sam/projects/projects/{project_uuid}/credits | Createprojectcredit
 *ProjectsApi* | [**createProjectInvoice**](docs/ProjectsApi.md#createProjectInvoice) | **POST** /sam/projects/projects/{project_uuid}/invoices | Createprojectinvoice
 *ProjectsApi* | [**createProjectKey**](docs/ProjectsApi.md#createProjectKey) | **POST** /sam/projects/projects/{project_uuid}/keys | Createprojectkey
 *ProjectsApi* | [**createUsageType**](docs/ProjectsApi.md#createUsageType) | **POST** /sam/projects/usage/types | Createusagetype
@@ -236,6 +237,7 @@ Class | Method | HTTP request | Description
 *ProjectsApi* | [**getSpecificProjectUsage**](docs/ProjectsApi.md#getSpecificProjectUsage) | **GET** /sam/projects/projects/{project_uuid}/usage/{usage_type_key} | Getspecificprojectusage
 *ProjectsApi* | [**getUsageType**](docs/ProjectsApi.md#getUsageType) | **GET** /sam/projects/usage/types/{usage_type_key} | Getusagetype
 *ProjectsApi* | [**removeMemberFromProject**](docs/ProjectsApi.md#removeMemberFromProject) | **DELETE** /sam/projects/projects/{project_uuid}/members/{entity_uuid} | Removememberfromproject
+*ProjectsApi* | [**revokeProjectCredit**](docs/ProjectsApi.md#revokeProjectCredit) | **DELETE** /sam/projects/projects/{project_uuid}/credits/{credit_uuid} | Revokeprojectcredit
 *ProjectsApi* | [**searchProjects**](docs/ProjectsApi.md#searchProjects) | **GET** /sam/projects/projects | Searchprojects
 *ProjectsApi* | [**searchUsageType**](docs/ProjectsApi.md#searchUsageType) | **GET** /sam/projects/usage/types | Searchusagetype
 *ProjectsApi* | [**updateProject**](docs/ProjectsApi.md#updateProject) | **PUT** /sam/projects/projects/{project_uuid} | Updateproject
@@ -394,6 +396,7 @@ Class | Method | HTTP request | Description
  - [ResponseDeleteusagetype](docs/ResponseDeleteusagetype.md)
  - [ResponseGeneratetoken](docs/ResponseGeneratetoken.md)
  - [ResponseRemovememberfromproject](docs/ResponseRemovememberfromproject.md)
+ - [ResponseRevokeprojectcredit](docs/ResponseRevokeprojectcredit.md)
  - [ResponseUpdateprojectcredential](docs/ResponseUpdateprojectcredential.md)
  - [SecurityCreateToken](docs/SecurityCreateToken.md)
  - [SecurityEncryptionKeyGet](docs/SecurityEncryptionKeyGet.md)
