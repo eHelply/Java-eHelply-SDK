@@ -8,6 +8,7 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
+|**projectUuid** | **String** |  |  [optional] |
 |**name** | **String** |  |  |
 |**summary** | **String** |  |  [optional] |
 |**_public** | **Boolean** |  |  [optional] |

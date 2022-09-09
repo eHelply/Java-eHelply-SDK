@@ -2,15 +2,18 @@
 
 # StaffResponse
 
-**:param** uuid                                **type:** string **:param** project_uuid                        **type:** string or None  **:param** entity                              **type:** string or None  **:param** place                               **type:** string or None  **:param** company                             **type:** string or None  **:param** schedule                            **type:** string or None  **:param** catalog                             **type:** string or None  **:param** reviews                             **type:** string or None  **:param** created_at                          **type:** string or None  **:param** updated_at                          **type:** string or None  **:param** deleted_at                          **type:** string or None
 
 ## Properties
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**uuid** | **String** |  |  |
+|**entityUuid** | **String** |  |  |
 |**projectUuid** | **String** |  |  [optional] |
-|**entity** | **Object** |  |  [optional] |
+|**scheduleUuid** | **String** |  |  [optional] |
+|**catalogUuid** | **String** |  |  [optional] |
+|**reviewGroupUuid** | **String** |  |  [optional] |
+|**uuid** | **String** |  |  |
+|**entity** | **String** |  |  [optional] |
 |**place** | **Object** |  |  [optional] |
 |**placeRoles** | **List&lt;String&gt;** |  |  [optional] |
 |**company** | **Object** |  |  [optional] |

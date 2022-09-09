@@ -9,8 +9,8 @@ info:
     name: Apache 2.0
     url: https://www.apache.org/licenses/LICENSE-2.0.html
   termsOfService: https://superstack.ehelply.com/support/legal/terms
-  title: eHelply SDK - 1.1.112
-  version: 1.1.112
+  title: eHelply SDK - 1.1.113
+  version: 1.1.113
 servers:
 - description: eHelply / SuperStack Production
   url: https://api.prod.ehelply.com
@@ -2439,14 +2439,6 @@ paths:
       parameters:
       - explode: true
         in: query
-        name: project_uuid
-        required: false
-        schema:
-          title: Project Uuid
-          type: string
-        style: form
-      - explode: true
-        in: query
         name: name
         required: false
         schema:
@@ -3459,7 +3451,7 @@ paths:
   /places/companies/{company_uuid}:
     delete:
       description: Deletes the company with the given ID and returns True if successful
-      operationId: delete_place_places_companies__company_uuid__delete
+      operationId: delete_company_places_companies__company_uuid__delete
       parameters:
       - explode: false
         in: path
@@ -3540,7 +3532,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/HTTPValidationError'
           description: Validation Error
-      summary: Delete Place
+      summary: Delete Company
       tags:
       - companies
       x-accepts: application/json
@@ -4042,14 +4034,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/StaffCreate'
+              $ref: '#/components/schemas/StaffBase'
         required: true
       responses:
         "200":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/StaffDb'
+                $ref: '#/components/schemas/StaffResponse'
           description: Successful Response
         "404":
           description: Route not found - Denied by eHelply
@@ -4342,7 +4334,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/StaffCreate'
+              $ref: '#/components/schemas/StaffBase'
         required: true
       responses:
         "200":
@@ -4565,7 +4557,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/CategoryDb'
+                $ref: '#/components/schemas/CategoryResponse'
           description: Successful Response
         "404":
           description: Route not found - Denied by eHelply
@@ -4733,7 +4725,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/CategoryBase'
+                $ref: '#/components/schemas/CategoryResponse'
           description: Successful Response
         "404":
           description: Route not found - Denied by eHelply
@@ -5026,7 +5018,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/TagDb'
+                $ref: '#/components/schemas/TagResponse'
           description: Successful Response
         "404":
           description: Route not found - Denied by eHelply
@@ -5185,7 +5177,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/TagBase'
+                $ref: '#/components/schemas/TagResponse'
           description: Successful Response
         "404":
           description: Route not found - Denied by eHelply
@@ -5271,7 +5263,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/TagBase'
+                $ref: '#/components/schemas/TagResponse'
           description: Successful Response
         "404":
           description: Route not found - Denied by eHelply
@@ -15546,7 +15538,7 @@ components:
       - name
       title: CategoryBase
       type: object
-    CategoryDb:
+    CategoryResponse:
       description: |-
         **:param** uuid                                **type:** string
         **:param** name                                **type:** string
@@ -15556,6 +15548,8 @@ components:
       example:
         project_uuid: project_uuid_1234
         meta_uuid: meat_uuid_1234
+        meta:
+          Category Field: field value
         name: Example Category
         uuid: uuid_1234
       properties:
@@ -15575,10 +15569,15 @@ components:
           example: meat_uuid_1234
           title: Meta Uuid
           type: string
+        meta:
+          example:
+            Category Field: field value
+          title: Meta
+          type: object
       required:
       - name
       - uuid
-      title: CategoryDb
+      title: CategoryResponse
       type: object
     CompanyBase:
       description: |-
@@ -15866,6 +15865,7 @@ components:
 
         **:param** contact                             **type:** ContactBase or None
       example:
+        project_uuid: project_uuid
         summary: Summary of the clinic
         addresses: []
         public: true
@@ -15882,6 +15882,9 @@ components:
         name: Example Clinic
         picture: url here
       properties:
+        project_uuid:
+          title: Project Uuid
+          type: string
         name:
           example: Example Clinic
           title: Name
@@ -15928,8 +15931,8 @@ components:
 
         **:param** contact                             **type:** ContactBase or None
       example:
-        summary: Summary of the clinic
         project_uuid: project_uuid 1234
+        summary: Summary of the clinic
         addresses: []
         created_at: 2020-06-27T12:00:00.000000
         uuid: uuid_1234
@@ -15953,6 +15956,10 @@ components:
         company: null
         categories: []
       properties:
+        project_uuid:
+          example: project_uuid 1234
+          title: Project Uuid
+          type: string
         name:
           example: Example Clinic
           title: Name
@@ -15985,10 +15992,6 @@ components:
         uuid:
           example: uuid_1234
           title: Uuid
-          type: string
-        project_uuid:
-          example: project_uuid 1234
-          title: Project Uuid
           type: string
         meta_uuid:
           example: meta_uuid 1234
@@ -16025,17 +16028,7 @@ components:
       - uuid
       title: PlaceResponse
       type: object
-    StaffCreate:
-      description: |-
-        **:param** project_uuid                        **type:** string or None
-
-        **:param** entity_uuid                         **type:** string or None
-
-        **:param** schedule_uuid                       **type:** string or None
-
-        **:param** catalog_uuid                        **type:** string or None
-
-        **:param** review_group_uuid                   **type:** string or None
+    StaffBase:
       example:
         project_uuid: project_uuid_1234
         schedule_uuid: schedule_uuid_1234
@@ -16065,48 +16058,35 @@ components:
           type: string
       required:
       - entity_uuid
-      title: StaffCreate
+      title: StaffBase
       type: object
-    StaffDb:
-      description: |-
-        **:param** uuid                                **type:** string
-        **:param** project_uuid                        **type:** string or None
-
-        **:param** entity_uuid                         **type:** string or None
-
-        **:param** schedule_uuid                       **type:** string or None
-
-        **:param** catalog_uuid                        **type:** string or None
-
-        **:param** review_group_uuid                   **type:** string or None
-
-        **:param** created_at                          **type:** string or None
-
-        **:param** updated_at                          **type:** string or None
-
-        **:param** deleted_at                          **type:** string or None
+    StaffResponse:
       example:
         project_uuid: project_uuid_1234
         schedule_uuid: schedule_uuid_1234
-        entity_uuid: entity_uuid_1234
         review_group_uuid: review_uuid_1234
-        updated_at: 2020-06-27T12:00:00.000000
-        catalog_uuid: catalog_uuid_1234
+        catalog: {}
         created_at: 2020-06-27T12:00:00.000000
         uuid: uuid_1234
         deleted_at: 2020-06-27T12:00:00.000000
+        schedule: {}
+        entity_uuid: entity_uuid_1234
+        reviews: {}
+        updated_at: 2020-06-27T12:00:00.000000
+        catalog_uuid: catalog_uuid_1234
+        company_roles: []
+        company: {}
+        place: {}
+        place_roles: []
+        entity: "{}"
       properties:
-        uuid:
-          example: uuid_1234
-          title: Uuid
+        entity_uuid:
+          example: entity_uuid_1234
+          title: Entity Uuid
           type: string
         project_uuid:
           example: project_uuid_1234
           title: Project Uuid
-          type: string
-        entity_uuid:
-          example: entity_uuid_1234
-          title: Entity Uuid
           type: string
         schedule_uuid:
           example: schedule_uuid_1234
@@ -16120,71 +16100,14 @@ components:
           example: review_uuid_1234
           title: Review Group Uuid
           type: string
-        created_at:
-          example: 2020-06-27T12:00:00.000000
-          title: Created At
-          type: string
-        updated_at:
-          example: 2020-06-27T12:00:00.000000
-          title: Updated At
-          type: string
-        deleted_at:
-          example: 2020-06-27T12:00:00.000000
-          title: Deleted At
-          type: string
-      required:
-      - uuid
-      title: StaffDb
-      type: object
-    StaffResponse:
-      description: |-
-        **:param** uuid                                **type:** string
-        **:param** project_uuid                        **type:** string or None
-
-        **:param** entity                              **type:** string or None
-
-        **:param** place                               **type:** string or None
-
-        **:param** company                             **type:** string or None
-
-        **:param** schedule                            **type:** string or None
-
-        **:param** catalog                             **type:** string or None
-
-        **:param** reviews                             **type:** string or None
-
-        **:param** created_at                          **type:** string or None
-
-        **:param** updated_at                          **type:** string or None
-
-        **:param** deleted_at                          **type:** string or None
-      example:
-        project_uuid: project_uuid_1234
-        catalog: {}
-        created_at: 2020-06-27T12:00:00.000000
-        uuid: uuid_1234
-        deleted_at: 2020-06-27T12:00:00.000000
-        schedule: {}
-        reviews: {}
-        updated_at: 2020-06-27T12:00:00.000000
-        company_roles: []
-        company: {}
-        place: {}
-        place_roles: []
-        entity: {}
-      properties:
         uuid:
           example: uuid_1234
           title: Uuid
           type: string
-        project_uuid:
-          example: project_uuid_1234
-          title: Project Uuid
-          type: string
         entity:
-          example: {}
+          example: "{}"
           title: Entity
-          type: object
+          type: string
         place:
           example: {}
           title: Place
@@ -16230,6 +16153,7 @@ components:
           title: Deleted At
           type: string
       required:
+      - entity_uuid
       - uuid
       title: StaffResponse
       type: object
@@ -16253,7 +16177,7 @@ components:
       - name
       title: TagBase
       type: object
-    TagDb:
+    TagResponse:
       description: |-
         **:param** uuid                                **type:** string
         **:param** name                                **type:** string
@@ -16278,7 +16202,7 @@ components:
       required:
       - name
       - uuid
-      title: TagDb
+      title: TagResponse
       type: object
     CatalogBase:
       example:

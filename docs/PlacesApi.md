@@ -498,7 +498,7 @@ No authorization required
 
 <a name="searchPlaces"></a>
 # **searchPlaces**
-> Page searchPlaces(projectUuid, name, addressLine1, addressLine2, city, provinceState, country, postalZipCode, lat, lng, email, isPublic, isDeleted, withCompany, withMeta, withCatalog, withReviews, withSchedule, withCollection, withBlog, withTags, withCategories, page, pageSize, sortOn, sortDesc, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData)
+> Page searchPlaces(name, addressLine1, addressLine2, city, provinceState, country, postalZipCode, lat, lng, email, isPublic, isDeleted, withCompany, withMeta, withCatalog, withReviews, withSchedule, withCollection, withBlog, withTags, withCategories, page, pageSize, sortOn, sortDesc, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData)
 
 Searchplaces
 
@@ -519,7 +519,6 @@ public class Example {
     defaultClient.setBasePath("https://api.prod.ehelply.com");
 
     PlacesApi apiInstance = new PlacesApi(defaultClient);
-    String projectUuid = "projectUuid_example"; // String | 
     String name = "name_example"; // String | 
     String addressLine1 = "addressLine1_example"; // String | 
     String addressLine2 = "addressLine2_example"; // String | 
@@ -552,7 +551,7 @@ public class Example {
     String ehelplyProject = "ehelplyProject_example"; // String | 
     String ehelplyData = "ehelplyData_example"; // String | 
     try {
-      Page result = apiInstance.searchPlaces(projectUuid, name, addressLine1, addressLine2, city, provinceState, country, postalZipCode, lat, lng, email, isPublic, isDeleted, withCompany, withMeta, withCatalog, withReviews, withSchedule, withCollection, withBlog, withTags, withCategories, page, pageSize, sortOn, sortDesc, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
+      Page result = apiInstance.searchPlaces(name, addressLine1, addressLine2, city, provinceState, country, postalZipCode, lat, lng, email, isPublic, isDeleted, withCompany, withMeta, withCatalog, withReviews, withSchedule, withCollection, withBlog, withTags, withCategories, page, pageSize, sortOn, sortDesc, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling PlacesApi#searchPlaces");
@@ -569,7 +568,6 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **projectUuid** | **String**|  | [optional] |
 | **name** | **String**|  | [optional] |
 | **addressLine1** | **String**|  | [optional] |
 | **addressLine2** | **String**|  | [optional] |

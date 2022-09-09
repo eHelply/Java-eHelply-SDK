@@ -1,8 +1,8 @@
 # ehelply-java-sdk
 
-eHelply SDK - 1.1.112
-- API version: 1.1.112
-  - Build date: 2022-08-28T15:22:59.625558Z[Etc/UTC]
+eHelply SDK - 1.1.113
+- API version: 1.1.113
+  - Build date: 2022-09-09T15:57:05.968057Z[Etc/UTC]
 
 eHelply SDK for SuperStack Services
 
@@ -41,7 +41,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>com.ehelply</groupId>
   <artifactId>ehelply-java-sdk</artifactId>
-  <version>1.1.112</version>
+  <version>1.1.113</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -57,7 +57,7 @@ Add this dependency to your project's build file:
   }
 
   dependencies {
-     implementation "com.ehelply:ehelply-java-sdk:1.1.112"
+     implementation "com.ehelply:ehelply-java-sdk:1.1.113"
   }
 ```
 
@@ -71,7 +71,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/ehelply-java-sdk-1.1.112.jar`
+* `target/ehelply-java-sdk-1.1.113.jar`
 * `target/lib/*.jar`
 
 ## Getting Started
@@ -152,7 +152,7 @@ Class | Method | HTTP request | Description
 *CategoryApi* | [**searchCategoriesPlacesCategoriesGet**](docs/CategoryApi.md#searchCategoriesPlacesCategoriesGet) | **GET** /places/categories | Search Categories
 *CategoryApi* | [**updateCategoryPlacesCategoriesCategoryUuidPut**](docs/CategoryApi.md#updateCategoryPlacesCategoriesCategoryUuidPut) | **PUT** /places/categories/{category_uuid} | Update Category
 *CompaniesApi* | [**createCompanyPlacesCompaniesPost**](docs/CompaniesApi.md#createCompanyPlacesCompaniesPost) | **POST** /places/companies | Create Company
-*CompaniesApi* | [**deletePlacePlacesCompaniesCompanyUuidDelete**](docs/CompaniesApi.md#deletePlacePlacesCompaniesCompanyUuidDelete) | **DELETE** /places/companies/{company_uuid} | Delete Place
+*CompaniesApi* | [**deleteCompanyPlacesCompaniesCompanyUuidDelete**](docs/CompaniesApi.md#deleteCompanyPlacesCompaniesCompanyUuidDelete) | **DELETE** /places/companies/{company_uuid} | Delete Company
 *CompaniesApi* | [**getCompanyPlacesCompaniesCompanyUuidGet**](docs/CompaniesApi.md#getCompanyPlacesCompaniesCompanyUuidGet) | **GET** /places/companies/{company_uuid} | Get Company
 *CompaniesApi* | [**searchCompaniesPlacesCompaniesGet**](docs/CompaniesApi.md#searchCompaniesPlacesCompaniesGet) | **GET** /places/companies | Search Companies
 *CompaniesApi* | [**updateCompanyPlacesCompaniesCompanyUuidPut**](docs/CompaniesApi.md#updateCompanyPlacesCompaniesCompanyUuidPut) | **PUT** /places/companies/{company_uuid} | Update Company
@@ -309,7 +309,7 @@ Class | Method | HTTP request | Description
  - [CatalogBase](docs/CatalogBase.md)
  - [CatalogReturn](docs/CatalogReturn.md)
  - [CategoryBase](docs/CategoryBase.md)
- - [CategoryDb](docs/CategoryDb.md)
+ - [CategoryResponse](docs/CategoryResponse.md)
  - [Company](docs/Company.md)
  - [CompanyBase](docs/CompanyBase.md)
  - [CompanyResponse](docs/CompanyResponse.md)
@@ -408,14 +408,13 @@ Class | Method | HTTP request | Description
  - [ServiceCreate](docs/ServiceCreate.md)
  - [ServiceMessageResponse](docs/ServiceMessageResponse.md)
  - [ServiceResponse](docs/ServiceResponse.md)
- - [StaffCreate](docs/StaffCreate.md)
- - [StaffDb](docs/StaffDb.md)
+ - [StaffBase](docs/StaffBase.md)
  - [StaffResponse](docs/StaffResponse.md)
  - [StatsVitalsResponse](docs/StatsVitalsResponse.md)
  - [StripeAccountResponse](docs/StripeAccountResponse.md)
  - [StripeCustomerSecretResponse](docs/StripeCustomerSecretResponse.md)
  - [TagBase](docs/TagBase.md)
- - [TagDb](docs/TagDb.md)
+ - [TagResponse](docs/TagResponse.md)
  - [Tax](docs/Tax.md)
  - [TicketResponse](docs/TicketResponse.md)
  - [TicketsResponse](docs/TicketsResponse.md)

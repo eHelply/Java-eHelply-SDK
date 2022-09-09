@@ -13,7 +13,7 @@ All URIs are relative to *https://api.prod.ehelply.com*
 
 <a name="createStaff"></a>
 # **createStaff**
-> StaffDb createStaff(staffCreate, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData)
+> StaffResponse createStaff(staffBase, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData)
 
 Createstaff
 
@@ -34,7 +34,7 @@ public class Example {
     defaultClient.setBasePath("https://api.prod.ehelply.com");
 
     StaffApi apiInstance = new StaffApi(defaultClient);
-    StaffCreate staffCreate = new StaffCreate(); // StaffCreate | 
+    StaffBase staffBase = new StaffBase(); // StaffBase | 
     String xAccessToken = "xAccessToken_example"; // String | 
     String xSecretToken = "xSecretToken_example"; // String | 
     String authorization = "authorization_example"; // String | 
@@ -42,7 +42,7 @@ public class Example {
     String ehelplyProject = "ehelplyProject_example"; // String | 
     String ehelplyData = "ehelplyData_example"; // String | 
     try {
-      StaffDb result = apiInstance.createStaff(staffCreate, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
+      StaffResponse result = apiInstance.createStaff(staffBase, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling StaffApi#createStaff");
@@ -59,7 +59,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **staffCreate** | [**StaffCreate**](StaffCreate.md)|  | |
+| **staffBase** | [**StaffBase**](StaffBase.md)|  | |
 | **xAccessToken** | **String**|  | [optional] |
 | **xSecretToken** | **String**|  | [optional] |
 | **authorization** | **String**|  | [optional] |
@@ -69,7 +69,7 @@ public class Example {
 
 ### Return type
 
-[**StaffDb**](StaffDb.md)
+[**StaffResponse**](StaffResponse.md)
 
 ### Authorization
 
@@ -355,7 +355,7 @@ No authorization required
 
 <a name="updateStaff"></a>
 # **updateStaff**
-> StaffResponse updateStaff(staffUuid, staffCreate, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData)
+> StaffResponse updateStaff(staffUuid, staffBase, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData)
 
 Updatestaff
 
@@ -377,7 +377,7 @@ public class Example {
 
     StaffApi apiInstance = new StaffApi(defaultClient);
     String staffUuid = "staffUuid_example"; // String | 
-    StaffCreate staffCreate = new StaffCreate(); // StaffCreate | 
+    StaffBase staffBase = new StaffBase(); // StaffBase | 
     String xAccessToken = "xAccessToken_example"; // String | 
     String xSecretToken = "xSecretToken_example"; // String | 
     String authorization = "authorization_example"; // String | 
@@ -385,7 +385,7 @@ public class Example {
     String ehelplyProject = "ehelplyProject_example"; // String | 
     String ehelplyData = "ehelplyData_example"; // String | 
     try {
-      StaffResponse result = apiInstance.updateStaff(staffUuid, staffCreate, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
+      StaffResponse result = apiInstance.updateStaff(staffUuid, staffBase, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling StaffApi#updateStaff");
@@ -403,7 +403,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **staffUuid** | **String**|  | |
-| **staffCreate** | [**StaffCreate**](StaffCreate.md)|  | |
+| **staffBase** | [**StaffBase**](StaffBase.md)|  | |
 | **xAccessToken** | **String**|  | [optional] |
 | **xSecretToken** | **String**|  | [optional] |
 | **authorization** | **String**|  | [optional] |

@@ -8,6 +8,7 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
+|**projectUuid** | **String** |  |  [optional] |
 |**name** | **String** |  |  |
 |**summary** | **String** |  |  [optional] |
 |**_public** | **Boolean** |  |  [optional] |
@@ -16,7 +17,6 @@
 |**contact** | [**ContactBase**](ContactBase.md) |  |  [optional] |
 |**picture** | **String** |  |  [optional] |
 |**uuid** | **String** |  |  |
-|**projectUuid** | **String** |  |  [optional] |
 |**metaUuid** | **String** |  |  [optional] |
 |**tags** | [**List&lt;TagBase&gt;**](TagBase.md) |  |  [optional] |
 |**categories** | [**List&lt;CategoryBase&gt;**](CategoryBase.md) |  |  [optional] |

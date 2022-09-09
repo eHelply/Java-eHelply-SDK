@@ -5,7 +5,7 @@ All URIs are relative to *https://api.prod.ehelply.com*
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
 | [**createCompanyPlacesCompaniesPost**](CompaniesApi.md#createCompanyPlacesCompaniesPost) | **POST** /places/companies | Create Company |
-| [**deletePlacePlacesCompaniesCompanyUuidDelete**](CompaniesApi.md#deletePlacePlacesCompaniesCompanyUuidDelete) | **DELETE** /places/companies/{company_uuid} | Delete Place |
+| [**deleteCompanyPlacesCompaniesCompanyUuidDelete**](CompaniesApi.md#deleteCompanyPlacesCompaniesCompanyUuidDelete) | **DELETE** /places/companies/{company_uuid} | Delete Company |
 | [**getCompanyPlacesCompaniesCompanyUuidGet**](CompaniesApi.md#getCompanyPlacesCompaniesCompanyUuidGet) | **GET** /places/companies/{company_uuid} | Get Company |
 | [**searchCompaniesPlacesCompaniesGet**](CompaniesApi.md#searchCompaniesPlacesCompaniesGet) | **GET** /places/companies | Search Companies |
 | [**updateCompanyPlacesCompaniesCompanyUuidPut**](CompaniesApi.md#updateCompanyPlacesCompaniesCompanyUuidPut) | **PUT** /places/companies/{company_uuid} | Update Company |
@@ -87,11 +87,11 @@ No authorization required
 | **404** | Route not found - Denied by eHelply |  -  |
 | **422** | Validation Error |  -  |
 
-<a name="deletePlacePlacesCompaniesCompanyUuidDelete"></a>
-# **deletePlacePlacesCompaniesCompanyUuidDelete**
-> Object deletePlacePlacesCompaniesCompanyUuidDelete(companyUuid, softDelete, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData)
+<a name="deleteCompanyPlacesCompaniesCompanyUuidDelete"></a>
+# **deleteCompanyPlacesCompaniesCompanyUuidDelete**
+> Object deleteCompanyPlacesCompaniesCompanyUuidDelete(companyUuid, softDelete, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData)
 
-Delete Place
+Delete Company
 
 Deletes the company with the given ID and returns True if successful
 
@@ -119,10 +119,10 @@ public class Example {
     String ehelplyProject = "ehelplyProject_example"; // String | 
     String ehelplyData = "ehelplyData_example"; // String | 
     try {
-      Object result = apiInstance.deletePlacePlacesCompaniesCompanyUuidDelete(companyUuid, softDelete, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
+      Object result = apiInstance.deleteCompanyPlacesCompaniesCompanyUuidDelete(companyUuid, softDelete, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling CompaniesApi#deletePlacePlacesCompaniesCompanyUuidDelete");
+      System.err.println("Exception when calling CompaniesApi#deleteCompanyPlacesCompaniesCompanyUuidDelete");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());

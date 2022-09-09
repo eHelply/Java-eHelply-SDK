@@ -12,7 +12,7 @@ All URIs are relative to *https://api.prod.ehelply.com*
 
 <a name="createTag"></a>
 # **createTag**
-> TagDb createTag(tagBase, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData)
+> TagResponse createTag(tagBase, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData)
 
 Createtag
 
@@ -41,7 +41,7 @@ public class Example {
     String ehelplyProject = "ehelplyProject_example"; // String | 
     String ehelplyData = "ehelplyData_example"; // String | 
     try {
-      TagDb result = apiInstance.createTag(tagBase, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
+      TagResponse result = apiInstance.createTag(tagBase, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling TagsApi#createTag");
@@ -68,7 +68,7 @@ public class Example {
 
 ### Return type
 
-[**TagDb**](TagDb.md)
+[**TagResponse**](TagResponse.md)
 
 ### Authorization
 
@@ -88,7 +88,7 @@ No authorization required
 
 <a name="getTag"></a>
 # **getTag**
-> TagBase getTag(tagUuid, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData)
+> TagResponse getTag(tagUuid, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData)
 
 Gettag
 
@@ -117,7 +117,7 @@ public class Example {
     String ehelplyProject = "ehelplyProject_example"; // String | 
     String ehelplyData = "ehelplyData_example"; // String | 
     try {
-      TagBase result = apiInstance.getTag(tagUuid, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
+      TagResponse result = apiInstance.getTag(tagUuid, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling TagsApi#getTag");
@@ -144,7 +144,7 @@ public class Example {
 
 ### Return type
 
-[**TagBase**](TagBase.md)
+[**TagResponse**](TagResponse.md)
 
 ### Authorization
 
@@ -250,7 +250,7 @@ No authorization required
 
 <a name="updateTag"></a>
 # **updateTag**
-> TagBase updateTag(tagUuid, tagBase, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData)
+> TagResponse updateTag(tagUuid, tagBase, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData)
 
 Updatetag
 
@@ -280,7 +280,7 @@ public class Example {
     String ehelplyProject = "ehelplyProject_example"; // String | 
     String ehelplyData = "ehelplyData_example"; // String | 
     try {
-      TagBase result = apiInstance.updateTag(tagUuid, tagBase, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
+      TagResponse result = apiInstance.updateTag(tagUuid, tagBase, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling TagsApi#updateTag");
@@ -308,7 +308,7 @@ public class Example {
 
 ### Return type
 
-[**TagBase**](TagBase.md)
+[**TagResponse**](TagResponse.md)
 
 ### Authorization
 

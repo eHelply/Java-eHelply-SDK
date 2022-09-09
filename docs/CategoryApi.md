@@ -13,7 +13,7 @@ All URIs are relative to *https://api.prod.ehelply.com*
 
 <a name="createCategoryPlacesCategoriesPost"></a>
 # **createCategoryPlacesCategoriesPost**
-> CategoryDb createCategoryPlacesCategoriesPost(categoryBase, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData)
+> CategoryResponse createCategoryPlacesCategoriesPost(categoryBase, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData)
 
 Create Category
 
@@ -42,7 +42,7 @@ public class Example {
     String ehelplyProject = "ehelplyProject_example"; // String | 
     String ehelplyData = "ehelplyData_example"; // String | 
     try {
-      CategoryDb result = apiInstance.createCategoryPlacesCategoriesPost(categoryBase, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
+      CategoryResponse result = apiInstance.createCategoryPlacesCategoriesPost(categoryBase, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling CategoryApi#createCategoryPlacesCategoriesPost");
@@ -69,7 +69,7 @@ public class Example {
 
 ### Return type
 
-[**CategoryDb**](CategoryDb.md)
+[**CategoryResponse**](CategoryResponse.md)
 
 ### Authorization
 
@@ -165,7 +165,7 @@ No authorization required
 
 <a name="getCategoryPlacesCategoriesCategoryUuidGet"></a>
 # **getCategoryPlacesCategoriesCategoryUuidGet**
-> CategoryBase getCategoryPlacesCategoriesCategoryUuidGet(categoryUuid, withMeta, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData)
+> CategoryResponse getCategoryPlacesCategoriesCategoryUuidGet(categoryUuid, withMeta, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData)
 
 Get Category
 
@@ -195,7 +195,7 @@ public class Example {
     String ehelplyProject = "ehelplyProject_example"; // String | 
     String ehelplyData = "ehelplyData_example"; // String | 
     try {
-      CategoryBase result = apiInstance.getCategoryPlacesCategoriesCategoryUuidGet(categoryUuid, withMeta, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
+      CategoryResponse result = apiInstance.getCategoryPlacesCategoriesCategoryUuidGet(categoryUuid, withMeta, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling CategoryApi#getCategoryPlacesCategoriesCategoryUuidGet");
@@ -223,7 +223,7 @@ public class Example {
 
 ### Return type
 
-[**CategoryBase**](CategoryBase.md)
+[**CategoryResponse**](CategoryResponse.md)
 
 ### Authorization
 
