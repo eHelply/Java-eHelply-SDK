@@ -1,8 +1,8 @@
 # ehelply-java-sdk
 
-eHelply SDK - 1.1.114
-- API version: 1.1.114
-  - Build date: 2022-09-19T16:14:05.123210Z[Etc/UTC]
+eHelply SDK - 1.1.115
+- API version: 1.1.115
+  - Build date: 2022-09-19T22:17:58.213726Z[Etc/UTC]
 
 eHelply SDK for SuperStack Services
 
@@ -41,7 +41,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>com.ehelply</groupId>
   <artifactId>ehelply-java-sdk</artifactId>
-  <version>1.1.114</version>
+  <version>1.1.115</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -57,7 +57,7 @@ Add this dependency to your project's build file:
   }
 
   dependencies {
-     implementation "com.ehelply:ehelply-java-sdk:1.1.114"
+     implementation "com.ehelply:ehelply-java-sdk:1.1.115"
   }
 ```
 
@@ -71,7 +71,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/ehelply-java-sdk-1.1.114.jar`
+* `target/ehelply-java-sdk-1.1.115.jar`
 * `target/lib/*.jar`
 
 ## Getting Started
@@ -156,8 +156,6 @@ Class | Method | HTTP request | Description
 *CompaniesApi* | [**getCompanyPlacesCompaniesCompanyUuidGet**](docs/CompaniesApi.md#getCompanyPlacesCompaniesCompanyUuidGet) | **GET** /places/companies/{company_uuid} | Get Company
 *CompaniesApi* | [**searchCompaniesPlacesCompaniesGet**](docs/CompaniesApi.md#searchCompaniesPlacesCompaniesGet) | **GET** /places/companies | Search Companies
 *CompaniesApi* | [**updateCompanyPlacesCompaniesCompanyUuidPut**](docs/CompaniesApi.md#updateCompanyPlacesCompaniesCompanyUuidPut) | **PUT** /places/companies/{company_uuid} | Update Company
-*LoggingApi* | [**getLogs**](docs/LoggingApi.md#getLogs) | **GET** /sam/logging/logs | Getlogs
-*LoggingApi* | [**getServiceLogs**](docs/LoggingApi.md#getServiceLogs) | **GET** /sam/logging/logs/services/{service} | Getservicelogs
 *LoggingApi* | [**getSubjectLogs**](docs/LoggingApi.md#getSubjectLogs) | **GET** /sam/logging/logs/services/{service}/subjects/{subject} | Getsubjectlogs
 *MetaApi* | [**createField**](docs/MetaApi.md#createField) | **POST** /meta/field | Create Field
 *MetaApi* | [**createMeta**](docs/MetaApi.md#createMeta) | **POST** /meta/meta/service/{service}/type/{type_str}/entity/{entity_uuid} | Create Meta
