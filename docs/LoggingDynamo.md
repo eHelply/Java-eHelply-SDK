@@ -12,6 +12,7 @@
 |**log** | **Object** |  |  |
 |**severity** | **String** |  |  |
 |**subject** | **String** |  |  |
+|**serviceName** | **String** |  |  |
 
 
 
