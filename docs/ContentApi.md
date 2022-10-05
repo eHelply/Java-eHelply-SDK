@@ -1,13 +1,13 @@
-# DefaultApi
+# ContentApi
 
 All URIs are relative to *https://api.prod.ehelply.com*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
-| [**createFile**](DefaultApi.md#createFile) | **POST** /files/files | Createfile |
-| [**deleteFile**](DefaultApi.md#deleteFile) | **DELETE** /files/files/{file_uuid} | Deletefile |
-| [**getFile**](DefaultApi.md#getFile) | **GET** /files/files/{file_uuid} | Getfile |
-| [**updateFile**](DefaultApi.md#updateFile) | **PUT** /files/files/{file_uuid} | Updatefile |
+| [**createFile**](ContentApi.md#createFile) | **POST** /files/files | Createfile |
+| [**deleteFile**](ContentApi.md#deleteFile) | **DELETE** /files/files/{file_uuid} | Deletefile |
+| [**getFile**](ContentApi.md#getFile) | **GET** /files/files/{file_uuid} | Getfile |
+| [**updateFile**](ContentApi.md#updateFile) | **PUT** /files/files/{file_uuid} | Updatefile |
 
 
 <a name="createFile"></a>
@@ -23,14 +23,14 @@ import com.ehelply.client.ApiClient;
 import com.ehelply.client.ApiException;
 import com.ehelply.client.Configuration;
 import com.ehelply.client.models.*;
-import com.ehelply.client.api.DefaultApi;
+import com.ehelply.client.api.ContentApi;
 
 public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.prod.ehelply.com");
 
-    DefaultApi apiInstance = new DefaultApi(defaultClient);
+    ContentApi apiInstance = new ContentApi(defaultClient);
     File _file = new File("/path/to/file"); // File | 
     String xAccessToken = "xAccessToken_example"; // String | 
     String xSecretToken = "xSecretToken_example"; // String | 
@@ -42,7 +42,7 @@ public class Example {
       CreateFile200Response result = apiInstance.createFile(_file, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling DefaultApi#createFile");
+      System.err.println("Exception when calling ContentApi#createFile");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -99,14 +99,14 @@ import com.ehelply.client.ApiClient;
 import com.ehelply.client.ApiException;
 import com.ehelply.client.Configuration;
 import com.ehelply.client.models.*;
-import com.ehelply.client.api.DefaultApi;
+import com.ehelply.client.api.ContentApi;
 
 public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.prod.ehelply.com");
 
-    DefaultApi apiInstance = new DefaultApi(defaultClient);
+    ContentApi apiInstance = new ContentApi(defaultClient);
     String fileUuid = "fileUuid_example"; // String | 
     String xAccessToken = "xAccessToken_example"; // String | 
     String xSecretToken = "xSecretToken_example"; // String | 
@@ -118,7 +118,7 @@ public class Example {
       DeleteFile200Response result = apiInstance.deleteFile(fileUuid, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling DefaultApi#deleteFile");
+      System.err.println("Exception when calling ContentApi#deleteFile");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -175,14 +175,14 @@ import com.ehelply.client.ApiClient;
 import com.ehelply.client.ApiException;
 import com.ehelply.client.Configuration;
 import com.ehelply.client.models.*;
-import com.ehelply.client.api.DefaultApi;
+import com.ehelply.client.api.ContentApi;
 
 public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.prod.ehelply.com");
 
-    DefaultApi apiInstance = new DefaultApi(defaultClient);
+    ContentApi apiInstance = new ContentApi(defaultClient);
     String fileUuid = "fileUuid_example"; // String | 
     String xAccessToken = "xAccessToken_example"; // String | 
     String xSecretToken = "xSecretToken_example"; // String | 
@@ -194,7 +194,7 @@ public class Example {
       File result = apiInstance.getFile(fileUuid, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling DefaultApi#getFile");
+      System.err.println("Exception when calling ContentApi#getFile");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -251,14 +251,14 @@ import com.ehelply.client.ApiClient;
 import com.ehelply.client.ApiException;
 import com.ehelply.client.Configuration;
 import com.ehelply.client.models.*;
-import com.ehelply.client.api.DefaultApi;
+import com.ehelply.client.api.ContentApi;
 
 public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.prod.ehelply.com");
 
-    DefaultApi apiInstance = new DefaultApi(defaultClient);
+    ContentApi apiInstance = new ContentApi(defaultClient);
     String fileUuid = "fileUuid_example"; // String | 
     File _file = new File("/path/to/file"); // File | 
     String xAccessToken = "xAccessToken_example"; // String | 
@@ -271,7 +271,7 @@ public class Example {
       UpdateFile200Response result = apiInstance.updateFile(fileUuid, _file, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling DefaultApi#updateFile");
+      System.err.println("Exception when calling ContentApi#updateFile");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());

@@ -1,8 +1,8 @@
 # ehelply-java-sdk
 
-eHelply SDK - 1.1.110
-- API version: 1.1.110
-  - Build date: 2022-10-05T00:49:17.186387Z[Etc/UTC]
+eHelply SDK - 1.1.111
+- API version: 1.1.111
+  - Build date: 2022-10-05T20:43:53.929130Z[Etc/UTC]
 
 eHelply SDK for SuperStack Services
 
@@ -41,7 +41,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>com.ehelply</groupId>
   <artifactId>ehelply-java-sdk</artifactId>
-  <version>1.1.110</version>
+  <version>1.1.111</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -57,7 +57,7 @@ Add this dependency to your project's build file:
   }
 
   dependencies {
-     implementation "com.ehelply:ehelply-java-sdk:1.1.110"
+     implementation "com.ehelply:ehelply-java-sdk:1.1.111"
   }
 ```
 
@@ -71,7 +71,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/ehelply-java-sdk-1.1.110.jar`
+* `target/ehelply-java-sdk-1.1.111.jar`
 * `target/lib/*.jar`
 
 ## Getting Started
@@ -156,10 +156,10 @@ Class | Method | HTTP request | Description
 *CompaniesApi* | [**getCompanyPlacesCompaniesCompanyUuidGet**](docs/CompaniesApi.md#getCompanyPlacesCompaniesCompanyUuidGet) | **GET** /places/companies/{company_uuid} | Get Company
 *CompaniesApi* | [**searchCompaniesPlacesCompaniesGet**](docs/CompaniesApi.md#searchCompaniesPlacesCompaniesGet) | **GET** /places/companies | Search Companies
 *CompaniesApi* | [**updateCompanyPlacesCompaniesCompanyUuidPut**](docs/CompaniesApi.md#updateCompanyPlacesCompaniesCompanyUuidPut) | **PUT** /places/companies/{company_uuid} | Update Company
-*DefaultApi* | [**createFile**](docs/DefaultApi.md#createFile) | **POST** /files/files | Createfile
-*DefaultApi* | [**deleteFile**](docs/DefaultApi.md#deleteFile) | **DELETE** /files/files/{file_uuid} | Deletefile
-*DefaultApi* | [**getFile**](docs/DefaultApi.md#getFile) | **GET** /files/files/{file_uuid} | Getfile
-*DefaultApi* | [**updateFile**](docs/DefaultApi.md#updateFile) | **PUT** /files/files/{file_uuid} | Updatefile
+*ContentApi* | [**createFile**](docs/ContentApi.md#createFile) | **POST** /files/files | Createfile
+*ContentApi* | [**deleteFile**](docs/ContentApi.md#deleteFile) | **DELETE** /files/files/{file_uuid} | Deletefile
+*ContentApi* | [**getFile**](docs/ContentApi.md#getFile) | **GET** /files/files/{file_uuid} | Getfile
+*ContentApi* | [**updateFile**](docs/ContentApi.md#updateFile) | **PUT** /files/files/{file_uuid} | Updatefile
 *LoggingApi* | [**getSubjectLogs**](docs/LoggingApi.md#getSubjectLogs) | **GET** /sam/logging/logs/services/{service}/subjects/{subject} | Getsubjectlogs
 *MetaApi* | [**createField**](docs/MetaApi.md#createField) | **POST** /meta/field | Create Field
 *MetaApi* | [**createMeta**](docs/MetaApi.md#createMeta) | **POST** /meta/meta/service/{service}/type/{type_str}/entity/{entity_uuid} | Create Meta

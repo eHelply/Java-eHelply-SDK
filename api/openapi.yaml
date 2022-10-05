@@ -9,8 +9,8 @@ info:
     name: Apache 2.0
     url: https://www.apache.org/licenses/LICENSE-2.0.html
   termsOfService: https://superstack.ehelply.com/support/legal/terms
-  title: eHelply SDK - 1.1.110
-  version: 1.1.110
+  title: eHelply SDK - 1.1.111
+  version: 1.1.111
 servers:
 - description: eHelply / SuperStack Production
   url: https://api.prod.ehelply.com
@@ -999,6 +999,8 @@ paths:
                 $ref: '#/components/schemas/HTTPValidationError'
           description: Validation Error
       summary: Createfile
+      tags:
+      - Content
       x-content-type: multipart/form-data
       x-accepts: application/json
   /files/files/{file_uuid}:
@@ -1089,6 +1091,8 @@ paths:
                 $ref: '#/components/schemas/HTTPValidationError'
           description: Validation Error
       summary: Deletefile
+      tags:
+      - Content
       x-accepts: application/json
     get:
       operationId: getFile
@@ -1179,6 +1183,8 @@ paths:
                 $ref: '#/components/schemas/HTTPValidationError'
           description: Validation Error
       summary: Getfile
+      tags:
+      - Content
       x-accepts: application/json
     put:
       operationId: updateFile
@@ -1273,6 +1279,8 @@ paths:
                 $ref: '#/components/schemas/HTTPValidationError'
           description: Validation Error
       summary: Updatefile
+      tags:
+      - Content
       x-content-type: multipart/form-data
       x-accepts: application/json
   /meta/meta/service/{service}/type/{type_str}/entity/{entity_uuid}:

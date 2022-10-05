@@ -37,6 +37,7 @@ docs/Contact.md
 docs/ContactBase.md
 docs/ContactMethod.md
 docs/ContactResponse.md
+docs/ContentApi.md
 docs/CreateFile200Response.md
 docs/CreateKeyResponse.md
 docs/CreateProjectCredential.md
@@ -47,7 +48,6 @@ docs/CreateTicket.md
 docs/Credential.md
 docs/CustomList.md
 docs/DatesMeta.md
-docs/DefaultApi.md
 docs/DeleteFile200Response.md
 docs/Detailed.md
 docs/DetailedMeta.md
@@ -201,7 +201,7 @@ src/main/java/com/ehelply/client/api/BillingApi.java
 src/main/java/com/ehelply/client/api/CatalogsApi.java
 src/main/java/com/ehelply/client/api/CategoryApi.java
 src/main/java/com/ehelply/client/api/CompaniesApi.java
-src/main/java/com/ehelply/client/api/DefaultApi.java
+src/main/java/com/ehelply/client/api/ContentApi.java
 src/main/java/com/ehelply/client/api/LoggingApi.java
 src/main/java/com/ehelply/client/api/MetaApi.java
 src/main/java/com/ehelply/client/api/MonitorApi.java
@@ -374,7 +374,7 @@ src/test/java/com/ehelply/client/api/BillingApiTest.java
 src/test/java/com/ehelply/client/api/CatalogsApiTest.java
 src/test/java/com/ehelply/client/api/CategoryApiTest.java
 src/test/java/com/ehelply/client/api/CompaniesApiTest.java
-src/test/java/com/ehelply/client/api/DefaultApiTest.java
+src/test/java/com/ehelply/client/api/ContentApiTest.java
 src/test/java/com/ehelply/client/api/LoggingApiTest.java
 src/test/java/com/ehelply/client/api/MetaApiTest.java
 src/test/java/com/ehelply/client/api/MonitorApiTest.java
