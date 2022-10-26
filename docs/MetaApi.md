@@ -4,100 +4,22 @@ All URIs are relative to *https://api.prod.ehelply.com*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
-| [**createField**](MetaApi.md#createField) | **POST** /meta/field | Create Field |
-| [**createMeta**](MetaApi.md#createMeta) | **POST** /meta/meta/service/{service}/type/{type_str}/entity/{entity_uuid} | Create Meta |
-| [**deleteField**](MetaApi.md#deleteField) | **DELETE** /meta/field/{field_uuid} | Delete Field |
-| [**deleteMeta**](MetaApi.md#deleteMeta) | **DELETE** /meta/meta/service/{service}/type/{type_str}/entity/{entity_uuid} | Delete Meta |
-| [**deleteMetaFromUuid**](MetaApi.md#deleteMetaFromUuid) | **DELETE** /meta/meta/{meta_uuid} | Delete Meta From Uuid |
-| [**getField**](MetaApi.md#getField) | **GET** /meta/field/{field_uuid} | Get Field |
-| [**getMeta**](MetaApi.md#getMeta) | **GET** /meta/meta/service/{service}/type/{type_str}/entity/{entity_uuid} | Get Meta |
-| [**getMetaFromUuid**](MetaApi.md#getMetaFromUuid) | **GET** /meta/meta/{meta_uuid} | Get Meta From Uuid |
-| [**makeSlug**](MetaApi.md#makeSlug) | **POST** /meta/meta/slug | Make Slug |
-| [**touchMeta**](MetaApi.md#touchMeta) | **POST** /meta/meta/service/{service}/type/{type_str}/entity/{entity_uuid}/touch | Touch Meta |
-| [**updateField**](MetaApi.md#updateField) | **PUT** /meta/field/{field_uuid} | Update Field |
-| [**updateMeta**](MetaApi.md#updateMeta) | **PUT** /meta/meta/service/{service}/type/{type_str}/entity/{entity_uuid} | Update Meta |
-| [**updateMetaFromUuid**](MetaApi.md#updateMetaFromUuid) | **PUT** /meta/meta/{meta_uuid} | Update Meta From Uuid |
+| [**createMeta**](MetaApi.md#createMeta) | **POST** /meta/meta/service/{service}/type/{type_name}/entity/{entity_uuid} | Createmeta |
+| [**createSlug**](MetaApi.md#createSlug) | **POST** /meta/slug | Createslug |
+| [**deleteMeta**](MetaApi.md#deleteMeta) | **DELETE** /meta/meta/{meta_uuid} | Deletemeta |
+| [**deleteMetaFromParts**](MetaApi.md#deleteMetaFromParts) | **DELETE** /meta/meta/service/{service}/type/{type_name}/entity/{entity_uuid} | Deletemetafromparts |
+| [**getMeta**](MetaApi.md#getMeta) | **GET** /meta/meta/{meta_uuid} | Getmeta |
+| [**getMetaFromParts**](MetaApi.md#getMetaFromParts) | **GET** /meta/meta/service/{service}/type/{type_name}/entity/{entity_uuid} | Getmetafromparts |
+| [**touchMeta**](MetaApi.md#touchMeta) | **POST** /meta/meta/{meta_uuid}/touch | Touchmeta |
+| [**updateMeta**](MetaApi.md#updateMeta) | **PUT** /meta/meta/{meta_uuid} | Updatemeta |
+| [**updateMetaFromParts**](MetaApi.md#updateMetaFromParts) | **PUT** /meta/meta/service/{service}/type/{type_name}/entity/{entity_uuid} | Updatemetafromparts |
 
-
-<a name="createField"></a>
-# **createField**
-> FieldDynamo createField(field, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData)
-
-Create Field
-
-### Example
-```java
-// Import classes:
-import com.ehelply.client.ApiClient;
-import com.ehelply.client.ApiException;
-import com.ehelply.client.Configuration;
-import com.ehelply.client.models.*;
-import com.ehelply.client.api.MetaApi;
-
-public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://api.prod.ehelply.com");
-
-    MetaApi apiInstance = new MetaApi(defaultClient);
-    Field field = new Field(); // Field | 
-    String xAccessToken = "xAccessToken_example"; // String | 
-    String xSecretToken = "xSecretToken_example"; // String | 
-    String authorization = "authorization_example"; // String | 
-    String ehelplyActiveParticipant = "ehelplyActiveParticipant_example"; // String | 
-    String ehelplyProject = "ehelplyProject_example"; // String | 
-    String ehelplyData = "ehelplyData_example"; // String | 
-    try {
-      FieldDynamo result = apiInstance.createField(field, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling MetaApi#createField");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
-    }
-  }
-}
-```
-
-### Parameters
-
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **field** | [**Field**](Field.md)|  | |
-| **xAccessToken** | **String**|  | [optional] |
-| **xSecretToken** | **String**|  | [optional] |
-| **authorization** | **String**|  | [optional] |
-| **ehelplyActiveParticipant** | **String**|  | [optional] |
-| **ehelplyProject** | **String**|  | [optional] |
-| **ehelplyData** | **String**|  | [optional] |
-
-### Return type
-
-[**FieldDynamo**](FieldDynamo.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Successful Response |  -  |
-| **404** | Not found |  -  |
-| **422** | Validation Error |  -  |
 
 <a name="createMeta"></a>
 # **createMeta**
-> MetaDynamo createMeta(service, typeStr, entityUuid, metaCreate, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData)
+> CreateMeta200Response createMeta(service, typeName, entityUuid, metaCreate, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData)
 
-Create Meta
+Createmeta
 
 ### Example
 ```java
@@ -115,7 +37,7 @@ public class Example {
 
     MetaApi apiInstance = new MetaApi(defaultClient);
     String service = "service_example"; // String | 
-    String typeStr = "typeStr_example"; // String | 
+    String typeName = "typeName_example"; // String | 
     String entityUuid = "entityUuid_example"; // String | 
     MetaCreate metaCreate = new MetaCreate(); // MetaCreate | 
     String xAccessToken = "xAccessToken_example"; // String | 
@@ -125,7 +47,7 @@ public class Example {
     String ehelplyProject = "ehelplyProject_example"; // String | 
     String ehelplyData = "ehelplyData_example"; // String | 
     try {
-      MetaDynamo result = apiInstance.createMeta(service, typeStr, entityUuid, metaCreate, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
+      CreateMeta200Response result = apiInstance.createMeta(service, typeName, entityUuid, metaCreate, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling MetaApi#createMeta");
@@ -143,7 +65,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **service** | **String**|  | |
-| **typeStr** | **String**|  | |
+| **typeName** | **String**|  | |
 | **entityUuid** | **String**|  | |
 | **metaCreate** | [**MetaCreate**](MetaCreate.md)|  | |
 | **xAccessToken** | **String**|  | [optional] |
@@ -155,7 +77,7 @@ public class Example {
 
 ### Return type
 
-[**MetaDynamo**](MetaDynamo.md)
+[**CreateMeta200Response**](CreateMeta200Response.md)
 
 ### Authorization
 
@@ -170,14 +92,16 @@ No authorization required
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Successful Response |  -  |
+| **400** | Something went wrong while trying to create a meta |  -  |
+| **403** | Unauthorized - Denied by eHelply |  -  |
 | **404** | Not found |  -  |
 | **422** | Validation Error |  -  |
 
-<a name="deleteField"></a>
-# **deleteField**
-> Object deleteField(fieldUuid, softDelete, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData)
+<a name="createSlug"></a>
+# **createSlug**
+> CreateSlug200Response createSlug(slugger, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData)
 
-Delete Field
+Createslug
 
 ### Example
 ```java
@@ -194,8 +118,7 @@ public class Example {
     defaultClient.setBasePath("https://api.prod.ehelply.com");
 
     MetaApi apiInstance = new MetaApi(defaultClient);
-    String fieldUuid = "fieldUuid_example"; // String | 
-    Boolean softDelete = true; // Boolean | 
+    Slugger slugger = new Slugger(); // Slugger | 
     String xAccessToken = "xAccessToken_example"; // String | 
     String xSecretToken = "xSecretToken_example"; // String | 
     String authorization = "authorization_example"; // String | 
@@ -203,10 +126,10 @@ public class Example {
     String ehelplyProject = "ehelplyProject_example"; // String | 
     String ehelplyData = "ehelplyData_example"; // String | 
     try {
-      Object result = apiInstance.deleteField(fieldUuid, softDelete, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
+      CreateSlug200Response result = apiInstance.createSlug(slugger, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling MetaApi#deleteField");
+      System.err.println("Exception when calling MetaApi#createSlug");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -220,8 +143,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **fieldUuid** | **String**|  | |
-| **softDelete** | **Boolean**|  | [optional] [default to true] |
+| **slugger** | [**Slugger**](Slugger.md)|  | |
 | **xAccessToken** | **String**|  | [optional] |
 | **xSecretToken** | **String**|  | [optional] |
 | **authorization** | **String**|  | [optional] |
@@ -231,7 +153,7 @@ public class Example {
 
 ### Return type
 
-**Object**
+[**CreateSlug200Response**](CreateSlug200Response.md)
 
 ### Authorization
 
@@ -239,21 +161,23 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Successful Response |  -  |
+| **400** | Unable to create slug |  -  |
+| **403** | Unauthorized - Denied by eHelply |  -  |
 | **404** | Not found |  -  |
 | **422** | Validation Error |  -  |
 
 <a name="deleteMeta"></a>
 # **deleteMeta**
-> Object deleteMeta(service, typeStr, entityUuid, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData)
+> DeleteMeta200Response deleteMeta(metaUuid, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData)
 
-Delete Meta
+Deletemeta
 
 ### Example
 ```java
@@ -270,9 +194,7 @@ public class Example {
     defaultClient.setBasePath("https://api.prod.ehelply.com");
 
     MetaApi apiInstance = new MetaApi(defaultClient);
-    String service = "service_example"; // String | 
-    String typeStr = "typeStr_example"; // String | 
-    String entityUuid = "entityUuid_example"; // String | 
+    String metaUuid = "metaUuid_example"; // String | 
     String xAccessToken = "xAccessToken_example"; // String | 
     String xSecretToken = "xSecretToken_example"; // String | 
     String authorization = "authorization_example"; // String | 
@@ -280,7 +202,7 @@ public class Example {
     String ehelplyProject = "ehelplyProject_example"; // String | 
     String ehelplyData = "ehelplyData_example"; // String | 
     try {
-      Object result = apiInstance.deleteMeta(service, typeStr, entityUuid, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
+      DeleteMeta200Response result = apiInstance.deleteMeta(metaUuid, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling MetaApi#deleteMeta");
@@ -297,82 +219,6 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **service** | **String**|  | |
-| **typeStr** | **String**|  | |
-| **entityUuid** | **String**|  | |
-| **xAccessToken** | **String**|  | [optional] |
-| **xSecretToken** | **String**|  | [optional] |
-| **authorization** | **String**|  | [optional] |
-| **ehelplyActiveParticipant** | **String**|  | [optional] |
-| **ehelplyProject** | **String**|  | [optional] |
-| **ehelplyData** | **String**|  | [optional] |
-
-### Return type
-
-**Object**
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Successful Response |  -  |
-| **404** | Not found |  -  |
-| **422** | Validation Error |  -  |
-
-<a name="deleteMetaFromUuid"></a>
-# **deleteMetaFromUuid**
-> Object deleteMetaFromUuid(metaUuid, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData)
-
-Delete Meta From Uuid
-
-### Example
-```java
-// Import classes:
-import com.ehelply.client.ApiClient;
-import com.ehelply.client.ApiException;
-import com.ehelply.client.Configuration;
-import com.ehelply.client.models.*;
-import com.ehelply.client.api.MetaApi;
-
-public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://api.prod.ehelply.com");
-
-    MetaApi apiInstance = new MetaApi(defaultClient);
-    String metaUuid = "metaUuid_example"; // String | 
-    String xAccessToken = "xAccessToken_example"; // String | 
-    String xSecretToken = "xSecretToken_example"; // String | 
-    String authorization = "authorization_example"; // String | 
-    String ehelplyActiveParticipant = "ehelplyActiveParticipant_example"; // String | 
-    String ehelplyProject = "ehelplyProject_example"; // String | 
-    String ehelplyData = "ehelplyData_example"; // String | 
-    try {
-      Object result = apiInstance.deleteMetaFromUuid(metaUuid, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling MetaApi#deleteMetaFromUuid");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
-    }
-  }
-}
-```
-
-### Parameters
-
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
 | **metaUuid** | **String**|  | |
 | **xAccessToken** | **String**|  | [optional] |
 | **xSecretToken** | **String**|  | [optional] |
@@ -383,7 +229,7 @@ public class Example {
 
 ### Return type
 
-**Object**
+[**DeleteMeta200Response**](DeleteMeta200Response.md)
 
 ### Authorization
 
@@ -398,88 +244,16 @@ No authorization required
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Successful Response |  -  |
+| **400** | Unable to delete meta(s) |  -  |
+| **403** | Unauthorized - Denied by eHelply |  -  |
 | **404** | Not found |  -  |
 | **422** | Validation Error |  -  |
 
-<a name="getField"></a>
-# **getField**
-> FieldDynamo getField(fieldUuid, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData)
+<a name="deleteMetaFromParts"></a>
+# **deleteMetaFromParts**
+> DeleteMeta200Response deleteMetaFromParts(service, typeName, entityUuid, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData)
 
-Get Field
-
-### Example
-```java
-// Import classes:
-import com.ehelply.client.ApiClient;
-import com.ehelply.client.ApiException;
-import com.ehelply.client.Configuration;
-import com.ehelply.client.models.*;
-import com.ehelply.client.api.MetaApi;
-
-public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://api.prod.ehelply.com");
-
-    MetaApi apiInstance = new MetaApi(defaultClient);
-    String fieldUuid = "fieldUuid_example"; // String | 
-    String xAccessToken = "xAccessToken_example"; // String | 
-    String xSecretToken = "xSecretToken_example"; // String | 
-    String authorization = "authorization_example"; // String | 
-    String ehelplyActiveParticipant = "ehelplyActiveParticipant_example"; // String | 
-    String ehelplyProject = "ehelplyProject_example"; // String | 
-    String ehelplyData = "ehelplyData_example"; // String | 
-    try {
-      FieldDynamo result = apiInstance.getField(fieldUuid, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling MetaApi#getField");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
-    }
-  }
-}
-```
-
-### Parameters
-
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **fieldUuid** | **String**|  | |
-| **xAccessToken** | **String**|  | [optional] |
-| **xSecretToken** | **String**|  | [optional] |
-| **authorization** | **String**|  | [optional] |
-| **ehelplyActiveParticipant** | **String**|  | [optional] |
-| **ehelplyProject** | **String**|  | [optional] |
-| **ehelplyData** | **String**|  | [optional] |
-
-### Return type
-
-[**FieldDynamo**](FieldDynamo.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Successful Response |  -  |
-| **404** | Not found |  -  |
-| **422** | Validation Error |  -  |
-
-<a name="getMeta"></a>
-# **getMeta**
-> MetaGet getMeta(service, typeStr, entityUuid, detailed, custom, dates, history, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData)
-
-Get Meta
+Deletemetafromparts
 
 ### Example
 ```java
@@ -497,11 +271,88 @@ public class Example {
 
     MetaApi apiInstance = new MetaApi(defaultClient);
     String service = "service_example"; // String | 
-    String typeStr = "typeStr_example"; // String | 
+    String typeName = "typeName_example"; // String | 
     String entityUuid = "entityUuid_example"; // String | 
+    String xAccessToken = "xAccessToken_example"; // String | 
+    String xSecretToken = "xSecretToken_example"; // String | 
+    String authorization = "authorization_example"; // String | 
+    String ehelplyActiveParticipant = "ehelplyActiveParticipant_example"; // String | 
+    String ehelplyProject = "ehelplyProject_example"; // String | 
+    String ehelplyData = "ehelplyData_example"; // String | 
+    try {
+      DeleteMeta200Response result = apiInstance.deleteMetaFromParts(service, typeName, entityUuid, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling MetaApi#deleteMetaFromParts");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **service** | **String**|  | |
+| **typeName** | **String**|  | |
+| **entityUuid** | **String**|  | |
+| **xAccessToken** | **String**|  | [optional] |
+| **xSecretToken** | **String**|  | [optional] |
+| **authorization** | **String**|  | [optional] |
+| **ehelplyActiveParticipant** | **String**|  | [optional] |
+| **ehelplyProject** | **String**|  | [optional] |
+| **ehelplyData** | **String**|  | [optional] |
+
+### Return type
+
+[**DeleteMeta200Response**](DeleteMeta200Response.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Successful Response |  -  |
+| **400** | Unable to delete meta(s) |  -  |
+| **403** | Unauthorized - Denied by eHelply |  -  |
+| **404** | Not found |  -  |
+| **422** | Validation Error |  -  |
+
+<a name="getMeta"></a>
+# **getMeta**
+> MetaDynamo getMeta(metaUuid, detailed, custom, history, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData)
+
+Getmeta
+
+### Example
+```java
+// Import classes:
+import com.ehelply.client.ApiClient;
+import com.ehelply.client.ApiException;
+import com.ehelply.client.Configuration;
+import com.ehelply.client.models.*;
+import com.ehelply.client.api.MetaApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.prod.ehelply.com");
+
+    MetaApi apiInstance = new MetaApi(defaultClient);
+    String metaUuid = "metaUuid_example"; // String | 
     Boolean detailed = false; // Boolean | 
     Boolean custom = false; // Boolean | 
-    Boolean dates = false; // Boolean | 
     Integer history = 0; // Integer | 
     String xAccessToken = "xAccessToken_example"; // String | 
     String xSecretToken = "xSecretToken_example"; // String | 
@@ -510,7 +361,7 @@ public class Example {
     String ehelplyProject = "ehelplyProject_example"; // String | 
     String ehelplyData = "ehelplyData_example"; // String | 
     try {
-      MetaGet result = apiInstance.getMeta(service, typeStr, entityUuid, detailed, custom, dates, history, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
+      MetaDynamo result = apiInstance.getMeta(metaUuid, detailed, custom, history, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling MetaApi#getMeta");
@@ -527,94 +378,9 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **service** | **String**|  | |
-| **typeStr** | **String**|  | |
-| **entityUuid** | **String**|  | |
-| **detailed** | **Boolean**|  | [optional] [default to false] |
-| **custom** | **Boolean**|  | [optional] [default to false] |
-| **dates** | **Boolean**|  | [optional] [default to false] |
-| **history** | **Integer**|  | [optional] [default to 0] |
-| **xAccessToken** | **String**|  | [optional] |
-| **xSecretToken** | **String**|  | [optional] |
-| **authorization** | **String**|  | [optional] |
-| **ehelplyActiveParticipant** | **String**|  | [optional] |
-| **ehelplyProject** | **String**|  | [optional] |
-| **ehelplyData** | **String**|  | [optional] |
-
-### Return type
-
-[**MetaGet**](MetaGet.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Successful Response |  -  |
-| **404** | Not found |  -  |
-| **422** | Validation Error |  -  |
-
-<a name="getMetaFromUuid"></a>
-# **getMetaFromUuid**
-> MetaGet getMetaFromUuid(metaUuid, detailed, custom, dates, history, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData)
-
-Get Meta From Uuid
-
-### Example
-```java
-// Import classes:
-import com.ehelply.client.ApiClient;
-import com.ehelply.client.ApiException;
-import com.ehelply.client.Configuration;
-import com.ehelply.client.models.*;
-import com.ehelply.client.api.MetaApi;
-
-public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://api.prod.ehelply.com");
-
-    MetaApi apiInstance = new MetaApi(defaultClient);
-    String metaUuid = "metaUuid_example"; // String | 
-    Boolean detailed = false; // Boolean | 
-    Boolean custom = false; // Boolean | 
-    Boolean dates = false; // Boolean | 
-    Integer history = 0; // Integer | 
-    String xAccessToken = "xAccessToken_example"; // String | 
-    String xSecretToken = "xSecretToken_example"; // String | 
-    String authorization = "authorization_example"; // String | 
-    String ehelplyActiveParticipant = "ehelplyActiveParticipant_example"; // String | 
-    String ehelplyProject = "ehelplyProject_example"; // String | 
-    String ehelplyData = "ehelplyData_example"; // String | 
-    try {
-      MetaGet result = apiInstance.getMetaFromUuid(metaUuid, detailed, custom, dates, history, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling MetaApi#getMetaFromUuid");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
-    }
-  }
-}
-```
-
-### Parameters
-
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
 | **metaUuid** | **String**|  | |
 | **detailed** | **Boolean**|  | [optional] [default to false] |
 | **custom** | **Boolean**|  | [optional] [default to false] |
-| **dates** | **Boolean**|  | [optional] [default to false] |
 | **history** | **Integer**|  | [optional] [default to 0] |
 | **xAccessToken** | **String**|  | [optional] |
 | **xSecretToken** | **String**|  | [optional] |
@@ -625,7 +391,7 @@ public class Example {
 
 ### Return type
 
-[**MetaGet**](MetaGet.md)
+[**MetaDynamo**](MetaDynamo.md)
 
 ### Authorization
 
@@ -640,76 +406,15 @@ No authorization required
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Successful Response |  -  |
-| **404** | Not found |  -  |
+| **403** | Unauthorized - Denied by eHelply |  -  |
+| **404** | meta does not exist |  -  |
 | **422** | Validation Error |  -  |
 
-<a name="makeSlug"></a>
-# **makeSlug**
-> Object makeSlug(metaSlugger)
+<a name="getMetaFromParts"></a>
+# **getMetaFromParts**
+> MetaDynamo getMetaFromParts(service, typeName, entityUuid, detailed, custom, history, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData)
 
-Make Slug
-
-### Example
-```java
-// Import classes:
-import com.ehelply.client.ApiClient;
-import com.ehelply.client.ApiException;
-import com.ehelply.client.Configuration;
-import com.ehelply.client.models.*;
-import com.ehelply.client.api.MetaApi;
-
-public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://api.prod.ehelply.com");
-
-    MetaApi apiInstance = new MetaApi(defaultClient);
-    MetaSlugger metaSlugger = new MetaSlugger(); // MetaSlugger | 
-    try {
-      Object result = apiInstance.makeSlug(metaSlugger);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling MetaApi#makeSlug");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
-    }
-  }
-}
-```
-
-### Parameters
-
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **metaSlugger** | [**MetaSlugger**](MetaSlugger.md)|  | |
-
-### Return type
-
-**Object**
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Successful Response |  -  |
-| **404** | Not found |  -  |
-| **422** | Validation Error |  -  |
-
-<a name="touchMeta"></a>
-# **touchMeta**
-> MetaDynamo touchMeta(service, typeStr, entityUuid, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData)
-
-Touch Meta
+Getmetafromparts
 
 ### Example
 ```java
@@ -727,8 +432,11 @@ public class Example {
 
     MetaApi apiInstance = new MetaApi(defaultClient);
     String service = "service_example"; // String | 
-    String typeStr = "typeStr_example"; // String | 
+    String typeName = "typeName_example"; // String | 
     String entityUuid = "entityUuid_example"; // String | 
+    Boolean detailed = false; // Boolean | 
+    Boolean custom = false; // Boolean | 
+    Integer history = 0; // Integer | 
     String xAccessToken = "xAccessToken_example"; // String | 
     String xSecretToken = "xSecretToken_example"; // String | 
     String authorization = "authorization_example"; // String | 
@@ -736,7 +444,87 @@ public class Example {
     String ehelplyProject = "ehelplyProject_example"; // String | 
     String ehelplyData = "ehelplyData_example"; // String | 
     try {
-      MetaDynamo result = apiInstance.touchMeta(service, typeStr, entityUuid, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
+      MetaDynamo result = apiInstance.getMetaFromParts(service, typeName, entityUuid, detailed, custom, history, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling MetaApi#getMetaFromParts");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **service** | **String**|  | |
+| **typeName** | **String**|  | |
+| **entityUuid** | **String**|  | |
+| **detailed** | **Boolean**|  | [optional] [default to false] |
+| **custom** | **Boolean**|  | [optional] [default to false] |
+| **history** | **Integer**|  | [optional] [default to 0] |
+| **xAccessToken** | **String**|  | [optional] |
+| **xSecretToken** | **String**|  | [optional] |
+| **authorization** | **String**|  | [optional] |
+| **ehelplyActiveParticipant** | **String**|  | [optional] |
+| **ehelplyProject** | **String**|  | [optional] |
+| **ehelplyData** | **String**|  | [optional] |
+
+### Return type
+
+[**MetaDynamo**](MetaDynamo.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Successful Response |  -  |
+| **403** | Unauthorized - Denied by eHelply |  -  |
+| **404** | meta does not exist |  -  |
+| **422** | Validation Error |  -  |
+
+<a name="touchMeta"></a>
+# **touchMeta**
+> TouchMeta200Response touchMeta(metaUuid, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData)
+
+Touchmeta
+
+### Example
+```java
+// Import classes:
+import com.ehelply.client.ApiClient;
+import com.ehelply.client.ApiException;
+import com.ehelply.client.Configuration;
+import com.ehelply.client.models.*;
+import com.ehelply.client.api.MetaApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.prod.ehelply.com");
+
+    MetaApi apiInstance = new MetaApi(defaultClient);
+    String metaUuid = "metaUuid_example"; // String | 
+    String xAccessToken = "xAccessToken_example"; // String | 
+    String xSecretToken = "xSecretToken_example"; // String | 
+    String authorization = "authorization_example"; // String | 
+    String ehelplyActiveParticipant = "ehelplyActiveParticipant_example"; // String | 
+    String ehelplyProject = "ehelplyProject_example"; // String | 
+    String ehelplyData = "ehelplyData_example"; // String | 
+    try {
+      TouchMeta200Response result = apiInstance.touchMeta(metaUuid, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling MetaApi#touchMeta");
@@ -753,9 +541,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **service** | **String**|  | |
-| **typeStr** | **String**|  | |
-| **entityUuid** | **String**|  | |
+| **metaUuid** | **String**|  | |
 | **xAccessToken** | **String**|  | [optional] |
 | **xSecretToken** | **String**|  | [optional] |
 | **authorization** | **String**|  | [optional] |
@@ -765,7 +551,7 @@ public class Example {
 
 ### Return type
 
-[**MetaDynamo**](MetaDynamo.md)
+[**TouchMeta200Response**](TouchMeta200Response.md)
 
 ### Authorization
 
@@ -780,170 +566,16 @@ No authorization required
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Successful Response |  -  |
-| **404** | Not found |  -  |
-| **422** | Validation Error |  -  |
-
-<a name="updateField"></a>
-# **updateField**
-> Object updateField(fieldUuid, field, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData)
-
-Update Field
-
-### Example
-```java
-// Import classes:
-import com.ehelply.client.ApiClient;
-import com.ehelply.client.ApiException;
-import com.ehelply.client.Configuration;
-import com.ehelply.client.models.*;
-import com.ehelply.client.api.MetaApi;
-
-public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://api.prod.ehelply.com");
-
-    MetaApi apiInstance = new MetaApi(defaultClient);
-    String fieldUuid = "fieldUuid_example"; // String | 
-    Field field = new Field(); // Field | 
-    String xAccessToken = "xAccessToken_example"; // String | 
-    String xSecretToken = "xSecretToken_example"; // String | 
-    String authorization = "authorization_example"; // String | 
-    String ehelplyActiveParticipant = "ehelplyActiveParticipant_example"; // String | 
-    String ehelplyProject = "ehelplyProject_example"; // String | 
-    String ehelplyData = "ehelplyData_example"; // String | 
-    try {
-      Object result = apiInstance.updateField(fieldUuid, field, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling MetaApi#updateField");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
-    }
-  }
-}
-```
-
-### Parameters
-
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **fieldUuid** | **String**|  | |
-| **field** | [**Field**](Field.md)|  | |
-| **xAccessToken** | **String**|  | [optional] |
-| **xSecretToken** | **String**|  | [optional] |
-| **authorization** | **String**|  | [optional] |
-| **ehelplyActiveParticipant** | **String**|  | [optional] |
-| **ehelplyProject** | **String**|  | [optional] |
-| **ehelplyData** | **String**|  | [optional] |
-
-### Return type
-
-**Object**
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Successful Response |  -  |
+| **400** | Unable to touch meta(s) |  -  |
+| **403** | Unauthorized - Denied by eHelply |  -  |
 | **404** | Not found |  -  |
 | **422** | Validation Error |  -  |
 
 <a name="updateMeta"></a>
 # **updateMeta**
-> MetaDynamo updateMeta(service, typeStr, entityUuid, metaCreate, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData)
+> UpdateMeta200Response updateMeta(metaUuid, metaCreate, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData)
 
-Update Meta
-
-### Example
-```java
-// Import classes:
-import com.ehelply.client.ApiClient;
-import com.ehelply.client.ApiException;
-import com.ehelply.client.Configuration;
-import com.ehelply.client.models.*;
-import com.ehelply.client.api.MetaApi;
-
-public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://api.prod.ehelply.com");
-
-    MetaApi apiInstance = new MetaApi(defaultClient);
-    String service = "service_example"; // String | 
-    String typeStr = "typeStr_example"; // String | 
-    String entityUuid = "entityUuid_example"; // String | 
-    MetaCreate metaCreate = new MetaCreate(); // MetaCreate | 
-    String xAccessToken = "xAccessToken_example"; // String | 
-    String xSecretToken = "xSecretToken_example"; // String | 
-    String authorization = "authorization_example"; // String | 
-    String ehelplyActiveParticipant = "ehelplyActiveParticipant_example"; // String | 
-    String ehelplyProject = "ehelplyProject_example"; // String | 
-    String ehelplyData = "ehelplyData_example"; // String | 
-    try {
-      MetaDynamo result = apiInstance.updateMeta(service, typeStr, entityUuid, metaCreate, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling MetaApi#updateMeta");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
-    }
-  }
-}
-```
-
-### Parameters
-
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **service** | **String**|  | |
-| **typeStr** | **String**|  | |
-| **entityUuid** | **String**|  | |
-| **metaCreate** | [**MetaCreate**](MetaCreate.md)|  | |
-| **xAccessToken** | **String**|  | [optional] |
-| **xSecretToken** | **String**|  | [optional] |
-| **authorization** | **String**|  | [optional] |
-| **ehelplyActiveParticipant** | **String**|  | [optional] |
-| **ehelplyProject** | **String**|  | [optional] |
-| **ehelplyData** | **String**|  | [optional] |
-
-### Return type
-
-[**MetaDynamo**](MetaDynamo.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Successful Response |  -  |
-| **404** | Not found |  -  |
-| **422** | Validation Error |  -  |
-
-<a name="updateMetaFromUuid"></a>
-# **updateMetaFromUuid**
-> MetaDynamo updateMetaFromUuid(metaUuid, metaCreate, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData)
-
-Update Meta From Uuid
+Updatemeta
 
 ### Example
 ```java
@@ -969,10 +601,10 @@ public class Example {
     String ehelplyProject = "ehelplyProject_example"; // String | 
     String ehelplyData = "ehelplyData_example"; // String | 
     try {
-      MetaDynamo result = apiInstance.updateMetaFromUuid(metaUuid, metaCreate, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
+      UpdateMeta200Response result = apiInstance.updateMeta(metaUuid, metaCreate, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling MetaApi#updateMetaFromUuid");
+      System.err.println("Exception when calling MetaApi#updateMeta");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -997,7 +629,7 @@ public class Example {
 
 ### Return type
 
-[**MetaDynamo**](MetaDynamo.md)
+[**UpdateMeta200Response**](UpdateMeta200Response.md)
 
 ### Authorization
 
@@ -1012,6 +644,90 @@ No authorization required
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Successful Response |  -  |
-| **404** | Not found |  -  |
+| **400** | Something went wrong while updating meta |  -  |
+| **403** | Unauthorized - Denied by eHelply |  -  |
+| **404** | meta does not exist |  -  |
+| **422** | Validation Error |  -  |
+
+<a name="updateMetaFromParts"></a>
+# **updateMetaFromParts**
+> UpdateMeta200Response updateMetaFromParts(service, typeName, entityUuid, metaCreate, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData)
+
+Updatemetafromparts
+
+### Example
+```java
+// Import classes:
+import com.ehelply.client.ApiClient;
+import com.ehelply.client.ApiException;
+import com.ehelply.client.Configuration;
+import com.ehelply.client.models.*;
+import com.ehelply.client.api.MetaApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.prod.ehelply.com");
+
+    MetaApi apiInstance = new MetaApi(defaultClient);
+    String service = "service_example"; // String | 
+    String typeName = "typeName_example"; // String | 
+    String entityUuid = "entityUuid_example"; // String | 
+    MetaCreate metaCreate = new MetaCreate(); // MetaCreate | 
+    String xAccessToken = "xAccessToken_example"; // String | 
+    String xSecretToken = "xSecretToken_example"; // String | 
+    String authorization = "authorization_example"; // String | 
+    String ehelplyActiveParticipant = "ehelplyActiveParticipant_example"; // String | 
+    String ehelplyProject = "ehelplyProject_example"; // String | 
+    String ehelplyData = "ehelplyData_example"; // String | 
+    try {
+      UpdateMeta200Response result = apiInstance.updateMetaFromParts(service, typeName, entityUuid, metaCreate, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling MetaApi#updateMetaFromParts");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **service** | **String**|  | |
+| **typeName** | **String**|  | |
+| **entityUuid** | **String**|  | |
+| **metaCreate** | [**MetaCreate**](MetaCreate.md)|  | |
+| **xAccessToken** | **String**|  | [optional] |
+| **xSecretToken** | **String**|  | [optional] |
+| **authorization** | **String**|  | [optional] |
+| **ehelplyActiveParticipant** | **String**|  | [optional] |
+| **ehelplyProject** | **String**|  | [optional] |
+| **ehelplyData** | **String**|  | [optional] |
+
+### Return type
+
+[**UpdateMeta200Response**](UpdateMeta200Response.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Successful Response |  -  |
+| **400** | Something went wrong while updating meta |  -  |
+| **403** | Unauthorized - Denied by eHelply |  -  |
+| **404** | meta does not exist |  -  |
 | **422** | Validation Error |  -  |
 

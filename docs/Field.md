@@ -8,14 +8,13 @@ Field
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**uuid** | **String** |  |  [optional] |
-|**type** | **Integer** |  |  [optional] |
+|**type** | **Object** |  |  [optional] |
 |**placeholder** | **String** |  |  [optional] |
-|**validations** | [**Validations**](Validations.md) |  |  [optional] |
+|**validations** | **Object** |  |  [optional] |
 |**hint** | **String** |  |  [optional] |
 |**icon** | **String** |  |  [optional] |
 |**label** | **String** |  |  [optional] |
-|**options** | [**Options**](Options.md) |  |  [optional] |
+|**options** | **Object** |  |  [optional] |
 
 
 

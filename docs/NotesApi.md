@@ -4,17 +4,17 @@ All URIs are relative to *https://api.prod.ehelply.com*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
-| [**createNote**](NotesApi.md#createNote) | **POST** /notes/notes | Create Note |
-| [**deleteNote**](NotesApi.md#deleteNote) | **DELETE** /notes/notes/{note_id} | Delete Note |
-| [**getNote**](NotesApi.md#getNote) | **GET** /notes/notes/{note_id} | Get Note |
-| [**updateNote**](NotesApi.md#updateNote) | **PUT** /notes/notes/{note_id} | Update Note |
+| [**createNote**](NotesApi.md#createNote) | **POST** /notes/notes | Createnote |
+| [**deleteNote**](NotesApi.md#deleteNote) | **DELETE** /notes/notes/{note_id} | Deletenote |
+| [**getNote**](NotesApi.md#getNote) | **GET** /notes/notes/{note_id} | Getnote |
+| [**updateNote**](NotesApi.md#updateNote) | **PUT** /notes/notes/{note_id} | Updatenote |
 
 
 <a name="createNote"></a>
 # **createNote**
-> NoteDynamoResponse createNote(noteBase, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData)
+> CreateNote200Response createNote(noteBase, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData)
 
-Create Note
+Createnote
 
 ### Example
 ```java
@@ -39,7 +39,7 @@ public class Example {
     String ehelplyProject = "ehelplyProject_example"; // String | 
     String ehelplyData = "ehelplyData_example"; // String | 
     try {
-      NoteDynamoResponse result = apiInstance.createNote(noteBase, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
+      CreateNote200Response result = apiInstance.createNote(noteBase, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling NotesApi#createNote");
@@ -66,7 +66,7 @@ public class Example {
 
 ### Return type
 
-[**NoteDynamoResponse**](NoteDynamoResponse.md)
+[**CreateNote200Response**](CreateNote200Response.md)
 
 ### Authorization
 
@@ -81,14 +81,16 @@ No authorization required
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Successful Response |  -  |
+| **400** | Something went wrong while trying to create a note |  -  |
+| **403** | Unauthorized - Denied by eHelply |  -  |
 | **404** | Not found |  -  |
 | **422** | Validation Error |  -  |
 
 <a name="deleteNote"></a>
 # **deleteNote**
-> Object deleteNote(noteId, method, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData)
+> DeleteNote200Response deleteNote(noteId, method, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData)
 
-Delete Note
+Deletenote
 
 ### Example
 ```java
@@ -114,7 +116,7 @@ public class Example {
     String ehelplyProject = "ehelplyProject_example"; // String | 
     String ehelplyData = "ehelplyData_example"; // String | 
     try {
-      Object result = apiInstance.deleteNote(noteId, method, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
+      DeleteNote200Response result = apiInstance.deleteNote(noteId, method, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling NotesApi#deleteNote");
@@ -142,7 +144,7 @@ public class Example {
 
 ### Return type
 
-**Object**
+[**DeleteNote200Response**](DeleteNote200Response.md)
 
 ### Authorization
 
@@ -157,6 +159,8 @@ No authorization required
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Successful Response |  -  |
+| **400** | Unable to delete note(s) |  -  |
+| **403** | Unauthorized - Denied by eHelply |  -  |
 | **404** | Not found |  -  |
 | **422** | Validation Error |  -  |
 
@@ -164,7 +168,7 @@ No authorization required
 # **getNote**
 > NoteDynamoHistoryResponse getNote(noteId, history, historyContent, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData)
 
-Get Note
+Getnote
 
 ### Example
 ```java
@@ -235,14 +239,15 @@ No authorization required
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Successful Response |  -  |
-| **404** | Not found |  -  |
+| **403** | Unauthorized - Denied by eHelply |  -  |
+| **404** | note does not exist |  -  |
 | **422** | Validation Error |  -  |
 
 <a name="updateNote"></a>
 # **updateNote**
-> NoteDynamoResponse updateNote(noteId, noteBase, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData)
+> UpdateNote200Response updateNote(noteId, noteBase, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData)
 
-Update Note
+Updatenote
 
 ### Example
 ```java
@@ -268,7 +273,7 @@ public class Example {
     String ehelplyProject = "ehelplyProject_example"; // String | 
     String ehelplyData = "ehelplyData_example"; // String | 
     try {
-      NoteDynamoResponse result = apiInstance.updateNote(noteId, noteBase, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
+      UpdateNote200Response result = apiInstance.updateNote(noteId, noteBase, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling NotesApi#updateNote");
@@ -296,7 +301,7 @@ public class Example {
 
 ### Return type
 
-[**NoteDynamoResponse**](NoteDynamoResponse.md)
+[**UpdateNote200Response**](UpdateNote200Response.md)
 
 ### Authorization
 
@@ -311,6 +316,8 @@ No authorization required
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Successful Response |  -  |
-| **404** | Not found |  -  |
+| **400** | Something went wrong while updating note |  -  |
+| **403** | Unauthorized - Denied by eHelply |  -  |
+| **404** | note does not exist |  -  |
 | **422** | Validation Error |  -  |
 
