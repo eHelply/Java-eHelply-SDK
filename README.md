@@ -1,8 +1,8 @@
 # ehelply-java-sdk
 
-eHelply SDK - 1.1.116
-- API version: 1.1.116
-  - Build date: 2022-10-26T18:46:50.783121Z[Etc/UTC]
+eHelply SDK - 1.1.117
+- API version: 1.1.117
+  - Build date: 2022-10-26T19:07:50.626594Z[Etc/UTC]
 
 eHelply SDK for SuperStack Services
 
@@ -41,7 +41,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>com.ehelply</groupId>
   <artifactId>ehelply-java-sdk</artifactId>
-  <version>1.1.116</version>
+  <version>1.1.117</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -57,7 +57,7 @@ Add this dependency to your project's build file:
   }
 
   dependencies {
-     implementation "com.ehelply:ehelply-java-sdk:1.1.116"
+     implementation "com.ehelply:ehelply-java-sdk:1.1.117"
   }
 ```
 
@@ -71,7 +71,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/ehelply-java-sdk-1.1.116.jar`
+* `target/ehelply-java-sdk-1.1.117.jar`
 * `target/lib/*.jar`
 
 ## Getting Started
@@ -161,19 +161,6 @@ Class | Method | HTTP request | Description
 *ContentApi* | [**getFile**](docs/ContentApi.md#getFile) | **GET** /files/files/{file_uuid} | Getfile
 *ContentApi* | [**updateFile**](docs/ContentApi.md#updateFile) | **PUT** /files/files/{file_uuid} | Updatefile
 *LoggingApi* | [**getSubjectLogs**](docs/LoggingApi.md#getSubjectLogs) | **GET** /sam/logging/logs/services/{service}/subjects/{subject} | Getsubjectlogs
-*MetaApi* | [**createField**](docs/MetaApi.md#createField) | **POST** /meta/field | Create Field
-*MetaApi* | [**createMeta**](docs/MetaApi.md#createMeta) | **POST** /meta/meta/service/{service}/type/{type_str}/entity/{entity_uuid} | Create Meta
-*MetaApi* | [**deleteField**](docs/MetaApi.md#deleteField) | **DELETE** /meta/field/{field_uuid} | Delete Field
-*MetaApi* | [**deleteMeta**](docs/MetaApi.md#deleteMeta) | **DELETE** /meta/meta/service/{service}/type/{type_str}/entity/{entity_uuid} | Delete Meta
-*MetaApi* | [**deleteMetaFromUuid**](docs/MetaApi.md#deleteMetaFromUuid) | **DELETE** /meta/meta/{meta_uuid} | Delete Meta From Uuid
-*MetaApi* | [**getField**](docs/MetaApi.md#getField) | **GET** /meta/field/{field_uuid} | Get Field
-*MetaApi* | [**getMeta**](docs/MetaApi.md#getMeta) | **GET** /meta/meta/service/{service}/type/{type_str}/entity/{entity_uuid} | Get Meta
-*MetaApi* | [**getMetaFromUuid**](docs/MetaApi.md#getMetaFromUuid) | **GET** /meta/meta/{meta_uuid} | Get Meta From Uuid
-*MetaApi* | [**makeSlug**](docs/MetaApi.md#makeSlug) | **POST** /meta/meta/slug | Make Slug
-*MetaApi* | [**touchMeta**](docs/MetaApi.md#touchMeta) | **POST** /meta/meta/service/{service}/type/{type_str}/entity/{entity_uuid}/touch | Touch Meta
-*MetaApi* | [**updateField**](docs/MetaApi.md#updateField) | **PUT** /meta/field/{field_uuid} | Update Field
-*MetaApi* | [**updateMeta**](docs/MetaApi.md#updateMeta) | **PUT** /meta/meta/service/{service}/type/{type_str}/entity/{entity_uuid} | Update Meta
-*MetaApi* | [**updateMetaFromUuid**](docs/MetaApi.md#updateMetaFromUuid) | **PUT** /meta/meta/{meta_uuid} | Update Meta From Uuid
 *MonitorApi* | [**acknowledgeAlarm**](docs/MonitorApi.md#acknowledgeAlarm) | **POST** /sam/monitor/services/{service}/stages/{stage}/alarms/{alarm_uuid}/acknowledge | Acknowledgealarm
 *MonitorApi* | [**assignAlarm**](docs/MonitorApi.md#assignAlarm) | **POST** /sam/monitor/services/{service}/stages/{stage}/alarms/{alarm_uuid}/assign | Assignalarm
 *MonitorApi* | [**attachAlarmNote**](docs/MonitorApi.md#attachAlarmNote) | **POST** /sam/monitor/services/{service}/stages/{stage}/alarms/{alarm_uuid}/note | Attachalarmnote
@@ -196,10 +183,6 @@ Class | Method | HTTP request | Description
 *MonitorApi* | [**showService**](docs/MonitorApi.md#showService) | **POST** /sam/monitor/services/{service}/stages/{stage}/show | Showservice
 *MonitorApi* | [**terminateAlarm**](docs/MonitorApi.md#terminateAlarm) | **POST** /sam/monitor/services/{service}/stages/{stage}/alarms/{alarm_uuid}/terminate | Terminatealarm
 *MonitorApi* | [**triggerAlarm**](docs/MonitorApi.md#triggerAlarm) | **POST** /sam/monitor/services/{service}/stages/{stage}/alarms | Triggeralarm
-*NotesApi* | [**createNote**](docs/NotesApi.md#createNote) | **POST** /notes/notes | Create Note
-*NotesApi* | [**deleteNote**](docs/NotesApi.md#deleteNote) | **DELETE** /notes/notes/{note_id} | Delete Note
-*NotesApi* | [**getNote**](docs/NotesApi.md#getNote) | **GET** /notes/notes/{note_id} | Get Note
-*NotesApi* | [**updateNote**](docs/NotesApi.md#updateNote) | **PUT** /notes/notes/{note_id} | Update Note
 *PlacesApi* | [**advancedSearchPlaces**](docs/PlacesApi.md#advancedSearchPlaces) | **GET** /places/search/places/string | Advancedsearchplaces
 *PlacesApi* | [**createPlacePlacesPlacesPost**](docs/PlacesApi.md#createPlacePlacesPlacesPost) | **POST** /places/places | Create Place
 *PlacesApi* | [**deletePlace**](docs/PlacesApi.md#deletePlace) | **DELETE** /places/places/{place_uuid} | Deleteplace
@@ -305,9 +288,6 @@ Class | Method | HTTP request | Description
  - [AppointmentBase](docs/AppointmentBase.md)
  - [AppointmentResponse](docs/AppointmentResponse.md)
  - [AttachPaymentToProject](docs/AttachPaymentToProject.md)
- - [Basic](docs/Basic.md)
- - [BasicMeta](docs/BasicMeta.md)
- - [BasicMetaCreate](docs/BasicMetaCreate.md)
  - [CatalogBase](docs/CatalogBase.md)
  - [CatalogReturn](docs/CatalogReturn.md)
  - [CategoryBase](docs/CategoryBase.md)
@@ -327,17 +307,9 @@ Class | Method | HTTP request | Description
  - [CreateReview](docs/CreateReview.md)
  - [CreateTicket](docs/CreateTicket.md)
  - [Credential](docs/Credential.md)
- - [CustomList](docs/CustomList.md)
- - [DatesMeta](docs/DatesMeta.md)
  - [DeleteFile200Response](docs/DeleteFile200Response.md)
- - [Detailed](docs/Detailed.md)
- - [DetailedMeta](docs/DetailedMeta.md)
- - [DetailedMetaCreate](docs/DetailedMetaCreate.md)
- - [DetailedMetaGet](docs/DetailedMetaGet.md)
  - [Discount](docs/Discount.md)
  - [Email](docs/Email.md)
- - [Field](docs/Field.md)
- - [FieldDynamo](docs/FieldDynamo.md)
  - [GetAppointment403Response](docs/GetAppointment403Response.md)
  - [GetInvoiceResponse](docs/GetInvoiceResponse.md)
  - [GetProjectCredential](docs/GetProjectCredential.md)
@@ -354,19 +326,7 @@ Class | Method | HTTP request | Description
  - [KpiResponse](docs/KpiResponse.md)
  - [LineItem](docs/LineItem.md)
  - [LoggingDynamo](docs/LoggingDynamo.md)
- - [MetaChildren](docs/MetaChildren.md)
- - [MetaCreate](docs/MetaCreate.md)
- - [MetaCustom](docs/MetaCustom.md)
- - [MetaDynamo](docs/MetaDynamo.md)
- - [MetaGet](docs/MetaGet.md)
- - [MetaSlugger](docs/MetaSlugger.md)
  - [Note](docs/Note.md)
- - [NoteBase](docs/NoteBase.md)
- - [NoteDynamoHistoryResponse](docs/NoteDynamoHistoryResponse.md)
- - [NoteDynamoResponse](docs/NoteDynamoResponse.md)
- - [NoteMeta](docs/NoteMeta.md)
- - [OptionGroup](docs/OptionGroup.md)
- - [Options](docs/Options.md)
  - [Page](docs/Page.md)
  - [Pagination](docs/Pagination.md)
  - [ParticipantCreate](docs/ParticipantCreate.md)
@@ -408,7 +368,6 @@ Class | Method | HTTP request | Description
  - [SecurityKeyCreate](docs/SecurityKeyCreate.md)
  - [SecurityKeyGet](docs/SecurityKeyGet.md)
  - [SecurityKeyVerify](docs/SecurityKeyVerify.md)
- - [Selection](docs/Selection.md)
  - [ServiceCreate](docs/ServiceCreate.md)
  - [ServiceMessageResponse](docs/ServiceMessageResponse.md)
  - [ServiceResponse](docs/ServiceResponse.md)
@@ -439,7 +398,6 @@ Class | Method | HTTP request | Description
  - [UserTokenReturn](docs/UserTokenReturn.md)
  - [UserValidations](docs/UserValidations.md)
  - [ValidationError](docs/ValidationError.md)
- - [Validations](docs/Validations.md)
 
 
 ## Documentation for Authorization
