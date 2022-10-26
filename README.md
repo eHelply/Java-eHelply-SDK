@@ -1,8 +1,8 @@
 # ehelply-java-sdk
 
-eHelply SDK - 1.1.115
-- API version: 1.1.115
-  - Build date: 2022-09-19T22:17:58.213726Z[Etc/UTC]
+eHelply SDK - 1.1.116
+- API version: 1.1.116
+  - Build date: 2022-10-26T18:46:50.783121Z[Etc/UTC]
 
 eHelply SDK for SuperStack Services
 
@@ -41,7 +41,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>com.ehelply</groupId>
   <artifactId>ehelply-java-sdk</artifactId>
-  <version>1.1.115</version>
+  <version>1.1.116</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -57,7 +57,7 @@ Add this dependency to your project's build file:
   }
 
   dependencies {
-     implementation "com.ehelply:ehelply-java-sdk:1.1.115"
+     implementation "com.ehelply:ehelply-java-sdk:1.1.116"
   }
 ```
 
@@ -71,7 +71,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/ehelply-java-sdk-1.1.115.jar`
+* `target/ehelply-java-sdk-1.1.116.jar`
 * `target/lib/*.jar`
 
 ## Getting Started
@@ -156,6 +156,10 @@ Class | Method | HTTP request | Description
 *CompaniesApi* | [**getCompanyPlacesCompaniesCompanyUuidGet**](docs/CompaniesApi.md#getCompanyPlacesCompaniesCompanyUuidGet) | **GET** /places/companies/{company_uuid} | Get Company
 *CompaniesApi* | [**searchCompaniesPlacesCompaniesGet**](docs/CompaniesApi.md#searchCompaniesPlacesCompaniesGet) | **GET** /places/companies | Search Companies
 *CompaniesApi* | [**updateCompanyPlacesCompaniesCompanyUuidPut**](docs/CompaniesApi.md#updateCompanyPlacesCompaniesCompanyUuidPut) | **PUT** /places/companies/{company_uuid} | Update Company
+*ContentApi* | [**createFile**](docs/ContentApi.md#createFile) | **POST** /files/files | Createfile
+*ContentApi* | [**deleteFile**](docs/ContentApi.md#deleteFile) | **DELETE** /files/files/{file_uuid} | Deletefile
+*ContentApi* | [**getFile**](docs/ContentApi.md#getFile) | **GET** /files/files/{file_uuid} | Getfile
+*ContentApi* | [**updateFile**](docs/ContentApi.md#updateFile) | **PUT** /files/files/{file_uuid} | Updatefile
 *LoggingApi* | [**getSubjectLogs**](docs/LoggingApi.md#getSubjectLogs) | **GET** /sam/logging/logs/services/{service}/subjects/{subject} | Getsubjectlogs
 *MetaApi* | [**createField**](docs/MetaApi.md#createField) | **POST** /meta/field | Create Field
 *MetaApi* | [**createMeta**](docs/MetaApi.md#createMeta) | **POST** /meta/meta/service/{service}/type/{type_str}/entity/{entity_uuid} | Create Meta
@@ -315,6 +319,7 @@ Class | Method | HTTP request | Description
  - [ContactBase](docs/ContactBase.md)
  - [ContactMethod](docs/ContactMethod.md)
  - [ContactResponse](docs/ContactResponse.md)
+ - [CreateFile200Response](docs/CreateFile200Response.md)
  - [CreateKeyResponse](docs/CreateKeyResponse.md)
  - [CreateProjectCredential](docs/CreateProjectCredential.md)
  - [CreateProjectCredit](docs/CreateProjectCredit.md)
@@ -324,6 +329,7 @@ Class | Method | HTTP request | Description
  - [Credential](docs/Credential.md)
  - [CustomList](docs/CustomList.md)
  - [DatesMeta](docs/DatesMeta.md)
+ - [DeleteFile200Response](docs/DeleteFile200Response.md)
  - [Detailed](docs/Detailed.md)
  - [DetailedMeta](docs/DetailedMeta.md)
  - [DetailedMetaCreate](docs/DetailedMetaCreate.md)
@@ -416,6 +422,7 @@ Class | Method | HTTP request | Description
  - [Tax](docs/Tax.md)
  - [TicketResponse](docs/TicketResponse.md)
  - [TicketsResponse](docs/TicketsResponse.md)
+ - [UpdateFile200Response](docs/UpdateFile200Response.md)
  - [UpdateProjectCredentialRequest](docs/UpdateProjectCredentialRequest.md)
  - [UpdateReview](docs/UpdateReview.md)
  - [User](docs/User.md)

@@ -37,6 +37,8 @@ docs/Contact.md
 docs/ContactBase.md
 docs/ContactMethod.md
 docs/ContactResponse.md
+docs/ContentApi.md
+docs/CreateFile200Response.md
 docs/CreateKeyResponse.md
 docs/CreateProjectCredential.md
 docs/CreateProjectCredit.md
@@ -46,6 +48,7 @@ docs/CreateTicket.md
 docs/Credential.md
 docs/CustomList.md
 docs/DatesMeta.md
+docs/DeleteFile200Response.md
 docs/Detailed.md
 docs/DetailedMeta.md
 docs/DetailedMetaCreate.md
@@ -151,6 +154,7 @@ docs/TagsApi.md
 docs/Tax.md
 docs/TicketResponse.md
 docs/TicketsResponse.md
+docs/UpdateFile200Response.md
 docs/UpdateProjectCredentialRequest.md
 docs/UpdateReview.md
 docs/User.md
@@ -196,6 +200,7 @@ src/main/java/com/ehelply/client/api/BillingApi.java
 src/main/java/com/ehelply/client/api/CatalogsApi.java
 src/main/java/com/ehelply/client/api/CategoryApi.java
 src/main/java/com/ehelply/client/api/CompaniesApi.java
+src/main/java/com/ehelply/client/api/ContentApi.java
 src/main/java/com/ehelply/client/api/LoggingApi.java
 src/main/java/com/ehelply/client/api/MetaApi.java
 src/main/java/com/ehelply/client/api/MonitorApi.java
@@ -241,6 +246,7 @@ src/main/java/com/ehelply/client/model/Contact.java
 src/main/java/com/ehelply/client/model/ContactBase.java
 src/main/java/com/ehelply/client/model/ContactMethod.java
 src/main/java/com/ehelply/client/model/ContactResponse.java
+src/main/java/com/ehelply/client/model/CreateFile200Response.java
 src/main/java/com/ehelply/client/model/CreateKeyResponse.java
 src/main/java/com/ehelply/client/model/CreateProjectCredential.java
 src/main/java/com/ehelply/client/model/CreateProjectCredit.java
@@ -250,6 +256,7 @@ src/main/java/com/ehelply/client/model/CreateTicket.java
 src/main/java/com/ehelply/client/model/Credential.java
 src/main/java/com/ehelply/client/model/CustomList.java
 src/main/java/com/ehelply/client/model/DatesMeta.java
+src/main/java/com/ehelply/client/model/DeleteFile200Response.java
 src/main/java/com/ehelply/client/model/Detailed.java
 src/main/java/com/ehelply/client/model/DetailedMeta.java
 src/main/java/com/ehelply/client/model/DetailedMetaCreate.java
@@ -342,6 +349,7 @@ src/main/java/com/ehelply/client/model/TagResponse.java
 src/main/java/com/ehelply/client/model/Tax.java
 src/main/java/com/ehelply/client/model/TicketResponse.java
 src/main/java/com/ehelply/client/model/TicketsResponse.java
+src/main/java/com/ehelply/client/model/UpdateFile200Response.java
 src/main/java/com/ehelply/client/model/UpdateProjectCredentialRequest.java
 src/main/java/com/ehelply/client/model/UpdateReview.java
 src/main/java/com/ehelply/client/model/User.java
@@ -364,6 +372,7 @@ src/test/java/com/ehelply/client/api/BillingApiTest.java
 src/test/java/com/ehelply/client/api/CatalogsApiTest.java
 src/test/java/com/ehelply/client/api/CategoryApiTest.java
 src/test/java/com/ehelply/client/api/CompaniesApiTest.java
+src/test/java/com/ehelply/client/api/ContentApiTest.java
 src/test/java/com/ehelply/client/api/LoggingApiTest.java
 src/test/java/com/ehelply/client/api/MetaApiTest.java
 src/test/java/com/ehelply/client/api/MonitorApiTest.java
@@ -404,6 +413,7 @@ src/test/java/com/ehelply/client/model/ContactBaseTest.java
 src/test/java/com/ehelply/client/model/ContactMethodTest.java
 src/test/java/com/ehelply/client/model/ContactResponseTest.java
 src/test/java/com/ehelply/client/model/ContactTest.java
+src/test/java/com/ehelply/client/model/CreateFile200ResponseTest.java
 src/test/java/com/ehelply/client/model/CreateKeyResponseTest.java
 src/test/java/com/ehelply/client/model/CreateProjectCredentialTest.java
 src/test/java/com/ehelply/client/model/CreateProjectCreditTest.java
@@ -413,6 +423,7 @@ src/test/java/com/ehelply/client/model/CreateTicketTest.java
 src/test/java/com/ehelply/client/model/CredentialTest.java
 src/test/java/com/ehelply/client/model/CustomListTest.java
 src/test/java/com/ehelply/client/model/DatesMetaTest.java
+src/test/java/com/ehelply/client/model/DeleteFile200ResponseTest.java
 src/test/java/com/ehelply/client/model/DetailedMetaCreateTest.java
 src/test/java/com/ehelply/client/model/DetailedMetaGetTest.java
 src/test/java/com/ehelply/client/model/DetailedMetaTest.java
@@ -505,6 +516,7 @@ src/test/java/com/ehelply/client/model/TagResponseTest.java
 src/test/java/com/ehelply/client/model/TaxTest.java
 src/test/java/com/ehelply/client/model/TicketResponseTest.java
 src/test/java/com/ehelply/client/model/TicketsResponseTest.java
+src/test/java/com/ehelply/client/model/UpdateFile200ResponseTest.java
 src/test/java/com/ehelply/client/model/UpdateProjectCredentialRequestTest.java
 src/test/java/com/ehelply/client/model/UpdateReviewTest.java
 src/test/java/com/ehelply/client/model/UserConfirmationTest.java
