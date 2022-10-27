@@ -1,14 +1,14 @@
 
 
-# Dates
+# CustomList
 
 
 ## Properties
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**createdAt** | **String** |  |  [optional] |
-|**updatedAt** | **String** |  |  [optional] |
+|**name** | **String** |  |  [optional] |
+|**description** | **String** |  |  [optional] |
 
 
 

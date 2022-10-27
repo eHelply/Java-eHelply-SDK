@@ -1,8 +1,8 @@
 # ehelply-java-sdk
 
-eHelply SDK - 1.1.113
-- API version: 1.1.113
-  - Build date: 2022-10-26T19:17:11.543782Z[Etc/UTC]
+eHelply SDK - 1.1.114
+- API version: 1.1.114
+  - Build date: 2022-10-27T14:06:08.981108Z[Etc/UTC]
 
 eHelply SDK for SuperStack Services
 
@@ -41,7 +41,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>com.ehelply</groupId>
   <artifactId>ehelply-java-sdk</artifactId>
-  <version>1.1.113</version>
+  <version>1.1.114</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -57,7 +57,7 @@ Add this dependency to your project's build file:
   }
 
   dependencies {
-     implementation "com.ehelply:ehelply-java-sdk:1.1.113"
+     implementation "com.ehelply:ehelply-java-sdk:1.1.114"
   }
 ```
 
@@ -71,7 +71,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/ehelply-java-sdk-1.1.113.jar`
+* `target/ehelply-java-sdk-1.1.114.jar`
 * `target/lib/*.jar`
 
 ## Getting Started
@@ -331,7 +331,7 @@ Class | Method | HTTP request | Description
  - [CreateSlug200Response](docs/CreateSlug200Response.md)
  - [CreateTicket](docs/CreateTicket.md)
  - [Credential](docs/Credential.md)
- - [Dates](docs/Dates.md)
+ - [CustomList](docs/CustomList.md)
  - [DatesMeta](docs/DatesMeta.md)
  - [DeleteField200Response](docs/DeleteField200Response.md)
  - [DeleteFile200Response](docs/DeleteFile200Response.md)
@@ -360,13 +360,17 @@ Class | Method | HTTP request | Description
  - [KpiResponse](docs/KpiResponse.md)
  - [LineItem](docs/LineItem.md)
  - [LoggingDynamo](docs/LoggingDynamo.md)
+ - [MetaChildren](docs/MetaChildren.md)
  - [MetaCreate](docs/MetaCreate.md)
+ - [MetaCustom](docs/MetaCustom.md)
  - [MetaDynamo](docs/MetaDynamo.md)
  - [Note](docs/Note.md)
  - [NoteBase](docs/NoteBase.md)
  - [NoteDynamoHistoryResponse](docs/NoteDynamoHistoryResponse.md)
  - [NoteDynamoResponse](docs/NoteDynamoResponse.md)
  - [NoteMeta](docs/NoteMeta.md)
+ - [OptionGroup](docs/OptionGroup.md)
+ - [Options](docs/Options.md)
  - [Page](docs/Page.md)
  - [Pagination](docs/Pagination.md)
  - [ParticipantCreate](docs/ParticipantCreate.md)
@@ -408,6 +412,7 @@ Class | Method | HTTP request | Description
  - [SecurityKeyCreate](docs/SecurityKeyCreate.md)
  - [SecurityKeyGet](docs/SecurityKeyGet.md)
  - [SecurityKeyVerify](docs/SecurityKeyVerify.md)
+ - [Selection](docs/Selection.md)
  - [ServiceCreate](docs/ServiceCreate.md)
  - [ServiceMessageResponse](docs/ServiceMessageResponse.md)
  - [ServiceResponse](docs/ServiceResponse.md)
@@ -444,6 +449,7 @@ Class | Method | HTTP request | Description
  - [UserTokenReturn](docs/UserTokenReturn.md)
  - [UserValidations](docs/UserValidations.md)
  - [ValidationError](docs/ValidationError.md)
+ - [Validations](docs/Validations.md)
 
 
 ## Documentation for Authorization

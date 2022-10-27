@@ -50,7 +50,7 @@ docs/CreateReview.md
 docs/CreateSlug200Response.md
 docs/CreateTicket.md
 docs/Credential.md
-docs/Dates.md
+docs/CustomList.md
 docs/DatesMeta.md
 docs/DeleteField200Response.md
 docs/DeleteFile200Response.md
@@ -82,7 +82,9 @@ docs/LineItem.md
 docs/LoggingApi.md
 docs/LoggingDynamo.md
 docs/MetaApi.md
+docs/MetaChildren.md
 docs/MetaCreate.md
+docs/MetaCustom.md
 docs/MetaDynamo.md
 docs/MonitorApi.md
 docs/Note.md
@@ -91,6 +93,8 @@ docs/NoteDynamoHistoryResponse.md
 docs/NoteDynamoResponse.md
 docs/NoteMeta.md
 docs/NotesApi.md
+docs/OptionGroup.md
+docs/Options.md
 docs/Page.md
 docs/Pagination.md
 docs/ParticipantCreate.md
@@ -137,6 +141,7 @@ docs/SecurityEncryptionKeyResponse.md
 docs/SecurityKeyCreate.md
 docs/SecurityKeyGet.md
 docs/SecurityKeyVerify.md
+docs/Selection.md
 docs/ServiceCreate.md
 docs/ServiceMessageResponse.md
 docs/ServiceResponse.md
@@ -178,6 +183,7 @@ docs/UserTokenReturn.md
 docs/UserValidations.md
 docs/UsersApi.md
 docs/ValidationError.md
+docs/Validations.md
 git_push.sh
 gradle.properties
 gradle/wrapper/gradle-wrapper.jar
@@ -264,7 +270,7 @@ src/main/java/com/ehelply/client/model/CreateReview.java
 src/main/java/com/ehelply/client/model/CreateSlug200Response.java
 src/main/java/com/ehelply/client/model/CreateTicket.java
 src/main/java/com/ehelply/client/model/Credential.java
-src/main/java/com/ehelply/client/model/Dates.java
+src/main/java/com/ehelply/client/model/CustomList.java
 src/main/java/com/ehelply/client/model/DatesMeta.java
 src/main/java/com/ehelply/client/model/DeleteField200Response.java
 src/main/java/com/ehelply/client/model/DeleteFile200Response.java
@@ -293,13 +299,17 @@ src/main/java/com/ehelply/client/model/History.java
 src/main/java/com/ehelply/client/model/KpiResponse.java
 src/main/java/com/ehelply/client/model/LineItem.java
 src/main/java/com/ehelply/client/model/LoggingDynamo.java
+src/main/java/com/ehelply/client/model/MetaChildren.java
 src/main/java/com/ehelply/client/model/MetaCreate.java
+src/main/java/com/ehelply/client/model/MetaCustom.java
 src/main/java/com/ehelply/client/model/MetaDynamo.java
 src/main/java/com/ehelply/client/model/Note.java
 src/main/java/com/ehelply/client/model/NoteBase.java
 src/main/java/com/ehelply/client/model/NoteDynamoHistoryResponse.java
 src/main/java/com/ehelply/client/model/NoteDynamoResponse.java
 src/main/java/com/ehelply/client/model/NoteMeta.java
+src/main/java/com/ehelply/client/model/OptionGroup.java
+src/main/java/com/ehelply/client/model/Options.java
 src/main/java/com/ehelply/client/model/Page.java
 src/main/java/com/ehelply/client/model/Pagination.java
 src/main/java/com/ehelply/client/model/ParticipantCreate.java
@@ -341,6 +351,7 @@ src/main/java/com/ehelply/client/model/SecurityEncryptionKeyResponse.java
 src/main/java/com/ehelply/client/model/SecurityKeyCreate.java
 src/main/java/com/ehelply/client/model/SecurityKeyGet.java
 src/main/java/com/ehelply/client/model/SecurityKeyVerify.java
+src/main/java/com/ehelply/client/model/Selection.java
 src/main/java/com/ehelply/client/model/ServiceCreate.java
 src/main/java/com/ehelply/client/model/ServiceMessageResponse.java
 src/main/java/com/ehelply/client/model/ServiceResponse.java
@@ -377,6 +388,7 @@ src/main/java/com/ehelply/client/model/UserSignupReturn.java
 src/main/java/com/ehelply/client/model/UserTokenReturn.java
 src/main/java/com/ehelply/client/model/UserValidations.java
 src/main/java/com/ehelply/client/model/ValidationError.java
+src/main/java/com/ehelply/client/model/Validations.java
 src/test/java/com/ehelply/client/api/AppointmentsApiTest.java
 src/test/java/com/ehelply/client/api/BillingApiTest.java
 src/test/java/com/ehelply/client/api/CatalogsApiTest.java
@@ -436,8 +448,8 @@ src/test/java/com/ehelply/client/model/CreateReviewTest.java
 src/test/java/com/ehelply/client/model/CreateSlug200ResponseTest.java
 src/test/java/com/ehelply/client/model/CreateTicketTest.java
 src/test/java/com/ehelply/client/model/CredentialTest.java
+src/test/java/com/ehelply/client/model/CustomListTest.java
 src/test/java/com/ehelply/client/model/DatesMetaTest.java
-src/test/java/com/ehelply/client/model/DatesTest.java
 src/test/java/com/ehelply/client/model/DeleteField200ResponseTest.java
 src/test/java/com/ehelply/client/model/DeleteFile200ResponseTest.java
 src/test/java/com/ehelply/client/model/DeleteMeta200ResponseTest.java
@@ -465,13 +477,17 @@ src/test/java/com/ehelply/client/model/HistoryTest.java
 src/test/java/com/ehelply/client/model/KpiResponseTest.java
 src/test/java/com/ehelply/client/model/LineItemTest.java
 src/test/java/com/ehelply/client/model/LoggingDynamoTest.java
+src/test/java/com/ehelply/client/model/MetaChildrenTest.java
 src/test/java/com/ehelply/client/model/MetaCreateTest.java
+src/test/java/com/ehelply/client/model/MetaCustomTest.java
 src/test/java/com/ehelply/client/model/MetaDynamoTest.java
 src/test/java/com/ehelply/client/model/NoteBaseTest.java
 src/test/java/com/ehelply/client/model/NoteDynamoHistoryResponseTest.java
 src/test/java/com/ehelply/client/model/NoteDynamoResponseTest.java
 src/test/java/com/ehelply/client/model/NoteMetaTest.java
 src/test/java/com/ehelply/client/model/NoteTest.java
+src/test/java/com/ehelply/client/model/OptionGroupTest.java
+src/test/java/com/ehelply/client/model/OptionsTest.java
 src/test/java/com/ehelply/client/model/PageTest.java
 src/test/java/com/ehelply/client/model/PaginationTest.java
 src/test/java/com/ehelply/client/model/ParticipantCreateTest.java
@@ -513,6 +529,7 @@ src/test/java/com/ehelply/client/model/SecurityEncryptionKeyResponseTest.java
 src/test/java/com/ehelply/client/model/SecurityKeyCreateTest.java
 src/test/java/com/ehelply/client/model/SecurityKeyGetTest.java
 src/test/java/com/ehelply/client/model/SecurityKeyVerifyTest.java
+src/test/java/com/ehelply/client/model/SelectionTest.java
 src/test/java/com/ehelply/client/model/ServiceCreateTest.java
 src/test/java/com/ehelply/client/model/ServiceMessageResponseTest.java
 src/test/java/com/ehelply/client/model/ServiceResponseTest.java
@@ -549,3 +566,4 @@ src/test/java/com/ehelply/client/model/UserTest.java
 src/test/java/com/ehelply/client/model/UserTokenReturnTest.java
 src/test/java/com/ehelply/client/model/UserValidationsTest.java
 src/test/java/com/ehelply/client/model/ValidationErrorTest.java
+src/test/java/com/ehelply/client/model/ValidationsTest.java

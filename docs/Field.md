@@ -8,13 +8,13 @@ Field
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**type** | **Object** |  |  [optional] |
+|**type** | **Integer** |  |  [optional] |
 |**placeholder** | **String** |  |  [optional] |
-|**validations** | **Object** |  |  [optional] |
+|**validations** | [**Validations**](Validations.md) |  |  [optional] |
 |**hint** | **String** |  |  [optional] |
 |**icon** | **String** |  |  [optional] |
 |**label** | **String** |  |  [optional] |
-|**options** | **Object** |  |  [optional] |
+|**options** | [**Options**](Options.md) |  |  [optional] |
 
 
 
