@@ -19,6 +19,7 @@
 |**hiddenStages** | **List&lt;String&gt;** |  |  [optional] |
 |**createdAt** | **String** |  |  [optional] |
 |**updatedAt** | **String** |  |  [optional] |
+|**superstackMeta** | [**ServiceSuperStackMeta**](ServiceSuperStackMeta.md) |  |  [optional] |
 
 
 
