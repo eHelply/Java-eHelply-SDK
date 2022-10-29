@@ -1,8 +1,8 @@
 # ehelply-java-sdk
 
-eHelply SDK - 1.1.114
-- API version: 1.1.114
-  - Build date: 2022-10-27T14:06:08.981108Z[Etc/UTC]
+eHelply SDK - 1.1.115
+- API version: 1.1.115
+  - Build date: 2022-10-29T14:14:58.899442Z[Etc/UTC]
 
 eHelply SDK for SuperStack Services
 
@@ -41,7 +41,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>com.ehelply</groupId>
   <artifactId>ehelply-java-sdk</artifactId>
-  <version>1.1.114</version>
+  <version>1.1.115</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -57,7 +57,7 @@ Add this dependency to your project's build file:
   }
 
   dependencies {
-     implementation "com.ehelply:ehelply-java-sdk:1.1.114"
+     implementation "com.ehelply:ehelply-java-sdk:1.1.115"
   }
 ```
 
@@ -71,7 +71,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/ehelply-java-sdk-1.1.114.jar`
+* `target/ehelply-java-sdk-1.1.115.jar`
 * `target/lib/*.jar`
 
 ## Getting Started
@@ -179,6 +179,7 @@ Class | Method | HTTP request | Description
 *MonitorApi* | [**attachAlarmNote**](docs/MonitorApi.md#attachAlarmNote) | **POST** /sam/monitor/services/{service}/stages/{stage}/alarms/{alarm_uuid}/note | Attachalarmnote
 *MonitorApi* | [**attachAlarmTicket**](docs/MonitorApi.md#attachAlarmTicket) | **POST** /sam/monitor/services/{service}/stages/{stage}/alarms/{alarm_uuid}/ticket | Attachalarmticket
 *MonitorApi* | [**clearAlarm**](docs/MonitorApi.md#clearAlarm) | **POST** /sam/monitor/services/{service}/stages/{stage}/alarms/{alarm_uuid}/clear | Clearalarm
+*MonitorApi* | [**deleteServiceSuperStackMeta**](docs/MonitorApi.md#deleteServiceSuperStackMeta) | **DELETE** /sam/monitor/services/{service}/superstack | Deleteservicesuperstackmeta
 *MonitorApi* | [**getService**](docs/MonitorApi.md#getService) | **GET** /sam/monitor/services/{service} | Getservice
 *MonitorApi* | [**getServiceAlarm**](docs/MonitorApi.md#getServiceAlarm) | **GET** /sam/monitor/services/{service}/stages/{stage}/alarms/{alarm_uuid} | Getservicealarm
 *MonitorApi* | [**getServiceAlarms**](docs/MonitorApi.md#getServiceAlarms) | **GET** /sam/monitor/services/{service}/stages/{stage}/alarms | Getservicealarms
@@ -189,9 +190,11 @@ Class | Method | HTTP request | Description
 *MonitorApi* | [**getServiceVitals**](docs/MonitorApi.md#getServiceVitals) | **GET** /sam/monitor/services/{service}/stages/{stage}/vitals | Getservicevitals
 *MonitorApi* | [**getServices**](docs/MonitorApi.md#getServices) | **GET** /sam/monitor/services | Getservices
 *MonitorApi* | [**getServicesWithSpecs**](docs/MonitorApi.md#getServicesWithSpecs) | **GET** /sam/monitor/specs/services | Getserviceswithspecs
+*MonitorApi* | [**getSupertackServices**](docs/MonitorApi.md#getSupertackServices) | **GET** /sam/monitor/superstack-services | Getsupertackservices
 *MonitorApi* | [**hideService**](docs/MonitorApi.md#hideService) | **POST** /sam/monitor/services/{service}/stages/{stage}/hide | Hideservice
 *MonitorApi* | [**ignoreAlarm**](docs/MonitorApi.md#ignoreAlarm) | **POST** /sam/monitor/services/{service}/stages/{stage}/alarms/{alarm_uuid}/ignore | Ignorealarm
 *MonitorApi* | [**registerService**](docs/MonitorApi.md#registerService) | **POST** /sam/monitor/services | Registerservice
+*MonitorApi* | [**saveServiceSuperStackMeta**](docs/MonitorApi.md#saveServiceSuperStackMeta) | **POST** /sam/monitor/services/{service}/superstack | Saveservicesuperstackmeta
 *MonitorApi* | [**searchAlarms**](docs/MonitorApi.md#searchAlarms) | **GET** /sam/monitor/services/{service}/alarms | Searchalarms
 *MonitorApi* | [**showService**](docs/MonitorApi.md#showService) | **POST** /sam/monitor/services/{service}/stages/{stage}/show | Showservice
 *MonitorApi* | [**terminateAlarm**](docs/MonitorApi.md#terminateAlarm) | **POST** /sam/monitor/services/{service}/stages/{stage}/alarms/{alarm_uuid}/terminate | Terminatealarm
@@ -416,6 +419,12 @@ Class | Method | HTTP request | Description
  - [ServiceCreate](docs/ServiceCreate.md)
  - [ServiceMessageResponse](docs/ServiceMessageResponse.md)
  - [ServiceResponse](docs/ServiceResponse.md)
+ - [ServiceSuperStackMeta](docs/ServiceSuperStackMeta.md)
+ - [ServiceSuperStackMetaFaq](docs/ServiceSuperStackMetaFaq.md)
+ - [ServiceSuperStackMetaFeature](docs/ServiceSuperStackMetaFeature.md)
+ - [ServiceSuperStackMetaGettingStarted](docs/ServiceSuperStackMetaGettingStarted.md)
+ - [ServiceSuperStackMetaGettingStartedEndpointTeaser](docs/ServiceSuperStackMetaGettingStartedEndpointTeaser.md)
+ - [ServiceSuperStackMetaUseCase](docs/ServiceSuperStackMetaUseCase.md)
  - [Slugger](docs/Slugger.md)
  - [StaffCreate](docs/StaffCreate.md)
  - [StaffDb](docs/StaffDb.md)
