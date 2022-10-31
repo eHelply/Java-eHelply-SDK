@@ -52,6 +52,7 @@ docs/CreateTicket.md
 docs/Credential.md
 docs/CustomList.md
 docs/DatesMeta.md
+docs/DeleteFact200Response.md
 docs/DeleteField200Response.md
 docs/DeleteFile200Response.md
 docs/DeleteMeta200Response.md
@@ -61,6 +62,9 @@ docs/DetailedMeta.md
 docs/DetailedMetaCreate.md
 docs/Discount.md
 docs/Email.md
+docs/Fact.md
+docs/FactCreate.md
+docs/FactsApi.md
 docs/Field.md
 docs/FieldDynamo.md
 docs/FieldsApi.md
@@ -134,6 +138,7 @@ docs/ResponseRemovememberfromproject.md
 docs/ResponseRevokeprojectcredit.md
 docs/ResponseUpdateprojectcredential.md
 docs/ReviewsApi.md
+docs/SaveFact200Response.md
 docs/SecurityApi.md
 docs/SecurityCreateToken.md
 docs/SecurityEncryptionKeyGet.md
@@ -217,6 +222,7 @@ src/main/java/com/ehelply/client/api/CatalogsApi.java
 src/main/java/com/ehelply/client/api/CategoryApi.java
 src/main/java/com/ehelply/client/api/CompaniesApi.java
 src/main/java/com/ehelply/client/api/ContentApi.java
+src/main/java/com/ehelply/client/api/FactsApi.java
 src/main/java/com/ehelply/client/api/FieldsApi.java
 src/main/java/com/ehelply/client/api/LoggingApi.java
 src/main/java/com/ehelply/client/api/MetaApi.java
@@ -277,6 +283,7 @@ src/main/java/com/ehelply/client/model/CreateTicket.java
 src/main/java/com/ehelply/client/model/Credential.java
 src/main/java/com/ehelply/client/model/CustomList.java
 src/main/java/com/ehelply/client/model/DatesMeta.java
+src/main/java/com/ehelply/client/model/DeleteFact200Response.java
 src/main/java/com/ehelply/client/model/DeleteField200Response.java
 src/main/java/com/ehelply/client/model/DeleteFile200Response.java
 src/main/java/com/ehelply/client/model/DeleteMeta200Response.java
@@ -286,6 +293,8 @@ src/main/java/com/ehelply/client/model/DetailedMeta.java
 src/main/java/com/ehelply/client/model/DetailedMetaCreate.java
 src/main/java/com/ehelply/client/model/Discount.java
 src/main/java/com/ehelply/client/model/Email.java
+src/main/java/com/ehelply/client/model/Fact.java
+src/main/java/com/ehelply/client/model/FactCreate.java
 src/main/java/com/ehelply/client/model/Field.java
 src/main/java/com/ehelply/client/model/FieldDynamo.java
 src/main/java/com/ehelply/client/model/GetAppointment403Response.java
@@ -350,6 +359,7 @@ src/main/java/com/ehelply/client/model/ResponseGeneratetoken.java
 src/main/java/com/ehelply/client/model/ResponseRemovememberfromproject.java
 src/main/java/com/ehelply/client/model/ResponseRevokeprojectcredit.java
 src/main/java/com/ehelply/client/model/ResponseUpdateprojectcredential.java
+src/main/java/com/ehelply/client/model/SaveFact200Response.java
 src/main/java/com/ehelply/client/model/SecurityCreateToken.java
 src/main/java/com/ehelply/client/model/SecurityEncryptionKeyGet.java
 src/main/java/com/ehelply/client/model/SecurityEncryptionKeyResponse.java
@@ -405,6 +415,7 @@ src/test/java/com/ehelply/client/api/CatalogsApiTest.java
 src/test/java/com/ehelply/client/api/CategoryApiTest.java
 src/test/java/com/ehelply/client/api/CompaniesApiTest.java
 src/test/java/com/ehelply/client/api/ContentApiTest.java
+src/test/java/com/ehelply/client/api/FactsApiTest.java
 src/test/java/com/ehelply/client/api/FieldsApiTest.java
 src/test/java/com/ehelply/client/api/LoggingApiTest.java
 src/test/java/com/ehelply/client/api/MetaApiTest.java
@@ -460,6 +471,7 @@ src/test/java/com/ehelply/client/model/CreateTicketTest.java
 src/test/java/com/ehelply/client/model/CredentialTest.java
 src/test/java/com/ehelply/client/model/CustomListTest.java
 src/test/java/com/ehelply/client/model/DatesMetaTest.java
+src/test/java/com/ehelply/client/model/DeleteFact200ResponseTest.java
 src/test/java/com/ehelply/client/model/DeleteField200ResponseTest.java
 src/test/java/com/ehelply/client/model/DeleteFile200ResponseTest.java
 src/test/java/com/ehelply/client/model/DeleteMeta200ResponseTest.java
@@ -469,6 +481,8 @@ src/test/java/com/ehelply/client/model/DetailedMetaTest.java
 src/test/java/com/ehelply/client/model/DetailedTest.java
 src/test/java/com/ehelply/client/model/DiscountTest.java
 src/test/java/com/ehelply/client/model/EmailTest.java
+src/test/java/com/ehelply/client/model/FactCreateTest.java
+src/test/java/com/ehelply/client/model/FactTest.java
 src/test/java/com/ehelply/client/model/FieldDynamoTest.java
 src/test/java/com/ehelply/client/model/FieldTest.java
 src/test/java/com/ehelply/client/model/GetAppointment403ResponseTest.java
@@ -533,6 +547,7 @@ src/test/java/com/ehelply/client/model/ResponseGeneratetokenTest.java
 src/test/java/com/ehelply/client/model/ResponseRemovememberfromprojectTest.java
 src/test/java/com/ehelply/client/model/ResponseRevokeprojectcreditTest.java
 src/test/java/com/ehelply/client/model/ResponseUpdateprojectcredentialTest.java
+src/test/java/com/ehelply/client/model/SaveFact200ResponseTest.java
 src/test/java/com/ehelply/client/model/SecurityCreateTokenTest.java
 src/test/java/com/ehelply/client/model/SecurityEncryptionKeyGetTest.java
 src/test/java/com/ehelply/client/model/SecurityEncryptionKeyResponseTest.java

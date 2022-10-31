@@ -1,8 +1,8 @@
 # ehelply-java-sdk
 
-eHelply SDK - 1.1.119
-- API version: 1.1.119
-  - Build date: 2022-10-29T14:13:55.848369Z[Etc/UTC]
+eHelply SDK - 1.1.120
+- API version: 1.1.120
+  - Build date: 2022-10-31T14:03:26.892990Z[Etc/UTC]
 
 eHelply SDK for SuperStack Services
 
@@ -41,7 +41,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>com.ehelply</groupId>
   <artifactId>ehelply-java-sdk</artifactId>
-  <version>1.1.119</version>
+  <version>1.1.120</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -57,7 +57,7 @@ Add this dependency to your project's build file:
   }
 
   dependencies {
-     implementation "com.ehelply:ehelply-java-sdk:1.1.119"
+     implementation "com.ehelply:ehelply-java-sdk:1.1.120"
   }
 ```
 
@@ -71,7 +71,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/ehelply-java-sdk-1.1.119.jar`
+* `target/ehelply-java-sdk-1.1.120.jar`
 * `target/lib/*.jar`
 
 ## Getting Started
@@ -160,6 +160,14 @@ Class | Method | HTTP request | Description
 *ContentApi* | [**deleteFile**](docs/ContentApi.md#deleteFile) | **DELETE** /files/files/{file_uuid} | Deletefile
 *ContentApi* | [**getFile**](docs/ContentApi.md#getFile) | **GET** /files/files/{file_uuid} | Getfile
 *ContentApi* | [**updateFile**](docs/ContentApi.md#updateFile) | **PUT** /files/files/{file_uuid} | Updatefile
+*FactsApi* | [**deleteFact**](docs/FactsApi.md#deleteFact) | **POST** /sam/facts/facts/{fact_name} | Deletefact
+*FactsApi* | [**deleteFact_0**](docs/FactsApi.md#deleteFact_0) | **POST** /sam/facts/facts/{fact_name} | Deletefact
+*FactsApi* | [**getFact**](docs/FactsApi.md#getFact) | **GET** /sam/facts/facts/{fact_name} | Getfact
+*FactsApi* | [**getFact_0**](docs/FactsApi.md#getFact_0) | **GET** /sam/facts/facts/{fact_name} | Getfact
+*FactsApi* | [**getFacts**](docs/FactsApi.md#getFacts) | **GET** /sam/facts/facts | Getfacts
+*FactsApi* | [**getFacts_0**](docs/FactsApi.md#getFacts_0) | **GET** /sam/facts/facts | Getfacts
+*FactsApi* | [**saveFact**](docs/FactsApi.md#saveFact) | **POST** /sam/facts/facts | Savefact
+*FactsApi* | [**saveFact_0**](docs/FactsApi.md#saveFact_0) | **POST** /sam/facts/facts | Savefact
 *FieldsApi* | [**createField**](docs/FieldsApi.md#createField) | **POST** /fields/fields | Createfield
 *FieldsApi* | [**deleteField**](docs/FieldsApi.md#deleteField) | **DELETE** /fields/fields/{field_uuid} | Deletefield
 *FieldsApi* | [**getField**](docs/FieldsApi.md#getField) | **GET** /fields/fields/{field_uuid} | Getfield
@@ -336,6 +344,7 @@ Class | Method | HTTP request | Description
  - [Credential](docs/Credential.md)
  - [CustomList](docs/CustomList.md)
  - [DatesMeta](docs/DatesMeta.md)
+ - [DeleteFact200Response](docs/DeleteFact200Response.md)
  - [DeleteField200Response](docs/DeleteField200Response.md)
  - [DeleteFile200Response](docs/DeleteFile200Response.md)
  - [DeleteMeta200Response](docs/DeleteMeta200Response.md)
@@ -345,6 +354,8 @@ Class | Method | HTTP request | Description
  - [DetailedMetaCreate](docs/DetailedMetaCreate.md)
  - [Discount](docs/Discount.md)
  - [Email](docs/Email.md)
+ - [Fact](docs/Fact.md)
+ - [FactCreate](docs/FactCreate.md)
  - [Field](docs/Field.md)
  - [FieldDynamo](docs/FieldDynamo.md)
  - [GetAppointment403Response](docs/GetAppointment403Response.md)
@@ -409,6 +420,7 @@ Class | Method | HTTP request | Description
  - [ResponseRemovememberfromproject](docs/ResponseRemovememberfromproject.md)
  - [ResponseRevokeprojectcredit](docs/ResponseRevokeprojectcredit.md)
  - [ResponseUpdateprojectcredential](docs/ResponseUpdateprojectcredential.md)
+ - [SaveFact200Response](docs/SaveFact200Response.md)
  - [SecurityCreateToken](docs/SecurityCreateToken.md)
  - [SecurityEncryptionKeyGet](docs/SecurityEncryptionKeyGet.md)
  - [SecurityEncryptionKeyResponse](docs/SecurityEncryptionKeyResponse.md)
