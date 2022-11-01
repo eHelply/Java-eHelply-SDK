@@ -1,8 +1,8 @@
 # ehelply-java-sdk
 
-eHelply SDK - 1.1.116
-- API version: 1.1.116
-  - Build date: 2022-10-31T14:03:01.795242Z[Etc/UTC]
+eHelply SDK - 1.1.117
+- API version: 1.1.117
+  - Build date: 2022-11-01T13:49:44.097596Z[Etc/UTC]
 
 eHelply SDK for SuperStack Services
 
@@ -41,7 +41,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>com.ehelply</groupId>
   <artifactId>ehelply-java-sdk</artifactId>
-  <version>1.1.116</version>
+  <version>1.1.117</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -57,7 +57,7 @@ Add this dependency to your project's build file:
   }
 
   dependencies {
-     implementation "com.ehelply:ehelply-java-sdk:1.1.116"
+     implementation "com.ehelply:ehelply-java-sdk:1.1.117"
   }
 ```
 
@@ -71,7 +71,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/ehelply-java-sdk-1.1.116.jar`
+* `target/ehelply-java-sdk-1.1.117.jar`
 * `target/lib/*.jar`
 
 ## Getting Started
@@ -131,13 +131,13 @@ Class | Method | HTTP request | Description
 *AppointmentsApi* | [**searchAppointmentEntities**](docs/AppointmentsApi.md#searchAppointmentEntities) | **GET** /appointments/appointments/{appointment_uuid}/entities | Searchappointmententities
 *AppointmentsApi* | [**searchEntityAppointments**](docs/AppointmentsApi.md#searchEntityAppointments) | **GET** /appointments/appointments/entities/{entity_uuid}/appointments | Getentityappointments
 *AppointmentsApi* | [**updateAppointment**](docs/AppointmentsApi.md#updateAppointment) | **PUT** /appointments/appointments/{appointment_uuid} | Updateappointment
-*BillingApi* | [**createBillingAccount**](docs/BillingApi.md#createBillingAccount) | **POST** /sam/billing/create_billing_account | Createbillingaccount
-*BillingApi* | [**getClientSecret**](docs/BillingApi.md#getClientSecret) | **GET** /sam/billing/retrieve_secret | Getclientsecret
-*BillingApi* | [**hasPayment**](docs/BillingApi.md#hasPayment) | **GET** /sam/billing/has_payment | Haspayment
-*BillingApi* | [**listPaymentMethods**](docs/BillingApi.md#listPaymentMethods) | **GET** /sam/billing/view_payment_method | Listpaymentmethods
-*BillingApi* | [**processPayment**](docs/BillingApi.md#processPayment) | **POST** /sam/billing/process_payment | Processpayment
-*BillingApi* | [**reconcilePaymentMethod**](docs/BillingApi.md#reconcilePaymentMethod) | **GET** /sam/billing/reconcile_payment | Reconcilepaymentmethod
-*BillingApi* | [**removePaymentMethod**](docs/BillingApi.md#removePaymentMethod) | **DELETE** /sam/billing/remove_payment_method | Removepaymentmethod
+*BillingApi* | [**createBillingAccount**](docs/BillingApi.md#createBillingAccount) | **POST** /sam/billing/projects/{project_uuid}/accounts | Createbillingaccount
+*BillingApi* | [**getClientSecret**](docs/BillingApi.md#getClientSecret) | **GET** /sam/billing/projects/{project_uuid}/secrets | Getclientsecret
+*BillingApi* | [**hasPayment**](docs/BillingApi.md#hasPayment) | **GET** /sam/billing/projects/{project_uuid}/payment-methods-exist | Haspayment
+*BillingApi* | [**listPaymentMethods**](docs/BillingApi.md#listPaymentMethods) | **GET** /sam/billing/projects/{project_uuid}/payment-methods | Listpaymentmethods
+*BillingApi* | [**processPayment**](docs/BillingApi.md#processPayment) | **POST** /sam/billing/projects/{project_uuid}/payments | Processpayment
+*BillingApi* | [**reconcilePaymentMethod**](docs/BillingApi.md#reconcilePaymentMethod) | **GET** /sam/billing/projects/{project_uuid}/payment-methods-reconciliation | Reconcilepaymentmethod
+*BillingApi* | [**removePaymentMethod**](docs/BillingApi.md#removePaymentMethod) | **DELETE** /sam/billing/projects/{project_uuid}/payment-methods | Removepaymentmethod
 *CatalogsApi* | [**attachProductToCatalog**](docs/CatalogsApi.md#attachProductToCatalog) | **POST** /products/catalogs/{catalog_uuid}/products/{product_uuid} | Addproducttocatalog
 *CatalogsApi* | [**createCatalog**](docs/CatalogsApi.md#createCatalog) | **POST** /products/catalogs | Createcatalog
 *CatalogsApi* | [**deleteCatalog**](docs/CatalogsApi.md#deleteCatalog) | **DELETE** /products/catalogs/{catalog_uuid} | Deletecatalog

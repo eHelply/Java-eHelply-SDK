@@ -4,18 +4,18 @@ All URIs are relative to *https://api.prod.ehelply.com*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
-| [**createBillingAccount**](BillingApi.md#createBillingAccount) | **POST** /sam/billing/create_billing_account | Createbillingaccount |
-| [**getClientSecret**](BillingApi.md#getClientSecret) | **GET** /sam/billing/retrieve_secret | Getclientsecret |
-| [**hasPayment**](BillingApi.md#hasPayment) | **GET** /sam/billing/has_payment | Haspayment |
-| [**listPaymentMethods**](BillingApi.md#listPaymentMethods) | **GET** /sam/billing/view_payment_method | Listpaymentmethods |
-| [**processPayment**](BillingApi.md#processPayment) | **POST** /sam/billing/process_payment | Processpayment |
-| [**reconcilePaymentMethod**](BillingApi.md#reconcilePaymentMethod) | **GET** /sam/billing/reconcile_payment | Reconcilepaymentmethod |
-| [**removePaymentMethod**](BillingApi.md#removePaymentMethod) | **DELETE** /sam/billing/remove_payment_method | Removepaymentmethod |
+| [**createBillingAccount**](BillingApi.md#createBillingAccount) | **POST** /sam/billing/projects/{project_uuid}/accounts | Createbillingaccount |
+| [**getClientSecret**](BillingApi.md#getClientSecret) | **GET** /sam/billing/projects/{project_uuid}/secrets | Getclientsecret |
+| [**hasPayment**](BillingApi.md#hasPayment) | **GET** /sam/billing/projects/{project_uuid}/payment-methods-exist | Haspayment |
+| [**listPaymentMethods**](BillingApi.md#listPaymentMethods) | **GET** /sam/billing/projects/{project_uuid}/payment-methods | Listpaymentmethods |
+| [**processPayment**](BillingApi.md#processPayment) | **POST** /sam/billing/projects/{project_uuid}/payments | Processpayment |
+| [**reconcilePaymentMethod**](BillingApi.md#reconcilePaymentMethod) | **GET** /sam/billing/projects/{project_uuid}/payment-methods-reconciliation | Reconcilepaymentmethod |
+| [**removePaymentMethod**](BillingApi.md#removePaymentMethod) | **DELETE** /sam/billing/projects/{project_uuid}/payment-methods | Removepaymentmethod |
 
 
 <a name="createBillingAccount"></a>
 # **createBillingAccount**
-> StripeAccountResponse createBillingAccount(xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData)
+> StripeAccountResponse createBillingAccount(projectUuid, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData)
 
 Createbillingaccount
 
@@ -34,6 +34,7 @@ public class Example {
     defaultClient.setBasePath("https://api.prod.ehelply.com");
 
     BillingApi apiInstance = new BillingApi(defaultClient);
+    String projectUuid = "projectUuid_example"; // String | 
     String xAccessToken = "xAccessToken_example"; // String | 
     String xSecretToken = "xSecretToken_example"; // String | 
     String authorization = "authorization_example"; // String | 
@@ -41,7 +42,7 @@ public class Example {
     String ehelplyProject = "ehelplyProject_example"; // String | 
     String ehelplyData = "ehelplyData_example"; // String | 
     try {
-      StripeAccountResponse result = apiInstance.createBillingAccount(xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
+      StripeAccountResponse result = apiInstance.createBillingAccount(projectUuid, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling BillingApi#createBillingAccount");
@@ -58,6 +59,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
+| **projectUuid** | **String**|  | |
 | **xAccessToken** | **String**|  | [optional] |
 | **xSecretToken** | **String**|  | [optional] |
 | **authorization** | **String**|  | [optional] |
@@ -87,7 +89,7 @@ No authorization required
 
 <a name="getClientSecret"></a>
 # **getClientSecret**
-> StripeCustomerSecretResponse getClientSecret(xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData)
+> StripeCustomerSecretResponse getClientSecret(projectUuid, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData)
 
 Getclientsecret
 
@@ -106,6 +108,7 @@ public class Example {
     defaultClient.setBasePath("https://api.prod.ehelply.com");
 
     BillingApi apiInstance = new BillingApi(defaultClient);
+    String projectUuid = "projectUuid_example"; // String | 
     String xAccessToken = "xAccessToken_example"; // String | 
     String xSecretToken = "xSecretToken_example"; // String | 
     String authorization = "authorization_example"; // String | 
@@ -113,7 +116,7 @@ public class Example {
     String ehelplyProject = "ehelplyProject_example"; // String | 
     String ehelplyData = "ehelplyData_example"; // String | 
     try {
-      StripeCustomerSecretResponse result = apiInstance.getClientSecret(xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
+      StripeCustomerSecretResponse result = apiInstance.getClientSecret(projectUuid, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling BillingApi#getClientSecret");
@@ -130,6 +133,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
+| **projectUuid** | **String**|  | |
 | **xAccessToken** | **String**|  | [optional] |
 | **xSecretToken** | **String**|  | [optional] |
 | **authorization** | **String**|  | [optional] |
@@ -178,7 +182,7 @@ public class Example {
     defaultClient.setBasePath("https://api.prod.ehelply.com");
 
     BillingApi apiInstance = new BillingApi(defaultClient);
-    Object projectUuid = null; // Object | 
+    String projectUuid = "projectUuid_example"; // String | 
     String xAccessToken = "xAccessToken_example"; // String | 
     String xSecretToken = "xSecretToken_example"; // String | 
     String authorization = "authorization_example"; // String | 
@@ -203,7 +207,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **projectUuid** | [**Object**](.md)|  | [optional] |
+| **projectUuid** | **String**|  | |
 | **xAccessToken** | **String**|  | [optional] |
 | **xSecretToken** | **String**|  | [optional] |
 | **authorization** | **String**|  | [optional] |
@@ -252,7 +256,7 @@ public class Example {
     defaultClient.setBasePath("https://api.prod.ehelply.com");
 
     BillingApi apiInstance = new BillingApi(defaultClient);
-    Object projectUuid = null; // Object | 
+    String projectUuid = "projectUuid_example"; // String | 
     String xAccessToken = "xAccessToken_example"; // String | 
     String xSecretToken = "xSecretToken_example"; // String | 
     String authorization = "authorization_example"; // String | 
@@ -277,7 +281,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **projectUuid** | [**Object**](.md)|  | [optional] |
+| **projectUuid** | **String**|  | |
 | **xAccessToken** | **String**|  | [optional] |
 | **xSecretToken** | **String**|  | [optional] |
 | **authorization** | **String**|  | [optional] |
@@ -309,7 +313,7 @@ No authorization required
 
 <a name="processPayment"></a>
 # **processPayment**
-> String processPayment(payment, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData)
+> String processPayment(projectUuid, payment, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData)
 
 Processpayment
 
@@ -328,6 +332,7 @@ public class Example {
     defaultClient.setBasePath("https://api.prod.ehelply.com");
 
     BillingApi apiInstance = new BillingApi(defaultClient);
+    String projectUuid = "projectUuid_example"; // String | 
     Payment payment = new Payment(); // Payment | 
     String xAccessToken = "xAccessToken_example"; // String | 
     String xSecretToken = "xSecretToken_example"; // String | 
@@ -336,7 +341,7 @@ public class Example {
     String ehelplyProject = "ehelplyProject_example"; // String | 
     String ehelplyData = "ehelplyData_example"; // String | 
     try {
-      String result = apiInstance.processPayment(payment, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
+      String result = apiInstance.processPayment(projectUuid, payment, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling BillingApi#processPayment");
@@ -353,6 +358,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
+| **projectUuid** | **String**|  | |
 | **payment** | [**Payment**](Payment.md)|  | |
 | **xAccessToken** | **String**|  | [optional] |
 | **xSecretToken** | **String**|  | [optional] |
@@ -383,7 +389,7 @@ No authorization required
 
 <a name="reconcilePaymentMethod"></a>
 # **reconcilePaymentMethod**
-> Boolean reconcilePaymentMethod(xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData)
+> Boolean reconcilePaymentMethod(projectUuid, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData)
 
 Reconcilepaymentmethod
 
@@ -402,6 +408,7 @@ public class Example {
     defaultClient.setBasePath("https://api.prod.ehelply.com");
 
     BillingApi apiInstance = new BillingApi(defaultClient);
+    String projectUuid = "projectUuid_example"; // String | 
     String xAccessToken = "xAccessToken_example"; // String | 
     String xSecretToken = "xSecretToken_example"; // String | 
     String authorization = "authorization_example"; // String | 
@@ -409,7 +416,7 @@ public class Example {
     String ehelplyProject = "ehelplyProject_example"; // String | 
     String ehelplyData = "ehelplyData_example"; // String | 
     try {
-      Boolean result = apiInstance.reconcilePaymentMethod(xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
+      Boolean result = apiInstance.reconcilePaymentMethod(projectUuid, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling BillingApi#reconcilePaymentMethod");
@@ -426,6 +433,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
+| **projectUuid** | **String**|  | |
 | **xAccessToken** | **String**|  | [optional] |
 | **xSecretToken** | **String**|  | [optional] |
 | **authorization** | **String**|  | [optional] |
@@ -474,7 +482,7 @@ public class Example {
     defaultClient.setBasePath("https://api.prod.ehelply.com");
 
     BillingApi apiInstance = new BillingApi(defaultClient);
-    Object projectUuid = null; // Object | 
+    String projectUuid = "projectUuid_example"; // String | 
     String xAccessToken = "xAccessToken_example"; // String | 
     String xSecretToken = "xSecretToken_example"; // String | 
     String authorization = "authorization_example"; // String | 
@@ -499,7 +507,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **projectUuid** | [**Object**](.md)|  | [optional] |
+| **projectUuid** | **String**|  | |
 | **xAccessToken** | **String**|  | [optional] |
 | **xSecretToken** | **String**|  | [optional] |
 | **authorization** | **String**|  | [optional] |
