@@ -42,7 +42,7 @@ docs/CreateField200Response.md
 docs/CreateFile200Response.md
 docs/CreateKeyResponse.md
 docs/CreateMeta200Response.md
-docs/CreateNote200Response.md
+docs/CreateNoteResponse.md
 docs/CreateProjectCredential.md
 docs/CreateProjectCredit.md
 docs/CreateProjectInvoice.md
@@ -274,7 +274,7 @@ src/main/java/com/ehelply/client/model/CreateField200Response.java
 src/main/java/com/ehelply/client/model/CreateFile200Response.java
 src/main/java/com/ehelply/client/model/CreateKeyResponse.java
 src/main/java/com/ehelply/client/model/CreateMeta200Response.java
-src/main/java/com/ehelply/client/model/CreateNote200Response.java
+src/main/java/com/ehelply/client/model/CreateNoteResponse.java
 src/main/java/com/ehelply/client/model/CreateProjectCredential.java
 src/main/java/com/ehelply/client/model/CreateProjectCredit.java
 src/main/java/com/ehelply/client/model/CreateProjectInvoice.java
@@ -463,7 +463,7 @@ src/test/java/com/ehelply/client/model/CreateField200ResponseTest.java
 src/test/java/com/ehelply/client/model/CreateFile200ResponseTest.java
 src/test/java/com/ehelply/client/model/CreateKeyResponseTest.java
 src/test/java/com/ehelply/client/model/CreateMeta200ResponseTest.java
-src/test/java/com/ehelply/client/model/CreateNote200ResponseTest.java
+src/test/java/com/ehelply/client/model/CreateNoteResponseTest.java
 src/test/java/com/ehelply/client/model/CreateProjectCredentialTest.java
 src/test/java/com/ehelply/client/model/CreateProjectCreditTest.java
 src/test/java/com/ehelply/client/model/CreateProjectInvoiceTest.java

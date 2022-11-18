@@ -12,7 +12,7 @@ All URIs are relative to *https://api.prod.ehelply.com*
 
 <a name="createNote"></a>
 # **createNote**
-> CreateNote200Response createNote(noteBase, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData)
+> CreateNoteResponse createNote(noteBase, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData)
 
 Createnote
 
@@ -39,7 +39,7 @@ public class Example {
     String ehelplyProject = "ehelplyProject_example"; // String | 
     String ehelplyData = "ehelplyData_example"; // String | 
     try {
-      CreateNote200Response result = apiInstance.createNote(noteBase, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
+      CreateNoteResponse result = apiInstance.createNote(noteBase, xAccessToken, xSecretToken, authorization, ehelplyActiveParticipant, ehelplyProject, ehelplyData);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling NotesApi#createNote");
@@ -66,7 +66,7 @@ public class Example {
 
 ### Return type
 
-[**CreateNote200Response**](CreateNote200Response.md)
+[**CreateNoteResponse**](CreateNoteResponse.md)
 
 ### Authorization
 
